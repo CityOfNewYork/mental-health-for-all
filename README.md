@@ -28,6 +28,28 @@ $ npm start
 
 ## CHANGELOG
 
+### JavaScript Enhancements to Integrate
+
+* Google Translate Element (need to pull example from one of our sites)
+* Web Share Component (available in the Patterns Scripts library)
+
+### v0.0.0-2
+
+Integrated the following items.
+
+* [x] Styles (locally compiled)
+* [x] Scripts (CDN)
+* [x] Default layout
+* [x] Partials directory with some objects and components
+* [x] Homepage template
+* [x] Archive template
+
+To dos.
+
+* [ ] Integrate the icons
+* [ ] Get JavaScript to work
+* [ ] Potentially use CDN for Styles and Icons (SVGs)
+
 ### v0.0.0-1
 
 Initialized an NPM/Node.js project.

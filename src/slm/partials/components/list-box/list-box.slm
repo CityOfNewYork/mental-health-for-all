@@ -1,0 +1,26 @@
+ol class='js-accordion c-list-box c-list-box--primary' data-multiselectable='true'
+  li class='c-list-box__item'
+    h3 class='js-accordion__header c-list-box__heading' id='homepage-ages-heading-'
+      | Group Name
+
+      span class='c-list-box__subheading' Group Description
+
+    ol class='js-accordion__content c-list-box__content' id='homepage-ages-panel-'
+      li class='c-list-box__subitem'
+        a href='#' class='button--full-width button--primary' Post Title
+
+      li class='c-list-box__subitem'
+        a href='#' class='button--full-width button--primary' Post Title
+
+  li class='c-list-box__item'
+    h3 class='js-accordion__header c-list-box__heading' id='homepage-ages-heading-'
+      | Group Name
+
+      span class='c-list-box__subheading' Group Description
+
+    ol class='js-accordion__content c-list-box__content' id='homepage-ages-panel-'
+      li class='c-list-box__subitem'
+        a href='#' class='button--full-width button--primary' Post Title
+
+      li class='c-list-box__subitem'
+        a href='#' class='button--full-width button--primary' Post Title

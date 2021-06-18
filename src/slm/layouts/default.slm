@@ -1,64 +1,51 @@
 doctype html
-html lang='en'
+html lang='en' class='no-js'
   head
     meta charset='utf-8'
-    meta http-equiv='X-UA-Compatible' content='IE=edge'
-    meta name='viewport' content='width=device-width, initial-scale=1'
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'
+    meta name='format-detection' content='telephone=no'
+    meta name='mobile-web-app-capable' content='yes'
 
-    link rel='icon' type='image/svg+xml' href='svg/pttrn-a-perfect-heart-red.svg'
+    title = title
+    / meta name='description' content='{{meta_desc}}'
+    / meta name='keywords' content='{{meta_keywords}}'
 
-    title = this.package.name
+    / {% if meta_noindex == true %}
+    / meta name='robots' content='noindex'
 
-    link rel='stylesheet' href='css/default.css'
+    / link rel='manifest' href='{{theme.path}}/manifest.json'
+    / link rel='icon' type='image' href='{{theme.path}}/assets/img/growningup-favicon.png'
+    / link rel='apple-touch-icon-precomposed' sizes='76x76' href='{{theme.path}}/assets/img/growningup-Icon-App-76x76@3x.png'
 
-    link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css'
-    script src='//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js'
+    / link rel='stylesheet' href='css/animate.css' type='text/css' media='screen'
+    link rel='stylesheet' href='/css/default.css' type='text/css' media='screen'
 
-    javascript:
-      document.addEventListener('DOMContentLoaded', function(event) {
-        hljs.configure({
-          languages: ['html', 'javascript', 'css', 'sass']
-        });
+    = content('head');
 
-        document.querySelectorAll('pre')
-          .forEach(function(pre) {
-            pre.setAttribute('tabindex', '0');
+  body
+    div class='o-offcanvas js-offcanvas' id='offcanvas-ages'
+      a href='#main' class='show-for-keyboard' Skip to main content
 
-            hljs.highlightBlock(pre);
-          });
-      });
+      == this.include('/slm/partials/objects/navigation/navigation.slm');
 
-  body class='bc-blue p-4'
-    header class='ta-center c-white p-4'
-      h1
-        = 'Welcome to'
-        br
-        = `${this.package.name} v${this.package.version}`
+      div class='o-offcanvas__main js-offcanvas__main'
+        == this.include('/slm/partials/objects/navigation/navigation-offcanvas.slm');
 
-      p = `${this.package.description}. Here's a sample component.`
+        main id='main' role='main'
+          = content('main')
 
-      br
+        == this.include('/slm/partials/objects/footer/footer.slm');
 
-    main
-      = content('main')
+        == this.include('/slm/partials/objects/banner/banner.slm');
 
-    footer class='ta-center p-4 c-white'
-      - let date = new Date();
-      - let opts = {year: 'numeric', month: 'long', day: 'numeric'};
-      p = `Last updated ${date.toLocaleDateString('en-US', opts)}`
-
-      a href='https://commons.wikimedia.org/wiki/File:A_perfect_SVG_heart.svg'
-        svg class='c-red' width='80' height='80'
-          title id='svg-a-perfect-heart' A perfect SVG heart
-          use xlink:href='#pttrn-a-perfect-heart'
-
-    script src='js/default.js'
+    script src='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js'
     script src='https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns-framework@v1.0.0-15/dist/utilities/icons/icons.iffe.js'
 
     javascript:
-      var MyPatterns = new Default();
+      new GUNYC();
 
-      new Icons('svg/svgs.svg');
+      // new Icons('svg/svgs.svg');
 
     = content('scripts')
 

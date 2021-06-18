@@ -1,6 +1,7 @@
 {
-  "name": "mhfa",
-  "version": "0.0.0-1",
+  "name": "@nycopportunity/mental-health-for-all",
+  "nicename": "Mental Health for All",
+  "version": "0.0.0-2",
   "description": "",
   "main": "index.js",
   "scripts": {

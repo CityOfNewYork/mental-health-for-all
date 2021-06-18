@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="yes" name="mobile-web-app-capable" />
+  <title>Programs | Mental Health for All</title>
+  <link href="/css/default.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="o-offcanvas js-offcanvas" id="offcanvas-ages">
+    <a class="show-for-keyboard" href="#main">Skip to main content</a>
+    <nav class="o-offcanvas__side js-offcanvas__side" id="ages" role="navigation" aria-label="ages-heading">
+      <h2 id="ages-heading" class="show-for-screen-reader">{{__('Resources by Age', 'GUNYC')}}</h2>
+      <button data-js="offcanvas-ages" data-toggle="offcanvas-ages" class="o-offcanvas__close button--text">
+        <svg class="icon--small" role="img">
+          <title>{{__('Close Resources by Age', 'GUNYC')}}</title>
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
+      <ol class="js-accordion c-list-box c-list-box--secondary" data-multiselectable="true">
+        <li class="c-list-box__item">
+          <h3 class="js-accordion__header c-list-box__heading" id="ages-heading-{{loop.index}}" tabindex="0">{{age_group.name}}</h3>
+          <ol class="js-accordion__content c-list-box__content" id="ages-panel-{{loop.index}}">
+            <li>
+              <a href="{{post.link}}" class="c-list-box__subitem">{{post.title}}</a>
+            </li>
+            <li>
+              <a href="{% if language_code != 'en' %}/{{language_code}}{% endif %}/brainbuilding?ages={{age_group.slug}}" class="c-list-box__subitem">{{ __('Brain Building', 'GUNY-Homepage') }}</a>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <div class="u-top-spacing-small text-center">
+        <a href="#ages" data-js="offcanvas-ages" class="show-for-keyboard">{{__('Close Resources by Age', 'GUNYC')}}</a>
+      </div>
+    </nav>
+    <div class="o-offcanvas__main js-offcanvas__main">
+      <header class="o-navigation">
+        <div class="o-container">
+          <a class="o-navigation__logo-wrapper o-navigation__logo-wrapper-no-menu" href="/">
+            <span class="o-navigation__logo">Mental Health for All</span>
+          </a>
+          <nav aria-label="Primary" class="o-navigation__nav" role="navigation">
+            <ul class="o-inline">
+              <li class="o-inline__item">
+                <a class="o-navigation__nav-link" href="#">Navigation Item</a>
+              </li>
+              <li class="o-inline__item">
+                <a class="o-navigation__nav-link" data-js="offcanvas-ages" data-toggle="offcanvas-ages" href="#ages">Ages</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <a aria-hidden="true" class="o-offcanvas__overlay" data-js="offcanvas-ages"></a>
+      <main id="main" role="main">
+        <div>
+          <div class="js-parallax">
+            <header class="c-hero js-parallax-content" style="background-color: #2793E0">
+              <div class="o-container js-parallax-text">
+                <h1 class="c-hero__title">Programs</h1>
+                <div class="c-hero__tagline desktop:w-6/12 pt-2">Find the support your family needs to thrive</div>
+              </div>
+            </header>
+          </div>
+          <section class="o-container u-bottom-spacing u-top-spacing-small desktop:flex">
+            <div class="o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar">
+              <div class="c-list-box c-list-box--quaternary js-accordion" data-multiselectable="false">
+                <div class="c-list-box__item">
+                  <h3 class="js-accordion__header c-list-box__heading" id="type-filter-heading">Category Heading</h3>
+                  <ul class="js-accordion__content c-list-box__content" id="type-filter-panel">
+                    <li class="c-list-box__subitem" v-if="programTypes!=null">
+                      <label class="checkbox">
+                        <input @change="selectAllTypes" class="checkbox__field" type="checkbox" v-model="checkedAllTypes" />
+                        <svg class="checkbox__indicator">
+                          <use xlink:href="#icon-check"></use>
+                        </svg>Select All
+                      </label>
+                    </li>
+                    <li class="c-list-box__subitem" v-for="category in programTypes">
+                      <label :for="category.slug" class="checkbox">
+                        <input :id="category.slug" :value="category.slug" class="checkbox__field" type="checkbox" v-model="checkedProgramType" />
+                        <svg class="checkbox__indicator">
+                          <use xlink:href="#icon-check"></use>
+                        </svg>Category Name
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="c-list-box__item">
+                  <h3 class="js-accordion__header c-list-box__heading" id="age-filter-heading">Age Group Heading</h3>
+                  <ul class="js-accordion__content c-list-box__content" id="age-filter-panel">
+                    <li class="c-list-box__subitem">
+                      <label class="checkbox">
+                        <input class="checkbox__field" type="checkbox" />
+                        <svg class="checkbox__indicator">
+                          <use xlink:href="#icon-check"></use>
+                        </svg>Select All
+                      </label>
+                    </li>
+                    <li class="c-list-box__subitem">
+                      <label class="checkbox">
+                        <input class="checkbox__field" id="slug" type="checkbox" value="slug" />
+                        <svg class="checkbox__indicator">
+                          <use xlink:href="#icon-check"></use>
+                        </svg>Age Name
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="o-article desktop:w-article">
+              <section class="c-block-list">
+                <div class="c-block-list--blue o-content-container u-sm-gutter loader">
+                  <a class="button--outline button--outline--white aligncenter" href="#programs-loaded">{{ __('See', 'guny') }} v{ totalResults } {{ __('programs', 'guny') }}</a>
+                </div>
+                <div class="c-block-list--shade o-content-container u-sm-gutter" id="programs-loaded">
+                  <div class="c-block-list__item u-sm-gutter" v-for="post in programs">
+                    <div class="c-card flex">
+                      <a :href="post.link">
+                        <div aria-hidden="true" class="c-card__sticker sticker">
+                          <svg class="icon--large">
+                            <title>v{ post.programs_cat[0].name }</title>
+                            <use xlink:href="'#icon-' + post.programs_cat[0].slug.replace('-'+document.documentElement.lang,'')"></use>
+                          </svg>
+                        </div>
+                      </a>
+                      <h3 class="c-card__title">
+                        <a href="post.link" rel="bookmark" title="post.acf.program_name">post.acf.plain_language_program_name</a>
+                      </h3>
+                      <div class="c-card__subtitle">
+                        <p>
+                          <strong>post.acf.program_name</strong>
+                        </p>
+                        <p>post.acf.government_agency</p>
+                      </div>
+                      <div class="c-card__body">v{ post.excerpt }</div>
+                      <div class="c-card__tags order-last" v-if="post.programs_cat">
+                        <a class="button--pill button--pill--alt" href="#">v{ term.name }</a>
+                        <a class="button--pill" href="#">v{ term.name }</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="o-footer" role="contentinfo">
+        <div class="o-container flex flex-wrap">
+          <div class="o-footer__section w-full desktop:w-1/2 flex-col flex-wrap">
+            <div class="o-footer__logos flex">
+              <div class="o-footer__logo w-1/2"></div>
+              <div class="o-footer__logo w-1/2"></div>
+            </div>
+            <nav aria-label="Secondary" class="o-footer__nav flex" role="navigation">
+              <ul class="o-footer__column w-1/2">
+                <li class="o-footer__nav-item">
+                  <a class="o-footer__link" href="/">Home</a>
+                </li>
+                <li class="o-footer__nav-item">
+                  <a class="o-footer__link" href="#" rel="" target="_self" title="Menu Link Title">Link Title</a>
+                </li>
+                <li class="o-footer__nav-item">
+                  <a class="o-footer__link" href="#" rel="" target="_self" title="Menu Link Title">Link Title</a>
+                </li>
+                <li class="o-footer__nav-item">
+                  <a class="o-footer__link" href="#" rel="" target="_self" title="Menu Link Title">Link Title</a>
+                </li>
+              </ul>
+              <ul class="c-footer__column w-1/2">
+                <li class="o-footer__nav-item">
+                  <a class="o-footer__link" href="#" rel="" target="_self" title="Menu Link Title">Link Title</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="o-container">
+          <div class="o-footer__footer">
+            <p>&copy; June 18, 2021 City of New York. All Rights Reserved.
+              <br />NYC is a trademark and service mark of the City of New York
+            </p>
+          </div>
+        </div>
+        <div class="o-footer__reached"></div>
+      </footer>
+      <div aria-describedby="dialog-desc-{{current_banner.slug}}" aria-labelledby="dialog-title-{{current_banner.slug}}" class="o-alert-banner hidden" data-alert="{{current_banner.slug}}" data-js="alert-banner-{{current_banner.slug}}" id="banner-{{current_banner.slug}}" role="dialog">
+        <div class="show-for-screen-reader" id="dialog-title-{{current_banner.slug}}">| {{__('Notification Banner', 'GUNYC')}}</div>
+        <div class="o-alert-banner__content" id="dialog-desc-{{current_banner.slug}}">
+          <div class="o-container">current_banner.banner_content</div>
+        </div>
+        <button aria-label="close" class="o-alert__button" data-js="alert-controller" type="button">
+          <svg class="icon--small" role="img">
+            <title>Close</title>
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns-framework@v1.0.0-15/dist/utilities/icons/icons.iffe.js"></script>
+  <script type="text/javascript">
+    new GUNYC();
+    // new Icons('svg/svgs.svg');
+  </script>
+  <script src="/reload/reload.js"></script>
+</body>
+
+</html>

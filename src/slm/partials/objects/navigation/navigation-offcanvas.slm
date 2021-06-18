@@ -1,0 +1,32 @@
+header class='o-navigation'
+  div class='o-container'
+    a href='/' class='o-navigation__logo-wrapper o-navigation__logo-wrapper-no-menu'
+      span class='o-navigation__logo' Mental Health for All
+
+    / {% include 'objects/language-switcher.twig' %}
+
+    nav class='o-navigation__nav' role='navigation' aria-label='Primary'
+      ul class='o-inline'
+        li class='o-inline__item'
+          a href='#' class='o-navigation__nav-link' Navigation Item
+
+        li class='o-inline__item'
+          a href='#ages' data-js='offcanvas-ages' data-toggle='offcanvas-ages' class='o-navigation__nav-link' Ages
+
+        / {% if function('Search\\visible') %}
+        /   li class='o-inline__item'
+        /     button class='o-navigation__nav-link search-toggle-icon' href='#search' data-toggle='overlay-search' data-toggle-class='fadeInDown'
+        /       svg class='o-navigation__icon o-navigation__icon__search' role='img' aria-hidden='true'
+        /         title Search
+        /         use xlink:href='#icon-search'
+
+        /       svg class='o-navigation__icon o-navigation__icon__close' role='img' aria-hidden='true'
+        /         title Search<
+        /         use xlink:href='#icon-close'
+
+/ {% if function('Search\\visible') %}
+  / {% include 'partials/search-overlay.twig' %}
+/ {% endif %}
+
+/ {# Offcanvas Overlay #}
+a class='o-offcanvas__overlay' data-js='offcanvas-ages' aria-hidden='true'

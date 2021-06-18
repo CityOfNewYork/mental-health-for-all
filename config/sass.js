@@ -7,7 +7,8 @@ const sass = {
   sourceMapEmbed: true,
   includePaths: [
     `${process.env.PWD}/src/`,
-    `${process.env.PWD}/node_modules/`
+    `${process.env.PWD}/node_modules/`,
+    `${process.env.PWD}/node_modules/@nycopportunity/growingup-patterns/src`
   ]
 };
 

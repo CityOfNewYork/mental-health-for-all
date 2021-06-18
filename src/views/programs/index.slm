@@ -1,0 +1,101 @@
+= extend('/slm/layouts/default')
+
+- title = 'Programs | Mental Health for All'
+
+= content('main')
+  div
+    div class='js-parallax'
+      header class='c-hero js-parallax-content' style='background-color: #2793E0'
+        div class='o-container js-parallax-text'
+          h1 class='c-hero__title' Programs
+
+          div class='c-hero__tagline desktop:w-6/12 pt-2' Find the support your family needs to thrive
+
+      / div class='alert'
+      /   div class='o-container' Alert
+
+    section class='o-container u-bottom-spacing u-top-spacing-small desktop:flex'
+      div class='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
+        div class='c-list-box c-list-box--quaternary js-accordion' data-multiselectable='false'
+          div class='c-list-box__item'
+            h3 class='js-accordion__header c-list-box__heading' id='type-filter-heading' Category Heading
+
+            ul class='js-accordion__content c-list-box__content' id='type-filter-panel'
+              li class='c-list-box__subitem' v-if='programTypes!=null'
+                label class='checkbox'
+                  input type='checkbox' v-model='checkedAllTypes' @change='selectAllTypes' class='checkbox__field'
+
+                  svg class='checkbox__indicator'
+                    use xlink:href='#icon-check'
+
+                  | Select All
+
+              li class='c-list-box__subitem' v-for='category in programTypes'
+                label class='checkbox' :for='category.slug'
+                  input type='checkbox'  :id='category.slug' :value='category.slug' v-model='checkedProgramType' class='checkbox__field'
+
+                  svg class='checkbox__indicator'
+                    use xlink:href='#icon-check'
+
+                  | Category Name
+
+          div class='c-list-box__item'
+            h3 class='js-accordion__header c-list-box__heading' id='age-filter-heading' Age Group Heading
+
+            ul class='js-accordion__content c-list-box__content' id='age-filter-panel'
+
+              li class='c-list-box__subitem'
+                label class='checkbox'
+                  input type='checkbox' class='checkbox__field'
+
+                  svg class='checkbox__indicator'
+                    use xlink:href='#icon-check'
+
+                  | Select All
+
+              li class='c-list-box__subitem'
+                label class='checkbox'
+                  input type='checkbox' id='slug' value='slug' class='checkbox__field'
+
+                  svg class='checkbox__indicator'
+                    use xlink:href='#icon-check'
+
+                  | Age Name
+
+      div class='o-article desktop:w-article'
+        section class="c-block-list"
+          div class="c-block-list--blue o-content-container u-sm-gutter loader"
+            a href="#programs-loaded" class="button--outline button--outline--white aligncenter"
+              | {{ __('See', 'guny') }} v{ totalResults } {{ __('programs', 'guny') }}
+
+          div id="programs-loaded" class="c-block-list--shade o-content-container u-sm-gutter"
+            div class="c-block-list__item u-sm-gutter" v-for="post in programs"
+              div class="c-card flex"
+                a :href="post.link"
+                  div class="c-card__sticker sticker" aria-hidden="true"
+                    svg class="icon--large"
+                      title v{ post.programs_cat[0].name }
+
+                      use xlink:href="'#icon-' + post.programs_cat[0].slug.replace('-'+document.documentElement.lang,'')"
+
+                h3 class='c-card__title'
+                  a href='post.link' title='post.acf.program_name' rel='bookmark' post.acf.plain_language_program_name
+
+                div class='c-card__subtitle'
+                  p
+                    strong post.acf.program_name
+
+                  p post.acf.government_agency
+
+                div class='c-card__body'
+                  | v{ post.excerpt }
+
+                div class='c-card__tags order-last' v-if='post.programs_cat'
+                  a href='#' class='button--pill button--pill--alt' v{ term.name }
+
+                  a href='#' class='button--pill' v{ term.name }
+
+        / {% block after_list %}
+        / {% endblock %}
+
+= content('scripts')

@@ -1,0 +1,51 @@
+- let date = new Date();
+- let opts = {year: 'numeric', month: 'long', day: 'numeric'};
+
+footer class='o-footer' role='contentinfo'
+  div class='o-container flex flex-wrap'
+    div class='o-footer__section w-full desktop:w-1/2 flex-col flex-wrap'
+      div class='o-footer__logos flex'
+        div class='o-footer__logo w-1/2'
+          / <figure class='>
+          /   <svg class='icon--logo-guny'><title>Growing Up NYC Logo</title><use xlink:href='#icon-growingupnyc-logo-white'></use></svg>
+          / </figure>
+
+        / {# <img alt='Growing Up NYC' src='{{theme.link}}/assets/img/logo-gunyc-white@236px.png' width='118'> #}
+
+        div class='o-footer__logo w-1/2'
+          / figure class='
+            / svg class='icon--logo-cc'
+            /   title Childrens Cabinet
+            /   use xlink:href='#icon-nyc-childrens-cabinet'
+
+        / {# <a href='http://www1.nyc.gov/site/childrenscabinet/index.page' target='_blank'><img alt='Link to NYC Children's Cabinet website' src='{{theme.link}}/assets/img/NYC-childrens-cabinet.svg' height='69' width='157'></a> #}
+
+      nav role='navigation' class='o-footer__nav flex' aria-label='Secondary'
+        ul class='o-footer__column w-1/2'
+          li class='o-footer__nav-item'
+            a class='o-footer__link' href='/' Home
+
+          li class='o-footer__nav-item'
+            a class='o-footer__link' href='#' title='Menu Link Title' target='_self' rel='' Link Title
+
+          li class='o-footer__nav-item'
+            a class='o-footer__link' href='#' title='Menu Link Title' target='_self' rel='' Link Title
+
+          li class='o-footer__nav-item'
+            a class='o-footer__link' href='#' title='Menu Link Title' target='_self' rel='' Link Title
+
+        ul class='c-footer__column w-1/2'
+          li class='o-footer__nav-item'
+            a class='o-footer__link' href='#' title='Menu Link Title' target='_self' rel='' Link Title
+
+    / div class='o-footer__signup w-full desktop:mt-0 desktop:w-1/2'
+      / {% include 'partials/form-email-signup.twig' with {form_id: 'footer'} %}
+
+  div class='o-container'
+    div class='o-footer__footer'
+      p
+        | &copy; ${date.toLocaleDateString('en-US', opts)} City of New York. All Rights Reserved.
+        br
+        | NYC is a trademark and service mark of the City of New York
+
+  div class='o-footer__reached'

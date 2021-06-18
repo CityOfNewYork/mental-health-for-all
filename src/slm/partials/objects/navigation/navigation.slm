@@ -1,0 +1,36 @@
+<nav class="o-offcanvas__side js-offcanvas__side" id="ages" role="navigation" aria-label="ages-heading">
+  <h2 id="ages-heading" class="show-for-screen-reader">{{__('Resources by Age', 'GUNYC')}}</h2>
+
+  <button data-js="offcanvas-ages" data-toggle="offcanvas-ages" class="o-offcanvas__close button--text">
+    <svg class="icon--small" role="img">
+      <title>{{__('Close Resources by Age', 'GUNYC')}}</title>
+      <use xlink:href="#icon-close"></use>
+    </svg>
+  </button>
+
+  <ol class="js-accordion c-list-box c-list-box--secondary" data-multiselectable="true">
+    / {% for age_group in age_menu %}
+    <li class="c-list-box__item">
+      <h3 class="js-accordion__header c-list-box__heading" id="ages-heading-{{loop.index}}" tabindex="0">{{age_group.name}}</h3>
+
+      <ol class="js-accordion__content c-list-box__content" id="ages-panel-{{loop.index}}">
+        / {% for post in age_group.posts('numberposts=-1&post_type=age&meta_key=numeric_age&orderby=meta_value_num&order=ASC') %}
+        <li>
+          <a href="{{post.link}}" class="c-list-box__subitem">{{post.title}}</a>
+        </li>
+        / {% endfor %}
+
+        / {% if age_group.slug in ["baby", "toddler", "pre-schooler", ["baby-", language_code]|join(''), ["toddler-",language_code]|join(''), ["pre-schooler-",language_code]|join('')] %}
+        <li>
+          <a href="{% if language_code != 'en' %}/{{language_code}}{% endif %}/brainbuilding?ages={{age_group.slug}}" class="c-list-box__subitem">{{ __('Brain Building', 'GUNY-Homepage') }}</a>
+        </li>
+        / {% endif %}
+      </ol>
+    </li>
+    / {% endfor %}
+  </ol>
+
+  <div class="u-top-spacing-small text-center">
+    <a href="#ages" data-js="offcanvas-ages" class="show-for-keyboard">{{__('Close Resources by Age', 'GUNYC')}}</a>
+  </div>
+</nav>

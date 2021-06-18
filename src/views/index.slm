@@ -1,32 +1,37 @@
 = extend('/slm/layouts/default')
 
-- title = 'Welcome to the @pttrn framework!'
+- title = 'Mental Health for All'
 
 = content('main')
-  / == this.include('../readme.md')
+  section class='o-static-column o-static-column--left c-side-hero js-static'
+    div class='c-side-hero__image'
 
-  section class='bc-white p-4'
-    h2 Details Component
+    div class='c-side-hero__content'
+      h1 class='c-side-hero__title'
+        / {{post.get_field('hero_title_top')}}
 
-    == this.include('components/details/details.md');
+        div class='c-side-hero__title__large rotating-text'
+          span data-js='rotate-text' class='rotating-text__entry'
+            | Mental for Health for All
 
-    h3 Demonstration
+          span data-js='rotate-controller' id='rotate' class='animated'
 
-    == this.include('components/details/details.slm');
+      a href='{{post.get_field('hero_button_url')}}' class='button--outline button--outline--white' Link
 
-    h3 Markup
+  section class='o-scroll-column o-scroll-column--right'
+    == this.include('/slm/partials/components/list-box/list-box.slm');
 
-    pre class='p-4'
-      = this.include('components/details/details.slm');
+    div class='c-block-list c-block-list--shade o-content-container'
+      h2 Featured Programs
 
-  br
+      div class='c-block-list__inner'
+        div class='c-block-list__item'
+          == this.include('/slm/partials/components/card/card.slm');
 
-  section class='bc-white p-4'
-    h2 Now you can make your own!
+        div class='c-block-list__item'
+          == this.include('/slm/partials/components/card/card.slm');
 
-    p Run the CLI to create a new component.
-
-    pre class='p-4'
-      code $ npx pttrn make component ...
+      div class='text-center'
+        a href='{{programs_link}}' class='button--outline button--outline--gray' See all programs
 
 = content('scripts')

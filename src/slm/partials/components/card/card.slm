@@ -1,0 +1,15 @@
+div class='c-card flex'
+  a href='#'
+    div class='c-card__sticker sticker' aria-hidden='true' Sticker
+
+  div class='c-card__subtitle' Card Subtitle
+
+  h3 class='c-card__title'
+    a href='#' title='{{ Post Title }}' rel='bookmark' {{ Post Title }}
+
+  p class='c-card__label' {{ Card Label }}
+
+  div class='c-card__body' {{ Card Body }}
+
+  div class='c-card__tags order-last'
+    a href='#' class='button--pill' {{ term.name }}

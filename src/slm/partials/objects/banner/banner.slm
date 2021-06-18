@@ -1,0 +1,14 @@
+div class='o-alert-banner hidden' aria-describedby='dialog-desc-{{current_banner.slug}}' aria-labelledby='dialog-title-{{current_banner.slug}}' data-alert='{{current_banner.slug}}' data-js='alert-banner-{{current_banner.slug}}' id='banner-{{current_banner.slug}}' role='dialog'
+  div class='show-for-screen-reader' id='dialog-title-{{current_banner.slug}}' | {{__('Notification Banner', 'GUNYC')}}
+
+  div class='o-alert-banner__content' id='dialog-desc-{{current_banner.slug}}'
+    div class='o-container' current_banner.banner_content
+
+  button aria-label='close' class='o-alert__button' data-js='alert-controller' type='button'
+    svg class='icon--small' role='img'
+      title Close
+
+      use xlink:href='#icon-close'
+
+
+
