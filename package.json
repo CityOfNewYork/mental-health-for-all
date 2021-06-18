@@ -1,0 +1,29 @@
+{
+  "name": "mhfa",
+  "version": "0.0.0-1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
+    "version": "npm run default && git add .",
+    "prepublishOnly": "git push && git push --tags",
+    "publish": "cross-env NODE_ENV=production pttrn publish",
+    "default": "cross-env NODE_ENV=production pttrn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CityOfNewYork/mhfa.git"
+  },
+  "author": "NYC Opportunity <products@nycopportunity.nyc.gov>",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/CityOfNewYork/mhfa/issues"
+  },
+  "homepage": "https://github.com/CityOfNewYork/mhfa#readme",
+  "dependencies": {
+    "@nycopportunity/growingup-patterns": "file:../growingupnyc-patterns"
+  },
+  "devDependencies": {
+    "@nycopportunity/pttrn": "^1.0.6"
+  }
+}

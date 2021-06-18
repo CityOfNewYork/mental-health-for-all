@@ -1,0 +1,10 @@
+/**
+ * Tailwindcss
+ */
+
+// This injects all of Tailwind's utility classes, generated based on your
+// config file. View docs for usage; https://tailwindcss.com/docs/
+
+// @tailwind base; // Uncomment this to use Tailwindcss base styles. These may interfere with existing styles.
+@tailwind components;
+@tailwind utilities;
