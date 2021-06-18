@@ -30,8 +30,17 @@ $ npm start
 
 ### JavaScript Enhancements to Integrate
 
-* Google Translate Element (need to pull example from one of our sites)
-* Web Share Component (available in the Patterns Scripts library)
+* [ ] Google Translate Element (need to pull example from one of our sites)
+* [ ] Web Share Component (available in the Patterns Scripts library)
+
+### v0.0.0-3
+
+Integrated the following items.
+
+* [x] Integrate the icons
+* [x] Potentially use CDN for Styles and Icons (SVGs)
+* [x] Get JavaScript to work (modules need to be implemented on an as needed basis)
+* [x] Single program template (Trauma Support)
 
 ### v0.0.0-2
 

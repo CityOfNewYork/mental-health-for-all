@@ -8,7 +8,7 @@
   <meta content="telephone=no" name="format-detection" />
   <meta content="yes" name="mobile-web-app-capable" />
   <title>Trauma Support | Programs | Mental Health for All</title>
-  <link href="/css/default.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/styles/site-default.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -59,8 +59,37 @@
       </header>
       <a aria-hidden="true" class="o-offcanvas__overlay" data-js="offcanvas-ages"></a>
       <main id="main" role="main">
-        <p>Experiencing any kind of crime, violence or abuse can have profound mental health consequences. Early assistance can help.</p>
-        <p>That's why New York City extends a universal offer of support to all people harmed by crime, violence and abuse. Victim advocates are available to help you get mental health assistance, navigate the legal system, and find ways to feel safe again. Contact your advocate today.</p>
+        <div class="js-parallax">
+          <header class="c-hero c-hero--large c-hero--long-text js-parallax-content" style="background-color: #469BFF">
+            <div class="o-container js-parallax-text">
+              <h1 class="c-hero__title c-hero__title--long">
+                <span class="c-hero__sticker sticker">
+                  <svg aria-hidden="true" class="icon--medium">
+                    <use xlink:href="#icon-"></use>
+                  </svg>
+                </span>Trauma Support
+              </h1>
+              <p class="c-hero__tagline desktop:w-6/12">government agency</p>
+              <p class="c-hero__tags">
+                <a class="button--pill" href="#">term.name</a>
+                <a class="button--pill" href="#">term.name</a>
+              </p>
+            </div>
+          </header>
+        </div>
+        <article class="o-container u-bottom-spacing-small js-sticky-container desktop:flex">
+          <div class="o-article js-sticky-article desktop:w-article m-auto">
+            <div class="o-content-container--compact">
+              <section class="o-content-container--text s-wysiwyg u-top-spacing" data-id="section-summary">
+                <p>Experiencing any kind of crime, violence or abuse can have profound mental health consequences. Early assistance can help.</p>
+                <p>That's why New York City extends a universal offer of support to all people harmed by crime, violence and abuse. Victim advocates are available to help you get mental health assistance, navigate the legal system, and find ways to feel safe again. Contact your advocate today.</p>
+              </section>
+            </div>
+          </div>
+        </article>
+        <div class="mobile:pt-5 tablet:pt-12 pb-6">
+          <a class="back-to-top bg-color-blue-light hover:bg-color-blue no-underline" data-js="back-to-top" href="#main" id="myBtn" title="Back To Top">Back To Top</a>
+        </div>
       </main>
       <footer class="o-footer" role="contentinfo">
         <div class="o-container flex flex-wrap">
@@ -116,10 +145,10 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns-framework@v1.0.0-15/dist/utilities/icons/icons.iffe.js"></script>
   <script type="text/javascript">
-    new GUNYC();
-    // new Icons('svg/svgs.svg');
+    var gunyc = new GUNYC();
+    gunyc.icons('https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/svg/icons.svg');
+    gunyc.accordion();
   </script>
   <script src="/reload/reload.js"></script>
 </body>

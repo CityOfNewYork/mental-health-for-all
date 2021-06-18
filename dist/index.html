@@ -8,7 +8,7 @@
   <meta content="telephone=no" name="format-detection" />
   <meta content="yes" name="mobile-web-app-capable" />
   <title>Mental Health for All</title>
-  <link href="/css/default.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/styles/site-default.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -191,10 +191,10 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyco-patterns-framework@v1.0.0-15/dist/utilities/icons/icons.iffe.js"></script>
   <script type="text/javascript">
-    new GUNYC();
-    // new Icons('svg/svgs.svg');
+    var gunyc = new GUNYC();
+    gunyc.icons('https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/svg/icons.svg');
+    gunyc.accordion();
   </script>
   <script src="/reload/reload.js"></script>
 </body>

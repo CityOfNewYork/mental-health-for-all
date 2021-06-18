@@ -1,0 +1,36 @@
+= extend('/slm/layouts/default')
+
+- title = 'Trauma Support | Programs | Mental Health for All'
+
+= content('main')
+  div class="js-parallax"
+    header class="c-hero c-hero--large c-hero--long-text js-parallax-content" style="background-color: #469BFF"
+      div class="o-container js-parallax-text"
+        h1 class="c-hero__title c-hero__title--long"
+          span class="c-hero__sticker sticker"
+            svg aria-hidden="true" class="icon--medium"
+              use xlink:href="#icon-"
+
+          | Trauma Support
+
+        p class="c-hero__tagline desktop:w-6/12"
+          | government agency
+
+        p class="c-hero__tags"
+          a href="#" class="button--pill" term.name
+
+          a href="#" class="button--pill" term.name
+
+  article class="o-container u-bottom-spacing-small js-sticky-container desktop:flex"
+    div class="o-article js-sticky-article desktop:w-article m-auto"
+      div class="o-content-container--compact"
+        section class="o-content-container--text s-wysiwyg u-top-spacing" data-id="section-summary"
+          p Experiencing any kind of crime, violence or abuse can have profound mental health consequences. Early assistance can help.
+
+          p That's why New York City extends a universal offer of support to all people harmed by crime, violence and abuse. Victim advocates are available to help you get mental health assistance, navigate the legal system, and find ways to feel safe again. Contact your advocate today.
+
+  div class='mobile:pt-5 tablet:pt-12 pb-6'
+    a href='#main' class='back-to-top bg-color-blue-light hover:bg-color-blue no-underline' id='myBtn' data-js='back-to-top' title='Back To Top'
+      | Back To Top
+
+= content('scripts')

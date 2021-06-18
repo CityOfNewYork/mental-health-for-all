@@ -95,7 +95,8 @@
 
                   a href='#' class='button--pill' v{ term.name }
 
-        / {% block after_list %}
-        / {% endblock %}
+      div class='mobile:pt-5 tablet:pt-12 pb-6'
+        a href='#main' class='back-to-top bg-color-blue-light hover:bg-color-blue no-underline' id='myBtn' data-js='back-to-top' title='Back To Top'
+          | Back To Top
 
 = content('scripts')
