@@ -8,10 +8,10 @@ header class='o-navigation'
     nav class='o-navigation__nav' role='navigation' aria-label='Primary'
       ul class='o-inline'
         li class='o-inline__item'
-          a href='#' class='o-navigation__nav-link' Navigation Item
+          a href='/programs/index' class='o-navigation__nav-link' Mental Health Services
 
         li class='o-inline__item'
-          a href='#ages' data-js='offcanvas-ages' data-toggle='offcanvas-ages' class='o-navigation__nav-link' Ages
+          a href='#ages' data-js='offcanvas-ages' data-toggle='offcanvas-ages' class='o-navigation__nav-link' About
 
         / {% if function('Search\\visible') %}
         /   li class='o-inline__item'

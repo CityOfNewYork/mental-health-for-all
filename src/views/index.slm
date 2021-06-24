@@ -3,20 +3,20 @@
 - title = 'Mental Health for All'
 
 = content('main')
-  section class='o-static-column o-static-column--left c-side-hero js-static'
-    div class='c-side-hero__image'
+  section class='o-static-column o-static-column--left c-side-hero js-static bg-toddler--primary'
+    div class='c-side-hero__image bg-toddler--primary'
 
     div class='c-side-hero__content'
       h1 class='c-side-hero__title'
         / {{post.get_field('hero_title_top')}}
-
+        | Mental Health for All
         div class='c-side-hero__title__large rotating-text'
           span data-js='rotate-text' class='rotating-text__entry'
             | Mental for Health for All
 
           span data-js='rotate-controller' id='rotate' class='animated'
 
-      a href='{{post.get_field('hero_button_url')}}' class='button--outline button--outline--white' Link
+      / a href='{{post.get_field('hero_button_url')}}' class='button--outline button--outline--white' Link
 
   section class='o-scroll-column o-scroll-column--right'
     == this.include('/slm/partials/components/list-box/list-box.slm');
@@ -25,13 +25,19 @@
       h2 Featured Programs
 
       div class='c-block-list__inner'
-        div class='c-block-list__item'
-          == this.include('/slm/partials/components/card/card.slm');
+        - featuredServices = this.services.filter(p => p.featured)
+        - for (let i in featuredServices)
+          - card = featuredServices[i]
+          / - card.class = 'h-full'
 
-        div class='c-block-list__item'
-          == this.include('/slm/partials/components/card/card.slm');
+          div class='c-block-list__item'
+            == this.include('/slm/partials/components/card/card.slm');
+
+        / div class='c-block-list__item'
+        /   == this.include('/slm/partials/components/card/card.slm');
 
       div class='text-center'
         a href='{{programs_link}}' class='button--outline button--outline--gray' See all programs
 
 = content('scripts')
+  javascript:

@@ -71846,3 +71846,7 @@ p+p{
     animation:bounce 1s infinite!important
   }
 }
+
+.o-navigation__logo{
+  background-image:"url(https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@1.0.1/dist/images/logo-color2@150px.png)"
+}

@@ -1,0 +1,96 @@
+= extend("/slm/layouts/default")
+
+- title = "Crisis Support | Programs | Mental Health for All"
+
+= content("main")
+  div class="js-parallax"
+    header class="c-hero c-hero--large c-hero--long-text js-parallax-content bg-toddler--primary"
+      div class="o-container js-parallax-text"
+        h1 class="c-hero__title c-hero__title--long"
+          | Crisis Support
+
+        p class="c-hero__tagline desktop:w-6/12"
+          | ThriveNYC | NYC Well
+
+        p class="c-hero__tags"
+          a href="#" class="button--pill" Crisis Support
+
+  article class="o-container u-bottom-spacing-small js-sticky-container desktop:flex"
+    div class="o-article-sidebar desktop:w-sidebar"
+      div class="o-content-container--compact u-shift-up"
+        ol class="c-nav-list js-sticky js-section-set o-sticky-nav" style=("width: 357px;")
+          li class="c-nav-list__item"
+            a class="scroll js-section c-nav-list__link bg-toddler--secondary" data-section="section-eligibility" href="#section-eligibility"
+              | What to know
+              svg class="icon--caret" aria-hidden="true"
+                use xlink:href="#icon-caret-right"
+          li class="c-nav-list__item"
+            a class="scroll js-section c-nav-list__link bg-toddler--secondary" data-section="section-call-to-action" href="#section-call-to-action"
+              | How to get Help?
+              svg class="icon--caret" aria-hidden="true"
+                use xlink:href="#icon-caret-right"
+          li class="c-nav-list__item"
+            a class="scroll js-section c-nav-list__link bg-toddler--secondary" data-section="section-help" href="#section-help"
+              | Other ways to get help
+              svg class="icon--caret" aria-hidden="true"
+                use xlink:href="#icon-caret-right"
+    div class="o-article js-sticky-article desktop:w-article m-auto"
+      div class="o-content-container--compact"
+        section id="section-eligibility" class="o-content-container--text s-wysiwyg u-top-spacing u-bottom-spacing-small" tabindex="-1"
+          h2 id="section-call-to-action" tabindex="-1"  Support during a crisis
+          p In New York City, support is always available in the most difficult of moments. Talk to an NYC Well counselor; it’s free, confidential, and available 24/7. Additionally, mobile crisis teams staffed by health professionals, can offer support to an individual in crisis in their home.
+          p Mobile crisis teams offer a range of services, including:
+          .list-unordered--check
+            ul
+              li Assessment
+              li Crisis intervention
+              li Supportive counseling
+              li Information and referrals, including to community-based mental health services
+          p Request help from a mobile crisis team if a family member, friend, or acquaintance is experiencing (or at risk of) a psychological crisis. You can also request a team for yourself.
+
+        section class="o-content-container--text s-wysiwyg u-bottom-spacing-small" data-id="section-call-to-action"
+          h2 id="section-call-to-action" tabindex="-1"  How to get Help?
+          .layout--three-columns.bg-color-gray-light.text-center
+            div class='c-card m-0 pr-6 flex'
+              h3 class='c-card__subtitle'
+                strong
+                  == 'Talk to a counselor or request a mobile crisis team'
+
+              div class="c-card__subtitle"
+                p
+                  strong
+                    == "1-888-NYC-WELL (1-888-692-9355)"
+                p
+                  == "Available 24 hours a day, 7 days a week"
+
+          .layout--three-columns.bg-color-gray-light.text-center
+            div class='c-card m-0 pr-6 flex'
+              h3 class='c-card__subtitle'
+                strong
+                  == 'Text a counselor'
+
+              div class="c-card__subtitle"
+                p
+                  strong
+                    == "Text 'WELL' to 65173"
+
+          .layout--three-columns.bg-color-gray-light.text-center
+             div class='c-card m-0 pr-6 flex'
+              h3 class='c-card__subtitle'
+                strong
+                  == 'Chat with a counselor online'
+
+              div class="c-card__subtitle"
+                p
+                  strong
+                    == "Go to nyc.gov/nycwell"
+        section id="section-eligibility" class="o-content-container--text s-wysiwyg u-bottom-spacing-small" tabindex="-1"
+          h2 Other ways to get help
+          p Visit NYC Well to learn more about who to call during a crisis.Learn more about the City's services for people in crisis and how to request support here: https://www1.nyc.gov/site/doh/health/health-topics/crisis-emergency-services-mobile-crisis-teams.page
+
+
+  div class="mobile:pt-5 tablet:pt-12 pb-6"
+    a href="#main" class="back-to-top bg-color-blue-light hover:bg-color-blue no-underline" id="myBtn" data-js="back-to-top" title="Back To Top"
+      | Back To Top
+
+= content("scripts")

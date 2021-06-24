@@ -1,15 +1,43 @@
-div class='c-card flex'
-  a href='#'
-    div class='c-card__sticker sticker' aria-hidden='true' Sticker
+/ Card
 
-  div class='c-card__subtitle' Card Subtitle
+/ Defaults
+- this.card = {}
+- this.color = ''
+
+/ Inherit overrides
+- if (typeof card !== 'undefined')
+  - this.card = Object.assign(this.card, card);
+
+div class='c-card flex'
 
   h3 class='c-card__title'
-    a href='#' title='{{ Post Title }}' rel='bookmark' {{ Post Title }}
+    - if this.card.title
+      a href='${this.card.link}' title='{{ Post Title }}' rel='bookmark'
+        == this.card.title
 
-  p class='c-card__label' {{ Card Label }}
+  div class="c-card__subtitle"
+    - if this.card.subtitle
+    p
+      strong
+        == this.card.subtitle
+    - if this.card.programProvider
+    p
+      == this.card.programProvider
 
-  div class='c-card__body' {{ Card Body }}
+  div class='c-card__body'
+    -if this.card.body
+      == this.card.body
 
-  div class='c-card__tags order-last'
-    a href='#' class='button--pill' {{ term.name }}
+  - if this.card.category.length > 0
+    div class='c-card__tags order-last'
+      - for (let i in this.card.category)
+
+        - if this.card.category[i] == 'Crisis Support'
+          - this.color = 'bg-toddler--primary'
+        - else if this.card.category[i] == 'Help With Anxiety'
+          - this.color = 'bg-pre-schooler--primary'
+        - else
+          - this.color = 'button--pill--alt'
+
+        a href='#' class='button--pill ${this.color}'
+          == this.card.category[i]

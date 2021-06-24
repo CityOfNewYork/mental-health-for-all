@@ -47,6 +47,7 @@ html lang='en' class='no-js'
       gunyc.icons('https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/svg/icons.svg');
       gunyc.accordion();
 
+
     = content('scripts')
 
     / The reload script. This should not be compile during production builds
