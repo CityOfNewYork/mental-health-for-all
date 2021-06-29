@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Categories",
+    "slug": "cat",
+    "programs": [
+      {
+        "id": 1,
+        "name": "Trauma Support",
+        "slug": "trauma-support"
+      },
+      {
+        "id": 2,
+        "name": "Veterans",
+        "slug": "veterans"
+      },
+      {
+        "id": 3,
+        "name": "Children and Families",
+        "slug": "children-and-families"
+      },
+      {
+        "id": 4,
+        "name": "LGBTQ New Yorkers",
+        "slug": "lgntq-new-yorkers"
+      },
+      {
+        "id": 5,
+        "name": "Care for Serious Mental Illness",
+        "slug": "care-for-serious-mental-illness"
+      },
+      {
+        "id": 6,
+        "name": "Crisis Support",
+        "slug": "crisis-support"
+      },
+      {
+        "id": 7,
+        "name": "Aging New Yorkers",
+        "slug": "aging-new-yorkers"
+      },
+      {
+        "id": 8,
+        "name": "Grief Support",
+        "slug": "grief-support"
+      },
+      {
+        "id": 9,
+        "name": "Help with Anxiety",
+        "slug": "help-with-anxiety"
+      },
+      {
+        "id": 10,
+        "name": "Substance Use Services",
+        "slug": "substance-use-services"
+      }
+    ]
+  }
+]

@@ -30,8 +30,16 @@ $ npm start
 
 ### JavaScript Enhancements to Integrate
 
-* [ ] Google Translate Element (need to pull example from one of our sites)
-* [ ] Web Share Component (available in the Patterns Scripts library)
+* [ ] Google Translate Element (need to pull example from [one of our sites, ACCESS?](https://github.com/CityOfNewYork/ACCESS-NYC/blob/main/wp-content/themes/access/src/js/modules/google-translate-element.js))
+* [ ] Web Share Component (available in the [Patterns Scripts library](https://github.com/CityOfNewYork/patterns-scripts/tree/main/src/web-share))
+
+### v0.0.0-5
+
+Implemented of [NYCO WP Archive Vue](https://github.com/CityOfNewYork/nyco-wp-archive-vue) application for filtering Services.
+
+### v0.0.0-4
+
+Implemented first round of content and design of Services.
 
 ### v0.0.0-3
 

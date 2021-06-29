@@ -8,7 +8,7 @@
 - if (typeof card !== 'undefined')
   - this.card = Object.assign(this.card, card);
 
-div class='c-card flex'
+div class='c-card flex mr-0'
 
   h3 class='c-card__title'
     - if this.card.title
@@ -39,5 +39,5 @@ div class='c-card flex'
         - else
           - this.color = 'button--pill--alt'
 
-        a href='#' class='button--pill ${this.color}'
+        a href='#' class='button--pill js-category ${this.color}'
           == this.card.category[i]

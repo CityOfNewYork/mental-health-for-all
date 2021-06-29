@@ -22,7 +22,7 @@
 
       / div class='alert'
       /   div class='o-container' Alert
-
+    div data-js="programs"
     section class='o-container u-bottom-spacing u-top-spacing-small desktop:flex'
       div class='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
         div class='c-list-box c-list-box--quaternary js-accordion' data-multiselectable='false'
@@ -52,7 +52,7 @@
               - card = this.services[i]
               / - card.class = 'h-full'
 
-              div class='c-block-list__item'
+              div class='c-block-list__item js-services-list'
                 == this.include('/slm/partials/components/card/card.slm');
 
       div class='mobile:pt-5 tablet:pt-12 pb-6'
@@ -60,4 +60,8 @@
           | Back To Top
 
 = content('scripts')
+  script src='/js/programs.js'
   javascript:
+    new Programs();
+
+

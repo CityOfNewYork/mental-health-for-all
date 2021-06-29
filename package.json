@@ -1,7 +1,7 @@
 {
   "name": "@nycopportunity/mental-health-for-all",
   "nicename": "Mental Health for All",
-  "version": "0.0.0-4",
+  "version": "0.0.0-5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,9 +22,14 @@
   },
   "homepage": "https://github.com/CityOfNewYork/mhfa#readme",
   "dependencies": {
-    "@nycopportunity/growingup-patterns": "file:../growingupnyc-patterns"
+    "@nycopportunity/growingup-patterns": "file:../growingupnyc-patterns",
+    "@nycopportunity/wp-archive-vue": "^1.2.0",
+    "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@nycopportunity/pttrn": "^1.0.6"
+    "@nycopportunity/pttrn": "^1.0.6",
+    "@rollup/plugin-json": "^4.1.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue-template-compiler": "^2.6.14"
   }
 }
