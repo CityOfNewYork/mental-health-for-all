@@ -13522,7 +13522,6 @@ var Programs = (function () {
            * @return  {Object}            Vue Instance
            */
           change: function(toChange) {
-            console.log('toChange:', toChange);
             this.$set(toChange.data, 'checked', !toChange.data.checked);
 
             this.click(toChange);
@@ -13584,20 +13583,45 @@ var Programs = (function () {
            * @return  {Array}  List of services
            */
           mockRequest: function() {
-            let filterdData;
-            if (this.query.cat || this.query.pop) {
-              filterdData = [...this.services].filter((service) => {
-                return (
-                  ((this.query.cat &&
-                    this.query.cat.includes(service.category.id)) ||
-                  (this.query.pop &&
-                    this.query.pop.includes(service.population.id)))
-                );
-              });
-            } else {
-              filterdData = [...this.services];
+            let filterdData = [...this.services];
+            if (this.query.cat && this.query.pop) {
+              if (this.query.cat.length === 0 && this.query.pop.length === 0) {
+                filterdData = [...this.services];
+              } else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
+                filterdData = [...this.services].filter((service) => {
+                  return (
+                    (this.query.cat.includes(service.category.id) &&
+                    this.query.pop.includes(service.population.id))
+                  );
+                });
+              } else if (
+                this.query.cat.length > 0 &&
+                this.query.pop.length === 0
+              ) {
+                filterdData = [...this.services].filter((service) => {
+                  return (this.query.cat.includes(service.category.id));
+                });
+              } else if (
+                this.query.pop.length > 0 &&
+                this.query.cat.length === 0
+              ) {
+                filterdData = [...this.services].filter((service) => {
+                  return (this.query.pop.includes(service.population.id));
+                });
+              }
+            } else if (this.query.cat && !this.query.pop) {
+              if (this.query.cat.length > 0) {
+                filterdData = [...this.services].filter((service) => {
+                  return (this.query.cat.includes(service.category.id));
+                });
+              }
+            } else if (this.query.pop && !this.query.cat) {
+              if (this.query.pop.length > 0) {
+                filterdData = [...this.services].filter((service) => {
+                  return (this.query.pop.includes(service.population.id));
+                });
+              }
             }
-
             return filterdData;
           },
 

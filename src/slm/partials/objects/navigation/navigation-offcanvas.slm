@@ -1,6 +1,6 @@
 header class='o-navigation'
   div class='o-container'
-    a href='/' class='o-navigation__logo-wrapper o-navigation__logo-wrapper-no-menu'
+    a href='/mhfa' class='o-navigation__logo-wrapper o-navigation__logo-wrapper-no-menu'
       span class='o-navigation__logo' Mental Health for All
 
     / {% include 'objects/language-switcher.twig' %}
@@ -8,10 +8,10 @@ header class='o-navigation'
     nav class='o-navigation__nav' role='navigation' aria-label='Primary'
       ul class='o-inline'
         li class='o-inline__item'
-          a href='/programs/index' class='o-navigation__nav-link' Mental Health Services
+          a href='/mhfa/programs/index' class='o-navigation__nav-link' Mental Health Services
 
         li class='o-inline__item'
-          a href='#ages' data-js='offcanvas-ages' data-toggle='offcanvas-ages' class='o-navigation__nav-link' About
+          a href='#' data-js='offcanvas-ages' data-toggle='offcanvas-ages' class='o-navigation__nav-link' About
 
         / {% if function('Search\\visible') %}
         /   li class='o-inline__item'
