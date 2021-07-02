@@ -3,7 +3,6 @@
 import Vue from 'vue/dist/vue.esm.browser';
 import ProgramsArchive from '../views/programs/archive.vue';
 import Services from '../../dist/data/services.json';
-
 /**
  * The class for the Programs Archive
  */
@@ -23,14 +22,25 @@ class Programs {
            *
            * @type {Array}
            */
-          services: Services,
-
+          services: Object.freeze(Services.map((obj) => Object.freeze(obj))),
           /**
            * This is our custom post type to query
            *
            * @type {String}
            */
           type: 'programs',
+
+          /**
+           * Initial query and current query used to request posts via the WP REST
+           * API. This JSON object maps directly to the URL query used by the WP
+           * REST API.
+           *
+           * @type {Object}
+           */
+          // query: {
+          //   page: 1,
+          //   per_page: 2,
+          // },
 
           /**
            * This is the endpoint list for terms and post requests
@@ -107,6 +117,7 @@ class Programs {
          * @return  {Object}            Vue Instance
          */
         change: function(toChange) {
+          console.log('toChange:', toChange);
           this.$set(toChange.data, 'checked', !toChange.data.checked);
 
           this.click(toChange);
@@ -128,9 +139,8 @@ class Programs {
           // Create a safe WP Query using permitted params
           let wpQuery = {};
 
-          Object.keys(query).map(p => {
-            if (this.params.includes(p))
-              wpQuery[p] = query[p];
+          Object.keys(query).map((p) => {
+            if (this.params.includes(p)) wpQuery[p] = query[p];
           });
 
           // Build the url query.
@@ -145,7 +155,7 @@ class Programs {
           this.$set(this.posts, query.page, {
             posts: [],
             query: Object.freeze(query),
-            show: (this.query.page >= query.page)
+            show: (this.query.page >= query.page),
           });
 
           /**
@@ -154,11 +164,11 @@ class Programs {
            *
            * @param   {Function}  resolve  The promise resolver
            */
-          return new Promise(resolve => {
+          return new Promise((resolve) => {
             resolve({
               ok: true,
               headers: new Headers(),
-              json: () => (this.mockRequest())
+              json: () => (this.mockRequest()),
             });
           });
         },
@@ -169,8 +179,51 @@ class Programs {
          * @return  {Array}  List of services
          */
         mockRequest: function() {
-          return this.services;
-        }
+          let filterdData;
+          if (this.query.cat || this.query.pop) {
+            filterdData = [...this.services].filter((service) => {
+              return (
+                ((this.query.cat &&
+                  this.query.cat.includes(service.category.id)) ||
+                (this.query.pop &&
+                  this.query.pop.includes(service.population.id)))
+              );
+            });
+          } else {
+            filterdData = [...this.services];
+          }
+
+          return filterdData;
+        },
+
+        /**
+         * Change string into slug,
+         * removes space and special characters,
+         * cahnge to lowercase
+         *
+         * @param  {string}  title  Program title
+         *
+         * @return {string}        Slugified version of the title string
+         */
+
+        slugify: function(string) {
+          const a =
+            'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
+          const b =
+            'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
+          const p = new RegExp(a.split('').join('|'), 'g');
+
+          return string
+            .toString()
+            .toLowerCase()
+            .replace(/\s+/g, '-') // Replace spaces with -
+            .replace(p, (c) => b.charAt(a.indexOf(c))) // Replace special characters
+            .replace(/&/g, '-and-') // Replace & with 'and'
+            .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+            .replace(/\-\-+/g, '-') // Replace multiple - with single -
+            .replace(/^-+/, '') // Trim - from start of text
+            .replace(/-+$/, ''); // Trim - from end of text
+        },
       },
 
       /**
@@ -185,9 +238,9 @@ class Programs {
         this.params.push('program-filter');
 
         // Initialize the application
-        this.getState()       // Get window.location.search (filtering history)
-          .queue()            // Queue up the first request
-          .fetch('terms')     // Get the terms from the 'terms' endpoint
+        this.getState() // Get window.location.search (filtering history)
+          .queue() // Queue up the first request
+          .fetch('terms') // Get the terms from the 'terms' endpoint
           .catch(this.error);
       },
     }).$mount('[data-js="programs"]');

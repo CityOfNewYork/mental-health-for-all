@@ -12550,6 +12550,10 @@ var Programs = (function () {
         })
         .then(this.wp)
         .catch(message => {
+          // eslint-disable-next-line no-undef
+          {
+            console.dir(message);
+          }
         });
       },
 
@@ -12786,6 +12790,10 @@ var Programs = (function () {
        * @param {Object} response  The error response
        */
       error: function(response) {
+        // eslint-disable-next-line no-undef
+        {
+          console.dir(response);
+        }
       },
 
       /**
@@ -12920,8 +12928,333 @@ var Programs = (function () {
   const __vue_script__ = __vue_component__$1;
 
   /* template */
-  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('main',[_c('h1',[_vm._v("WordPress Archive Vue")]),_vm._v(" "),_c('aside',[_c('h2',[_vm._v("Filters")]),_vm._v(" "),_vm._l((_vm.terms),function(term){return _c('details',{key:term.term_id},[_c('summary',[_vm._v(_vm._s(term.name))]),_vm._v(" "),_c('ul',[_c('li',[_c('button',{on:{"click":function($event){return _vm.toggle({ event: $event, data: { parent: term.slug } })}}},[_vm._v("\n            Toggle All\n          ")])]),_vm._v(" "),_vm._l((term.filters),function(filter){return _c('li',{key:filter.slug},[_c('label',{staticClass:"checkbox"},[_c('input',{attrs:{"type":"checkbox"},domProps:{"value":filter.slug,"checked":filter.checked},on:{"change":function($event){return _vm.change({ event: $event, data: filter })}}}),_vm._v(" "),_c('span',{domProps:{"innerHTML":_vm._s(filter.name)}},[_vm._v(_vm._s(filter.name))])])])})],2)])})],2),_vm._v(" "),_c('article',[_c('h2',[_vm._v("Posts")]),_vm._v(" "),_vm._l((_vm.posts),function(page){return _c('div',{key:("page-" + (_vm.posts.indexOf(page)))},[(page && page.show)?_c('div',[_c('h3',[_vm._v("Page "+_vm._s(_vm.posts.indexOf(page)))]),_vm._v(" "),_vm._l((page.posts),function(post){return _c('details',{key:post.id},[_c('summary',{domProps:{"innerHTML":_vm._s(post.title)}},[_vm._v("\n            "+_vm._s(post.title)+"\n          ")]),_vm._v(" "),_c('pre',[_vm._v(_vm._s(post))])])})],2):_vm._e()])}),_vm._v(" "),_c('p',[(_vm.next)?_c('button',{attrs:{"data-amount":"1"},on:{"click":_vm.paginate}},[_vm._v("\n        Load More Posts\n      ")]):_vm._e()])],2)])};
+  var __vue_render__ = function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c(
+      "section",
+      {
+        staticClass:
+          "o-container u-bottom-spacing u-top-spacing-small desktop:flex"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "c-list-box c-list-box--quaternary js-accordion o-accordion",
+                attrs: {
+                  "data-multiselectable": "false",
+                  role: "presentation",
+                  "aria-multiselectable": "false"
+                }
+              },
+              _vm._l(_vm.terms, function(term) {
+                return _c(
+                  "div",
+                  {
+                    key: term.term_id,
+                    staticClass: "c-list-box__item o-accordion__item"
+                  },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "c-list-box__heading o-accordion__header bg-toddler--secondary",
+                        attrs: {
+                          "data-js": "accordion",
+                          type: "button",
+                          "aria-controls": "aria-c-" + term.slug,
+                          "aria-expanded": "true"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n          " + _vm._s(term.name) + "\n          "
+                        ),
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "o-accordion__caret icon",
+                            attrs: { "aria-hidden": "true" }
+                          },
+                          [
+                            _c("use", {
+                              attrs: { "xlink:href": "#icon-caret-down" }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "ul",
+                      {
+                        attrs: {
+                          role: "region",
+                          "aria-hidden": "false",
+                          id: "aria-c-" + term.slug
+                        }
+                      },
+                      [
+                        _c(
+                          "li",
+                          {
+                            staticClass: "c-list-box__subitem bg-toddler--primary"
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                on: {
+                                  click: function($event) {
+                                    return _vm.toggle({
+                                      event: $event,
+                                      data: { parent: term.slug }
+                                    })
+                                  }
+                                }
+                              },
+                              [_vm._v("\n              Toggle All\n            ")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm._l(term.filters, function(filter) {
+                          return _c(
+                            "li",
+                            {
+                              key: filter.slug,
+                              staticClass:
+                                "c-list-box__subitem bg-toddler--primary"
+                            },
+                            [
+                              _c("label", { staticClass: "checkbox" }, [
+                                _c("input", {
+                                  staticClass: "checkbox__field",
+                                  attrs: { type: "checkbox" },
+                                  domProps: {
+                                    value: filter.slug,
+                                    checked: filter.checked
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.change({
+                                        event: $event,
+                                        data: filter
+                                      })
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "svg",
+                                  { staticClass: "checkbox__indicator" },
+                                  [
+                                    _c("use", {
+                                      attrs: { "xlink:href": "#icon-check" }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    domProps: { innerHTML: _vm._s(filter.name) }
+                                  },
+                                  [_vm._v(_vm._s(filter.name))]
+                                )
+                              ])
+                            ]
+                          )
+                        })
+                      ],
+                      2
+                    )
+                  ]
+                )
+              }),
+              0
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "o-article desktop:w-article" }, [
+          _c(
+            "section",
+            { staticClass: "c-block-list" },
+            _vm._l(_vm.posts, function(page) {
+              return _c("div", { key: "page-" + _vm.posts.indexOf(page) }, [
+                page && page.show
+                  ? _c("div", [
+                      _c("h3", [
+                        _vm._v("Page " + _vm._s(_vm.posts.indexOf(page)))
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "c-block-list--shade o-content-container u-sm-gutter"
+                        },
+                        _vm._l(page.posts, function(post) {
+                          return _c(
+                            "div",
+                            {
+                              key: post.id,
+                              staticClass: "c-block-list__item u-sm-gutter"
+                            },
+                            [
+                              _c("div", { staticClass: "c-card mr-0 flex" }, [
+                                _c("div", { staticClass: "c-card__title" }, [
+                                  _c(
+                                    "a",
+                                    {
+                                      attrs: {
+                                        href: _vm.slugify(post.title),
+                                        title: post.title,
+                                        rel: ""
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                    " +
+                                          _vm._s(post.title) +
+                                          "\n                  "
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "c-card__subtitle" }, [
+                                  _c("p", [
+                                    _c("strong", [_vm._v(_vm._s(post.subtitle))])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("p", [_vm._v(_vm._s(post.programProvider))])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "c-card__body" }, [
+                                  _vm._v(
+                                    "\n                  " +
+                                      _vm._s(post.body) +
+                                      "\n                "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "c-card__tags order-last" },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "button--pill js-category button--pill--alt",
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.change({
+                                              event: $event,
+                                              data: {
+                                                parent: "cat",
+                                                id: post.category.id
+                                              }
+                                            })
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                    " +
+                                            _vm._s(post.category.name) +
+                                            "\n                  "
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "a",
+                                      {
+                                        staticClass:
+                                          "button--pill js-category bg-pre-schooler--primary",
+                                        attrs: { href: "#" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                    " +
+                                            _vm._s(post.population.name) +
+                                            "\n                  "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "o-content-container--compact pagination mobile:flex justify-between"
+            },
+            [
+              _c("div", {
+                staticClass: "previous tablet:mr-3 mb-3 tablet:mb-0 text-center",
+                attrs: { id: "paginate" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "paginate text-center" }, [
+                _vm.next
+                  ? _c(
+                      "button",
+                      {
+                        staticClass:
+                          "button--outline button--outline--gray paginate",
+                        attrs: { "data-amount": "1" },
+                        on: { click: _vm.paginate }
+                      },
+                      [_vm._v("\n          Next\n        ")]
+                    )
+                  : _vm._e()
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("p", [
+            _vm.next
+              ? _c(
+                  "button",
+                  { attrs: { "data-amount": "1" }, on: { click: _vm.paginate } },
+                  [_vm._v("\n        Load More Posts\n      ")]
+                )
+              : _vm._e()
+          ])
+        ])
+      ]
+    )
+  };
   var __vue_staticRenderFns__ = [];
+  __vue_render__._withStripped = true;
 
     /* style */
     const __vue_inject_styles__ = undefined;
@@ -12974,34 +13307,14 @@ var Programs = (function () {
   		],
   		link: "/programs/crisis-support",
   		featured: true,
-  		category: [
-  			"Crisis Support"
-  		]
-  	},
-  	{
-  		subtitle: "NYC Well",
-  		title: "Support after you’ve lost a loved one.",
-  		programProvider: "ThriveNYC",
-  		body: "If you've lost someone you care about, you don't have to grieve alone. Talking about it can help, and affordable support is available.",
-  		CTA: [
-  			{
-  				title: "Talk to a counselor or request a mobile crisis team",
-  				action: "1-888-NYC-WELL (1-888-692-9355), Available 24 hours a day, 7 days a week"
-  			},
-  			{
-  				title: "Text a counselor",
-  				action: "Text 'WELL' to 65173"
-  			},
-  			{
-  				title: "Chat with a counselor online",
-  				action: "Go to nyc.gov/nycwell"
-  			}
-  		],
-  		link: "/programs/crisis-support",
-  		featured: false,
-  		category: [
-  			"Grief Support"
-  		]
+  		category: {
+  			id: 3,
+  			name: "Crisis Support"
+  		},
+  		population: {
+  			id: 1,
+  			name: "Veterans"
+  		}
   	},
   	{
   		subtitle: "Senior Mental Health",
@@ -13024,9 +13337,14 @@ var Programs = (function () {
   		],
   		link: "/programs/crisis-support",
   		featured: true,
-  		category: [
-  			"Aging New Yorkers"
-  		]
+  		category: {
+  			id: 5,
+  			name: "Help with Anxiety"
+  		},
+  		population: {
+  			id: 4,
+  			name: "Aging New Yorkers"
+  		}
   	},
   	{
   		subtitle: "NYC Well - Grief Support",
@@ -13049,9 +13367,14 @@ var Programs = (function () {
   		],
   		link: "/programs/crisis-support",
   		featured: false,
-  		category: [
-  			"Grief Support"
-  		]
+  		category: {
+  			id: 6,
+  			name: "Substance Use Services"
+  		},
+  		population: {
+  			id: 6,
+  			name: "Everyone"
+  		}
   	},
   	{
   		subtitle: "NYC Well",
@@ -13074,9 +13397,14 @@ var Programs = (function () {
   		],
   		link: "/programs/crisis-support",
   		featured: true,
-  		category: [
-  			"Help With Anxiety"
-  		]
+  		category: {
+  			id: 2,
+  			name: "Care for Serious Mental Illness"
+  		},
+  		population: {
+  			id: 5,
+  			name: "Students"
+  		}
   	}
   ];
 
@@ -13099,14 +13427,25 @@ var Programs = (function () {
              *
              * @type {Array}
              */
-            services: Services,
-
+            services: Object.freeze(Services.map((obj) => Object.freeze(obj))),
             /**
              * This is our custom post type to query
              *
              * @type {String}
              */
             type: 'programs',
+
+            /**
+             * Initial query and current query used to request posts via the WP REST
+             * API. This JSON object maps directly to the URL query used by the WP
+             * REST API.
+             *
+             * @type {Object}
+             */
+            // query: {
+            //   page: 1,
+            //   per_page: 2,
+            // },
 
             /**
              * This is the endpoint list for terms and post requests
@@ -13183,6 +13522,7 @@ var Programs = (function () {
            * @return  {Object}            Vue Instance
            */
           change: function(toChange) {
+            console.log('toChange:', toChange);
             this.$set(toChange.data, 'checked', !toChange.data.checked);
 
             this.click(toChange);
@@ -13204,9 +13544,8 @@ var Programs = (function () {
             // Create a safe WP Query using permitted params
             let wpQuery = {};
 
-            Object.keys(query).map(p => {
-              if (this.params.includes(p))
-                wpQuery[p] = query[p];
+            Object.keys(query).map((p) => {
+              if (this.params.includes(p)) wpQuery[p] = query[p];
             });
 
             // Build the url query.
@@ -13221,7 +13560,7 @@ var Programs = (function () {
             this.$set(this.posts, query.page, {
               posts: [],
               query: Object.freeze(query),
-              show: (this.query.page >= query.page)
+              show: (this.query.page >= query.page),
             });
 
             /**
@@ -13230,11 +13569,11 @@ var Programs = (function () {
              *
              * @param   {Function}  resolve  The promise resolver
              */
-            return new Promise(resolve => {
+            return new Promise((resolve) => {
               resolve({
                 ok: true,
                 headers: new Headers(),
-                json: () => (this.mockRequest())
+                json: () => (this.mockRequest()),
               });
             });
           },
@@ -13245,8 +13584,51 @@ var Programs = (function () {
            * @return  {Array}  List of services
            */
           mockRequest: function() {
-            return this.services;
-          }
+            let filterdData;
+            if (this.query.cat || this.query.pop) {
+              filterdData = [...this.services].filter((service) => {
+                return (
+                  ((this.query.cat &&
+                    this.query.cat.includes(service.category.id)) ||
+                  (this.query.pop &&
+                    this.query.pop.includes(service.population.id)))
+                );
+              });
+            } else {
+              filterdData = [...this.services];
+            }
+
+            return filterdData;
+          },
+
+          /**
+           * Change string into slug,
+           * removes space and special characters,
+           * cahnge to lowercase
+           *
+           * @param  {string}  title  Program title
+           *
+           * @return {string}        Slugified version of the title string
+           */
+
+          slugify: function(string) {
+            const a =
+              'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
+            const b =
+              'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
+            const p = new RegExp(a.split('').join('|'), 'g');
+
+            return string
+              .toString()
+              .toLowerCase()
+              .replace(/\s+/g, '-') // Replace spaces with -
+              .replace(p, (c) => b.charAt(a.indexOf(c))) // Replace special characters
+              .replace(/&/g, '-and-') // Replace & with 'and'
+              .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+              .replace(/\-\-+/g, '-') // Replace multiple - with single -
+              .replace(/^-+/, '') // Trim - from start of text
+              .replace(/-+$/, ''); // Trim - from end of text
+          },
         },
 
         /**
@@ -13261,9 +13643,9 @@ var Programs = (function () {
           this.params.push('program-filter');
 
           // Initialize the application
-          this.getState()       // Get window.location.search (filtering history)
-            .queue()            // Queue up the first request
-            .fetch('terms')     // Get the terms from the 'terms' endpoint
+          this.getState() // Get window.location.search (filtering history)
+            .queue() // Queue up the first request
+            .fetch('terms') // Get the terms from the 'terms' endpoint
             .catch(this.error);
         },
       }).$mount('[data-js="programs"]');

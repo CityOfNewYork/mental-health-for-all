@@ -17,44 +17,9 @@
           h1 class='c-hero__title' Mental Health Services
 
           div class='c-hero__tagline desktop:w-6/12 pt-2' Find resources for yourself or someone you know who need support with their mental health
-
-
-
       / div class='alert'
       /   div class='o-container' Alert
     div data-js="programs"
-    section class='o-container u-bottom-spacing u-top-spacing-small desktop:flex'
-      div class='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
-        div class='c-list-box c-list-box--quaternary js-accordion' data-multiselectable='false'
-          div class='c-list-box__item'
-            h3 class='js-accordion__header c-list-box__heading bg-toddler--secondary' id='type-filter-heading' Filters
-
-            ul class='js-accordion__content c-list-box__content' id='type-filter-panel'
-              - for (let i in this.programs)
-                - program = this.programs[i]
-
-                li class='c-list-box__subitem bg-toddler--primary'
-                  label class='checkbox'
-                    input type='checkbox' class='checkbox__field' name='program' value='${program}'
-
-                    svg class='checkbox__indicator'
-                      use xlink:href='#icon-check'
-                    == program
-
-      div class='o-article desktop:w-article'
-        section class="c-block-list"
-          div class="c-block-list--blue o-content-container u-sm-gutter loader"
-            a href="#programs-loaded" class="button--outline button--outline--white aligncenter"
-              | {{ __('See', 'guny') }} v{ totalResults } {{ __('programs', 'guny') }}
-
-          div class='c-block-list--shade o-content-container u-sm-gutter'
-            - for (let i in this.services)
-              - card = this.services[i]
-              / - card.class = 'h-full'
-
-              div class='c-block-list__item js-services-list'
-                == this.include('/slm/partials/components/card/card.slm');
-
       div class='mobile:pt-5 tablet:pt-12 pb-6'
         a href='#main' class='back-to-top bg-color-blue-light hover:bg-color-blue no-underline' id='myBtn' data-js='back-to-top' title='Back To Top'
           | Back To Top
