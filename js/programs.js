@@ -13125,7 +13125,7 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              terms: '/data/terms.json',
+              terms: 'https://cityofnewyork.github.io/mhfa/data/terms.json',
 
               /**
                * A required endpoint for the list of services. This is based on
@@ -13133,7 +13133,7 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              programs: '/data/services.json',
+              programs: 'https://cityofnewyork.github.io/mhfa/data/services.json',
             },
 
             /**
