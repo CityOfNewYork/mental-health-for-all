@@ -14,7 +14,8 @@
     div class='js-parallax'
       header class='c-hero js-parallax-content bg-toddler--primary'
         div class='o-container js-parallax-text'
-          h1 class='c-hero__title' Mental Health Services
+          h1 class='c-hero__title'
+
 
           div class='c-hero__tagline desktop:w-6/12 pt-2' Find resources for yourself or someone you know who need support with their mental health
       / div class='alert'

@@ -40,7 +40,7 @@ html lang='en' class='no-js'
         == this.include('/slm/partials/objects/banner/banner.slm');
 
     script src='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js'
-    script src='/js/default.js'
+    script src='${this.root}/js/default.js'
 
     javascript:
       var gunyc = new Default();
