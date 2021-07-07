@@ -42,7 +42,7 @@
       <section class="c-block-list">
       <div v-for="page in posts" :key="`page-${posts.indexOf(page)}`" >
         <div v-if="page && page.show" >
-          <h3>Page {{ posts.indexOf(page) }}</h3>
+          <!-- <h3>Page {{ posts.indexOf(page) }}</h3> -->
             <div class="c-block-list--shade o-content-container u-sm-gutter">
               <div v-for="post in page.posts" :key="post.id" class="c-block-list__item u-sm-gutter">
                 <div class="c-card mr-0 flex">

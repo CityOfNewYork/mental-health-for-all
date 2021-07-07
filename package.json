@@ -8,7 +8,7 @@
     "start": "cross-env NODE_ENV=development concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
     "version": "npm run default && git add .",
     "default": "cross-env NODE_ENV=production pttrn",
-    "ghpages": "default && cross-env NODE_ENV=production pttrn publish"
+    "ghpages": "npm run default && cross-env NODE_ENV=production pttrn publish"
   },
   "repository": {
     "type": "git",

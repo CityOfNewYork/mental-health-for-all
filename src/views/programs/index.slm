@@ -26,7 +26,7 @@
           | Back To Top
 
 = content('scripts')
-  script src='/js/programs.js'
+  script src='${this.root}/js/programs.js'
   javascript:
     new Programs();
 
