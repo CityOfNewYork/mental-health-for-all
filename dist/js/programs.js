@@ -13132,10 +13132,6 @@ var Programs = (function () {
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "c-card__subtitle" }, [
-                                  _c("p", [
-                                    _c("strong", [_vm._v(_vm._s(post.subtitle))])
-                                  ]),
-                                  _vm._v(" "),
                                   _c("p", [_vm._v(_vm._s(post.programProvider))])
                                 ]),
                                 _vm._v(" "),
@@ -13294,15 +13290,15 @@ var Programs = (function () {
   			name: "Crisis Support"
   		},
   		population: {
-  			id: 1,
-  			name: "Veterans"
+  			id: 6,
+  			name: "Everyone"
   		}
   	},
   	{
-  		subtitle: "Senior Mental Health",
-  		title: "Mental health support for older adults",
-  		programProvider: "NYC Department of the Aging",
-  		body: "If you’re an older adult feeling isolated or lonely, experiencing depression or anxiety, or just looking to talk to someone, you can get support – including group and individual counseling – through your neighborhood older adult center.",
+  		subtitle: "Free short-term counseling",
+  		title: "NYC Well",
+  		programProvider: "ThriveNYC",
+  		body: "Free short-term counseling",
   		link: "/programs/crisis-support",
   		featured: true,
   		category: {
@@ -13310,20 +13306,20 @@ var Programs = (function () {
   			name: "Help with Anxiety"
   		},
   		population: {
-  			id: 4,
-  			name: "Aging New Yorkers"
+  			id: 6,
+  			name: "Everyone"
   		}
   	},
   	{
   		subtitle: "NYC Well - Grief Support",
-  		title: "Talk to someone after the death of a loved one",
+  		title: "The Crime Victim Assistance Program (CVAP)",
   		programProvider: "NYC Thrive",
-  		body: "If you’ve lost someone you care about, you don’t have to grieve alone. Talking about it can help, and affordable support is available.",
+  		body: "Mental health support for victims of domestic violence and other crimes",
   		link: "/programs/crisis-support",
   		featured: false,
   		category: {
   			id: 6,
-  			name: "Substance Use Services"
+  			name: "Trauma Support"
   		},
   		population: {
   			id: 6,

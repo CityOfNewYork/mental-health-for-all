@@ -63,7 +63,13 @@
               - for (let i in this.service.body.howToGetInTouch.content)
                 - this.card = this.service.body.howToGetInTouch.content[i]
                 div class="c-block-list__item"
-                  div class="c-card mr-0"
+                  div class="c-card mr-0 rounded-lg"
+                    div class="c-card__title"
+                      a href="mobile-crisis-teams" rel="" title=("Mobile crisis teams")
+                        div class="c-card__sticker sticker" aria-hidden="true"
+                          svg class='icon--large'
+                            use xlink:href='#icon-work'
+
                     div class='c-card__body'
                       == this.card
 

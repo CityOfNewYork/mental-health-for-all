@@ -16,28 +16,32 @@ div class='c-card flex mr-0'
         == this.card.title
 
   div class="c-card__subtitle"
-    - if this.card.subtitle
-    p
-      strong
-        == this.card.subtitle
+    / - if this.card.subtitle
+    / p
+    /   strong
+    /     == this.card.subtitle
     - if this.card.programProvider
     p
       == this.card.programProvider
 
   div class='c-card__body'
-    -if this.card.body
-      == this.card.body
+    -if this.card.subtitle
+      == this.card.subtitle
 
-  - if this.card.category.length > 0
     div class='c-card__tags order-last'
-      - for (let i in this.card.category)
+    - if this.card.category.name
+      / - for (let i in this.card.category)
 
-        - if this.card.category[i] == 'Crisis Support'
-          - this.color = 'bg-toddler--primary'
-        - else if this.card.category[i] == 'Help With Anxiety'
-          - this.color = 'bg-pre-schooler--primary'
-        - else
-          - this.color = 'button--pill--alt'
+      - if this.card.category.name == 'Crisis Support'
+        - this.color = 'bg-toddler--primary'
+      - else if this.card.category.name== 'Help With Anxiety'
+        - this.color = 'bg-pre-schooler--primary'
+      - else
+        - this.color = 'button--pill--alt'
 
-        a href='#' class='button--pill js-category ${this.color}'
-          == this.card.category[i]
+      a href='/mhfa/programs/index.html' class='button--pill js-category ${this.color}'
+        == this.card.category.name
+
+    - if this.card.population.name
+      a href='/mhfa/programs/index.html' class='button--pill js-category button--pill--alt'
+        == this.card.population.name

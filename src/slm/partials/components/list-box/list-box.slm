@@ -1,26 +1,13 @@
 ol class='js-accordion c-list-box c-list-box--primary' data-multiselectable='true'
   li class='c-list-box__item'
     h3 class='js-accordion__header c-list-box__heading bg-toddler--secondary' id='homepage-ages-heading-'
-      | Group Name
+      | Get Immediate Help
 
-      span class='c-list-box__subheading' Group Description
-
-    ol class='js-accordion__content c-list-box__content bg-toddler--primary' id='homepage-ages-panel-'
-      li class='c-list-box__subitem'
-        a href='#' class='button--full-width button--primary' Post Title
-
-      li class='c-list-box__subitem'
-        a href='#' class='button--full-width button--primary' Post Title
-
-  li class='c-list-box__item'
-    h3 class='js-accordion__header c-list-box__heading bg-toddler--secondary' id='homepage-ages-heading-'
-      | Group Name
-
-      span class='c-list-box__subheading' Group Description
+      span class='c-list-box__subheading' The hotlines below are free, confidential, and available 24/7
 
     ol class='js-accordion__content c-list-box__content bg-toddler--primary' id='homepage-ages-panel-'
       li class='c-list-box__subitem'
-        a href='#' class='button--full-width button--primary' Post Title
+        a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary' Speak to a counselor from NYC Well
 
       li class='c-list-box__subitem'
-        a href='#' class='button--full-width button--primary' Post Title
+        a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary' National Suicide Prevention Lifeline

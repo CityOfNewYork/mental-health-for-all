@@ -90,7 +90,7 @@ module.exports = {
           `,
         },
       },
-      link: './mhfa/programs/support-during-a-crisis',
+      link: './programs/support-during-a-crisis',
       featured: true,
       category: {
         id: 3,
@@ -202,7 +202,7 @@ module.exports = {
           `,
         },
       },
-      link: './mhfa/programs/support-during-a-crisis',
+      link: './programs/support-during-a-crisis',
       featured: true,
       category: {
         id: 3,
@@ -315,7 +315,7 @@ module.exports = {
           `,
         },
       },
-      link: './mhfa/programs/the-crime-victim-assistance-program-cvap',
+      link: './programs/the-crime-victim-assistance-program-cvap',
       featured: true,
       category: {
         id: 3,

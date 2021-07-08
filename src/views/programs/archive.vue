@@ -52,7 +52,7 @@
                     </a>
                   </div>
                   <div class="c-card__subtitle">
-                    <p><strong>{{ post.subtitle }}</strong></p>
+                    <!-- <p><strong>{{ post.subtitle }}</strong></p> -->
                     <p>{{ post.programProvider }}</p>
                   </div>
                   <div class="c-card__body">

@@ -22,7 +22,7 @@
     == this.include('/slm/partials/components/list-box/list-box.slm');
 
     div class='c-block-list c-block-list--shade o-content-container'
-      h2 Featured Programs
+      h2 Featured Services
 
       div class='c-block-list__inner'
         - featuredServices = this.services.filter(p => p.featured)
@@ -37,7 +37,7 @@
         /   == this.include('/slm/partials/components/card/card.slm');
 
       div class='text-center'
-        a href='{{programs_link}}' class='button--outline button--outline--gray' See all programs
+        a href='/mhfa/programs/index.html' class='button--outline button--outline--gray' See all services
 
 = content('scripts')
   javascript:
