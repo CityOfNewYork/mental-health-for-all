@@ -24,11 +24,13 @@
     "@nycopportunity/growingup-patterns": "file:../growingupnyc-patterns",
     "@nycopportunity/pttrn-scripts": "^1.0.5",
     "@nycopportunity/wp-archive-vue": "^1.2.0",
+    "animate.scss": "^0.0.6",
     "vue": "^2.6.14"
   },
   "devDependencies": {
     "@nycopportunity/pttrn": "^1.0.6",
     "@rollup/plugin-json": "^4.1.0",
+    "node-sass": "^6.0.1",
     "rollup-plugin-vue": "^5.1.9",
     "vue-template-compiler": "^2.6.14"
   }
