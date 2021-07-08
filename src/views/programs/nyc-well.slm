@@ -1,7 +1,7 @@
 = extend("/slm/layouts/default")
 
 - title = "Crisis Support | Programs | Mental Health for All"
-- this.service = this.services.find(service => service.title == 'Mobile crisis teams')
+- this.service = this.services.find(service => service.title == 'NYC Well')
 
 
 = content("main")
