@@ -19,7 +19,7 @@ html lang='en' class='no-js'
     / link rel='apple-touch-icon-precomposed' sizes='76x76' href='{{theme.path}}/assets/img/growningup-Icon-App-76x76@3x.png'
 
     / link rel='stylesheet' href='css/animate.css' type='text/css' media='screen'
-    link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/styles/site-default.css' type='text/css' media='screen'
+    link rel='stylesheet' href='${this.root}/css/default.css' type='text/css' media='screen'
 
     = content('head');
 
@@ -39,7 +39,7 @@ html lang='en' class='no-js'
 
         == this.include('/slm/partials/objects/banner/banner.slm');
 
-    script src='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js'
+    / script src='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js'
     script src='${this.root}/js/default.js'
 
     javascript:

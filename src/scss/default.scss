@@ -10,5 +10,6 @@
 
 // @forward 'imports' // with ($language: '');
 
-@forward 'imports';
+$language: '';
 
+@import 'imports';
