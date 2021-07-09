@@ -1,7 +1,7 @@
 $tokens:(
   version: 0.0.0-6,
   cdn: "https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@0.0.0-6/dist/",
-  output: "/Users/yonas/Documents/NYCOpportunity/mhfa/src/config/_tokens.scss",
+  output: "/Users/dehirth/envs/cityofnewyork/mhfa/src/config/_tokens.scss",
   fonts: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
     text-sans: ("Open Sans", sans-serif),
@@ -38,8 +38,8 @@ $tokens:(
     color-blue-light: #2793e0,
     color-blue: #0055b8,
     color-blue-mid: #184e9e,
-    color-blue-dark: #00326d,
-    color-red: #fb0000,
+    color-blue-dark: #2E4F91,
+    color-red: #FB5159,
     color-pink: #d8006d,
     color-pink-dark: #7f1c4e,
     color-green: #21ad0e,
@@ -50,12 +50,14 @@ $tokens:(
     color-light-green-light: #42D1B5,
     color-orange-light: #ffb900,
     color-orange-mid: #ff9d00,
-    color-orange: #ff6100,
+    color-orange: #FA660A,
     color-orange-dark: #bc3b09,
     color-orange-vroom: #F6901E,
-    color-purple: #7735b2,
-    color-purple-dark: #3c036f,
-    color-shadow: rgba(0, 0, 0, .2)
+    color-purple: #C1408B,
+    color-purple-dark: #9F2D71,
+    color-shadow: rgba(0, 0, 0, .2),
+    color-yellow: #FDB240,
+    color-yellow-light: #FED77C
   ),
   colors-default: (
     color-primary: color-blue-light,
@@ -168,5 +170,39 @@ $tokens:(
     timing: cubic-bezier(.23, 1, .32, 1)
   ),
   icons: (icon-afterschool-guides, icon-anytime-anywhere, icon-arrow-right, icon-at-an-appt, icon-at-the-park, icon-at-the-store, icon-bathtime, icon-bedtime, icon-baby, icon-book, icon-calendar, icon-caret-down, icon-caret-left, icon-caret-right, icon-caret-line-down, icon-caret-line-left, icon-caret-line-right, icon-caret-line-up, icon-chevron-down, icon-chevron-left, icon-chevron-right, icon-chevron-up, icon-cash-expenses, icon-check, icon-check-outlined, icon-child-care, icon-city-id-card, icon-cleaning-up, icon-clock-o, icon-close, icon-diaper-change, icon-education, icon-enrichment, icon-envelope-o, icon-family-services, icon-food, icon-getting-dressed, icon-grade-schooler, icon-health-care, icon-housing, icon-laundry, icon-lightbulb, icon-map-marker, icon-mealtime, icon-on-the-go, icon-people-with-disabilities, icon-playtime, icon-pre-schooler, icon-pre-teen, icon-recurring, icon-search, icon-sms, icon-star, icon-summer-guides, icon-teen, icon-toddler, icon-topic, icon-work, icon-young-adult),
-  logos: (logo-growingupnyc, logo-nyc-childrens-cabinet, logo-vroom, logo-vroom-ar, logo-vroom-bn, logo-vroom-es, logo-vroom-fr, logo-vroom-ht, logo-vroom-ko, logo-vroom-pl, logo-vroom-ru, logo-vroom-ur, logo-vroom-zh-hant)
+  logos: (logo-growingupnyc, logo-nyc-childrens-cabinet, logo-vroom, logo-vroom-ar, logo-vroom-bn, logo-vroom-es, logo-vroom-fr, logo-vroom-ht, logo-vroom-ko, logo-vroom-pl, logo-vroom-ru, logo-vroom-ur, logo-vroom-zh-hant),
+  populations: (
+    veterans: (
+      primary: #FA660A,
+      secondary: #FA660A
+    ),
+    children-and-youth: (
+      primary: #2E4F91,
+      secondary: #2E4F91
+    ),
+    lgbtq: (
+      primary: #C1408B,
+      secondary: #C1408B
+    ),
+    seniors: (
+      primary: #FB5159,
+      secondary: #FB5159
+    ),
+    immigrants: (
+      primary: #02A586,
+      secondary: #02A586
+    ),
+    everyone: (
+      primary: #21ad0e,
+      secondary: #21ad0e
+    ),
+    adults: (
+      primary: #51596b,
+      secondary: #51596b
+    ),
+    families: (
+      primary: #d8006d,
+      secondary: #d8006d
+    )
+  )
 );

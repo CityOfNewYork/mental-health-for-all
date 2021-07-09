@@ -9,6 +9,7 @@
     div class='c-side-hero__content'
       h1 class='c-side-hero__title'
         | Mental Health for All
+
         div class='c-side-hero__title__large rotating-text'
           span data-js='rotate-text' class='rotating-text__entry'
             | Mental for Health for All
@@ -16,31 +17,34 @@
           span data-js='rotate-controller' id='rotate' class='animated'
 
   section class='o-scroll-column o-scroll-column--right'
-    div clas="o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"
-      div class="c-list-box c-list-box--quaternary js-accordion o-accordion " aria-multiselectable="false" data-multiselectable="false" role="presentation"
-          div class="c-list-box__item o-accordion__item"
-            button data-js="accordion" type="button" aria-controls='aria-hotline' aria-expanded="false" class='c-list-box__heading o-accordion__header bg-toddler--secondary'
-              | Get Immediate Help
-              span class='c-list-box__subheading' The hotlines below are free, confidential, and available 24/7
+    div clas='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
+      div class='c-list-box c-list-box--quaternary o-accordion'
+        div class='c-list-box__item o-accordion__item'
+          div class='c-list-box__heading o-accordion__header bg-color-gray-light text-color-black'
+            | Get Immediate Help
 
-              svg.o-accordion__caret.icon aria-hidden="true"
-                use xlink:href="#icon-caret-down"
-            ul class='js-accordion__content c-list-box__content bg-toddler--primary' id='aria-hotline'
-              li class='c-list-box__subitem'
-                a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary' Speak to a counselor from NYC Well
+            span class='c-list-box__subheading' The hotlines below are free, confidential, and available 24/7
 
-              li class='c-list-box__subitem'
-                a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary' National Suicide Prevention Lifeline
+          ul class='c-list-box__content bg-color-gray-light text-color-black'
+            li class='c-list-box__subitem pb-0'
+              a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary' Speak to a counselor from NYC Well
 
-      div class="c-list-box c-list-box--quaternary js-accordion o-accordion " aria-multiselectable="false" data-multiselectable="false" role="presentation"
+            li class='c-list-box__subitem'
+              a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary' National Suicide Prevention Lifeline
+
+      div class='c-list-box c-list-box--quaternary js-accordion o-accordion pt-0' aria-multiselectable='true' data-multiselectable='true' role='presentation'
         - for (let i in this.population)
-          div class="c-list-box__item o-accordion__item"
-            button data-js="accordion" type="button" aria-controls='aria-${this.createSlug(this.population[i].name)}' aria-expanded="false" class='c-list-box__heading o-accordion__header bg-toddler--secondary'
+          - let slug = this.createSlug(this.population[i].name);
+
+          div class='c-list-box__item o-accordion__item'
+            button data-js='accordion' type='button' aria-controls='aria-${slug}' aria-expanded='false' class='c-list-box__heading o-accordion__header bg-${slug}--secondary'
               == this.population[i].name
-              svg.o-accordion__caret.icon aria-hidden="true"
-                use xlink:href="#icon-caret-down"
-            ul aria-hidden="false" role="region" id='aria-${this.createSlug(this.population[i].name)}' class="active hidden"
-              li.c-list-box__subitem.bg-toddler--primary
+
+              svg class='o-accordion__caret icon' aria-hidden='true'
+                use xlink:href='#icon-caret-down'
+
+            ul aria-hidden='false' role='region' id='aria-${slug}' class='hidden'
+              li class='c-list-box__subitem bg-${slug}--primary'
                 - filteredServices = this.services.filter(service => service.population.id === this.population[i].id)
                 - for (let i in filteredServices.slice(0, 2))
                   - card = filteredServices[i]
@@ -54,7 +58,5 @@
       div class='text-center py-5'
         a href='${this.root}/programs/index.html' class='button--outline button--outline--gray' See all services
 
-  javascript:
-
-
   = content('scripts')
+    javascript:

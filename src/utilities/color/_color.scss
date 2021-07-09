@@ -1,0 +1,78 @@
+/**
+ * Color
+ */
+
+// Dependencies
+@import 'config/tokens';
+// @use 'config/color';
+
+$populations: map-get($tokens, 'populations');
+
+// Declarations
+@each $key, $value in $populations {
+  $primary: map-get($value, 'primary');
+  $secondary: map-get($value, 'secondary');
+
+  .bg-#{$key}--primary,
+  .hover\:bg-#{$key}--primary:hover {
+    background-color: $primary !important;
+  }
+
+  .border-#{$key}--primary {
+    border-color: $primary !important;
+  }
+
+  .text-#{$key}--primary {
+    color: $primary;
+  }
+
+  button.bg-#{$key}--primary,
+  a.bg-#{$key}--primary {
+    transition: background-color 250ms linear;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      background-color: $secondary !important;
+      border-color: $secondary !important;
+      outline: none;
+    }
+  }
+
+  .bg-#{$key}--secondary,
+  .hover\:bg-#{$key}--secondary:hover {
+    background-color: $secondary !important;
+  }
+
+  .border-#{$key}--secondary {
+    border-color: $secondary !important;
+  }
+
+  .text-#{$key}--secondary {
+    color: $secondary;
+  }
+
+  button.bg-#{$key}--secondary,
+  a.bg-#{$key}--secondary {
+    &:hover,
+    &:focus,
+    &.is-active {
+      background-color: $primary !important;
+      border-color: $primary !important;
+      outline: none;
+    }
+  }
+
+  .svg-#{$key} {
+    .stop1 {
+      stop-color: $secondary;
+    }
+    .stop2 {
+      stop-color: $primary;
+    }
+  }
+
+  .gradient-#{$key} {
+    background-image: url('#{$cdn}#{$path-to-images}gradient-baby.png');
+  }
+}

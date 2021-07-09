@@ -2,12 +2,14 @@
 
 import Toggle from '@nycopportunity/pttrn-scripts/src/toggle/toggle';
 import Icons from '@nycopportunity/pttrn-scripts/src/icons/icons';
+
 class Default {
   constructor() {}
 
   toggle() {
     return new Toggle();
   }
+
   accordion() {
     return new Toggle({
       selector: '[data-js*="accordion"]',
@@ -16,12 +18,10 @@ class Default {
       },
     });
   }
+
   icons(path) {
     return new Icons(path);
   }
 }
-export default Default;
 
-// class Default {
-//   constructor() {}
-// }
+export default Default;

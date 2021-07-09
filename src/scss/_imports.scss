@@ -9,7 +9,7 @@
  * Fonts
  ********/
 
-@import '@nycopportunity/growingup-patterns/src/elements/fonts/fonts';
+@import 'elements/fonts/fonts';
 
 /***********************
  * External Dependencies
@@ -84,16 +84,13 @@
 @import '@nycopportunity/growingup-patterns/src/utilities/typography/typography';
 @import '@nycopportunity/growingup-patterns/src/utilities/offcanvas/offcanvas';
 @import '@nycopportunity/growingup-patterns/src/utilities/background-image/background-image';
-// @import '@nycopportunity/growingup-patterns/src/utilities/spacing/spacing';
 @import '@nycopportunity/growingup-patterns/src/utilities/sticky/sticky';
-@import '@nycopportunity/growingup-patterns/dist/styles/_tailwind.scss';
+
+@tailwind utilities;
+
 @import '@nycopportunity/growingup-patterns/src/utilities/form-effects/form-effects';
 @import '@nycopportunity/growingup-patterns/src/utilities/spacing/spacing';
 
-.o-navigation__logo {
-  background-image: "url(https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@1.0.1/dist/images/logo-color2@150px.png)";
-}
+@import 'utilities/color/color';
 
-.text-color-black-temp {
-  color: #000 !important;
-}
+@import 'site';
