@@ -209,7 +209,7 @@ module.exports = {
         name: 'Crisis Support',
       },
       population: {
-        id: 1,
+        id: 6,
         name: 'Everyone',
       },
     },
@@ -322,7 +322,7 @@ module.exports = {
         name: 'Trauma Support',
       },
       population: {
-        id: 1,
+        id: 6,
         name: 'Everyone',
       },
     },
@@ -347,28 +347,38 @@ module.exports = {
     },
     {
       id: 2,
-      name: 'Children and Families',
-      slug: 'children-and-families',
+      name: 'Children and Youth',
+      slug: 'children-and-youth',
     },
     {
       id: 3,
-      name: 'LGBTQ New Yorkers',
-      slug: 'lgntq-new-yorkers',
+      name: 'LGBTQ',
+      slug: 'lgbtq',
     },
     {
       id: 4,
-      name: 'Aging New Yorkers',
-      slug: 'aging-new-yorkers',
+      name: 'Seniors',
+      slug: 'seniors',
     },
     {
       id: 5,
-      name: 'Students',
-      slug: 'students',
+      name: 'Immigrants',
+      slug: 'immigrants',
     },
     {
       id: 6,
       name: 'Everyone',
       slug: 'everyone',
+    },
+    {
+      id: 7,
+      name: 'Adults',
+      slug: 'adults',
+    },
+    {
+      id: 8,
+      name: 'Families',
+      slug: 'families',
     },
   ],
 

@@ -12,8 +12,7 @@ class Default {
     return new Toggle({
       selector: '[data-js*="accordion"]',
       after: (toggle) => {
-        // toggle.element.parentNode.classList.toggle('is-expanded');
-        console.log('Accordion');
+        toggle.element.parentNode.classList.toggle('is-expanded');
       },
     });
   }
