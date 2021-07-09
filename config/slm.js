@@ -339,6 +339,38 @@ module.exports = {
     'Help with Anxiety',
     'Substance Use Services',
   ],
+  population: [
+    {
+      id: 1,
+      name: 'Veterans',
+      slug: 'veterans',
+    },
+    {
+      id: 2,
+      name: 'Children and Families',
+      slug: 'children-and-families',
+    },
+    {
+      id: 3,
+      name: 'LGBTQ New Yorkers',
+      slug: 'lgntq-new-yorkers',
+    },
+    {
+      id: 4,
+      name: 'Aging New Yorkers',
+      slug: 'aging-new-yorkers',
+    },
+    {
+      id: 5,
+      name: 'Students',
+      slug: 'students',
+    },
+    {
+      id: 6,
+      name: 'Everyone',
+      slug: 'everyone',
+    },
+  ],
 
   /**
    * Functions

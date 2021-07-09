@@ -1,13 +1,12 @@
-ol class='js-accordion c-list-box c-list-box--primary' data-multiselectable='true'
-  li class='c-list-box__item'
-    h3 class='js-accordion__header c-list-box__heading bg-toddler--secondary' id='homepage-ages-heading-'
-      | Get Immediate Help
+li class='c-list-box__item o-accordion__item'
+  button data-js="accordion" class='js-accordion__header c-list-box__heading bg-toddler--secondary' id='homepage-ages-heading-'
+    | Get Immediate Help
+    svg class="o-accordion__caret icon" aria-hidden="true"><use xlink:href="#icon-caret-down"></use></svg>
+    / span class='c-list-box__subheading' The hotlines below are free, confidential, and available 24/7
 
-      span class='c-list-box__subheading' The hotlines below are free, confidential, and available 24/7
+  ol class='js-accordion__content c-list-box__content bg-toddler--primary' id='homepage-ages-panel-'
+    li class='c-list-box__subitem'
+      a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary' Speak to a counselor from NYC Well
 
-    ol class='js-accordion__content c-list-box__content bg-toddler--primary' id='homepage-ages-panel-'
-      li class='c-list-box__subitem'
-        a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary' Speak to a counselor from NYC Well
-
-      li class='c-list-box__subitem'
-        a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary' National Suicide Prevention Lifeline
+    li class='c-list-box__subitem'
+      a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary' National Suicide Prevention Lifeline

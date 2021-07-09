@@ -39,9 +39,9 @@ div class='c-card flex mr-0'
       - else
         - this.color = 'button--pill--alt'
 
-      a href='/mhfa/programs/index.html' class='button--pill js-category ${this.color}'
+      a href='${this.root}/programs/index.html' class='button--pill js-category ${this.color}'
         == this.card.category.name
 
     - if this.card.population.name
-      a href='/mhfa/programs/index.html' class='button--pill js-category button--pill--alt'
+      a href='${this.root}/programs/index.html' class='button--pill js-category button--pill--alt'
         == this.card.population.name

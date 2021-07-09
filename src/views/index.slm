@@ -19,7 +19,31 @@
       / a href='{{post.get_field('hero_button_url')}}' class='button--outline button--outline--white' Link
 
   section class='o-scroll-column o-scroll-column--right'
-    == this.include('/slm/partials/components/list-box/list-box.slm');
+    div clas="o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"
+      div class="c-list-box c-list-box--quaternary js-accordion o-accordion" aria-multiselectable="false" data-multiselectable="false" role="presentation"
+        div class="c-list-box__item o-accordion__item"
+          button data-js="accordion" type="button" aria-expanded="true" class='c-list-box__heading o-accordion__header bg-toddler--secondary'
+            == "Veterans"
+            svg.o-accordion__caret.icon aria-hidden="true"
+              use xlink:href="#icon-caret-down"
+          ul aria-hidden="false" role="region"
+            li.c-list-box__subitem.bg-toddler--primary
+              == "Hello"
+
+      / li class='c-list-box__item'
+      /   h3 class='js-accordion__header c-list-box__heading bg-toddler--secondary' id='homepage-ages-heading-'
+      /     | Get Immediate Help
+
+      /     span class='c-list-box__subheading' The hotlines below are free, confidential, and available 24/7
+
+      /   ol class='js-accordion__content c-list-box__content bg-toddler--primary' id='homepage-ages-panel-'
+      /     li class='c-list-box__subitem'
+      /       a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary' Speak to a counselor from NYC Well
+
+      /     li class='c-list-box__subitem'
+      /       a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary' National Suicide Prevention Lifeline
+
+      / == this.include('/slm/partials/components/list-box/list-box.slm');
 
     div class='c-block-list c-block-list--shade o-content-container'
       h2 Featured Services
@@ -37,7 +61,9 @@
         /   == this.include('/slm/partials/components/card/card.slm');
 
       div class='text-center'
-        a href='/mhfa/programs/index.html' class='button--outline button--outline--gray' See all services
+        a href='${this.root}/programs/index.html' class='button--outline button--outline--gray' See all services
 
-= content('scripts')
   javascript:
+
+
+  = content('scripts')
