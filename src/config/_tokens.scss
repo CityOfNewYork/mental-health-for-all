@@ -57,10 +57,11 @@ $tokens:(
     color-purple-dark: #9F2D71,
     color-shadow: rgba(0, 0, 0, .2),
     color-yellow: #FDB240,
-    color-yellow-light: #FED77C
+    color-yellow-light: #FED77C,
+    color-primary: color-purple-dark
   ),
   colors-default: (
-    color-primary: color-blue-light,
+    color-primary: color-purple-dark,
     color-secondary: color-blue,
     color-background: color-white,
     color-background-shade: color-gray-light,
