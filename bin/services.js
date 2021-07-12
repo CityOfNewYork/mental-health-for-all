@@ -28,15 +28,19 @@ module.exports = {
       let template = 'src/slm/services/main.slm';
       let data = fs.readFileSync(template, 'utf8');
 
+      data = data
+        .replace(/{{ SERVICE_TITLE }}/g, service.title)
+        .replace('{{ SERVICE_SLUG }}', createSlug(service.title));
+
       let write = `src/views/programs/${createSlug(service.title)}.slm`;
 
-      if (!fs.existsSync(write)) {
+      // if (!fs.existsSync(write)) {
         await fs.writeFileSync(write, data);
 
         cnsl.success(`${alerts.str.path(write)} was made.`);
-      } else {
-        cnsl.error(`${alerts.str.path(write)} already exists.`);
-      }
+      // } else {
+        // cnsl.error(`${alerts.str.path(write)} already exists.`);
+      // }
     }
   }
 };
