@@ -2,6 +2,10 @@
   background-image: url('../img/children_and_families.jpg');
 }
 
+.bg-crisis-support {
+  background-image: url('../img/crisis_support.jpg');
+}
+
 button {
   transition: background-color .25s linear
 }
@@ -26,6 +30,27 @@ svg {
 .sticker--medium {
   width: 80px;
   height: 80px;
+}
+
+.icon--communications {
+  width: 29px;
+}
+
+[class*='o-content'] {
+  font-size: 1.3125rem;
+}
+
+.list-unordered--check ul {
+  list-style: disc;
+
+  li {
+    padding-bottom: 0;
+    padding-left: rem-calc(14);
+
+    &:before {
+      display: none;
+    }
+  }
 }
 
 :root {
