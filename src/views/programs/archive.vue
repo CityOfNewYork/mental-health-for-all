@@ -39,6 +39,17 @@
 
     <div class='o-article desktop:w-article'>
       <section class="c-block-list">
+
+        <!-- <div v-if="!loading">
+          Results
+        </div>
+
+        <div v-if="none">
+          No results
+        </div><div v-else-if="loading">
+          Spinner
+        </div> -->
+
       <div v-for="page in posts" :key="`page-${posts.indexOf(page)}`" >
         <div v-if="page && page.show" >
           <!-- <h3>Page {{ posts.indexOf(page) }}</h3> -->
