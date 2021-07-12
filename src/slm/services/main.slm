@@ -1,10 +1,4 @@
-= extend('/slm/layouts/default')
 
-- title = '{{ SERVICE_TITLE }} | Services | Mental Health for All'
-- this.service = this.services.find(service => service.title == '{{ SERVICE_TITLE }}')
-- this.service.slug = '{{ SERVICE_SLUG }}';
-
-= content('main')
   div class='js-parallax'
     header class='c-hero c-hero--large c-hero--long-text js-parallax-content bg-toddler--primary'
       div class='o-container js-parallax-text'
@@ -90,5 +84,3 @@
   div class='mobile:pt-5 tablet:pt-12 pb-6'
     a href='#main' class='back-to-top bg-color-blue-light hover:bg-color-blue no-underline' id='myBtn' data-js='back-to-top' title='Back To Top'
       | Back To Top
-
-= content('scripts')
