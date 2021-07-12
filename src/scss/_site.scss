@@ -14,6 +14,10 @@ a {
   font-weight: bold;
 }
 
+svg {
+  pointer-events: none;
+}
+
 .c-list-box__heading.active {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
