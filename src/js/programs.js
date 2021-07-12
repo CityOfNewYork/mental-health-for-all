@@ -3,6 +3,7 @@
 import Vue from 'vue/dist/vue.esm.browser';
 import ProgramsArchive from '../views/programs/archive.vue';
 import Services from '../../dist/data/services.json';
+
 /**
  * The class for the Programs Archive
  */
@@ -101,6 +102,19 @@ class Programs {
             };
           },
         };
+      },
+
+      computed: {
+        /**
+         * Wether there posts to display from the modified query
+         *
+         * @type {Boolean}
+         */
+        none: function() {
+          // return !this.headers.pages && !this.headers.total;
+          // console.dir(this.posts[1].posts.length > 0);
+          // return (this.posts && this.posts[1].posts.length > 0) ? true : false;
+        },
       },
 
       /**
