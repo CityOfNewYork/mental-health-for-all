@@ -1,0 +1,46 @@
+/**
+ * Text-rotator
+ */
+
+// Dependencies
+// @use 'config/tokens' as *;
+// @use 'config/text-rotator';
+
+// Declarations
+.text-rotator__text {
+  position: absolute;
+}
+
+.text-rotator__text:nth-child(1) {
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+}
+
+.text-rotator__text:nth-child(2) {
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+}
+
+.text-rotator__text:nth-child(3) {
+  animation-name: fade;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+}
+
+@keyframes fade {
+  0%, 50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

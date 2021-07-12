@@ -1,11 +1,3 @@
-.o-navigation__logo {
-  background-image: "url(https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@1.0.1/dist/images/logo-color2@150px.png)";
-}
-
-.text-color-black-temp {
-  color: #000 !important;
-}
-
 .c-side-hero__image {
   background-image: url('../img/children_and_families.jpg');
 }
@@ -20,4 +12,18 @@ button {
 
 a {
   font-weight: bold;
+}
+
+.c-list-box__heading.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sticker--medium {
+  width: 80px;
+  height: 80px;
+}
+
+:root {
+  --o-attribution-font-size: 0.9rem
 }

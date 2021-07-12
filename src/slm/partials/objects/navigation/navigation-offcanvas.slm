@@ -1,6 +1,6 @@
 header class='o-navigation'
   div class='o-container flex justify-between items-center py-4'
-    a href='${this.root}' class=''
+    a href='${this.root}'
       span class='sr-only' Mental Health for All
 
       svg style='width: 249px' width='249' height='63' viewBox='0 0 249 63' fill='none' xmlns='http://www.w3.org/2000/svg'

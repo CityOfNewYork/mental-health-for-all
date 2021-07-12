@@ -45,6 +45,7 @@ html lang='en' class='no-js'
     javascript:
       var gunyc = new Default();
       gunyc.icons('https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/svg/icons.svg');
+      gunyc.icons('${this.root}/svg/svgs.svg');
       gunyc.toggle();
       gunyc.accordion();
 
