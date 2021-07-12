@@ -59,7 +59,9 @@ module.exports = {
         howToGetInTouch: {
           title: 'How to get in touch',
           content: [
-            `
+            {
+              type: 'website',
+              body: `
               <h3>Call NYC Well at <a href="tel:888-692-9355">(888) NYC-WELL (888-692-9355)</a> and ask about “mobile crisis teams”</h3>
 
               <div class="list-unordered--check">
@@ -69,7 +71,7 @@ module.exports = {
                   <li>Available in the Bronx, Brooklyn, Manhattan, and Queens.</li>
                 </ul>
               </div>
-            `,
+            `},
           ],
         },
         otherWaysToGetHelp: {
@@ -137,7 +139,9 @@ module.exports = {
         howToGetInTouch: {
           title: 'How to get in touch',
           content: [
-            `
+            {
+              type: 'calling',
+              body: `
               <h3>Talk to a counselor</h3>
 
               <div class="list-unordered--check">
@@ -147,8 +151,10 @@ module.exports = {
                   <li>It’s free, confidential, and available 24 hours a day, 7 days a week.</li>
                 </ul>
               </div>
-            `,
-            `
+            `},
+            {
+              type: 'texting',
+              body: `
               <h3>Text a counselor</h3>
 
               <div class="list-unordered--check">
@@ -156,8 +162,10 @@ module.exports = {
                   <li>Text 'WELL' to 65173</li>
                 </ul>
               </div>
-            `,
-            `
+            `},
+            {
+              type: 'website',
+              body: `
               <h3>Chat with a counselor online</h3>
 
               <div class="list-unordered--check">
@@ -165,7 +173,7 @@ module.exports = {
                   <li>Go to <a href="https://nycwell.cityofnewyork.us/en/">NYC Well</a></li>
                 </ul>
               </div>
-            `,
+            `},
           ],
         },
         otherWaysToGetHelp: {
@@ -231,7 +239,9 @@ module.exports = {
         howToGetInTouch: {
           title: 'How to get in touch',
           content: [
-            `
+            {
+              type: 'website',
+              body: `
               <h3>Contact a victim advocate near you</h3>
 
               <div class="list-unordered--check">
@@ -239,8 +249,10 @@ module.exports = {
                   <li>Advocates can assist you in any language. <a href="https://www1.nyc.gov/site/nypd/services/victim-services/cvap.page">Link</a></li>
                 </ul>
               </div>
-            `,
-            `
+            `},
+            {
+              type: 'online-chat',
+              body: `
               <h3>Live Chat with an advocate</h3>
 
               <div class="list-unordered--check">
@@ -248,8 +260,10 @@ module.exports = {
                   <li><a href="https://www.safehorizon.org/safechat/">Link here</a></li>
                 </ul>
               </div>
-            `,
-            `
+            `},
+            {
+              type: 'calling',
+              body:`
               <h3>Chat with a counselor online</h3>
 
               <div class="list-unordered--check">
@@ -257,7 +271,7 @@ module.exports = {
                   <li>Call <a href="tel:800-621-4673">800-621-4673</a> (For help with domestic violence)</li>
                 </ul>
               </div>
-            `,
+            `},
           ],
         },
         otherWaysToGetHelp: {

@@ -55,7 +55,7 @@
           <!-- <h3>Page {{ posts.indexOf(page) }}</h3> -->
             <div class="c-block-list--shade o-content-container u-sm-gutter" data-js="filtered-results">
               <div v-for="post in page.posts" :key="post.id" class="c-block-list__item u-sm-gutter">
-                <div class="c-card mr-0 flex">
+                <div class="c-card rounded-lg mr-0 flex">
                   <div class="c-card__title">
                     <a :href="slugify(post.title)" :title="post.title" rel="">
                       {{ post.title }}
