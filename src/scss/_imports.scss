@@ -15,6 +15,12 @@
  * External Dependencies
  ************************/
 
+ @import '@nycopportunity/pattern-attribution/src/tokens';
+
+ :root {
+  --o-attribution-font-size: 1rem
+}
+
 @import '@nycopportunity/growingup-patterns/src/config/tokens';
 
 /***********
@@ -67,6 +73,7 @@
 @import '@nycopportunity/growingup-patterns/src/objects/feature-photo/feature-photo';
 @import '@nycopportunity/growingup-patterns/src/objects/flex-embed/flex-embed';
 @import '@nycopportunity/growingup-patterns/src/objects/footer/footer';
+@import '@nycopportunity/pattern-attribution/src/attribution';
 @import '@nycopportunity/growingup-patterns/src/objects/inline-list/inline-list';
 @import '@nycopportunity/growingup-patterns/src/objects/overlay/overlay';
 @import '@nycopportunity/growingup-patterns/src/objects/navigation/navigation';
