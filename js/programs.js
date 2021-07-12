@@ -13195,6 +13195,28 @@ var Programs = (function () {
            */
           mockRequest: function() {
             let filterdData = [...this.services];
+
+            // After filter if there is no result
+            const noResultFound = () => {
+              const divContainer = document.createElement('div');
+              const title = document.createElement('h2');
+              const tileText = document.createTextNode(
+                'Sorry, no results were found.'
+              );
+              title.appendChild(tileText);
+              const node = document.createElement('p');
+              const textnode = document.createTextNode(
+                'It looks like there aren’t any services for the filters you selected at this moment.'
+              );
+              node.appendChild(textnode);
+              divContainer.appendChild(title);
+              divContainer.appendChild(node);
+
+              document
+                .querySelector('[data-js="filtered-results"]')
+                .appendChild(divContainer);
+            };
+
             if (this.query.cat && this.query.pop) {
               if (this.query.cat.length === 0 && this.query.pop.length === 0) {
                 filterdData = [...this.services];
@@ -13205,6 +13227,8 @@ var Programs = (function () {
                     this.query.pop.includes(service.population.id))
                   );
                 });
+
+                filterdData.length === 0 && noResultFound();
               } else if (
                 this.query.cat.length > 0 &&
                 this.query.pop.length === 0
@@ -13212,6 +13236,8 @@ var Programs = (function () {
                 filterdData = [...this.services].filter((service) => {
                   return (this.query.cat.includes(service.category.id));
                 });
+
+                filterdData.length === 0 && noResultFound();
               } else if (
                 this.query.pop.length > 0 &&
                 this.query.cat.length === 0
@@ -13219,43 +13245,27 @@ var Programs = (function () {
                 filterdData = [...this.services].filter((service) => {
                   return (this.query.pop.includes(service.population.id));
                 });
+
+                filterdData.length === 0 && noResultFound();
               }
             } else if (this.query.cat && !this.query.pop) {
               if (this.query.cat.length > 0) {
                 filterdData = [...this.services].filter((service) => {
                   return (this.query.cat.includes(service.category.id));
                 });
+
+                filterdData.length === 0 && noResultFound();
               }
             } else if (this.query.pop && !this.query.cat) {
               if (this.query.pop.length > 0) {
                 filterdData = [...this.services].filter((service) => {
                   return (this.query.pop.includes(service.population.id));
                 });
+
+                filterdData.length === 0 && noResultFound();
               }
             }
-            if (this.query.cat && this.query.pop) {
-              if (this.query.cat.length > 0 || this.query.pop.length > 0) {
-                if (filterdData.length === 0) {
-                  console.log('shetiargem');
-                  const divContainer = document.createElement('div');
-                  const title = document.createElement('h2');
-                  const tileText = document.createTextNode(
-                    'Sorry, no results were found.'
-                  );
-                  title.appendChild(tileText);
-                  const node = document.createElement('p');
-                  const textnode = document.createTextNode(
-                    'It looks like there aren’t any services for the filters you selected at this moment.'
-                  );
-                  node.appendChild(textnode);
-                  divContainer.appendChild(title);
-                  divContainer.appendChild(node);
-                  document
-                    .querySelector('[data-js="filtered-results"]')
-                    .appendChild(divContainer);
-                }
-              }
-            }
+
             return filterdData;
           },
 
