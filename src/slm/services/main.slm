@@ -1,86 +1,106 @@
+div class='js-parallax relative'
+  / svg class='absolute' width="1427" height="478" viewBox="0 0 1427 478" fill="none" xmlns="http://www.w3.org/2000/svg"
+  /   path d="M1095 477.985L0.000970649 477.984L81.5002 -4.00091L1477.5 -4.0002L1095 477.985Z" fill="url(#paint0_linear)" fill-opacity="0.8"
+  /   defs
+  /     linearGradient id="paint0_linear" x1="467.498" y1="474.5" x2="623.999" y2="105.5" gradientUnits="userSpaceOnUse"
+  /       stop stop-color="#DA7CB5"
+  /       stop offset="1" stop-color="#DA7CB5" stop-opacity="0"
 
-  div class='js-parallax'
-    header class='c-hero c-hero--large c-hero--long-text js-parallax-content bg-toddler--primary'
-      div class='o-container js-parallax-text'
-        - if this.service.title
-          h1 class='c-hero__title c-hero__title--long'
-            == this.service.title
+  header class='c-hero c-hero--large c-hero--long-text js-parallax-content bg-color-purple'
+    div class='o-container js-parallax-text'
+      - if this.service.title
+        h1 class='c-hero__title c-hero__title--long'
+          == this.service.title
 
-        - if this.service.subtitle
-          p class='c-hero__tagline desktop:w-6/12'
-            == this.service.subtitle
+      - if this.service.subtitle
+        p class='c-hero__tagline desktop:w-6/12'
+          == this.service.subtitle
 
-        - if this.service.programProvider
-          p class='c-hero__tagline desktop:w-6/12'
-            == this.service.programProvider
+      - if this.service.programProvider
+        p class='c-hero__tagline desktop:w-6/12'
+          == this.service.programProvider
 
-        - if this.service.category.name
-          p class='c-hero__tags'
-            a href='#' class='button--pill'
-              == this.service.category.name
+      - if this.service.category.name
+        p class='c-hero__tags'
+          a href='#' class='button--pill'
+            == this.service.category.name
 
-  article class='o-container u-bottom-spacing-small js-sticky-container desktop:flex'
-    div class='o-article-sidebar desktop:w-sidebar'
-      div class='o-content-container--compact u-shift-up'
-        ol class='c-nav-list js-sticky js-section-set o-sticky-nav' style=('width: 357px;')
-          - for (let i in this.service.sections)
-            li class='c-nav-list__item'
-              a class='scroll js-section c-nav-list__link bg-toddler--secondary' data-section='${this.createSlug(this.service.sections[i])}' href='#${this.createSlug(this.service.sections[i])}'
-                == this.service.sections[i]
 
-                svg class='icon--caret' aria-hidden='true'
-                  use xlink:href='#icon-caret-right'
+article class='o-container u-bottom-spacing-small js-sticky-container desktop:flex'
+  div class='o-article-sidebar desktop:w-sidebar'
+    div class='o-content-container--compact u-shift-up'
+      ol class='c-nav-list js-sticky js-section-set o-sticky-nav' style=('width: 357px;')
+        - let sections = ['veterans', 'children-and-youth', 'lgbtq', 'seniors', 'immigrants'];
 
-    div class='o-article js-sticky-article desktop:w-article m-auto'
-      div class='o-content-container--compact'
-        - if this.service.sections.includes('What it is')
-          section id='${this.createSlug(this.service.body.whatItIs.title)}' class='o-content-container--text s-wysiwyg u-top-spacing u-bottom-spacing-small' tabindex='-1'
-            h2 id='section-call-to-action' tabindex='-1'
-              == this.service.body.whatItIs.title
+        - for (let i in this.service.sections)
+          li class='c-nav-list__item'
+            a class='scroll js-section c-nav-list__link bg-${sections[i]}--secondary' data-section='${this.createSlug(this.service.sections[i])}' href='#${this.createSlug(this.service.sections[i])}'
+              == this.service.sections[i]
 
-            == this.service.body.whatItIs.content
+              svg class='icon--caret' aria-hidden='true'
+                use xlink:href='#icon-caret-right'
 
-        - if this.service.sections.includes('Who it’s for')
-          section id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
+  div class='o-article js-sticky-article desktop:w-article m-auto'
+    div class='o-content-container--compact'
+      - if this.service.sections.includes('What it is')
+        section id='${this.createSlug(this.service.body.whatItIs.title)}' class='o-content-container--text s-wysiwyg u-top-spacing u-bottom-spacing-small' tabindex='-1'
+          h2 id='section-call-to-action' tabindex='-1'
+            == this.service.body.whatItIs.title
+
+          == this.service.body.whatItIs.content
+
+      - if this.service.sections.includes('Who it’s for')
+        / section id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
+        /   h2 id='section-call-to-action' tabindex='-1'
+        /     == this.service.body.whoItIsFor.title
+
+        /   == this.service.body.whoItIsFor.content
+
+        section class='c-tip u-sm-gutter bg-color-purple o-content-container text-center' data-id='${this.createSlug(this.service.body.whoItIsFor.title)}'
+          div id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='c-tip__sticker sticker bg-color-purple'
+            svg class='icon--large' role='img' aria-hidden='true'
+              use xlink:href='#icon-lightbulb'
+
+          div class='c-tip__content text-center'
             h2 id='section-call-to-action' tabindex='-1'
               == this.service.body.whoItIsFor.title
 
             == this.service.body.whoItIsFor.content
 
-        - if this.service.sections.includes('Cost')
-          section id='${this.createSlug(this.service.body.cost.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
-            h2 id='section-call-to-action' tabindex='-1'
-              == this.service.body.cost.title
+      - if this.service.sections.includes('Cost')
+        section id='${this.createSlug(this.service.body.cost.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
+          h2 id='section-call-to-action' tabindex='-1'
+            == this.service.body.cost.title
 
-            == this.service.body.cost.content
+          == this.service.body.cost.content
 
-        - if this.service.sections.includes('How to get in touch')
-          section id='${this.createSlug(this.service.body.howToGetInTouch.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
-            h2 id='section-call-to-action' tabindex='-1'
-              == this.service.body.howToGetInTouch.title
+      - if this.service.sections.includes('How to get in touch')
+        section id='${this.createSlug(this.service.body.howToGetInTouch.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
+          h2 id='section-call-to-action' tabindex='-1'
+            == this.service.body.howToGetInTouch.title
 
-            div class='o-content-container c-block-list c-block-list--shade'
-              div class='c-block-list__inner'
-              - for (let i in this.service.body.howToGetInTouch.content)
-                - this.card = this.service.body.howToGetInTouch.content[i]
-                div class='c-block-list__item'
-                  div class='c-card mr-0 rounded-lg'
-                    div class='c-card__title'
-                      a href=this.service.slug title=this.service.title
-                        div class='c-card__sticker sticker' aria-hidden='true'
-                          svg class='icon--large'
-                            use xlink:href='#icon-work'
+          div class='o-content-container c-block-list c-block-list--shade'
+            - for (let i in this.service.body.howToGetInTouch.content)
+              - this.card = this.service.body.howToGetInTouch.content[i]
 
-                    div class='c-card__body'
-                      == this.card
+              div class='c-block-list__item'
+                div class='c-card rounded-lg'
+                  div class='c-card__title'
+                    a href=this.service.slug title=this.service.title
+                      div class='c-card__sticker sticker bg-color-purple text-color-white' aria-hidden='true'
+                        svg class='icon--large'
+                          use xlink:href='#mhfa-icon-${this.card.type}'
 
-        - if this.service.sections.includes('Other ways to get help')
-          section id='${this.createSlug(this.service.body.otherWaysToGetHelp.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
-            h2 id='section-call-to-action' tabindex='-1'
-              == this.service.body.otherWaysToGetHelp.title
+                  div class='c-card__body'
+                    == this.card.body
 
-            == this.service.body.otherWaysToGetHelp.content
+      - if this.service.sections.includes('Other ways to get help')
+        section id='${this.createSlug(this.service.body.otherWaysToGetHelp.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
+          h2 id='section-call-to-action' tabindex='-1'
+            == this.service.body.otherWaysToGetHelp.title
 
-  div class='mobile:pt-5 tablet:pt-12 pb-6'
-    a href='#main' class='back-to-top bg-color-blue-light hover:bg-color-blue no-underline' id='myBtn' data-js='back-to-top' title='Back To Top'
-      | Back To Top
+          == this.service.body.otherWaysToGetHelp.content
+
+div class='mobile:pt-5 tablet:pt-12 pb-6'
+  a href='#main' class='back-to-top bg-color-blue-light hover:bg-color-blue no-underline' id='myBtn' data-js='back-to-top' title='Back To Top'
+    | Back To Top
