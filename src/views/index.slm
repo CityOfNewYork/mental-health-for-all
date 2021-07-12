@@ -53,7 +53,7 @@
                     == this.include('/slm/partials/components/card/card.slm');
 
                 div class='text-center py-5'
-                  a href='${this.root}/programs/index.html' class='button--outline button--outline--gray' See all services
+                  a href='${this.root}/programs/index.html' class='button--full-width button--primary text-${slug}--primary' See all services
 
       div class='text-center py-5'
         a href='${this.root}/programs/index.html' class='button--outline button--outline--gray' See all services
