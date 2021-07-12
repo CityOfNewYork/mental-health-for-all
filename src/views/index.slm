@@ -27,10 +27,10 @@
 
           ul class='c-list-box__content bg-color-gray-light text-color-black'
             li class='c-list-box__subitem pb-0'
-              a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary' Speak to a counselor from NYC Well
+              a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary button--text hover:text-color-purple hover:border-color-purple' Speak to a counselor from NYC Well
 
             li class='c-list-box__subitem'
-              a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary' National Suicide Prevention Lifeline
+              a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary button--text hover:text-color-purple hover:border-color-purple' National Suicide Prevention Lifeline
 
       div class='c-list-box c-list-box--quaternary js-accordion o-accordion pt-0' aria-multiselectable='true' data-multiselectable='true' role='presentation'
         - for (let i in this.population)
