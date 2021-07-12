@@ -12969,7 +12969,7 @@ var Programs = (function () {
                       "button",
                       {
                         staticClass:
-                          "c-list-box__heading o-accordion__header bg-toddler--secondary",
+                          "c-list-box__heading o-accordion__header bg-toddler--secondary active",
                         attrs: {
                           "data-js": "accordion",
                           type: "button",
@@ -13111,87 +13111,93 @@ var Programs = (function () {
                               staticClass: "c-block-list__item u-sm-gutter"
                             },
                             [
-                              _c("div", { staticClass: "c-card mr-0 flex" }, [
-                                _c("div", { staticClass: "c-card__title" }, [
-                                  _c(
-                                    "a",
-                                    {
-                                      attrs: {
-                                        href: _vm.slugify(post.title),
-                                        title: post.title,
-                                        rel: ""
-                                      }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                    " +
-                                          _vm._s(post.title) +
-                                          "\n                  "
-                                      )
-                                    ]
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "c-card__subtitle" }, [
-                                  _c("p", [_vm._v(_vm._s(post.programProvider))])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "c-card__body" }, [
-                                  _vm._v(
-                                    "\n                  " +
-                                      _vm._s(post.body) +
-                                      "\n                "
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "c-card__tags order-last" },
-                                  [
+                              _c(
+                                "div",
+                                { staticClass: "c-card rounded-lg mr-0 flex" },
+                                [
+                                  _c("div", { staticClass: "c-card__title" }, [
                                     _c(
-                                      "button",
+                                      "a",
                                       {
-                                        staticClass:
-                                          "button--pill js-category button--pill--alt",
-                                        on: {
-                                          click: function($event) {
-                                            return _vm.change({
-                                              event: $event,
-                                              data: {
-                                                parent: "cat",
-                                                id: post.category.id
-                                              }
-                                            })
-                                          }
+                                        attrs: {
+                                          href: _vm.slugify(post.title),
+                                          title: post.title,
+                                          rel: ""
                                         }
                                       },
                                       [
                                         _vm._v(
                                           "\n                    " +
-                                            _vm._s(post.category.name) +
-                                            "\n                  "
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass:
-                                          "button--pill js-category bg-pre-schooler--primary",
-                                        attrs: { href: "#" }
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                    " +
-                                            _vm._s(post.population.name) +
+                                            _vm._s(post.title) +
                                             "\n                  "
                                         )
                                       ]
                                     )
-                                  ]
-                                )
-                              ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "c-card__subtitle" }, [
+                                    _c("p", [
+                                      _vm._v(_vm._s(post.programProvider))
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "c-card__body" }, [
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(post.body) +
+                                        "\n                "
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "c-card__tags order-last" },
+                                    [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass:
+                                            "button--pill js-category button--pill--alt",
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.change({
+                                                event: $event,
+                                                data: {
+                                                  parent: "cat",
+                                                  id: post.category.id
+                                                }
+                                              })
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                    " +
+                                              _vm._s(post.category.name) +
+                                              "\n                  "
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "button--pill js-category bg-pre-schooler--primary",
+                                          attrs: { href: "#" }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                    " +
+                                              _vm._s(post.population.name) +
+                                              "\n                  "
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
                             ]
                           )
                         }),
@@ -13280,15 +13286,15 @@ var Programs = (function () {
 
   var Services = [
   	{
-  		subtitle: "NYC Well",
-  		title: "Mobile crisis teams",
-  		programProvider: "ThriveNYC",
-  		body: "Request help to your home during a psychological crisis",
-  		link: "/programs/crisis-support",
+  		subtitle: "Mental health support for victims of domestic violence and other crimes",
+  		title: "The Crime Victim Assistance Program (CVAP)",
+  		programProvider: "NYPD & Safe Horizon",
+  		body: "Mental health support for victims of domestic violence and other crimes",
+  		link: "./programs/the-crime-victim-assistance-program-cvap",
   		featured: true,
   		category: {
-  			id: 3,
-  			name: "Crisis Support"
+  			id: 1,
+  			name: "Trauma Support"
   		},
   		population: {
   			id: 6,
@@ -13300,11 +13306,11 @@ var Programs = (function () {
   		title: "NYC Well",
   		programProvider: "ThriveNYC",
   		body: "Free short-term counseling",
-  		link: "/programs/crisis-support",
+  		link: "./programs/support-during-a-crisis",
   		featured: true,
   		category: {
-  			id: 5,
-  			name: "Help with Anxiety"
+  			id: 3,
+  			name: "Crisis Support"
   		},
   		population: {
   			id: 6,
@@ -13312,35 +13318,19 @@ var Programs = (function () {
   		}
   	},
   	{
-  		subtitle: "NYC Well - Grief Support",
-  		title: "The Crime Victim Assistance Program (CVAP)",
-  		programProvider: "NYC Thrive",
-  		body: "Mental health support for victims of domestic violence and other crimes",
-  		link: "/programs/crisis-support",
-  		featured: false,
-  		category: {
-  			id: 6,
-  			name: "Trauma Support"
-  		},
-  		population: {
-  			id: 6,
-  			name: "Everyone"
-  		}
-  	},
-  	{
-  		subtitle: "NYC Well",
-  		title: "Help for when you’re experiencing anxiety",
+  		subtitle: "Request help to your home during a psychological crisis",
+  		title: "Mobile crisis teams",
   		programProvider: "ThriveNYC",
-  		body: "If you are experiencing anxiety - feelings of fear, tension or worry - you're not alone. Talking through these feelings, learning ways to cope, and receiving support can help.Reach out to NYC Well to learn more about getting the support you need.",
-  		link: "/programs/crisis-support",
+  		body: "Request help to your home during a psychological crisis",
+  		link: "./programs/support-during-a-crisis",
   		featured: true,
   		category: {
-  			id: 2,
-  			name: "Care for Serious Mental Illness"
+  			id: 3,
+  			name: "Crisis Support"
   		},
   		population: {
-  			id: 5,
-  			name: "Students"
+  			id: 1,
+  			name: "Veterans"
   		}
   	}
   ];
@@ -13443,6 +13433,19 @@ var Programs = (function () {
               };
             },
           };
+        },
+
+        computed: {
+          /**
+           * Wether there posts to display from the modified query
+           *
+           * @type {Boolean}
+           */
+          none: function() {
+            // return !this.headers.pages && !this.headers.total;
+            // console.dir(this.posts[1].posts.length > 0);
+            // return (this.posts && this.posts[1].posts.length > 0) ? true : false;
+          },
         },
 
         /**
