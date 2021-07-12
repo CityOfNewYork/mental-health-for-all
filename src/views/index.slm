@@ -32,8 +32,7 @@
             == "Immigrants"
           span data-js="rotate-controller" id="rotate" class="animated"
 
-      a.button--outline.button--outline--white href='${this.root}/programs/index.html'  Explore Mental Health services
-
+      a.button--outline.button--outline--white href='${this.root}/programs/index.html' Explore Mental Health services
 
   section class='o-scroll-column o-scroll-column--right'
     div clas='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
@@ -74,7 +73,7 @@
                 - for (let i in filteredServices.slice(0, 2))
                   - card = filteredServices[i]
 
-                  div class='c-block-list__item text-color-black-temp'
+                  div class='c-block-list__item text-color-black'
                     == this.include('/slm/partials/components/card/card.slm');
 
                 div class='text-center py-5'
