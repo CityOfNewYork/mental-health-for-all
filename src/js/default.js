@@ -2,6 +2,8 @@
 
 import Toggle from '@nycopportunity/pttrn-scripts/src/toggle/toggle';
 import Icons from '@nycopportunity/pttrn-scripts/src/icons/icons';
+import StaticColumn from './staticColumn';
+import TextRotation from './textRotation';
 
 class Default {
   constructor() {}
@@ -21,6 +23,14 @@ class Default {
 
   icons(path) {
     return new Icons(path);
+  }
+
+  staticColumn() {
+    return new StaticColumn();
+  }
+
+  textRotation() {
+    return new TextRotation();
   }
 }
 

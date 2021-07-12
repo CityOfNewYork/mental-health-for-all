@@ -8,13 +8,32 @@
 
     div class='c-side-hero__content'
       h1 class='c-side-hero__title'
-        | Mental Health for All
+        p
+          | The official
+          |  Mental Health
+          |  resource for
 
         div class='c-side-hero__title__large rotating-text'
-          span data-js='rotate-text' class='rotating-text__entry'
-            | Mental for Health for All
+          span data-js="rotate-text" class="rotating-text__entry"
+            == "Children and youth"
+          span data-js="rotate-text" class="rotating-text__entry"
+            == "Families"
+          span data-js="rotate-text" class="rotating-text__entry"
+            == "Adults"
+          span data-js="rotate-text" class="rotating-text__entry"
+            == "Seniors"
+          span data-js="rotate-text" class="rotating-text__entry"
+            == "Veterans"
+          span data-js="rotate-text" class="rotating-text__entry"
+            == "Seniors"
+          span data-js="rotate-text" class="rotating-text__entry"
+            == "LGBTQ"
+          span data-js="rotate-text" class="rotating-text__entry"
+            == "Immigrants"
+          span data-js="rotate-controller" id="rotate" class="animated"
 
-          span data-js='rotate-controller' id='rotate' class='animated'
+      a.button--outline.button--outline--white href='${this.root}/programs/index.html'  Explore Mental Health services
+
 
   section class='o-scroll-column o-scroll-column--right'
     div clas='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
