@@ -7,7 +7,7 @@
             <svg class="o-accordion__caret icon" aria-hidden="true"><use xlink:href="#icon-caret-down"></use>
             </svg>
           </button> -->
-          <button data-js="accordion" type="button" :aria-controls="'aria-c-' + term.slug" aria-expanded="true" class='c-list-box__heading o-accordion__header bg-toddler--secondary'>
+          <button data-js="accordion" type="button" :aria-controls="'aria-c-' + term.slug" aria-expanded="true" class='c-list-box__heading o-accordion__header bg-toddler--secondary active'>
             {{term.name}}
             <svg class="o-accordion__caret icon" aria-hidden="true"><use xlink:href="#icon-caret-down"></use></svg>
           </button>
