@@ -22,6 +22,7 @@
   "homepage": "https://github.com/CityOfNewYork/mhfa#readme",
   "dependencies": {
     "@nycopportunity/growingup-patterns": "file:../growingupnyc-patterns",
+    "@nycopportunity/pattern-attribution": "^1.0.3",
     "@nycopportunity/pttrn-scripts": "^1.0.5",
     "@nycopportunity/wp-archive-vue": "^1.2.0",
     "animate.scss": "^0.0.6",
