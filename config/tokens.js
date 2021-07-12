@@ -12,6 +12,17 @@ tokens.colors['color-yellow'] = '#FB5159';
 tokens.colors['color-yellow'] = '#FDB240';
 tokens.colors['color-yellow-light'] = '#FED77C';
 
+tokens['colors-default']['color-primary'] = 'color-purple-dark';
+// tokens['colors-default']['color-secondary'] = ''
+// tokens['colors-default']['color-background'] = ''
+// tokens['colors-default']['color-background-shade'] = ''
+// tokens['colors-default']['color-background-footer'] = ''
+// tokens['colors-default']['color-text'] = ''
+// tokens['colors-default']['color-text-invert'] = ''
+// tokens['colors-default']['color-text-link'] = ''
+// tokens['colors-default']['color-text-weak'] = ''
+// tokens['colors-default']['color-error'] = ''
+
 tokens.populations = {
   'veterans': {
     'primary': tokens.colors['color-orange'],
