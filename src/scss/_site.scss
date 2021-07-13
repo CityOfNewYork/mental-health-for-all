@@ -13,9 +13,9 @@
 }
 
 .bg-domestic-violence {
+  background-position-y: 35%;
   background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 41%, rgba(40,11,28,0) 84%, rgba(40,11,28,0) 100%),
                     url('../img/domestic-violence.jpg');
-  background-position-y: 35%;
 }
 
 .bg-still-1 {
@@ -28,8 +28,8 @@
 
 .bg-light-a {
   top: 0;
-  right: 0;
-  margin-right: 80px;
+  right: 50%;
+  margin-right: -340px;
   width: 983px;
   min-width: 983px;
   height: auto;
