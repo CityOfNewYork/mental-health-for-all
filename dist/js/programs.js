@@ -12968,8 +12968,10 @@ var Programs = (function () {
                     _c(
                       "button",
                       {
-                        staticClass:
-                          "c-list-box__heading o-accordion__header bg-toddler--secondary active",
+                        class:
+                          "c-list-box__heading o-accordion__header bg-" +
+                          term.slug +
+                          "--secondary active",
                         attrs: {
                           "data-js": "accordion",
                           type: "button",
@@ -13009,7 +13011,8 @@ var Programs = (function () {
                         _c(
                           "li",
                           {
-                            staticClass: "c-list-box__subitem bg-toddler--primary"
+                            class:
+                              "c-list-box__subitem bg-" + term.slug + "--primary"
                           },
                           [
                             _c(
@@ -13034,8 +13037,10 @@ var Programs = (function () {
                             "li",
                             {
                               key: filter.slug,
-                              staticClass:
-                                "c-list-box__subitem bg-toddler--primary"
+                              class:
+                                "c-list-box__subitem bg-" +
+                                term.slug +
+                                "--primary"
                             },
                             [
                               _c("label", { staticClass: "checkbox" }, [
