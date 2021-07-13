@@ -1,12 +1,5 @@
 div class='js-parallax relative'
-  / svg class='absolute' width="1427" height="478" viewBox="0 0 1427 478" fill="none" xmlns="http://www.w3.org/2000/svg"
-  /   path d="M1095 477.985L0.000970649 477.984L81.5002 -4.00091L1477.5 -4.0002L1095 477.985Z" fill="url(#paint0_linear)" fill-opacity="0.8"
-  /   defs
-  /     linearGradient id="paint0_linear" x1="467.498" y1="474.5" x2="623.999" y2="105.5" gradientUnits="userSpaceOnUse"
-  /       stop stop-color="#DA7CB5"
-  /       stop offset="1" stop-color="#DA7CB5" stop-opacity="0"
-
-  header class='c-hero c-hero--large c-hero--long-text js-parallax-content bg-color-purple'
+  header class='c-hero c-hero--large c-hero--long-text js-parallax-content bg-color-purple bg-domestic-violence'
     div class='o-container js-parallax-text'
       - if this.service.title
         h1 class='c-hero__title c-hero__title--long'
@@ -16,15 +9,18 @@ div class='js-parallax relative'
         p class='c-hero__tagline desktop:w-6/12'
           == this.service.subtitle
 
-      - if this.service.programProvider
-        p class='c-hero__tagline desktop:w-6/12'
-          == this.service.programProvider
+          - if this.service.programProvider
+            = ' | '
+            b == this.service.programProvider
+
+      / - if this.service.programProvider
+      /   p class='c-hero__tagline desktop:w-6/12'
+      /     == this.service.programProvider
 
       - if this.service.category.name
         p class='c-hero__tags'
           a href='#' class='button--pill'
             == this.service.category.name
-
 
 article class='o-container u-bottom-spacing-small js-sticky-container desktop:flex'
   div class='o-article-sidebar desktop:w-sidebar'
@@ -50,13 +46,7 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
           == this.service.body.whatItIs.content
 
       - if this.service.sections.includes('Who it’s for')
-        / section id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
-        /   h2 id='section-call-to-action' tabindex='-1'
-        /     == this.service.body.whoItIsFor.title
-
-        /   == this.service.body.whoItIsFor.content
-
-        section class='c-tip u-sm-gutter bg-color-purple o-content-container text-center' data-id='${this.createSlug(this.service.body.whoItIsFor.title)}'
+        section class='c-tip u-sm-gutter bg-color-purple o-content-container text-center mb-4' data-id='${this.createSlug(this.service.body.whoItIsFor.title)}'
           div id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='c-tip__sticker sticker bg-color-purple'
             svg class='icon--large' role='img' aria-hidden='true'
               use xlink:href='#icon-lightbulb'
@@ -66,6 +56,8 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
               == this.service.body.whoItIsFor.title
 
             == this.service.body.whoItIsFor.content
+
+        br
 
       - if this.service.sections.includes('Cost')
         section id='${this.createSlug(this.service.body.cost.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'

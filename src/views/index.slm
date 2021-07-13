@@ -4,9 +4,17 @@
 
 = content('main')
   section class='o-static-column o-static-column--left c-side-hero js-static bg-toddler--primary'
-    div class='c-side-hero__image bg-toddler--primary'
+    div class='c-side-hero__image bg-main bg-color-purple'
 
-    div class='c-side-hero__content'
+    div class='c-side-hero__content bg-color-purple tablet:bg-transparent overflow-hidden'
+      svg class='bg-light-a tablet:hidden' viewBox='0 0 1260 384' fill='none' xmlns='http://www.w3.org/2000/svg'
+        path d='M540.959 -34.3182L1259.95 -34.3182L1116.69 460.74L0.698089 455.732L540.959 -34.3182Z' fill='url(#bg-light-a)' fill-opacity='0.8'
+
+        defs
+          linearGradient id='bg-light-a' x1='732.41' y1='-19.1426' x2='574.587' y2='349.294' gradientUnits='userSpaceOnUse'
+            stop stop-color='#DA7CB5'
+            stop offset='1' stop-color='#DA7CB5' stop-opacity='0'
+
       h1 class='c-side-hero__title'
         p
           | The official
@@ -84,3 +92,5 @@
 
   = content('scripts')
     javascript:
+      gunyc.staticColumn();
+      gunyc.textRotation();

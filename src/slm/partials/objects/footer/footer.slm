@@ -3,10 +3,11 @@
 
 footer class='o-footer bg-color-yellow-light text-color-purple-dark py-0 overflow-hidden' role='contentinfo'
   div class='o-container'
-    svg aria-hidden='true' class='absolute' style='width: 877px; height: 353px; min-width: 877px; top: 0; left: 0; margin-left: -30px' width='877' height='353' viewBox='0 0 877 353' fill='none' xmlns='http://www.w3.org/2000/svg'
-      path d='M28.0651 0.900299L471.566 0.900269L876.066 257.399L-38.9347 336.9L28.0651 0.900299Z' fill='url(#paint0_linear)'
+    svg class='bg-light-c' aria-hidden='true' class='absolute' width='877' height='353' viewBox='0 0 877 353' fill='none' xmlns='http://www.w3.org/2000/svg'
+      path d='M28.0651 0.900299L471.566 0.900269L876.066 257.399L-38.9347 336.9L28.0651 0.900299Z' fill='url(#bg-light-c)'
+
       defs
-        linearGradient id='paint0_linear' x1='122.065' y1='4.40013' x2='201.565' y2='302.4' gradientUnits='userSpaceOnUse'
+        linearGradient id='bg-light-c' x1='122.065' y1='4.40013' x2='201.565' y2='302.4' gradientUnits='userSpaceOnUse'
           stop stop-color='#FEE6AE'
           stop offset='1' stop-color='#FEE6AE' stop-opacity='0'
 

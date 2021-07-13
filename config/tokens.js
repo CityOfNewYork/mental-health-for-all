@@ -3,14 +3,20 @@ let tokens = require('@nycopportunity/growingup-patterns/config/tokens');
 // Fix the tokens output path to prevent the watch script from firing multiple times.
 tokens.output = `"${process.env.PWD}/src/config/_tokens.scss"`;
 
+/**
+ * Mental Health for All Colors
+ */
+
 tokens.colors['color-orange'] = '#FA660A';
-tokens.colors['color-blue-dark'] = '#2E4F91';
+tokens.colors['color-blue-dark'] = '#154A94';
 tokens.colors['color-purple'] = '#C1408B';
 tokens.colors['color-purple-dark'] = '#9F2D71';
-tokens.colors['color-red'] = '#FB5159';
-tokens.colors['color-yellow'] = '#FB5159';
-tokens.colors['color-yellow'] = '#FDB240';
-tokens.colors['color-yellow-light'] = '#FED77C';
+tokens.colors['color-purple-light'] = '#ECC8DE';
+tokens.colors['color-red'] = '#E93E51';
+tokens.colors['color-yellow'] = '#FDB714';
+tokens.colors['color-yellow-light'] = '#FFCB68';
+
+tokens.colors['transparent'] = 'transparent';
 
 tokens['colors-default']['color-primary'] = 'color-purple-dark';
 // tokens['colors-default']['color-secondary'] = ''
@@ -55,6 +61,14 @@ tokens.populations = {
   'families': {
     'primary': tokens.colors['color-pink'],
     'secondary': tokens.colors['color-pink']
+  },
+  'cat': {
+    'primary': tokens.colors['color-purple'],
+    'secondary': tokens.colors['color-purple']
+  },
+  'pop': {
+    'primary': tokens.colors['color-purple'],
+    'secondary': tokens.colors['color-purple']
   }
 };
 
