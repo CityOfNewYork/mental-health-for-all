@@ -32,11 +32,6 @@
         "id": 6,
         "name": "Substance Use Services",
         "slug": "substance-use-services"
-      },
-      {
-        "id": 7,
-        "name": "Peer Support",
-        "slug": "peer-support"
       }
     ]
   },
@@ -61,8 +56,8 @@
       },
       {
         "id": 4,
-        "name": "Seniors",
-        "slug": "seniors"
+        "name": "Aging New Yorkers",
+        "slug": "aging-new-yorkers"
       },
       {
         "id": 5,
