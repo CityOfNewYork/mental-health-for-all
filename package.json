@@ -8,11 +8,11 @@
     "start": "cross-env NODE_ENV=development concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
     "version": "npm run default && git add .",
     "default": "cross-env NODE_ENV=development pttrn",
-    "ghpages": "npm run default && cross-env NODE_ENV=development pttrn publish",
+    "ghpages": "npm run default && cross-env NODE_ENV=development pttrn publish"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CityOfNewYork/mhfa.git"
+    "url": "https://github.com/CityOfNewYork/mhfa"
   },
   "author": "NYC Opportunity <products@nycopportunity.nyc.gov>",
   "license": "GPL-3.0+",
