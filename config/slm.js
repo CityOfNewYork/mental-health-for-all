@@ -5,8 +5,10 @@ module.exports = {
       NODE_ENV: process.env.NODE_ENV,
     },
   },
-  root: (process.env.NODE_ENV === 'production')
-      ? 'https://cityofnewyork.github.io/mhfa' : '',
+  root:
+    process.env.NODE_ENV === 'production'
+      ? 'https://cityofnewyork.github.io/mhfa'
+      : '',
   services: [
     {
       title: 'Mobile crisis teams',
@@ -71,7 +73,8 @@ module.exports = {
                   <li>Available in the Bronx, Brooklyn, Manhattan, and Queens.</li>
                 </ul>
               </div>
-            `},
+            `,
+            },
           ],
         },
         otherWaysToGetHelp: {
@@ -151,7 +154,8 @@ module.exports = {
                   <li>It’s free, confidential, and available 24 hours a day, 7 days a week.</li>
                 </ul>
               </div>
-            `},
+            `,
+            },
             {
               type: 'texting',
               body: `
@@ -162,7 +166,8 @@ module.exports = {
                   <li>Text 'WELL' to 65173</li>
                 </ul>
               </div>
-            `},
+            `,
+            },
             {
               type: 'website',
               body: `
@@ -173,7 +178,8 @@ module.exports = {
                   <li>Go to <a href="https://nycwell.cityofnewyork.us/en/">NYC Well</a></li>
                 </ul>
               </div>
-            `},
+            `,
+            },
           ],
         },
         otherWaysToGetHelp: {
@@ -196,7 +202,8 @@ module.exports = {
     },
     {
       title: 'The Crime Victim Assistance Program (CVAP)',
-      subtitle: 'Mental health support for victims of domestic violence and other crimes',
+      subtitle:
+        'Mental health support for victims of domestic violence and other crimes',
       programProvider: 'NYPD & Safe Horizon',
       sections: [
         'What it is',
@@ -249,7 +256,8 @@ module.exports = {
                   <li>Advocates can assist you in any language. <a href="https://www1.nyc.gov/site/nypd/services/victim-services/cvap.page">Link</a></li>
                 </ul>
               </div>
-            `},
+            `,
+            },
             {
               type: 'online-chat',
               body: `
@@ -260,10 +268,11 @@ module.exports = {
                   <li><a href="https://www.safehorizon.org/safechat/">Link here</a></li>
                 </ul>
               </div>
-            `},
+            `,
+            },
             {
               type: 'calling',
-              body:`
+              body: `
               <h3>Chat with a counselor online</h3>
 
               <div class="list-unordered--check">
@@ -271,7 +280,8 @@ module.exports = {
                   <li>Call <a href="tel:800-621-4673">800-621-4673</a> (For help with domestic violence)</li>
                 </ul>
               </div>
-            `},
+            `,
+            },
           ],
         },
         otherWaysToGetHelp: {
@@ -292,6 +302,371 @@ module.exports = {
       population: {
         id: 6,
         name: 'Everyone',
+      },
+    },
+    {
+      title: 'Mission: VetCheck',
+      subtitle:
+        'Mission: VetCheck connects veterans to trained volunteers through one-on-one supportive check-in calls.',
+      programProvider:
+        'NYC Department of Veterans’ Services & The Mayor’s Office of Community Mental Health and Unite Us',
+      sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+      body: {
+        whatItIs: {
+          title: 'What it is',
+          content: `
+            <p>As a veteran, you can request a supportive check-in call from a trained volunteer through Mission: VetCheck. Check-ins give you one-on-one support and help you get information on accessing vital public services like:</p>
+
+
+            <div class="list-unordered--check">
+            <ul>
+            <li>free meals</li>
+
+            <li>COVID-19 testing locations</li>
+
+            <li>mental health resources</li>
+            </ul>
+            </div>
+
+            <p>VetCheck check-ins are not a substitute for immediate or life-threatening concerns.</p>
+          `,
+        },
+        whoItIsFor: {
+          title: 'Who it’s for',
+          content: `
+            <p>Mission: VetCheck is available to veterans across New York City during the COVID-19 crisis.</p>
+          `,
+        },
+        cost: {
+          title: 'Cost',
+          content: `
+            <p>Free</p>
+          `,
+        },
+        howToGetInTouch: {
+          title: 'How to get in touch',
+          content: [
+            {
+              type: 'website',
+              body: `
+              <h3>CRequest a Check-in by <a href="https://thrivenyc.cityofnewyork.us/mission-vetcheck">filling out this form</a> . Check-ins happen 9 am – 7 pm, 7 days a week.</h3>
+            `,
+            },
+          ],
+        },
+      },
+      link: './programs/',
+      featured: true,
+      category: {
+        id: 5,
+        name: 'Help with Anxiety',
+      },
+      population: {
+        id: 1,
+        name: 'Veterans',
+      },
+    },
+    {
+      title: 'Family Justice Centers',
+      subtitle:
+        'Legal and social services for survivors of domestic and gender-based violence',
+      programProvider:
+        "Mayor's Office to End Domestic and Gender-Based Violence",
+      sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+      body: {
+        whatItIs: {
+          title: 'What it is',
+          content: `
+            <p>If you’re a survivor of domestic and gender-based violence, a Family Justice Center (FJC) can help. This includes sexual violence, human trafficking, stalking, intimate partner violence, and more.</p>
+
+            <p>Family Justice Centers offer legal and social service support for survivors and their families, as well as mental health support including:</p>
+
+            <div class="list-unordered--check">
+              <ul>
+                <li>Crisis counseling and connections to ongoing support</li>
+
+                <li>Legal help for orders of protection, custody, visitation, child support, divorce, housing, and immigration</li>
+
+                <li>Individual and group therapy</li>
+
+                <li>Safety planning</li>
+              </ul>
+            </div>
+          `,
+        },
+        whoItIsFor: {
+          title: 'Who it’s for',
+          content: `
+            <p>All are welcome regardless of language, income, gender identity, or immigration status.</p>
+          `,
+        },
+        cost: {
+          title: 'Cost',
+          content: `
+            <p>Free</p>
+          `,
+        },
+        howToGetInTouch: {
+          title: 'How to get in touch',
+          content: [
+            {
+              type: 'website',
+              body: `
+              <h3><a href="https://www1.nyc.gov/site/nypd/services/victim-services/cvap.page">Visit a Family Justice Center</a></li></h3>
+
+              <div class="list-unordered--check">
+                <ul>
+                  <li>There’s a Family Justice Center in every borough.</li>
+                  <li>Monday through Friday</li>
+                  <li>9 a.m. to 5 p.m.</li>
+                  <li>No appointment is needed.</li>
+                </ul>
+              </div>
+            `,
+            },
+            {
+              type: 'calling',
+              body: `
+              <h3>Call <a href="tel:311">311</a></h3>
+
+              <div class="list-unordered--check">
+                <ul>
+                  <li>Ask about “Family Justice Centers”</li>
+                </ul>
+              </div>
+            `,
+            },
+            {
+              type: 'calling',
+              body: `
+              <h3>Call the City's 24-hour Domestic Violence Hotline at <a href="tel:800-621-HOPE">800-621-HOPE (4673)</a> for immediate safety planning, shelter assistance, and other resources.</h3>
+
+              <div class="list-unordered--check">
+                <ul>
+                  <li>TTY: <a href="tel:800-810-7444">800-810-7444</a></li>
+                </ul>
+              </div>
+            `,
+            },
+          ],
+        },
+      },
+      link: './programs/family-justice-centers',
+      featured: true,
+      category: {
+        id: 1,
+        name: 'Trauma Support',
+      },
+      population: {
+        id: 6,
+        name: 'Everyone',
+      },
+    },
+    {
+      title: 'Geriatric Mental Health Initiative',
+      subtitle:
+        'New Yorkers age 60 and older can get mental health screenings, on-site counseling, and referrals at senior centers near them.',
+      programProvider: 'Department for the Aging (DFTA)',
+      sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+      body: {
+        whatItIs: {
+          title: 'What it is',
+          content: `
+            <p>If you’re an older adult who needs mental health support, you can speak to a mental health clinician at a senior center near you.</p>
+
+            <p>Mental health clinicians can screen you for depression, provide on-site counseling, and give referrals. They can also talk to you about anxiety and depression.</p>
+          `,
+        },
+        whoItIsFor: {
+          title: 'Who it’s for',
+          content: `
+            <p>Adults who are age 60 or older can see a mental health clinician.</p>
+          `,
+        },
+        cost: {
+          title: 'Cost',
+          content: `
+            <p>Free</p>
+          `,
+        },
+        howToGetInTouch: {
+          title: 'How to get in touch',
+          content: [
+            {
+              type: 'website',
+              body: `
+              <h3><a href="https://www1.nyc.gov/site/dfta/services/find-help.page">Find a senior center with a mental health clinician</a></li></h3>
+
+              <div class="list-unordered--check">
+                <ul>
+                  <li>Search for “Geriatric Mental Health” under <strong>Services</strong>. </li>
+                  <li>Choose a location from the results and call them for more information.</li>
+                </ul>
+              </div>
+            `,
+            },
+            {
+              type: 'calling',
+              body: `
+              <h3>Call AGING Connect at <a href="tel:212-244-6469">212-244-6469</a> and ask about Geriatric Mental Health</h3>
+            `,
+            },
+            {
+              type: 'calling',
+              body: `
+              <h3>Learn more at <a href="https://www1.nyc.gov/site/dfta/services/thrivenyc-at-dfta.page"> Department for the Aging</a>.</h3>
+            `,
+            },
+          ],
+        },
+      },
+      link: './programs/',
+      featured: true,
+      category: {
+        id: 2,
+        name: 'Care for Serious Mental Illness',
+      },
+      population: {
+        id: 4,
+        name: 'Seniors',
+      },
+    },
+    {
+      title: 'Friendly Visiting and Friendly VOICES',
+      subtitle:
+        'Older New Yorkers who feel isolated can connect with a peer to talk about shared interests.',
+      programProvider: 'Department for the Aging (DFTA)',
+      sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+      body: {
+        whatItIs: {
+          title: 'What it is',
+          content: `
+            <p>If you’re an older adult feeling isolated or lonely, experiencing depression or anxiety, or just looking to talk to someone, the Friendly Programs can help. </p>
+
+            <p><strong>Friendly Visiting</strong> is a program for homebound older adults who have ongoing health challenges that make it difficult for them to go out. </p>
+            <p>You can get paired with a volunteer visitor or peer who is close to your age. A volunteer can visit you in your home to talk about shared interests and experiences. You may also join a virtual group to talk with others.</p>
+            <p>Due to COVID-19, volunteers are currently maintaining social distancing guidelines and are connecting with their matches by phone and video calls.</p>
+            <p><strong>Friendly VOICES</strong> is a program for older adults who are isolated for other reasons (such as COVID-19).</p>
+            <p>You’ll be matched with a volunteer whom you can keep in touch by phone or video calls. You also have the option to join a virtual group or be matched with a peer close to your age.</p>
+          `,
+        },
+        whoItIsFor: {
+          title: 'Who it’s for',
+          content: `
+            <p>The Friendly Programs are open to older adults.</p>
+          `,
+        },
+        cost: {
+          title: 'Cost',
+          content: `
+            <p>Free</p>
+          `,
+        },
+        howToGetInTouch: {
+          title: 'How to get in touch',
+          content: [
+            {
+              type: 'calling',
+              body: `
+              <h3>Call AGING Connect at <a href="tel:212-244-6469">212-244-6469</a> and ask about the Friendly Programs.</h3>
+            `,
+            },
+            {
+              type: 'calling',
+              body: `
+              <h3><a href="https://www.surveymonkey.com/r/G8VSSVS">Fill out the interest form to enroll in Friendly VOICES.</a> You’ll be contacted with next steps.</h3>
+            `,
+            },
+          ],
+        },
+        otherWaysToGetHelp: {
+          title: 'Other ways to get help',
+          content: `
+            <p>Learn more online from the Department for the Aging. <a href="https://www1.nyc.gov/site/dfta/services/friendly-programs.page">Department for the Aging</a></p>
+          `,
+        },
+      },
+      link: './programs/',
+      featured: true,
+      category: {
+        id: 7,
+        name: 'Peer Support',
+      },
+      population: {
+        id: 4,
+        name: 'Seniors',
+      },
+    },
+    {
+      title: 'Program for Survivors of Torture',
+      subtitle:
+        'Immigrants who survived torture and are applying for asylum can access medical, mental health, and other services.',
+      programProvider: 'Bellevue and NYC Health + Hospitals',
+      sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+      body: {
+        whatItIs: {
+          title: 'What it is',
+          content: `
+            <p>If you are someone who was tortured or persecuted by your family or another person, help is available.</p>
+
+            <p>The Program for Survivors of Torture (PSOT) at NYC Health + Hospitals and Bellevue assists individuals and families who survived torture and human rights abuses.</p>
+            <p>You can get:</p>
+
+            <div class="list-unordered--check">
+            <ul>
+              <li><strong>Medical services</strong> including labs and referrals to specialists.</li>
+              <li><strong>Mental health services</strong> like group therapy, psychiatric support, and more.</li>
+              <li><strong>Social services</strong> like housing support, English classes, and more.</li>
+              <li><strong>Legal services</strong> to help you obtain asylum.</li>
+            </ul>
+          </div>
+          `,
+        },
+        whoItIsFor: {
+          title: 'Who it’s for',
+          content: `
+            <p>If you’ve already applied for asylum in the United States or plan to apply for asylum, you may be eligible.</p>
+          `,
+        },
+        cost: {
+          title: 'Cost',
+          content: `
+            <p>Free</p>
+          `,
+        },
+        howToGetInTouch: {
+          title: 'How to get in touch',
+          content: [
+            {
+              type: 'website',
+              body: `
+              <h3>If you or someone you know is interested in becoming a client, complete a <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2QK6MtLyn1zCkzP1XeYbMZxN7T9xDzkliJ7jAmWwPGls9Uw/viewform">referral form</a>.</h3>
+            `,
+            },
+            {
+              type: 'website',
+              body: `
+              <h3>Email for more information <a href="mailto: info@survivorsoftorture.org">info@survivorsoftorture.org.</a></h3>
+            `,
+            },
+          ],
+        },
+        otherWaysToGetHelp: {
+          title: 'Other ways to get help',
+          content: `
+            <p>Learn more from <a href="https://www.survivorsoftorture.org/">survivorsoftorture.org</a></p>
+          `,
+        },
+      },
+      link: './programs/',
+      featured: true,
+      category: {
+        id: 8,
+        name: 'Counseling',
+      },
+      population: {
+        id: 7,
+        name: 'Immigrants',
       },
     },
   ],

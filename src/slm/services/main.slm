@@ -42,14 +42,14 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
 
   div class='o-article js-sticky-article desktop:w-article m-auto'
     div class='o-content-container--compact'
-      - if this.service.sections.includes('What it is')
+      - if this.service.body.hasOwnProperty('whatItIs')
         section id='${this.createSlug(this.service.body.whatItIs.title)}' class='o-content-container--text s-wysiwyg u-top-spacing u-bottom-spacing-small' tabindex='-1'
           h2 id='section-call-to-action' tabindex='-1'
             == this.service.body.whatItIs.title
 
           == this.service.body.whatItIs.content
 
-      - if this.service.sections.includes('Who it’s for')
+      - if this.service.body.hasOwnProperty('whoItIsFor')
         / section id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
         /   h2 id='section-call-to-action' tabindex='-1'
         /     == this.service.body.whoItIsFor.title
@@ -67,14 +67,14 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
 
             == this.service.body.whoItIsFor.content
 
-      - if this.service.sections.includes('Cost')
+      - if this.service.body.hasOwnProperty('cost')
         section id='${this.createSlug(this.service.body.cost.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
           h2 id='section-call-to-action' tabindex='-1'
             == this.service.body.cost.title
 
           == this.service.body.cost.content
 
-      - if this.service.sections.includes('How to get in touch')
+      - if this.service.body.hasOwnProperty('howToGetInTouch')
         section id='${this.createSlug(this.service.body.howToGetInTouch.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
           h2 id='section-call-to-action' tabindex='-1'
             == this.service.body.howToGetInTouch.title
@@ -94,7 +94,7 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
                   div class='c-card__body'
                     == this.card.body
 
-      - if this.service.sections.includes('Other ways to get help')
+      - if this.service.body.hasOwnProperty('otherWaysToGetHelp')
         section id='${this.createSlug(this.service.body.otherWaysToGetHelp.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
           h2 id='section-call-to-action' tabindex='-1'
             == this.service.body.otherWaysToGetHelp.title
