@@ -38,8 +38,8 @@ $tokens:(
     color-blue-light: #2793e0,
     color-blue: #0055b8,
     color-blue-mid: #184e9e,
-    color-blue-dark: #2E4F91,
-    color-red: #FB5159,
+    color-blue-dark: #154A94,
+    color-red: #E93E51,
     color-pink: #d8006d,
     color-pink-dark: #7f1c4e,
     color-green: #21ad0e,
@@ -56,9 +56,11 @@ $tokens:(
     color-purple: #C1408B,
     color-purple-dark: #9F2D71,
     color-shadow: rgba(0, 0, 0, .2),
-    color-yellow: #FDB240,
-    color-yellow-light: #FED77C,
-    color-primary: color-purple-dark
+    color-yellow: #FDB714,
+    color-yellow-light: #FFCB68,
+    color-primary: color-purple-dark,
+    color-purple-light: #ECC8DE,
+    transparent: transparent
   ),
   colors-default: (
     color-primary: color-purple-dark,
@@ -178,16 +180,16 @@ $tokens:(
       secondary: #FA660A
     ),
     children-and-youth: (
-      primary: #2E4F91,
-      secondary: #2E4F91
+      primary: #154A94,
+      secondary: #154A94
     ),
     lgbtq: (
       primary: #C1408B,
       secondary: #C1408B
     ),
     seniors: (
-      primary: #FB5159,
-      secondary: #FB5159
+      primary: #E93E51,
+      secondary: #E93E51
     ),
     immigrants: (
       primary: #02A586,
@@ -204,6 +206,14 @@ $tokens:(
     families: (
       primary: #d8006d,
       secondary: #d8006d
+    ),
+    cat: (
+      primary: #C1408B,
+      secondary: #C1408B
+    ),
+    pop: (
+      primary: #C1408B,
+      secondary: #C1408B
     )
   )
 );

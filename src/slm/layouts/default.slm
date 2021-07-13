@@ -27,8 +27,6 @@ html lang='en' class='no-js'
     div class='o-offcanvas js-offcanvas' id='offcanvas-ages'
       a href='#main' class='show-for-keyboard' Skip to main content
 
-      == this.include('/slm/partials/objects/navigation/navigation.slm');
-
       div class='o-offcanvas__main js-offcanvas__main'
         == this.include('/slm/partials/objects/navigation/navigation-offcanvas.slm');
 
@@ -44,14 +42,11 @@ html lang='en' class='no-js'
 
     javascript:
       var gunyc = new Default();
+
       gunyc.icons('https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/svg/icons.svg');
       gunyc.icons('${this.root}/svg/svgs.svg');
       gunyc.toggle();
       gunyc.accordion();
-      if (window.location.pathname === '/' || window.location.pathname === '/mhfa/') {
-        gunyc.staticColumn();
-        gunyc.textRotation();
-      }
 
     = content('scripts')
 

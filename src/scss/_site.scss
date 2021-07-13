@@ -1,9 +1,64 @@
-.c-side-hero__image {
-  background-image: url('../img/children_and_families.jpg');
+.c-side-hero__content::before,
+.c-side-hero__content::after {
+  display: none;
+}
+
+.bg-main {
+  background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 10%, rgba(40,11,28,0) 64%, rgba(40,11,28,0) 100%),
+                    url('../img/main.jpg');
 }
 
 .bg-crisis-support {
-  background-image: url('../img/crisis_support.jpg');
+  background-image: url('../img/crisis-support.jpg');
+}
+
+.bg-domestic-violence {
+  background-position-y: 35%;
+  background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 41%, rgba(40,11,28,0) 84%, rgba(40,11,28,0) 100%),
+                    url('../img/domestic-violence.jpg');
+}
+
+.bg-still-1 {
+  background-image: url('../img/still-1.png');
+}
+
+[class*='bg-light'] {
+  position: absolute;
+}
+
+.bg-light-a {
+  top: 0;
+  right: 50%;
+  margin-right: -340px;
+  width: 983px;
+  min-width: 983px;
+  height: auto;
+}
+
+.bg-light-b {
+  top: 0;
+  right: 0;
+  margin-right: -40px;
+  width: 1343px;
+  min-width: 1343px;
+  height: 480px;
+}
+
+.bg-light-c {
+  top: 0;
+  left: 0;
+  margin-left: -30px;
+  width: 877px;
+  min-width: 877px;
+  height: 353px;
+}
+
+.bg-light-d {
+  bottom: 0;
+  left: 0;
+  width: 1427px;
+  min-width: 1427px;
+  height: 478px;
 }
 
 button {

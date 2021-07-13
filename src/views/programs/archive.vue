@@ -7,19 +7,19 @@
             <svg class="o-accordion__caret icon" aria-hidden="true"><use xlink:href="#icon-caret-down"></use>
             </svg>
           </button> -->
-          <button data-js="accordion" type="button" :aria-controls="'aria-c-' + term.slug" aria-expanded="true" class='c-list-box__heading o-accordion__header bg-toddler--secondary active'>
+          <button data-js="accordion" type="button" :aria-controls="'aria-c-' + term.slug" aria-expanded="true" :class="'c-list-box__heading o-accordion__header bg-' + term.slug + '--secondary active'">
             {{term.name}}
             <svg class="o-accordion__caret icon" aria-hidden="true"><use xlink:href="#icon-caret-down"></use></svg>
           </button>
           <ul role="region" aria-hidden="false" :id="'aria-c-' + term.slug">
-            <li class='c-list-box__subitem bg-toddler--primary'>
+            <li :class="'c-list-box__subitem bg-' + term.slug + '--primary'">
               <button
                 @click="toggle({ event: $event, data: { parent: term.slug } })"
               >
                 Toggle All
               </button>
             </li>
-            <li v-for="filter in term.filters" :key="filter.slug" class='c-list-box__subitem bg-toddler--primary'>
+            <li v-for="filter in term.filters" :key="filter.slug" :class="'c-list-box__subitem bg-' + term.slug + '--primary'">
               <label class="checkbox">
                 <input
                   class="checkbox__field"
