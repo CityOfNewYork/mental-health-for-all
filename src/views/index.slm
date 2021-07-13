@@ -17,7 +17,11 @@
 
       h1 class='c-side-hero__title'
         p
-          |  Mental Health
+          | The official
+          svg.icon--nyc.mx-2 role="img"
+            title New York City
+            use xlink:href="#icon-nyc-logo"
+          | Mental Health
           |  resource for
 
         div class='c-side-hero__title__large rotating-text'
