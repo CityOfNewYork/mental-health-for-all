@@ -8,6 +8,12 @@
                     url('../img/main.jpg');
 }
 
+.bg-single {
+  background-position-y: 35%;
+  background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 41%, rgba(40,11,28,0) 84%, rgba(40,11,28,0) 100%),
+                    url('../img/single.jpg');
+}
+
 .bg-crisis-support {
   background-image: url('../img/crisis-support.jpg');
 }

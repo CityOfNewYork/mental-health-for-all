@@ -1,5 +1,5 @@
 div class='js-parallax relative'
-  header class='c-hero c-hero--large c-hero--long-text js-parallax-content bg-color-purple bg-domestic-violence'
+  header class='c-hero c-hero--large c-hero--long-text js-parallax-content bg-color-purple bg-single'
     div class='o-container js-parallax-text'
       - if this.service.title
         h1 class='c-hero__title c-hero__title--long'
