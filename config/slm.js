@@ -669,6 +669,134 @@ module.exports = {
         name: 'Immigrants',
       },
     },
+    {
+      title: 'Clubhouses',
+      subtitle:
+        'People who struggle with mental illness and substance abuse can go to a Clubhouse to connect with peers and get help rejoining society.',
+      programProvider: 'Department of Health and Mental Hygiene',
+      sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+      body: {
+        whatItIs: {
+          title: 'What it is',
+          content: `
+            <p>Clubhouses are supportive communities for people with a history of serious mental illness and substance misuse.</p>
+
+            <p>You can find meaningful work and educational opportunities and social connections in these unique, member-run spaces.</p>
+            <p>Designed to help people rejoin society and maintain their position in it, clubhouses offer:</p>
+
+            <div class="list-unordered--check">
+            <ul>
+            <li>mutual support from other members</li>
+            <li>professional staff support</li>
+            <li>work training</li>
+            <li>educational opportunities</li>
+            <li>social connection</li>
+            </ul>
+            </div>
+            <p>There are clubhouses in The Bronx, Brooklyn, Manhattan, and Queens.</p>
+          `,
+        },
+        whoItIsFor: {
+          title: 'Who it’s for',
+          content: `
+            <p>If you’re an adult with a history of serious mental illness or substance misuse, a clubhouse can help.</p>
+          `,
+        },
+        cost: {
+          title: 'Cost',
+          content: `
+            <p>Clubhouses are free for people to access.</p>
+          `,
+        },
+        howToGetInTouch: {
+          title: 'How to get in touch',
+          content: [
+            {
+              type: 'calling',
+              body: `
+              <h3>Call <a href="tel:1-888-NYC-Well">1-888-NYC-Well </a> to find a clubhouse near you
+              Ask for a Clubhouse near you.
+              </h3>
+            `,
+            },
+            {
+              type: 'website',
+              body: `
+              <h3>Visit the <a href="https://nycwell.cityofnewyork.us/en/find-services/">NYC Well service directory</a> to find a clubhouse. Search for "Clubhouse"</h3>
+            `,
+            },
+          ],
+        },
+      },
+      link: './programs/',
+      featured: true,
+      category: {
+        id: 7,
+        name: 'Peer Support',
+      },
+      population: {
+        id: 8,
+        name: 'Adults',
+      },
+    },
+    {
+      title: 'Early Childhood Mental Health Network',
+      subtitle:
+        'Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.',
+      programProvider: 'Department of Health and Mental Hygiene',
+      sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+      body: {
+        whatItIs: {
+          title: 'What it is',
+          content: `
+            <p>If you’re a parent who is concerned about your child’s emotions, behavior, or relationships, you can get help. An early childhood therapeutic center can help you address these challenges early.</p>
+
+            <p>Early childhood therapeutic centers offer:</p>
+
+            <div class="list-unordered--check">
+            <ul>
+            <li>Specialized mental health treatment for children from birth to age five and their families.</li>
+            <li>Access to family peer advocates and connection to ongoing support. </li>
+            </ul>
+            </div>
+          `,
+        },
+        whoItIsFor: {
+          title: 'Who it’s for',
+          content: `
+            <p>Parents and young children from birth to age 5.</p>
+          `,
+        },
+        cost: {
+          title: 'Cost',
+          content: `
+            <p>Centers accept Medicaid and other insurance. They’ll also work with you to ensure access.</p>
+          `,
+        },
+        howToGetInTouch: {
+          title: 'How to get in touch',
+          content: [
+            {
+              type: 'website',
+              body: `
+              <h3><a href="https://nycwell.cityofnewyork.us/en/find-services/">Call and make an appointment at a Center near you. </a>There are Centers in every borough.
+              </h3>
+            `,
+            },
+          ],
+        },
+      },
+      link: './programs/',
+      featured: true,
+      category: {
+        id: 9,
+        name: 'Mental Health Care ',
+      },
+      population: {
+        id: 2,
+        name: 'Children and Families',
+      },
+    },
   ],
   programs: [
     'Trauma Support',

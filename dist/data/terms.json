@@ -42,6 +42,11 @@
         "id": 8,
         "name": "Counseling",
         "slug": "counseling"
+      },
+      {
+        "id": 9,
+        "name": "Mental Health Care ",
+        "slug": "mental-health-care "
       }
     ]
   },
@@ -83,6 +88,11 @@
         "id": 7,
         "name": "Immigrants",
         "slug": "immigrants"
+      },
+      {
+        "id": 8,
+        "name": "Adults",
+        "slug": "adults"
       }
     ]
   }
