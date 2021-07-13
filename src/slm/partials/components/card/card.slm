@@ -12,7 +12,7 @@ div class='c-card flex mr-0 rounded-lg'
 
   h3 class='c-card__title'
     - if this.card.title
-      a href='${this.card.link}' title='{{ Post Title }}' rel='bookmark'
+      a href='programs/${this.createSlug(this.card.title)}' title='{{ Post Title }}' rel='bookmark'
         == this.card.title
 
   div class="c-card__subtitle"
