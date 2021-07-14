@@ -8,7 +8,7 @@ const fs = require('fs');
 const cnsl = require('@nycopportunity/pttrn/bin/util/console');
 const alerts = require('@nycopportunity/pttrn/config/alerts');
 
-const services = require('../config/slm').services;
+const services = require('./services');
 
 const createSlug = (s) =>
   s
