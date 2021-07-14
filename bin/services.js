@@ -10,23 +10,23 @@ const alerts = require('@nycopportunity/pttrn/config/alerts');
 
 const services = require('../config/slm').services;
 
-const createSlug = (s) => s
-  .toLowerCase()
-  .replace(/[^0-9a-zA-Z - _]+/g, '')
-  .replace(/\s+/g, '-')
-  .replace(/-+/g, '-')
+const createSlug = (s) =>
+  s
+    .toLowerCase()
+    .replace(/[^0-9a-zA-Z - _]+/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
 
 const card = {
-  "subtitle": '',
-  "title": '',
-  "programProvider": '',
-  "body": '',
-  "link": '',
-  "featured": '',
-  "category": {},
-  "population": {}
-}
-
+  subtitle: '',
+  title: '',
+  programProvider: '',
+  body: '',
+  link: '',
+  featured: '',
+  categories: {},
+  population: {},
+};
 
 /**
  * Export our methods
@@ -54,11 +54,11 @@ module.exports = {
         .replace('{{ SERVICE_SLUG }}', slug);
 
       // if (!fs.existsSync(write)) {
-        await fs.writeFileSync(write, data);
+      await fs.writeFileSync(write, data);
 
-        cnsl.success(`${alerts.str.path(write)} was made.`);
+      cnsl.success(`${alerts.str.path(write)} was made.`);
       // } else {
-        // cnsl.error(`${alerts.str.path(write)} already exists.`);
+      // cnsl.error(`${alerts.str.path(write)} already exists.`);
       // }
 
       /**
@@ -67,7 +67,7 @@ module.exports = {
 
       let srvc = {};
 
-      Object.keys(card).map(key => {
+      Object.keys(card).map((key) => {
         if (key === 'body') {
           srvc[key] = service['subtitle'];
         } else {
@@ -85,5 +85,5 @@ module.exports = {
     fs.writeFileSync(servciesJson, JSON.stringify(json));
 
     cnsl.success(`${alerts.str.path(servciesJson)} was made.`);
-  }
+  },
 };
