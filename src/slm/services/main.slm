@@ -17,10 +17,15 @@ div class='js-parallax relative'
       /   p class='c-hero__tagline desktop:w-6/12'
       /     == this.service.programProvider
 
-      - if this.service.category.name
+      - if this.service.categories && this.service.categories.length > 0
         p class='c-hero__tags'
-          a href='#' class='button--pill'
-            == this.service.category.name
+          - for (let i in this.service.categories)
+            span class='button--pill button--pill--alt order-last'
+              == this.service.categories[i].name
+      - if this.service.population && this.service.population.length > 0
+          - for (let i in this.service.population)
+            span class='button--pill order-last ${this.generateClassName(this.service.population[i].name)}'
+              == this.service.population[i].name
 
 article class='o-container u-bottom-spacing-small js-sticky-container desktop:flex'
   div class='o-article-sidebar desktop:w-sidebar'

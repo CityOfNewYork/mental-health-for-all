@@ -88,14 +88,26 @@ module.exports = {
       },
       link: './programs/support-during-a-crisis',
       featured: true,
-      category: {
-        id: 3,
-        name: 'Crisis Support',
-      },
-      population: {
-        id: 1,
-        name: 'Veterans',
-      },
+      categories: [
+        {
+          id: 3,
+          name: 'Crisis Support',
+        },
+        {
+          id: 10,
+          name: 'Serious mental illness',
+        },
+        {
+          id: 9,
+          name: 'Mental Health Care',
+        },
+      ],
+      population: [
+        {
+          id: 6,
+          name: 'Everyone',
+        },
+      ],
     },
     {
       title: 'NYC Well',
@@ -191,14 +203,42 @@ module.exports = {
       },
       link: './programs/support-during-a-crisis',
       featured: true,
-      category: {
-        id: 3,
-        name: 'Crisis Support',
-      },
-      population: {
-        id: 6,
-        name: 'Everyone',
-      },
+      categories: [
+        {
+          id: 3,
+          name: 'Crisis Support',
+        },
+        {
+          id: 5,
+          name: 'Help with Anxiety',
+        },
+        {
+          id: 4,
+          name: 'Grief Support',
+        },
+        {
+          id: 6,
+          name: 'Substance Use Services',
+        },
+        {
+          id: 10,
+          name: 'Serious mental illness',
+        },
+        {
+          id: 7,
+          name: 'Peer Support',
+        },
+        {
+          id: 8,
+          name: 'Counseling',
+        },
+      ],
+      population: [
+        {
+          id: 6,
+          name: 'Everyone',
+        },
+      ],
     },
     {
       title: 'The Crime Victim Assistance Program (CVAP)',
@@ -295,14 +335,18 @@ module.exports = {
       },
       link: './programs/the-crime-victim-assistance-program-cvap',
       featured: true,
-      category: {
-        id: 1,
-        name: 'Trauma Support',
-      },
-      population: {
-        id: 6,
-        name: 'Everyone',
-      },
+      categories: [
+        {
+          id: 1,
+          name: 'Trauma Support',
+        },
+      ],
+      population: [
+        {
+          id: 6,
+          name: 'Everyone',
+        },
+      ],
     },
     {
       title: 'Mission: VetCheck',
@@ -357,14 +401,22 @@ module.exports = {
       },
       link: './programs/',
       featured: true,
-      category: {
-        id: 5,
-        name: 'Help with Anxiety',
-      },
-      population: {
-        id: 1,
-        name: 'Veterans',
-      },
+      categories: [
+        {
+          id: 1,
+          name: 'Trauma Support',
+        },
+        {
+          id: 5,
+          name: 'Help with Anxiety',
+        },
+      ],
+      population: [
+        {
+          id: 1,
+          name: 'Veterans',
+        },
+      ],
     },
     {
       title: 'Family Justice Centers',
@@ -453,14 +505,34 @@ module.exports = {
       },
       link: './programs/family-justice-centers',
       featured: true,
-      category: {
-        id: 1,
-        name: 'Trauma Support',
-      },
-      population: {
-        id: 6,
-        name: 'Everyone',
-      },
+      categories: [
+        {
+          id: 1,
+          name: 'Trauma Support',
+        },
+      ],
+      population: [
+        {
+          id: 6,
+          name: 'Everyone',
+        },
+        {
+          id: 2,
+          name: 'Children and Families',
+        },
+        {
+          id: 8,
+          name: 'Adults',
+        },
+        {
+          id: 3,
+          name: 'LGBTQ',
+        },
+        {
+          id: 7,
+          name: 'Immigrants',
+        },
+      ],
     },
     {
       title: 'Geriatric Mental Health Initiative',
@@ -522,14 +594,26 @@ module.exports = {
       },
       link: './programs/',
       featured: true,
-      category: {
-        id: 2,
-        name: 'Care for Serious Mental Illness',
-      },
-      population: {
-        id: 4,
-        name: 'Seniors',
-      },
+      categories: [
+        {
+          id: 5,
+          name: 'Help with Anxiety',
+        },
+        {
+          id: 10,
+          name: 'Serious mental illness',
+        },
+        {
+          id: 9,
+          name: 'Mental Health Care',
+        },
+      ],
+      population: [
+        {
+          id: 4,
+          name: 'Seniors',
+        },
+      ],
     },
     {
       title: 'Friendly Visiting and Friendly VOICES',
@@ -588,14 +672,18 @@ module.exports = {
       },
       link: './programs/',
       featured: true,
-      category: {
-        id: 7,
-        name: 'Peer Support',
-      },
-      population: {
-        id: 4,
-        name: 'Seniors',
-      },
+      categories: [
+        {
+          id: 7,
+          name: 'Peer Support',
+        },
+      ],
+      population: [
+        {
+          id: 4,
+          name: 'Seniors',
+        },
+      ],
     },
     {
       title: 'Program for Survivors of Torture',
@@ -660,14 +748,38 @@ module.exports = {
       },
       link: './programs/',
       featured: true,
-      category: {
-        id: 8,
-        name: 'Counseling',
-      },
-      population: {
-        id: 7,
-        name: 'Immigrants',
-      },
+      categories: [
+        {
+          id: 1,
+          name: 'Trauma Support',
+        },
+        {
+          id: 7,
+          name: 'Peer Support',
+        },
+        {
+          id: 9,
+          name: 'Mental Health Care',
+        },
+        {
+          id: 10,
+          name: 'Serious mental illness',
+        },
+      ],
+      population: [
+        {
+          id: 2,
+          name: 'Children and Families',
+        },
+        {
+          id: 8,
+          name: 'Adults',
+        },
+        {
+          id: 7,
+          name: 'Immigrants',
+        },
+      ],
     },
     {
       title: 'Clubhouses',
@@ -730,14 +842,30 @@ module.exports = {
       },
       link: './programs/',
       featured: true,
-      category: {
-        id: 7,
-        name: 'Peer Support',
-      },
-      population: {
-        id: 8,
-        name: 'Adults',
-      },
+      categories: [
+        {
+          id: 6,
+          name: 'Substance Use Services',
+        },
+        {
+          id: 10,
+          name: 'Serious mental illness',
+        },
+        {
+          id: 7,
+          name: 'Peer Support',
+        },
+      ],
+      population: [
+        {
+          id: 8,
+          name: 'Adults',
+        },
+        {
+          id: 4,
+          name: 'Seniors',
+        },
+      ],
     },
     {
       title: 'Early Childhood Mental Health Network',
@@ -788,14 +916,30 @@ module.exports = {
       },
       link: './programs/',
       featured: true,
-      category: {
-        id: 9,
-        name: 'Mental Health Care ',
-      },
-      population: {
-        id: 2,
-        name: 'Children and Families',
-      },
+      categories: [
+        {
+          id: 1,
+          name: 'Trauma Support',
+        },
+        {
+          id: 5,
+          name: 'Help with Anxiety',
+        },
+        {
+          id: 7,
+          name: 'Peer Support',
+        },
+        {
+          id: 9,
+          name: 'Mental Health Care',
+        },
+      ],
+      population: [
+        {
+          id: 2,
+          name: 'Children and Families',
+        },
+      ],
     },
   ],
   programs: [
@@ -818,13 +962,13 @@ module.exports = {
     },
     {
       id: 2,
-      name: 'Children and Youth',
-      slug: 'children-and-youth',
+      name: 'Children and Families',
+      slug: 'children-and-families',
     },
     {
       id: 3,
       name: 'LGBTQ',
-      slug: 'lgbtq',
+      slug: 'lgntq',
     },
     {
       id: 4,
@@ -833,8 +977,8 @@ module.exports = {
     },
     {
       id: 5,
-      name: 'Immigrants',
-      slug: 'immigrants',
+      name: 'Students',
+      slug: 'students',
     },
     {
       id: 6,
@@ -843,13 +987,13 @@ module.exports = {
     },
     {
       id: 7,
-      name: 'Adults',
-      slug: 'adults',
+      name: 'Immigrants',
+      slug: 'immigrants',
     },
     {
       id: 8,
-      name: 'Families',
-      slug: 'families',
+      name: 'Adults',
+      slug: 'adults',
     },
   ],
 
@@ -869,6 +1013,10 @@ module.exports = {
       values.includes(service.taxonomy)
     );
     return filteredServices;
+  },
+  generateClassName: (title) => {
+    let className = `bg-${title.toLowerCase()}--secondary`;
+    return className;
   },
   createSlug: (s) =>
     s

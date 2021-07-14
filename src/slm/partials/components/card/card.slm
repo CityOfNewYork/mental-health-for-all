@@ -28,16 +28,16 @@ div class='c-card flex mr-0 rounded-lg'
     -if this.card.subtitle
       == this.card.subtitle
 
-    div class='c-card__tags order-last'
-    - if this.card.category.name
-      / - for (let i in this.card.category)
+    / div class='c-card__tags order-last'
+    / - if this.card.category.name
+    /   / - for (let i in this.card.category)
 
-      - if this.card.category.name == 'Crisis Support'
-        - this.color = 'bg-toddler--primary'
-      - else if this.card.category.name== 'Help With Anxiety'
-        - this.color = 'bg-pre-schooler--primary'
-      - else
-        - this.color = 'button--pill--alt'
+    /   - if this.card.category.name == 'Crisis Support'
+    /     - this.color = 'bg-toddler--primary'
+    /   - else if this.card.category.name== 'Help With Anxiety'
+    /     - this.color = 'bg-pre-schooler--primary'
+    /   - else
+    /     - this.color = 'button--pill--alt'
 
     /   a href='${this.root}/programs/index.html' class='button--pill js-category ${this.color}'
     /     == this.card.category.name

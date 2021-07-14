@@ -69,12 +69,19 @@
                     {{ post.body }}
                   </div>
                   <div class="c-card__tags order-last">
-                    <button class="button--pill js-category button--pill--alt" @click="change({ event: $event, data: {parent: 'cat', id: post.category.id} })">
-                      {{ post.category.name }}
-                    </button>
-                    <a class="button--pill js-category bg-pre-schooler--primary" href="#">
+                      <span v-for="category in post.categories" :key="category.name">
+                        <button class="button--pill js-category button--pill--alt"  @click="change({ event: $event, data: {parent: 'cat', id: category.id} })">
+                          {{ category.name }}
+                        </button>
+                      </span>
+                      <span v-for="people in post.population" :key="people.id">
+                        <button class="button--pill js-category button--pill--alt" :class="classNameGenerator(people.name)" @click="change({ event: $event, data: {parent: 'pop', id: people.id} })">
+                          {{ people.name }}
+                        </button>
+                      </span>
+                    <!-- <a class="button--pill js-category bg-pre-schooler--primary" href="#">
                       {{ post.population.name }}
-                    </a>
+                    </a> -->
                   </div>
                 </div>
                   <!-- <pre>{{ post }}</pre> -->

@@ -139,6 +139,15 @@ class Programs {
         },
 
         /**
+         * Generate class names based on population name
+         * @param {*} name
+         */
+        classNameGenerator: function(name) {
+          let className = ['bg-' + name.toLowerCase() + '--secondary'];
+          return className;
+        },
+
+        /**
          * Overrides wpQuery from the archive.vue library which makes the
          * request for the Services data. Since the data is bundled with the
          * application there is no need to make a request. We just mock the
@@ -220,19 +229,25 @@ class Programs {
               filterdData = [...this.services];
             } else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
               filterdData = [...this.services].filter((service) => {
-                return (
-                  (this.query.cat.includes(service.category.id) &&
-                  this.query.pop.includes(service.population.id))
-                );
+                let filtered =
+                  service.categories.some((category) =>
+                    this.query.cat.includes(category.id)
+                  ) &&
+                  service.population.some((people) =>
+                    this.query.pop.includes(people.id)
+                  );
+                return filtered;
               });
-
               filterdData.length === 0 && noResultFound();
             } else if (
               this.query.cat.length > 0 &&
               this.query.pop.length === 0
             ) {
               filterdData = [...this.services].filter((service) => {
-                return (this.query.cat.includes(service.category.id));
+                let filteredCat = service.categories.some((category) =>
+                  this.query.cat.includes(category.id)
+                );
+                return filteredCat;
               });
 
               filterdData.length === 0 && noResultFound();
@@ -241,7 +256,10 @@ class Programs {
               this.query.cat.length === 0
             ) {
               filterdData = [...this.services].filter((service) => {
-                return (this.query.pop.includes(service.population.id));
+                let filteredPop = service.population.some((people) =>
+                  this.query.pop.includes(people.id)
+                );
+                return filteredPop;
               });
 
               filterdData.length === 0 && noResultFound();
@@ -249,7 +267,10 @@ class Programs {
           } else if (this.query.cat && !this.query.pop) {
             if (this.query.cat.length > 0) {
               filterdData = [...this.services].filter((service) => {
-                return (this.query.cat.includes(service.category.id));
+                let filteredCat = service.categories.some((category) =>
+                  this.query.cat.includes(category.id)
+                );
+                return filteredCat;
               });
 
               filterdData.length === 0 && noResultFound();
@@ -257,7 +278,10 @@ class Programs {
           } else if (this.query.pop && !this.query.cat) {
             if (this.query.pop.length > 0) {
               filterdData = [...this.services].filter((service) => {
-                return (this.query.pop.includes(service.population.id));
+                let filteredPop = service.population.some((people) =>
+                  this.query.pop.includes(people.id)
+                );
+                return filteredPop;
               });
 
               filterdData.length === 0 && noResultFound();
