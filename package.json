@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/CityOfNewYork/mhfa/issues"
   },
-  "homepage": "https://cityofnewyork.github.com/mhfa",
+  "homepage": "https://cityofnewyork.github.io/mhfa",
   "dependencies": {
     "@nycopportunity/growingup-patterns": "file:../growingupnyc-patterns",
     "@nycopportunity/pattern-attribution": "^1.0.3",

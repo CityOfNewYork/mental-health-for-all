@@ -1,7 +1,26 @@
+let package = require('../package.json');
+
 let remotes = {
   'development': '',
-  'testing': 'https://nycopportunity.github.com/mhfa',
-  'production': 'https://cityofnewyork.github.com/mhfa'
+  'testing': 'https://nycopportunity.github.io/mhfa',
+  'production': package.homepage
+};
+
+let banners = {
+  'Crime Victim Assistance Program': 'a',
+  'Family Justice Centers': 'b',
+  'Programs for Survivors of Torture': 'c',
+  'Mission: VetCheck': 'd',
+  'The Trevor Project': 'e',
+  'LGBTQ+ National Help Center': 'e',
+  'Mental Health Services: Single Point of Access (SPOA)': 'f',
+  'Mobile Crisis Teams': 'f',
+  'Friendly Visiting and Friendly VOICES': 'g',
+  'Geriatric Mental Health Initiative': 'g',
+  'NYC Well': false,
+  'NYC Care': 'f',
+  'NYC Family Resource Centers': 'b',
+  'Early Childhood Mental Health Network': 'h'
 };
 
 module.exports = {
