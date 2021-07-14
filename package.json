@@ -2,13 +2,13 @@
   "name": "@nycopportunity/mental-health-for-all",
   "nicename": "Mental Health for All",
   "version": "0.0.0-8",
-  "description": "",
+  "description": "The official NYC Mental Health resource",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
+    "start": "cross-env NODE_ENV=development concurrently \"pttrn -w -np\" \"pttrn serve -w\" -p \"none\"",
     "version": "npm run default && git add .",
-    "default": "cross-env NODE_ENV=development pttrn -np",
-    "ghpages": "npm run default && cross-env NODE_ENV=development pttrn publish"
+    "default": "cross-env NODE_ENV=testing pttrn -np",
+    "ghpages": "npm run default && cross-env NODE_ENV=testing pttrn publish"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/CityOfNewYork/mhfa/issues"
   },
-  "homepage": "https://github.com/CityOfNewYork/mhfa#readme",
+  "homepage": "https://cityofnewyork.github.com/mhfa",
   "dependencies": {
     "@nycopportunity/growingup-patterns": "file:../growingupnyc-patterns",
     "@nycopportunity/pattern-attribution": "^1.0.3",

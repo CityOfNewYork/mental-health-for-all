@@ -1,3 +1,9 @@
+let remotes = {
+  'development': '',
+  'testing': 'https://nycopportunity.github.com/mhfa',
+  'production': 'https://cityofnewyork.github.com/mhfa'
+};
+
 module.exports = {
   name: 'Yonas',
   process: {
@@ -5,10 +11,7 @@ module.exports = {
       NODE_ENV: process.env.NODE_ENV,
     },
   },
-  root:
-    process.env.NODE_ENV === 'production'
-      ? 'https://cityofnewyork.github.io/mhfa'
-      : '',
+  root: remotes[process.env.NODE_ENV],
   services: [
     {
       title: 'Mobile crisis teams',
