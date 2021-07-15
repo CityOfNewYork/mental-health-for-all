@@ -8,25 +8,85 @@
                     url('../img/main.jpg');
 }
 
-.bg-single {
-  background-position-y: 35%;
-  background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 41%, rgba(40,11,28,0) 84%, rgba(40,11,28,0) 100%),
-                    url('../img/single.jpg');
+.c-hero {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.bg-crisis-support {
-  background-image: url('../img/crisis-support.jpg');
+.c-hero__content {
+  display: flex;
+  flex-direction: column-reverse;
+
+  height: 80vh;
+  max-height: 587px;
+  padding-bottom: 5rem;
 }
 
-.bg-domestic-violence {
-  background-position-y: 35%;
-  background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 41%, rgba(40,11,28,0) 84%, rgba(40,11,28,0) 100%),
-                    url('../img/domestic-violence.jpg');
+[class*='bg-banner'],
+[class*='bg-banner']:before,
+[class*='bg-banner']:after {
+  background-size: cover;
+  background-position: 30% 30%;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  content: '';
+  transition: opacity 1s;
 }
 
-.bg-still-1 {
-  background-image: url('../img/still-1.png');
+[class*='bg-banner']:after {
+  background-image: linear-gradient(53deg, rgba(105,19,69,1) 18%, rgba(40,11,28,0) 70%, rgba(40,11,28,0));
+  mix-blend-mode: multiply;
+  opacity: 0;
 }
+
+[class*='bg-banner'].loaded:before {
+  opacity: 0;
+}
+
+[class*='bg-banner'].loaded:after {
+  opacity: 1;
+}
+
+@each $value in ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j') {
+  .bg-banner-#{$value} {
+    background-image: url('../img/banners/#{$value}.jpg');
+
+    &:before {
+      background-image: url('../img/banners/#{$value}-low.jpg');
+    }
+  }
+}
+
+.bg-banner-g,
+.bg-banner-g:before {
+  background-position: 50% 80%;
+}
+
+
+// .bg-single {
+//   background-position-y: 35%;
+//   background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 41%, rgba(40,11,28,0) 84%, rgba(40,11,28,0) 100%),
+//                     url('../img/single.jpg');
+// }
+
+// .bg-crisis-support {
+//   background-image: url('../img/crisis-support.jpg');
+// }
+
+// .bg-domestic-violence {
+//   background-position-y: 35%;
+//   background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 41%, rgba(40,11,28,0) 84%, rgba(40,11,28,0) 100%),
+//                     url('../img/domestic-violence.jpg');
+// }
+
+// .bg-still-1 {
+//   background-image: url('../img/still-1.png');
+// }
 
 [class*='bg-light'] {
   position: absolute;
@@ -43,8 +103,8 @@
 
 .bg-light-b {
   top: 0;
-  right: 0;
-  margin-right: -40px;
+  left: 50%;
+  margin-left: -500px;
   width: 1343px;
   min-width: 1343px;
   height: 480px;
@@ -53,7 +113,7 @@
 .bg-light-c {
   top: 0;
   left: 0;
-  margin-left: -30px;
+  margin-left: -90px;
   width: 877px;
   min-width: 877px;
   height: 353px;
@@ -105,7 +165,7 @@ svg {
   list-style: disc;
 
   li {
-    padding-bottom: 0;
+    padding-top: 0;
     padding-left: rem-calc(14);
 
     &:before {
@@ -116,4 +176,8 @@ svg {
 
 :root {
   --o-attribution-font-size: 0.9rem
+}
+
+.small {
+  font-size: 75%
 }

@@ -49,7 +49,7 @@
     div clas='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
       div class='c-list-box c-list-box--quaternary o-accordion'
         div class='c-list-box__item o-accordion__item'
-          div class='c-list-box__heading o-accordion__header bg-color-gray-light text-color-black flex items-center'
+          div class='c-list-box__heading o-accordion__header bg-color-gray-light text-color-dark-gray-dark flex items-center'
             div class='pr-4'
               div class='sticker sticker--medium text-color-purple bg-color-white' aria-hidden='true'
                 svg style='width: 29px'
@@ -60,7 +60,7 @@
 
               span class='c-list-box__subheading' The hotlines below are free, confidential, and available 24/7
 
-          ul class='c-list-box__content bg-color-gray-light text-color-black'
+          ul class='c-list-box__content bg-color-gray-light'
             li class='c-list-box__subitem pb-0'
               a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary button--text hover:text-color-purple hover:border-color-purple' Speak to a counselor from NYC Well
 
@@ -85,7 +85,7 @@
                 - for (let i in filteredServices.slice(0, 2))
                   - card = filteredServices[i]
 
-                  div class='c-block-list__item text-color-black'
+                  div class='c-block-list__item text-color-dark-gray-dark'
                     == this.include('/slm/partials/components/card/card.slm');
 
                 div class='text-center py-5'
