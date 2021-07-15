@@ -1469,7 +1469,7 @@ module.exports = [
     subtitle:
       'Counseling with bilingual-bicultural therapists at NYC Health + Hospitals to help you build stronger relationships in your family.',
     programProvider: 'NYC Health + Hospitals',
-    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    sections: ['What it is', 'Who it’s for', 'How to get in touch'],
     body: {
       whatItIs: {
         title: 'What it is',
@@ -1532,7 +1532,7 @@ module.exports = [
     subtitle:
       'Referral to specialty services for people with serious mental illness',
     programProvider: 'Department of Mental Health and Hygiene (DOHMH)',
-    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    sections: ['What it is', 'Who it’s for', 'How to get in touch'],
     body: {
       whatItIs: {
         title: 'What it is',
@@ -1578,6 +1578,152 @@ module.exports = [
       {
         id: 9,
         name: 'Mental Health Care',
+      },
+    ],
+    population: [
+      {
+        id: 6,
+        name: 'Everyone',
+      },
+    ],
+  },
+  {
+    title: 'School Mental Health Services',
+    subtitle:
+      'Mental health resources to meet the emotional health and academic needs of your child.',
+    programProvider: 'Department of Education',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>Mental health resources are available to every public school in New York City. The <a href="https://www.schools.nyc.gov/school-life/health-and-wellness/mental-health" >School Mental Health Program</a> offers support so schools meet the emotional health and academic needs of their students.</p>
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>Children who attend a NYC DOE public school can get access to services.</p>
+        `,
+      },
+      cost: {
+        title: 'Cost',
+        content: `
+          <p>Although many services are at no cost to families, some services such as treatment may have a fee. Ask your school mental health program for more information.</p>
+          <div class="list-unordered--check">
+          <ul>
+          <li><p>If there is a fee, your current health care insurance may be billed directly.</p>
+
+          </li>
+          <li><p>If you do not have insurance, your school mental health program may be able to help you obtain public health insurance.</p>
+
+          </li>
+          </ul>
+          </div>
+          `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3>Ask your Parent Coordinator, School Social Worker, or School Counselor about your school's mental health program.</h3>
+          `,
+          },
+          {
+            type: 'website',
+            body: `
+            <h3>Visit the DOE website on <a href="https://www.schools.nyc.gov/school-life/health-and-wellness/mental-health" >Mental Health</a> for more information.</h3>
+          `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 9,
+        name: 'Mental Health Care',
+      },
+    ],
+    population: [
+      {
+        id: 5,
+        name: 'Children and Youth',
+      },
+    ],
+  },
+  {
+    title: 'Assisted Outpatient Treatment (AOT)',
+    subtitle:
+      'Court-ordered treatment program for those with serious mental illness who are a danger to themselves or others.',
+    programProvider: 'Department of Mental Health and Hygiene (DOHMH)',
+    sections: ['What it is', 'Who it’s for', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>The Assisted Outpatient Treatment program (AOT) was created by Kendra’s law. Kendra’s law states that people with serious mental illness who are a danger to themselves or others can be court-ordered to participate in mental health treatment.</p>
+        <p>If you have a serious mental illness, AOT can help you receive treatment services that may allow you to live independently in your community.</p>
+        <p>You might be considered for AOT if someone you know feels it is a challenge for you to live safely or independently in the community without the right mental health treatment, or if previous treatment plans did not work. This person can reach out to the AOT team, who will ask the courts to review your case.</p>
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>You can be assigned to the AOT program if you:</p>
+          <div class="list-unordered--check">
+          <ul>
+          <li><p>Are 18 years or older</p>
+
+          </li>
+          <li><p>Suffer from a mental illness </p>
+
+          </li>
+          <li><p>Have a hard time living independently in your community according to a doctor’s exam </p>
+
+          </li>
+          <li><p>Find it difficult to stick to the treatment plan you agreed on with your provider, which has led to: </p>
+
+          </li>
+          <ul>
+          <li><p>Two psychiatric hospitalizations or incarcerations in the last three years </p>
+
+          </li>
+          <li><p>An attempt to hurt yourself or someone else, or having hurt yourself or someone else, at least once in the last four years</p>
+
+          </li>
+          </ul>
+
+          </ul>
+          </div>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www1.nyc.gov/site/doh/health/health-topics/assisted-outpatient-treatment.page">Learn more about AOT and how to refer someone</a></h3>
+            <p>Almost anyone with personal contact with the individual can make a referral. This includes family, roommates, treatment providers, and parole or probation officers.</p>
+          `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 9,
+        name: 'Mental Health Care',
+      },
+      {
+        id: 10,
+        name: 'Serious mental illness',
       },
     ],
     population: [
