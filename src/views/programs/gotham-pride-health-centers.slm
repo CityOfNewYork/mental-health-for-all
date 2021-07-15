@@ -1,0 +1,10 @@
+= extend('/slm/layouts/default')
+
+- title = 'Gotham Pride Health Centers | Services | Mental Health for All'
+- this.service = this.services.find(service => service.title == 'Gotham Pride Health Centers')
+- this.service.slug = 'gotham-pride-health-centers';
+
+= content('main')
+  = partial('/slm/services/main.slm')
+
+= content('scripts')

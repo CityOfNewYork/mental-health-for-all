@@ -1,0 +1,10 @@
+= extend('/slm/layouts/default')
+
+- title = 'Drop-in Centers for Runaway and Homeless Youth | Services | Mental Health for All'
+- this.service = this.services.find(service => service.title == 'Drop-in Centers for Runaway and Homeless Youth')
+- this.service.slug = 'dropin-centers-for-runaway-and-homeless-youth';
+
+= content('main')
+  = partial('/slm/services/main.slm')
+
+= content('scripts')

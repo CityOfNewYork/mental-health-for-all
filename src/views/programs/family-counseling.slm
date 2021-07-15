@@ -1,0 +1,10 @@
+= extend('/slm/layouts/default')
+
+- title = 'Family Counseling | Services | Mental Health for All'
+- this.service = this.services.find(service => service.title == 'Family Counseling')
+- this.service.slug = 'family-counseling';
+
+= content('main')
+  = partial('/slm/services/main.slm')
+
+= content('scripts')

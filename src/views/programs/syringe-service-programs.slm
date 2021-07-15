@@ -1,0 +1,10 @@
+= extend('/slm/layouts/default')
+
+- title = 'Syringe Service Programs | Services | Mental Health for All'
+- this.service = this.services.find(service => service.title == 'Syringe Service Programs')
+- this.service.slug = 'syringe-service-programs';
+
+= content('main')
+  = partial('/slm/services/main.slm')
+
+= content('scripts')

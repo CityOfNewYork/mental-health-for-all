@@ -13158,48 +13158,74 @@ var Programs = (function () {
                                     "div",
                                     { staticClass: "c-card__tags order-last" },
                                     [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "button--pill js-category button--pill--alt",
-                                          on: {
-                                            click: function($event) {
-                                              return _vm.change({
-                                                event: $event,
-                                                data: {
-                                                  parent: "cat",
-                                                  id: post.category.id
+                                      _vm._l(post.categories, function(category) {
+                                        return _c(
+                                          "span",
+                                          { key: category.name },
+                                          [
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass:
+                                                  "button--pill js-category button--pill--alt",
+                                                on: {
+                                                  click: function($event) {
+                                                    return _vm.change({
+                                                      event: $event,
+                                                      data: {
+                                                        parent: "cat",
+                                                        id: category.id
+                                                      }
+                                                    })
+                                                  }
                                                 }
-                                              })
-                                            }
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    " +
-                                              _vm._s(post.category.name) +
-                                              "\n                  "
-                                          )
-                                        ]
-                                      ),
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                        " +
+                                                    _vm._s(category.name) +
+                                                    "\n                      "
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
+                                      }),
                                       _vm._v(" "),
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "button--pill js-category bg-pre-schooler--primary",
-                                          attrs: { href: "#" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    " +
-                                              _vm._s(post.population.name) +
-                                              "\n                  "
+                                      _vm._l(post.population, function(people) {
+                                        return _c("span", { key: people.id }, [
+                                          _c(
+                                            "button",
+                                            {
+                                              staticClass:
+                                                "button--pill js-category button--pill--alt",
+                                              class: _vm.classNameGenerator(
+                                                people.name
+                                              ),
+                                              on: {
+                                                click: function($event) {
+                                                  return _vm.change({
+                                                    event: $event,
+                                                    data: {
+                                                      parent: "pop",
+                                                      id: people.id
+                                                    }
+                                                  })
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                        " +
+                                                  _vm._s(people.name) +
+                                                  "\n                      "
+                                              )
+                                            ]
                                           )
-                                        ]
-                                      )
-                                    ]
+                                        ])
+                                      })
+                                    ],
+                                    2
                                   )
                                 ]
                               )
@@ -13291,20 +13317,220 @@ var Programs = (function () {
 
   var Services = [
   	{
+  		subtitle: "Counseling with bilingual-bicultural therapists at NYC Health + Hospitals to help you build stronger relationships in your family.",
+  		title: "Family Counseling",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Counseling with bilingual-bicultural therapists at NYC Health + Hospitals to help you build stronger relationships in your family.",
+  		link: "./programs/",
+  		featured: true,
+  		categories: [
+  			{
+  				id: 8,
+  				name: "Counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Families"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Mental health support and sexual/reproductive services for LGBTQ New Yorkers.",
+  		title: "Gotham Pride Health Centers",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Mental health support and sexual/reproductive services for LGBTQ New Yorkers.",
+  		link: "./programs/",
+  		featured: true,
+  		categories: [
+  			{
+  				id: 9,
+  				name: "Mental Health Care"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 3,
+  				name: "LGBTQ"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Drug use supplies and overdose prevention education for people who use drugs",
+  		title: "Syringe Service Programs",
+  		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
+  		body: "Drug use supplies and overdose prevention education for people who use drugs",
+  		link: "./programs/",
+  		featured: true,
+  		categories: [
+  			{
+  				id: 6,
+  				name: "Substance Use Services"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Free Naloxone kits from community-based programs and pharmacies to reverse an opioid overdose.",
+  		title: "Naloxone",
+  		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
+  		body: "Free Naloxone kits from community-based programs and pharmacies to reverse an opioid overdose.",
+  		link: "./programs/",
+  		featured: true,
+  		categories: [
+  			{
+  				id: 6,
+  				name: "Substance Use Services"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Psychiatric emergency services for New Yorkers at NYC Health + Hospitals",
+  		title: "Comprehensive Psychiatric Emergency Services Program (CPEP)",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Psychiatric emergency services for New Yorkers at NYC Health + Hospitals",
+  		link: "./programs/",
+  		featured: true,
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Serious mental illness"
+  			},
+  			{
+  				id: 9,
+  				name: "Mental Health Care"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Family support services for parents of youth with mental health challenges.",
+  		title: "NYC Family Resource Centers",
+  		programProvider: "NYC Department of Health and Mental Hygiene",
+  		body: "Family support services for parents of youth with mental health challenges.",
+  		link: "./programs/",
+  		featured: true,
+  		categories: [
+  			{
+  				id: 7,
+  				name: "Peer Support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Families"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Emergency drop-in centers for homeless and runaway youth who need food and other essentials.",
+  		title: "Drop-in Centers for Runaway and Homeless Youth",
+  		programProvider: "Department of Youth and Community Development (DYCD)",
+  		body: "Emergency drop-in centers for homeless and runaway youth who need food and other essentials.",
+  		link: "./programs/",
+  		featured: true,
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety"
+  			},
+  			{
+  				id: 6,
+  				name: "Substance Use Services"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 5,
+  				name: "Children and Youth"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Low- or no- cost healthcare for New Yorkers who can’t afford or are ineligible for health insurance",
+  		title: "NYC Care",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Low- or no- cost healthcare for New Yorkers who can’t afford or are ineligible for health insurance",
+  		link: "./programs/",
+  		featured: true,
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Serious mental illness"
+  			},
+  			{
+  				id: 9,
+  				name: "Mental Health Care"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			}
+  		]
+  	},
+  	{
   		subtitle: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
   		title: "Early Childhood Mental Health Network",
   		programProvider: "Department of Health and Mental Hygiene",
   		body: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
   		link: "./programs/",
   		featured: true,
-  		category: {
-  			id: 9,
-  			name: "Mental Health Care "
-  		},
-  		population: {
-  			id: 2,
-  			name: "Children and Families"
-  		}
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support"
+  			},
+  			{
+  				id: 9,
+  				name: "Mental Health Care"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Children and Families"
+  			}
+  		]
   	},
   	{
   		subtitle: "People who struggle with mental illness and substance abuse can go to a Clubhouse to connect with peers and get help rejoining society.",
@@ -13313,14 +13539,30 @@ var Programs = (function () {
   		body: "People who struggle with mental illness and substance abuse can go to a Clubhouse to connect with peers and get help rejoining society.",
   		link: "./programs/",
   		featured: true,
-  		category: {
-  			id: 7,
-  			name: "Peer Support"
-  		},
-  		population: {
-  			id: 8,
-  			name: "Adults"
-  		}
+  		categories: [
+  			{
+  				id: 6,
+  				name: "Substance Use Services"
+  			},
+  			{
+  				id: 10,
+  				name: "Serious mental illness"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 8,
+  				name: "Adults"
+  			},
+  			{
+  				id: 4,
+  				name: "Seniors"
+  			}
+  		]
   	},
   	{
   		subtitle: "Immigrants who survived torture and are applying for asylum can access medical, mental health, and other services.",
@@ -13329,14 +13571,38 @@ var Programs = (function () {
   		body: "Immigrants who survived torture and are applying for asylum can access medical, mental health, and other services.",
   		link: "./programs/",
   		featured: true,
-  		category: {
-  			id: 8,
-  			name: "Counseling"
-  		},
-  		population: {
-  			id: 7,
-  			name: "Immigrants"
-  		}
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support"
+  			},
+  			{
+  				id: 9,
+  				name: "Mental Health Care"
+  			},
+  			{
+  				id: 10,
+  				name: "Serious mental illness"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Children and Families"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants"
+  			}
+  		]
   	},
   	{
   		subtitle: "Older New Yorkers who feel isolated can connect with a peer to talk about shared interests.",
@@ -13345,14 +13611,18 @@ var Programs = (function () {
   		body: "Older New Yorkers who feel isolated can connect with a peer to talk about shared interests.",
   		link: "./programs/",
   		featured: true,
-  		category: {
-  			id: 7,
-  			name: "Peer Support"
-  		},
-  		population: {
-  			id: 4,
-  			name: "Seniors"
-  		}
+  		categories: [
+  			{
+  				id: 7,
+  				name: "Peer Support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 4,
+  				name: "Seniors"
+  			}
+  		]
   	},
   	{
   		subtitle: "New Yorkers age 60 and older can get mental health screenings, on-site counseling, and referrals at senior centers near them.",
@@ -13361,14 +13631,26 @@ var Programs = (function () {
   		body: "New Yorkers age 60 and older can get mental health screenings, on-site counseling, and referrals at senior centers near them.",
   		link: "./programs/",
   		featured: true,
-  		category: {
-  			id: 2,
-  			name: "Care for Serious Mental Illness"
-  		},
-  		population: {
-  			id: 4,
-  			name: "Seniors"
-  		}
+  		categories: [
+  			{
+  				id: 5,
+  				name: "Help with Anxiety"
+  			},
+  			{
+  				id: 10,
+  				name: "Serious mental illness"
+  			},
+  			{
+  				id: 9,
+  				name: "Mental Health Care"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 4,
+  				name: "Seniors"
+  			}
+  		]
   	},
   	{
   		subtitle: "Legal and social services for survivors of domestic and gender-based violence",
@@ -13377,14 +13659,34 @@ var Programs = (function () {
   		body: "Legal and social services for survivors of domestic and gender-based violence",
   		link: "./programs/family-justice-centers",
   		featured: true,
-  		category: {
-  			id: 1,
-  			name: "Trauma Support"
-  		},
-  		population: {
-  			id: 6,
-  			name: "Everyone"
-  		}
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			},
+  			{
+  				id: 2,
+  				name: "Children and Families"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants"
+  			}
+  		]
   	},
   	{
   		subtitle: "Mission: VetCheck connects veterans to trained volunteers through one-on-one supportive check-in calls.",
@@ -13393,14 +13695,22 @@ var Programs = (function () {
   		body: "Mission: VetCheck connects veterans to trained volunteers through one-on-one supportive check-in calls.",
   		link: "./programs/",
   		featured: true,
-  		category: {
-  			id: 5,
-  			name: "Help with Anxiety"
-  		},
-  		population: {
-  			id: 1,
-  			name: "Veterans"
-  		}
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 1,
+  				name: "Veterans"
+  			}
+  		]
   	},
   	{
   		subtitle: "Mental health support for victims of domestic violence and other crimes",
@@ -13409,14 +13719,18 @@ var Programs = (function () {
   		body: "Mental health support for victims of domestic violence and other crimes",
   		link: "./programs/the-crime-victim-assistance-program-cvap",
   		featured: true,
-  		category: {
-  			id: 1,
-  			name: "Trauma Support"
-  		},
-  		population: {
-  			id: 6,
-  			name: "Everyone"
-  		}
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			}
+  		]
   	},
   	{
   		subtitle: "Free short-term counseling",
@@ -13425,14 +13739,42 @@ var Programs = (function () {
   		body: "Free short-term counseling",
   		link: "./programs/support-during-a-crisis",
   		featured: true,
-  		category: {
-  			id: 3,
-  			name: "Crisis Support"
-  		},
-  		population: {
-  			id: 6,
-  			name: "Everyone"
-  		}
+  		categories: [
+  			{
+  				id: 3,
+  				name: "Crisis Support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support"
+  			},
+  			{
+  				id: 6,
+  				name: "Substance Use Services"
+  			},
+  			{
+  				id: 10,
+  				name: "Serious mental illness"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			}
+  		]
   	},
   	{
   		subtitle: "Request help to your home during a psychological crisis",
@@ -13441,14 +13783,26 @@ var Programs = (function () {
   		body: "Request help to your home during a psychological crisis",
   		link: "./programs/support-during-a-crisis",
   		featured: true,
-  		category: {
-  			id: 3,
-  			name: "Crisis Support"
-  		},
-  		population: {
-  			id: 1,
-  			name: "Veterans"
-  		}
+  		categories: [
+  			{
+  				id: 3,
+  				name: "Crisis Support"
+  			},
+  			{
+  				id: 10,
+  				name: "Serious mental illness"
+  			},
+  			{
+  				id: 9,
+  				name: "Mental Health Care"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			}
+  		]
   	}
   ];
 
@@ -13587,6 +13941,15 @@ var Programs = (function () {
           },
 
           /**
+           * Generate class names based on population name
+           * @param {*} name
+           */
+          classNameGenerator: function(name) {
+            let className = ['bg-' + name.toLowerCase() + '--secondary'];
+            return className;
+          },
+
+          /**
            * Overrides wpQuery from the archive.vue library which makes the
            * request for the Services data. Since the data is bundled with the
            * application there is no need to make a request. We just mock the
@@ -13668,19 +14031,25 @@ var Programs = (function () {
                 filterdData = [...this.services];
               } else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
                 filterdData = [...this.services].filter((service) => {
-                  return (
-                    (this.query.cat.includes(service.category.id) &&
-                    this.query.pop.includes(service.population.id))
-                  );
+                  let filtered =
+                    service.categories.some((category) =>
+                      this.query.cat.includes(category.id)
+                    ) &&
+                    service.population.some((people) =>
+                      this.query.pop.includes(people.id)
+                    );
+                  return filtered;
                 });
-
                 filterdData.length === 0 && noResultFound();
               } else if (
                 this.query.cat.length > 0 &&
                 this.query.pop.length === 0
               ) {
                 filterdData = [...this.services].filter((service) => {
-                  return (this.query.cat.includes(service.category.id));
+                  let filteredCat = service.categories.some((category) =>
+                    this.query.cat.includes(category.id)
+                  );
+                  return filteredCat;
                 });
 
                 filterdData.length === 0 && noResultFound();
@@ -13689,7 +14058,10 @@ var Programs = (function () {
                 this.query.cat.length === 0
               ) {
                 filterdData = [...this.services].filter((service) => {
-                  return (this.query.pop.includes(service.population.id));
+                  let filteredPop = service.population.some((people) =>
+                    this.query.pop.includes(people.id)
+                  );
+                  return filteredPop;
                 });
 
                 filterdData.length === 0 && noResultFound();
@@ -13697,7 +14069,10 @@ var Programs = (function () {
             } else if (this.query.cat && !this.query.pop) {
               if (this.query.cat.length > 0) {
                 filterdData = [...this.services].filter((service) => {
-                  return (this.query.cat.includes(service.category.id));
+                  let filteredCat = service.categories.some((category) =>
+                    this.query.cat.includes(category.id)
+                  );
+                  return filteredCat;
                 });
 
                 filterdData.length === 0 && noResultFound();
@@ -13705,7 +14080,10 @@ var Programs = (function () {
             } else if (this.query.pop && !this.query.cat) {
               if (this.query.pop.length > 0) {
                 filterdData = [...this.services].filter((service) => {
-                  return (this.query.pop.includes(service.population.id));
+                  let filteredPop = service.population.some((people) =>
+                    this.query.pop.includes(people.id)
+                  );
+                  return filteredPop;
                 });
 
                 filterdData.length === 0 && noResultFound();
@@ -13726,22 +14104,11 @@ var Programs = (function () {
            */
 
           slugify: function(string) {
-            const a =
-              'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
-            const b =
-              'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
-            const p = new RegExp(a.split('').join('|'), 'g');
-
             return string
-              .toString()
               .toLowerCase()
-              .replace(/\s+/g, '-') // Replace spaces with -
-              .replace(p, (c) => b.charAt(a.indexOf(c))) // Replace special characters
-              .replace(/&/g, '-and-') // Replace & with 'and'
-              .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-              .replace(/\-\-+/g, '-') // Replace multiple - with single -
-              .replace(/^-+/, '') // Trim - from start of text
-              .replace(/-+$/, ''); // Trim - from end of text
+              .replace(/[^0-9a-zA-Z - _]+/g, '')
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-');
           },
         },
 

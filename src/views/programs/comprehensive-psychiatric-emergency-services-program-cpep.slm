@@ -1,0 +1,10 @@
+= extend('/slm/layouts/default')
+
+- title = 'Comprehensive Psychiatric Emergency Services Program (CPEP) | Services | Mental Health for All'
+- this.service = this.services.find(service => service.title == 'Comprehensive Psychiatric Emergency Services Program (CPEP)')
+- this.service.slug = 'comprehensive-psychiatric-emergency-services-program-cpep';
+
+= content('main')
+  = partial('/slm/services/main.slm')
+
+= content('scripts')
