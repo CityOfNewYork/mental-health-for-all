@@ -1,0 +1,32 @@
+/ div class='js-parallax relative'
+header class='c-hero c-hero--large'
+  div class='bg-banner-${this.service.banner} not-loaded' data-js='lazy'
+
+  div class='c-hero__content o-container'
+    div class=''
+      - if this.service.title
+        h1 class='c-hero__title desktop:w-8/12'
+          == this.service.title
+
+      - if this.service.subtitle
+        p class='c-hero__tagline desktop:w-5/12 text-lg'
+          == this.service.subtitle
+
+          - if this.service.programProvider
+            = ' '
+            b == this.service.programProvider
+
+      / - if this.service.programProvider
+      /   p class='c-hero__tagline desktop:w-6/12'
+      /     == this.service.programProvider
+
+      - if this.service.categories && this.service.categories.length > 0
+        p class='c-hero__tags'
+          - for (let i in this.service.categories)
+            span class='button--pill button--pill--alt order-last'
+              == this.service.categories[i].name
+
+      - if this.service.population && this.service.population.length > 0
+          - for (let i in this.service.population)
+            span class='button--pill order-last ${this.generateClassName(this.service.population[i].name)}'
+              == this.service.population[i].name

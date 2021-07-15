@@ -8,14 +8,14 @@ let remotes = {
 };
 
 let banners = {
-  'Crime Victim Assistance Program': 'a',
+  'The Crime Victim Assistance Program (CVAP)': 'a',
   'Family Justice Centers': 'b',
-  'Programs for Survivors of Torture': 'c',
+  'Program for Survivors of Torture': 'c',
   'Mission: VetCheck': 'd',
   'The Trevor Project': 'e',
   'LGBTQ+ National Help Center': 'e',
   'Mental Health Services: Single Point of Access (SPOA)': 'f',
-  'Mobile Crisis Teams': 'f',
+  'Mobile crisis teams': 'f',
   'Friendly Visiting and Friendly VOICES': 'g',
   'Geriatric Mental Health Initiative': 'g',
   'NYC Well': false,
@@ -36,6 +36,12 @@ let banners = {
   'Mental Health Integrated in Primary Care': 'f',
   'Intensive Mobile Treatment': 'f',
 };
+
+services.map(s => {
+  s.banner = banners[s.title];
+
+  return s;
+});
 
 module.exports = {
   name: 'Yonas',

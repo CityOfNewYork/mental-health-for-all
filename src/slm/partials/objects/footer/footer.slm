@@ -4,12 +4,16 @@
 footer class='o-footer bg-color-yellow-light text-color-purple-dark py-0 overflow-hidden' role='contentinfo'
   div class='o-container'
     svg class='bg-light-c' aria-hidden='true' class='absolute' width='877' height='353' viewBox='0 0 877 353' fill='none' xmlns='http://www.w3.org/2000/svg'
-      path d='M28.0651 0.900299L471.566 0.900269L876.066 257.399L-38.9347 336.9L28.0651 0.900299Z' fill='url(#bg-light-c)'
+      g clip-path='url(#clip-graphic-light-c)'
+        path d='M66.8612 -0.465057L510.362 -0.465087L914.862 256.033L-0.138562 335.535L66.8612 -0.465057Z' fill='url(#paint-graphic-light-c)'
 
       defs
-        linearGradient id='bg-light-c' x1='122.065' y1='4.40013' x2='201.565' y2='302.4' gradientUnits='userSpaceOnUse'
+        linearGradient id='paint-graphic-light-c' x1='160.5' y1='16.5' x2='199.5' y2='296.5' gradientUnits='userSpaceOnUse'
           stop stop-color='#FEE6AE'
           stop offset='1' stop-color='#FEE6AE' stop-opacity='0'
+
+        clipPath id='clip-graphic-light-c'
+          rect width='915' height='336' fill='none'
 
     div class='o-attribution relative'
       div
