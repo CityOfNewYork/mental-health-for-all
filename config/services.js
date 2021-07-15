@@ -411,8 +411,7 @@ module.exports = [
     title: 'Family Justice Centers',
     subtitle:
       'Legal and social services for survivors of domestic and gender-based violence',
-    programProvider:
-      "Mayor's Office to End Domestic and Gender-Based Violence",
+    programProvider: "Mayor's Office to End Domestic and Gender-Based Violence",
     sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
     body: {
       whatItIs: {
@@ -927,6 +926,604 @@ module.exports = [
       {
         id: 2,
         name: 'Children and Families',
+      },
+    ],
+  },
+  {
+    title: 'NYC Care',
+    subtitle:
+      'Low- or no- cost healthcare for New Yorkers who can’t afford or are ineligible for health insurance',
+    programProvider: 'NYC Health + Hospitals',
+    sections: [
+      'What it is',
+      'Who it’s for',
+      'Cost',
+      'How to get in touch',
+      'Other ways to get help',
+    ],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+          <p>Health care is a human right. That’s why New York City guarantees health care for all New Yorkers – and that includes mental health care.</p>
+
+          <p>NYC Care is a health access program at NYC Health + Hospitals. As a NYC Care member, you can access your primary care provider at a care site near you.</p>
+          <p>You’ll also have access to a full suite of healthcare, including comprehensive mental health support at low- or no-cost.</p>
+          <p>There are NYC Care locations in all 5 boroughs.</p> <a href="https://www.nyccare.nyc/locations/">Find a location near you.</a>
+
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>You may be eligible for NYC Care if:</p>
+          <div class="list-unordered--check">
+          <ul>
+          <li>you’ve lived in New York in the past 6 months</li>
+          <li>You can’t afford or are ineligible for health insurance</li>
+          </ul>
+          </div>
+        `,
+      },
+      cost: {
+        title: 'Cost',
+        content: `
+          <p>NYC Care provides health care at low- or no-cost.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'calling',
+            body: `
+            <h3>Call <a href="tel:646-NYC CARE">646-NYC CARE</a> to get more information or check your eligibility.</h3>
+          `,
+          },
+        ],
+      },
+      otherWaysToGetHelp: {
+        title: 'Other ways to get help',
+        content: `
+          <p>Learn more about NYC Care by visiting<a href="https://www.nyccare.nyc/">nyccare.nyc</a></p>
+        `,
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 10,
+        name: 'Serious mental illness',
+      },
+      {
+        id: 9,
+        name: 'Mental Health Care',
+      },
+    ],
+    population: [
+      {
+        id: 6,
+        name: 'Everyone',
+      },
+    ],
+  },
+  {
+    title: 'Drop-in Centers for Runaway and Homeless Youth',
+    subtitle:
+      'Emergency drop-in centers for homeless and runaway youth who need food and other essentials.',
+    programProvider: 'Department of Youth and Community Development (DYCD)',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+          <p>If you’re age 14 – 24 and need emergency shelter, you can go to a Drop-in Center. You can get essentials like:</p>
+
+          <div class="list-unordered--check">
+          <ul>
+          <li>Food</li>
+          <li>Food</li>
+          <li>Immediate shelter</li>
+          </ul>
+          </div>
+
+          <p>You can also get access to counseling, support, and referrals to relevant services.</a>
+
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>Youth age 14 – 24</p>
+        `,
+      },
+      cost: {
+        title: 'Cost',
+        content: `
+          <p>Services at drop-in centers are provided at no cost.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www1.nyc.gov/site/dycd/services/runaway-homeless-youth/borough-based-drop-in-centers.page">Find a drop-in center near you.</a> There are drop-in centers in every borough. Some are open 24/7; check the hours of operation before going.</h3>
+          `,
+          },
+          {
+            type: 'calling',
+            body: `
+            <h3>Call DYCD Youth Connect</h3>
+            <p>Call in NYC: <a href="tel:800-246-4646">800-246-4646</a></p>
+            <p>Outside NYC: <a href="tel:646-343-6800">646-343-6800</a></p>
+            <p>Hours of operation are from Monday – Friday 9 AM – 5 PM.</p>
+
+          `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 1,
+        name: 'Trauma Support',
+      },
+      {
+        id: 5,
+        name: 'Help with Anxiety',
+      },
+      {
+        id: 6,
+        name: 'Substance Use Services',
+      },
+      {
+        id: 8,
+        name: 'Counseling',
+      },
+    ],
+    population: [
+      {
+        id: 5,
+        name: 'Children and Youth',
+      },
+    ],
+  },
+  {
+    title: 'NYC Family Resource Centers',
+    subtitle:
+      'Family support services for parents of youth with mental health challenges.',
+    programProvider: 'NYC Department of Health and Mental Hygiene',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+          <p>Raising a child with emotional and behavioral difficulties can be challenging.</p>
+          <p>Family Resource Centers (FRCs) provide family support services
+          to parents/caregivers of children and youth. If you have a child with mental health needs, you can get support like:
+          </p>
+
+          <div class="list-unordered--check">
+          <ul>
+          <li>Emotional support</li>
+          <li>Advocacy to help navigate child-serving systems</li>
+          <li>Information about mental health conditions, services, and family rights</li>
+          <li>Referrals to appropriate services and resources</li>
+          <li>Skill development through educational workshops</li>
+          <li>Recreational activities</li>
+          <li>Respite</li>
+          </ul>
+          </div>
+
+          <p>Support services are individual and group-based.</p>
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>Parents and caregivers of children and youth from birth – age 24</p>
+        `,
+      },
+      cost: {
+        title: 'Cost',
+        content: `
+          <p>All FRC services are free. You don’t need a referral to access services.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/mh/fam-sup-dir.pdf">Contact a Family Resource Center</a>. They’re available in every borough.</h3>
+          `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 7,
+        name: 'Peer Support',
+      },
+    ],
+    population: [
+      {
+        id: 2,
+        name: 'Families',
+      },
+      {
+        id: 5,
+        name: 'Children and Youth',
+      },
+    ],
+  },
+  {
+    title: 'Comprehensive Psychiatric Emergency Services Program (CPEP)',
+    subtitle:
+      'Psychiatric emergency services for New Yorkers at NYC Health + Hospitals',
+    programProvider: 'NYC Health + Hospitals',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+          <p>NYC Health + Hospitals offers all New Yorkers comprehensive psychiatric emergency services throughout the system’s 11 hospitals.</p>
+          <p>This includes extended observation for children, adolescents, and adults who need:</p>
+
+          <div class="list-unordered--check">
+          <ul>
+          <li>emergency mental health services</li>
+          <li>specialized care for the evaluation and treatment of psychiatric crises, including suicidal or aggressive behavior.
+          </li>
+          </ul>
+          </div>
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>Available for all ages</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'calling',
+            body: `
+            <h3><a href="tel:911f">Call 911 </a>. if there’s a medical emergency.</h3>
+          `,
+          },
+          {
+            type: 'calling',
+            body: `
+            <h3>Call NYC Health + Hospitals at <a href="tel:911f">844-NYC-4NYC</a>. Ask about emergency mental health services. if there’s a medical emergency.</h3>
+          `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 10,
+        name: 'Serious mental illness',
+      },
+      {
+        id: 9,
+        name: 'Mental Health Care',
+      },
+    ],
+    population: [
+      {
+        id: 6,
+        name: 'Everyone',
+      },
+    ],
+  },
+  {
+    title: 'Naloxone',
+    subtitle:
+      'Free Naloxone kits from community-based programs and pharmacies to reverse an opioid overdose.',
+    programProvider: 'Department of Mental Health and Hygiene (DOHMH)',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+          <p>Naloxone (Narcan®) is a safe medication that can save someone’s life by reversing the effects of an opioid overdose. It only works on opioids, such as heroin, prescription painkillers and fentanyl, but it is safe to use even if opioids are not present.</p>
+          <p>If you are worried you or someone you know may be at risk of an opioid overdose, naloxone is available to you.</p>
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>Anyone can request a Naloxone kit.</p>
+        `,
+      },
+      cost: {
+        title: 'Cost',
+        content: `
+          <p>You can get a free Naloxone kit at participating community-based programs and pharmacies near you. You can also attend a virtual training and get a kit by mail.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/naloxone-list-of-prevention-programs.pdf">Contact a community-based program (PDF) to get a free kit</a>. There are programs in every borough.</h3>
+          `,
+          },
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/naloxone-list-of-pharmacy.pdf">Visit a pharmacy (PDF) to get a free kit</a>. Ask the pharmacist for a free “Emergency Overdose Rescue Kit”.</h3>
+          `,
+          },
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www1.nyc.gov/site/doh/health/health-topics/naloxone.page">Attend a virtual training and get a kit by mail</a>. Trainings are hosted by DOHMH.</h3>
+          `,
+          },
+        ],
+      },
+      otherWaysToGetHelp: {
+        title: 'Other ways to get help',
+        content: `
+          <h3>How to purchase naloxone with insurance or out-of-pocket:</h3>
+
+          <div class="list-unordered--check">
+          <ul>
+          <li><p>Check the <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/naloxone-list-of-pharmacy.pdf" >list of participating pharmacies (PDF)</a></p>
+
+          </li>
+          <li><p>You can also use the <a href="https://a816-healthpsi.nyc.gov/NYCHealthMap/home/ByServices?services=2" >NYC Health Map</a> to find a pharmacy near you.</p>
+
+          </li>
+          <li><p>When contacting a pharmacy, ask the pharmacist about getting naloxone/Narcan®.</p>
+
+          </li>
+          <li><p>You do not need a prescription from your doctor.</p>
+
+          </li>
+          <li><p>The pharmacy may need to order the medication.</p>
+
+          </li>
+          <li><p>If a pharmacy is enrolled in the Naloxone Co-payment Assistance Program (N-CAP), up to $40 of your insurance copay can be covered. Ask your pharmacist about the program when requesting naloxone.</p>
+
+          </li>
+          <li><p>If you are having a hard time getting naloxone, email <a href="mailto:naloxone@health.nyc.gov" >naloxone@health.nyc.gov</a></p>
+
+          </li>
+          </li>
+          </ul>
+          </div>
+        `,
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 6,
+        name: 'Substance Use Services',
+      },
+    ],
+    population: [
+      {
+        id: 6,
+        name: 'Everyone',
+      },
+    ],
+  },
+  {
+    title: 'Syringe Service Programs',
+    subtitle:
+      'Drug use supplies and overdose prevention education for people who use drugs',
+    programProvider: 'Department of Mental Health and Hygiene (DOHMH)',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>There are 15 syringe service programs across the city that provide critical services to people who use drugs. Services include: </p>
+        <div class="list-unordered--check">
+        <ul>
+        <li><p>sterile drug use supplies</p>
+
+        </li>
+        <li><p>overdose prevention education</p>
+
+        </li>
+        <li><p>harm reduction counseling. </p>
+
+        </li>
+        </ul>
+        </div>
+        <br>
+        <p>Harm reduction can help prevent problems including acute and chronic infections, and overdose. </p>
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>Syringe Service Programs are open to all New Yorkers.</p>
+        `,
+      },
+      cost: {
+        title: 'Cost',
+        content: `
+          <p>Syringe Service Programs are free</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/syringe-service.pdf">Visit a Syringe Service Program</a>. You’ll find them in all boroughs </h3>
+          `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 6,
+        name: 'Substance Use Services',
+      },
+    ],
+    population: [
+      {
+        id: 6,
+        name: 'Everyone',
+      },
+    ],
+  },
+  {
+    title: 'Gotham Pride Health Centers',
+    subtitle:
+      'Mental health support and sexual/reproductive services for LGBTQ New Yorkers.',
+    programProvider: 'NYC Health + Hospitals',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>NYC Health + Hospitals is committed to providing culturally competent care to all New Yorkers. The City’s public health system has five designated Pride Health Centers throughout the city, which all offer comprehensive mental health assessments and out-patient care.</p>
+        <p>Pride Health Centers can help if you need:</p>
+        <div class="list-unordered--check">
+        <ul>
+        <li><p>urgent sexual or reproductive services</p>
+
+        </li>
+        <li><p>LGBTQ affirming care</p>
+
+        </li>
+        <li><p>mental health support</p>
+
+        </li>
+        </ul>
+        </div>
+        <br>
+        <p>Harm reduction can help prevent problems including acute and chronic infections, and overdose. </p>
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>????????</p>
+        `,
+      },
+      cost: {
+        title: 'Cost',
+        content: `
+          <p>??????</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www.nychealthandhospitals.org/services/lgbtq-health-care-services/">Visit a Pride Health Center</a>. There are five Pride Health Centers in Manhattan and Brooklyn.</h3>
+          `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 9,
+        name: 'Mental Health Care',
+      },
+    ],
+    population: [
+      {
+        id: 3,
+        name: 'LGBTQ',
+      },
+    ],
+  },
+  {
+    title: 'Family Counseling',
+    subtitle:
+      'Counseling with bilingual-bicultural therapists at NYC Health + Hospitals to help you build stronger relationships in your family.',
+    programProvider: 'NYC Health + Hospitals',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>Family counseling from a professional mental health provider can help to improve communication, help you and your family members better understand family dynamics, and build stronger relationships with one another.</p>
+        <p>NYC Health + Hospitals bilingual-bicultural therapists offer expert counseling in Family Therapy programs. They’re offered at clinics citywide.</p>
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>Family counseling is available for all New Yorkers.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'calling',
+            body: `
+            <h3><a href="tel:1-844-692-4692">Call 1-844-NYC-4NYC (1-844-692-4692)</a>. to make an appointment or find a clinic near you</h3>
+          `,
+          },
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://nycwell.cityofnewyork.us/en/find-services/">Search for a provider on NYC Well</a></h3>
+            <div class="list-unordered--check">
+              <ul>
+                <li><p>There are over 600 providers who offer family counseling. </p>
+
+                </li>
+                <li><p>Search for “family counseling”</p>
+
+                </li>
+              </ul>
+            </div>
+          `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 8,
+        name: 'Counseling',
+      },
+    ],
+    population: [
+      {
+        id: 2,
+        name: 'Families',
       },
     ],
   },

@@ -2,9 +2,9 @@ let package = require('../package.json');
 let services = require('./services');
 
 let remotes = {
-  'development': '',
-  'testing': 'https://nycopportunity.github.io/mhfa',
-  'production': package.homepage
+  development: '',
+  testing: 'https://nycopportunity.github.io/mhfa',
+  production: package.homepage,
 };
 
 let banners = {
@@ -22,8 +22,9 @@ let banners = {
   'NYC Care': 'f',
   'NYC Family Resource Centers': 'b',
   'Early Childhood Mental Health Network': 'h',
-  'Health + Hospitals Comprehensive Psychiatric Emergency Services Program (CPEP)': 'f',
-  'Clubhouses': 'd',
+  'Health + Hospitals Comprehensive Psychiatric Emergency Services Program (CPEP)':
+    'f',
+  Clubhouses: 'd',
   'School Mental Health Services': 'b',
   'Family Counseling': 'h',
   'Assisted Outpatient Treatment (AOT)': 'f',
@@ -33,7 +34,7 @@ let banners = {
   'Gotham Health Pride Centers': false,
   '3-2-1 Impact': 'f',
   'Mental Health Integrated in Primary Care': 'f',
-  'Intensive Mobile Treatment': 'f'
+  'Intensive Mobile Treatment': 'f',
 };
 
 module.exports = {
@@ -65,8 +66,8 @@ module.exports = {
     },
     {
       id: 2,
-      name: 'Children and Families',
-      slug: 'children-and-families',
+      name: 'Families',
+      slug: 'families',
     },
     {
       id: 3,
@@ -80,8 +81,8 @@ module.exports = {
     },
     {
       id: 5,
-      name: 'Students',
-      slug: 'students',
+      name: 'Children and Youth',
+      slug: 'children-and-youth',
     },
     {
       id: 6,

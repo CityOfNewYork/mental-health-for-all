@@ -66,8 +66,8 @@
       },
       {
         "id": 2,
-        "name": "Children and Families",
-        "slug": "children-and-families"
+        "name": "Families",
+        "slug": "families"
       },
       {
         "id": 3,
@@ -81,8 +81,8 @@
       },
       {
         "id": 5,
-        "name": "Students",
-        "slug": "students"
+        "name": "Children and Youth",
+        "slug": "children-and-youth"
       },
       {
         "id": 6,
