@@ -45,8 +45,13 @@
       },
       {
         "id": 9,
-        "name": "Mental Health Care ",
-        "slug": "mental-health-care "
+        "name": "Mental Health Care",
+        "slug": "mental-health-care"
+      },
+      {
+        "id": 10,
+        "name": "Serious mental illness",
+        "slug": "serious-mental-illness"
       }
     ]
   },
@@ -61,13 +66,13 @@
       },
       {
         "id": 2,
-        "name": "Children and Families",
-        "slug": "children-and-families"
+        "name": "Families",
+        "slug": "families"
       },
       {
         "id": 3,
-        "name": "LGBTQ New Yorkers",
-        "slug": "lgntq-new-yorkers"
+        "name": "LGBTQ",
+        "slug": "lgntq"
       },
       {
         "id": 4,
@@ -76,8 +81,8 @@
       },
       {
         "id": 5,
-        "name": "Students",
-        "slug": "students"
+        "name": "Children and Youth",
+        "slug": "children-and-youth"
       },
       {
         "id": 6,
