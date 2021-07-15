@@ -12,7 +12,7 @@
 = content('main')
   div
     div class='js-parallax'
-      header class='c-hero js-parallax-content bg-color-purple'
+      header class='c-hero c-hero--short bg-color-purple'
         svg class='bg-light-b' viewBox='0 0 1260 384' fill='none' xmlns='http://www.w3.org/2000/svg'
           path d='M540.959 -34.3182L1259.95 -34.3182L1116.69 460.74L0.698089 455.732L540.959 -34.3182Z' fill='url(#bg-light-b)' fill-opacity='0.8'
 
@@ -21,10 +21,11 @@
               stop stop-color='#DA7CB5'
               stop offset='1' stop-color='#DA7CB5' stop-opacity='0'
 
-        div class='o-container js-parallax-text'
-          h1 class='c-hero__title' Mental Health Services
+        div class='c-hero__content o-container'
+          div
+            h1 class='c-hero__title' Mental Health Services
 
-          div class='c-hero__tagline desktop:w-6/12 pt-2' Find resources for yourself or someone you know who needs support with their mental health
+            div class='c-hero__tagline desktop:w-6/12 pt-2' Find resources for yourself or someone you know who needs support with their mental health
       / div class='alert'
       /   div class='o-container' Alert
     div data-js='programs'
