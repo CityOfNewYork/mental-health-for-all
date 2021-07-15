@@ -6,10 +6,25 @@
 @import 'config/media';
 
 // Declarations
+
+/**
+ * Homepage
+ */
+
+// Hide splashes in homepage banner
+.c-side-hero__content:after,
+.c-side-hero__content:before {
+  display: none
+}
+
 .bg-main {
   background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 10%, rgba(40,11,28,0) 64%, rgba(40,11,28,0) 100%),
                     url('../img/main.jpg');
 }
+
+/**
+ * Single Page Banner images
+ */
 
 [class*='bg-banner'] {
   &:before {
@@ -87,6 +102,10 @@ $banners: ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j');
     background-position: 30% 40%;
   }
 }
+
+/**
+ * Light Effects
+ */
 
 [class*='bg-light'] {
   position: absolute;
