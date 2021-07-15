@@ -1527,4 +1527,64 @@ module.exports = [
       },
     ],
   },
+  {
+    title: 'Single Point of Access (SPOA)',
+    subtitle:
+      'Referral to specialty services for people with serious mental illness',
+    programProvider: 'Department of Mental Health and Hygiene (DOHMH)',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>The City offers a selection of programs designed to assist New Yorkers experiencing serious mental illness. </p>
+        <p>Through <a href="https://www1.nyc.gov/site/doh/providers/resources/mental-illness-single-point-of-access.page" >Single Point of Access (SPOA)</a>, your provider can connect you to specialty mental health services and coordination of care If you have a serious mental illness.</p>
+        <p>You’ll need a referral for these services. Your mental health provider — outpatient or inpatient doctor — can start the process of qualifying you for these services.</p>
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>Single Point of Access serves New Yorkers of all ages.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3><strong>If you want a referral to SPOA,</span> contact your mental health provider. </h3>
+          `,
+          },
+          {
+            type: 'website',
+            body: `
+            <h3><strong>If you want to refer someone with a serious mental illness,</span>  complete the online application by logging into <a href="https://a816-healthpsi.nyc.gov/NYCMED/Account/Login" >NYCMED</a>. If you do not have a NYCMED account, you must create one.</h3>
+            <p>Your application must include a recent psychiatric evaluation, a recent psychosocial evaluation and a client consent form.</p>
+            <p>If you have any questions on how to apply, email <a href="mailto:SPOASupport@health.nyc.gov" >SPOASupport@health.nyc.gov</a></p>
+          `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 10,
+        name: 'Serious mental illness',
+      },
+      {
+        id: 9,
+        name: 'Mental Health Care',
+      },
+    ],
+    population: [
+      {
+        id: 6,
+        name: 'Everyone',
+      },
+    ],
+  },
 ];
