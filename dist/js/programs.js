@@ -12550,10 +12550,6 @@ var Programs = (function () {
         })
         .then(this.wp)
         .catch(message => {
-          // eslint-disable-next-line no-undef
-          {
-            console.dir(message);
-          }
         });
       },
 
@@ -12790,10 +12786,6 @@ var Programs = (function () {
        * @param {Object} response  The error response
        */
       error: function(response) {
-        // eslint-disable-next-line no-undef
-        {
-          console.dir(response);
-        }
       },
 
       /**
