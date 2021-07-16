@@ -13,7 +13,7 @@ let banners = {
   'Program for Survivors of Torture': 'c',
   'Mission: VetCheck': 'd',
   'The Trevor Project': 'e',
-  'LGBTQ+ National Help Center': 'e',
+  'LGBT National Help Center': 'e',
   'Single Point of Access (SPOA)': 'f',
   'Mobile crisis teams': 'f',
   'Friendly Visiting and Friendly VOICES': 'g',
