@@ -1,9 +1,3 @@
-/ Defaults
-- this.filteredServices = []
-- this.color = ''
-
-/ Filter services
-- this.filteredServices = this.getSelectedCheckboxValues('program', this.services)
 
 = extend('/slm/layouts/default')
 

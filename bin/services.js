@@ -36,7 +36,12 @@ const card = {
 module.exports = {
   run: async () => {
     let json = [];
+
+    let cat = []
+    let pop = []
     let servciesJson = 'dist/data/services.json';
+    let termsJson = 'dist/data/terms.json';
+    let population = 'config/population.json'
 
     for (let i = services.length - 1; i >= 0; i--) {
       let service = services[i];
@@ -75,15 +80,42 @@ module.exports = {
         }
       });
 
+      service.categories.map(category => {
+        category.slug = createSlug(category.name)
+        cat.push(category)
+      })
+      service.population.map(people => {
+        people.slug = createSlug(people.name)
+        pop.push(people)
+      })
+
       json.push(srvc);
     }
 
+    const unique = (arr, key) => [...new Map(arr.map(item => [item[key], item])).values()];
+
+    let terms = [
+      {
+        name: "categories",
+        slug: "cat",
+        programs: unique(cat, 'id')
+      },
+      {
+        name: "population",
+        slug: "pop",
+        programs: unique(pop, 'id')
+      }
+    ]
     /**
      * Write the services json
      */
 
     fs.writeFileSync(servciesJson, JSON.stringify(json));
+    fs.writeFileSync(termsJson, JSON.stringify(terms));
+    fs.writeFileSync(population, JSON.stringify(unique(pop, 'id')));
 
     cnsl.success(`${alerts.str.path(servciesJson)} was made.`);
+    cnsl.success(`${alerts.str.path(termsJson)} was made.`);
+    cnsl.success(`${alerts.str.path(population)} was made.`);
   },
 };
