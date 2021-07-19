@@ -506,7 +506,7 @@ module.exports = [
       },
       {
         id: 2,
-        name: 'Children and Families',
+        name: 'Families',
       },
       {
         id: 8,
@@ -514,7 +514,7 @@ module.exports = [
       },
       {
         id: 3,
-        name: 'LGBTQ',
+        name: 'LGBTQ New Yorkers',
       },
       {
         id: 7,
@@ -757,7 +757,7 @@ module.exports = [
     population: [
       {
         id: 2,
-        name: 'Children and Families',
+        name: 'Families',
       },
       {
         id: 8,
@@ -856,6 +856,243 @@ module.exports = [
     ],
   },
   {
+    title: 'NYC Care',
+    subtitle:
+    'Low- or no- cost healthcare for New Yorkers who can’t afford or are ineligible for health insurance',
+    programProvider: 'NYC Health + Hospitals',
+    sections: [
+      'What it is',
+      'Who it’s for',
+      'Cost',
+      'How to get in touch',
+      'Other ways to get help',
+    ],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>Health care is a human right. That’s why New York City guarantees health care for all New Yorkers – and that includes mental health care.</p>
+
+        <p>NYC Care is a health access program at NYC Health + Hospitals. As a NYC Care member, you can access your primary care provider at a care site near you.</p>
+        <p>You’ll also have access to a full suite of healthcare, including comprehensive mental health support at low- or no-cost.</p>
+        <p>There are NYC Care locations in all 5 boroughs.</p> <a href="https://www.nyccare.nyc/locations/">Find a location near you.</a>
+
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+          <p>You may be eligible for NYC Care if:</p>
+          <div class="list-unordered--check">
+          <ul>
+          <li>you’ve lived in New York in the past 6 months</li>
+          <li>You can’t afford or are ineligible for health insurance</li>
+          </ul>
+          </div>
+          `,
+        },
+      cost: {
+        title: 'Cost',
+        content: `
+        <p>NYC Care provides health care at low- or no-cost.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'calling',
+            body: `
+            <h3>Call <a href="tel:646-NYC CARE">646-NYC CARE</a> to get more information or check your eligibility.</h3>
+            `,
+          },
+        ],
+      },
+      otherWaysToGetHelp: {
+        title: 'Other ways to get help',
+        content: `
+        <p>Learn more about NYC Care by visiting<a href="https://www.nyccare.nyc/">nyccare.nyc</a></p>
+        `,
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 10,
+        name: 'Serious mental illness',
+      },
+      {
+        id: 9,
+        name: 'Mental Health Care',
+      },
+    ],
+    population: [
+      {
+        id: 6,
+        name: 'Everyone',
+      },
+    ],
+  },
+  {
+    title: 'Drop-in Centers for Runaway and Homeless Youth',
+    subtitle:
+    'Emergency drop-in centers for homeless and runaway youth who need food and other essentials.',
+    programProvider: 'Department of Youth and Community Development (DYCD)',
+    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>If you’re age 14 – 24 and need emergency shelter, you can go to a Drop-in Center. You can get essentials like:</p>
+
+        <div class="list-unordered--check">
+        <ul>
+        <li>Food</li>
+        <li>Food</li>
+        <li>Immediate shelter</li>
+        </ul>
+        </div>
+
+        <p>You can also get access to counseling, support, and referrals to relevant services.</a>
+
+        `,
+      },
+      whoItIsFor: {
+        title: 'Who it’s for',
+        content: `
+        <p>Youth age 14 – 24</p>
+        `,
+      },
+      cost: {
+        title: 'Cost',
+        content: `
+        <p>Services at drop-in centers are provided at no cost.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www1.nyc.gov/site/dycd/services/runaway-homeless-youth/borough-based-drop-in-centers.page">Find a drop-in center near you.</a> There are drop-in centers in every borough. Some are open 24/7; check the hours of operation before going.</h3>
+            `,
+          },
+          {
+            type: 'calling',
+            body: `
+            <h3>Call DYCD Youth Connect</h3>
+            <p>Call in NYC: <a href="tel:800-246-4646">800-246-4646</a></p>
+            <p>Outside NYC: <a href="tel:646-343-6800">646-343-6800</a></p>
+            <p>Hours of operation are from Monday – Friday 9 AM – 5 PM.</p>
+
+            `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 1,
+        name: 'Trauma Support',
+      },
+      {
+        id: 5,
+        name: 'Help with Anxiety',
+      },
+      {
+        id: 6,
+        name: 'Substance Use Services',
+      },
+      {
+        id: 8,
+        name: 'Counseling',
+      },
+    ],
+    population: [
+      {
+        id: 5,
+        name: 'Children and Youth',
+      },
+    ],
+  },
+  {
+    title: 'NYC Family Resource Centers',
+    subtitle:
+      'Family support services for parents of youth with mental health challenges.',
+      programProvider: 'NYC Department of Health and Mental Hygiene',
+      sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
+      body: {
+        whatItIs: {
+          title: 'What it is',
+        content: `
+        <p>Raising a child with emotional and behavioral difficulties can be challenging.</p>
+          <p>Family Resource Centers (FRCs) provide family support services
+          to parents/caregivers of children and youth. If you have a child with mental health needs, you can get support like:
+          </p>
+
+          <div class="list-unordered--check">
+          <ul>
+          <li>Emotional support</li>
+          <li>Advocacy to help navigate child-serving systems</li>
+          <li>Information about mental health conditions, services, and family rights</li>
+          <li>Referrals to appropriate services and resources</li>
+          <li>Skill development through educational workshops</li>
+          <li>Recreational activities</li>
+          <li>Respite</li>
+          </ul>
+          </div>
+
+          <p>Support services are individual and group-based.</p>
+          `,
+        },
+        whoItIsFor: {
+          title: 'Who it’s for',
+          content: `
+          <p>Parents and caregivers of children and youth from birth – age 24</p>
+          `,
+        },
+        cost: {
+          title: 'Cost',
+          content: `
+          <p>All FRC services are free. You don’t need a referral to access services.</p>
+          `,
+        },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/mh/fam-sup-dir.pdf">Contact a Family Resource Center</a>. They’re available in every borough.</h3>
+            `,
+          },
+        ],
+      },
+    },
+    link: './programs/',
+    featured: true,
+    categories: [
+      {
+        id: 7,
+        name: 'Peer Support',
+      },
+    ],
+    population: [
+      {
+        id: 2,
+        name: 'Families',
+      },
+      {
+        id: 5,
+        name: 'Children and Youth',
+      },
+    ],
+  },
+  {
     title: 'Early Childhood Mental Health Network',
     subtitle:
       'Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.',
@@ -920,239 +1157,6 @@ module.exports = [
       {
         id: 9,
         name: 'Mental Health Care',
-      },
-    ],
-    population: [
-      {
-        id: 2,
-        name: 'Children and Families',
-      },
-    ],
-  },
-  {
-    title: 'NYC Care',
-    subtitle:
-      'Low- or no- cost healthcare for New Yorkers who can’t afford or are ineligible for health insurance',
-    programProvider: 'NYC Health + Hospitals',
-    sections: [
-      'What it is',
-      'Who it’s for',
-      'Cost',
-      'How to get in touch',
-      'Other ways to get help',
-    ],
-    body: {
-      whatItIs: {
-        title: 'What it is',
-        content: `
-          <p>Health care is a human right. That’s why New York City guarantees health care for all New Yorkers – and that includes mental health care.</p>
-
-          <p>NYC Care is a health access program at NYC Health + Hospitals. As a NYC Care member, you can access your primary care provider at a care site near you.</p>
-          <p>You’ll also have access to a full suite of healthcare, including comprehensive mental health support at low- or no-cost.</p>
-          <p>There are NYC Care locations in all 5 boroughs.</p> <a href="https://www.nyccare.nyc/locations/">Find a location near you.</a>
-
-        `,
-      },
-      whoItIsFor: {
-        title: 'Who it’s for',
-        content: `
-          <p>You may be eligible for NYC Care if:</p>
-          <div class="list-unordered--check">
-          <ul>
-          <li>you’ve lived in New York in the past 6 months</li>
-          <li>You can’t afford or are ineligible for health insurance</li>
-          </ul>
-          </div>
-        `,
-      },
-      cost: {
-        title: 'Cost',
-        content: `
-          <p>NYC Care provides health care at low- or no-cost.</p>
-        `,
-      },
-      howToGetInTouch: {
-        title: 'How to get in touch',
-        content: [
-          {
-            type: 'calling',
-            body: `
-            <h3>Call <a href="tel:646-NYC CARE">646-NYC CARE</a> to get more information or check your eligibility.</h3>
-          `,
-          },
-        ],
-      },
-      otherWaysToGetHelp: {
-        title: 'Other ways to get help',
-        content: `
-          <p>Learn more about NYC Care by visiting<a href="https://www.nyccare.nyc/">nyccare.nyc</a></p>
-        `,
-      },
-    },
-    link: './programs/',
-    featured: true,
-    categories: [
-      {
-        id: 10,
-        name: 'Serious mental illness',
-      },
-      {
-        id: 9,
-        name: 'Mental Health Care',
-      },
-    ],
-    population: [
-      {
-        id: 6,
-        name: 'Everyone',
-      },
-    ],
-  },
-  {
-    title: 'Drop-in Centers for Runaway and Homeless Youth',
-    subtitle:
-      'Emergency drop-in centers for homeless and runaway youth who need food and other essentials.',
-    programProvider: 'Department of Youth and Community Development (DYCD)',
-    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
-    body: {
-      whatItIs: {
-        title: 'What it is',
-        content: `
-          <p>If you’re age 14 – 24 and need emergency shelter, you can go to a Drop-in Center. You can get essentials like:</p>
-
-          <div class="list-unordered--check">
-          <ul>
-          <li>Food</li>
-          <li>Food</li>
-          <li>Immediate shelter</li>
-          </ul>
-          </div>
-
-          <p>You can also get access to counseling, support, and referrals to relevant services.</a>
-
-        `,
-      },
-      whoItIsFor: {
-        title: 'Who it’s for',
-        content: `
-          <p>Youth age 14 – 24</p>
-        `,
-      },
-      cost: {
-        title: 'Cost',
-        content: `
-          <p>Services at drop-in centers are provided at no cost.</p>
-        `,
-      },
-      howToGetInTouch: {
-        title: 'How to get in touch',
-        content: [
-          {
-            type: 'website',
-            body: `
-            <h3><a href="https://www1.nyc.gov/site/dycd/services/runaway-homeless-youth/borough-based-drop-in-centers.page">Find a drop-in center near you.</a> There are drop-in centers in every borough. Some are open 24/7; check the hours of operation before going.</h3>
-          `,
-          },
-          {
-            type: 'calling',
-            body: `
-            <h3>Call DYCD Youth Connect</h3>
-            <p>Call in NYC: <a href="tel:800-246-4646">800-246-4646</a></p>
-            <p>Outside NYC: <a href="tel:646-343-6800">646-343-6800</a></p>
-            <p>Hours of operation are from Monday – Friday 9 AM – 5 PM.</p>
-
-          `,
-          },
-        ],
-      },
-    },
-    link: './programs/',
-    featured: true,
-    categories: [
-      {
-        id: 1,
-        name: 'Trauma Support',
-      },
-      {
-        id: 5,
-        name: 'Help with Anxiety',
-      },
-      {
-        id: 6,
-        name: 'Substance Use Services',
-      },
-      {
-        id: 8,
-        name: 'Counseling',
-      },
-    ],
-    population: [
-      {
-        id: 5,
-        name: 'Children and Youth',
-      },
-    ],
-  },
-  {
-    title: 'NYC Family Resource Centers',
-    subtitle:
-      'Family support services for parents of youth with mental health challenges.',
-    programProvider: 'NYC Department of Health and Mental Hygiene',
-    sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
-    body: {
-      whatItIs: {
-        title: 'What it is',
-        content: `
-          <p>Raising a child with emotional and behavioral difficulties can be challenging.</p>
-          <p>Family Resource Centers (FRCs) provide family support services
-          to parents/caregivers of children and youth. If you have a child with mental health needs, you can get support like:
-          </p>
-
-          <div class="list-unordered--check">
-          <ul>
-          <li>Emotional support</li>
-          <li>Advocacy to help navigate child-serving systems</li>
-          <li>Information about mental health conditions, services, and family rights</li>
-          <li>Referrals to appropriate services and resources</li>
-          <li>Skill development through educational workshops</li>
-          <li>Recreational activities</li>
-          <li>Respite</li>
-          </ul>
-          </div>
-
-          <p>Support services are individual and group-based.</p>
-        `,
-      },
-      whoItIsFor: {
-        title: 'Who it’s for',
-        content: `
-          <p>Parents and caregivers of children and youth from birth – age 24</p>
-        `,
-      },
-      cost: {
-        title: 'Cost',
-        content: `
-          <p>All FRC services are free. You don’t need a referral to access services.</p>
-        `,
-      },
-      howToGetInTouch: {
-        title: 'How to get in touch',
-        content: [
-          {
-            type: 'website',
-            body: `
-            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/mh/fam-sup-dir.pdf">Contact a Family Resource Center</a>. They’re available in every borough.</h3>
-          `,
-          },
-        ],
-      },
-    },
-    link: './programs/',
-    featured: true,
-    categories: [
-      {
-        id: 7,
-        name: 'Peer Support',
       },
     ],
     population: [
@@ -1460,7 +1464,7 @@ module.exports = [
     population: [
       {
         id: 3,
-        name: 'LGBTQ',
+        name: 'LGBTQ New Yorkers',
       },
     ],
   },

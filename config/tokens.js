@@ -38,7 +38,7 @@ tokens.populations = {
     'primary': tokens.colors['color-blue-dark'],
     'secondary': tokens.colors['color-blue-dark']
   },
-  'lgbtq': {
+  'lgbtq-new-yorkers': {
     'primary': tokens.colors['color-purple'],
     'secondary': tokens.colors['color-purple']
   },
