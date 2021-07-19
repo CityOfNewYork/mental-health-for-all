@@ -96,12 +96,12 @@ module.exports = {
 
     let terms = [
       {
-        name: "categories",
+        name: "Type of Need",
         slug: "cat",
         programs: unique(cat, 'id')
       },
       {
-        name: "population",
+        name: "People Served",
         slug: "pop",
         programs: unique(pop, 'id')
       }

@@ -1,6 +1,7 @@
 <template>
   <section class="o-container u-bottom-spacing u-top-spacing-small desktop:flex">
     <div class='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'>
+      <div class='px-8 py-3'><h3>Filter Services:</h3></div>
       <div class='c-list-box c-list-box--quaternary js-accordion o-accordion' data-multiselectable="false" role="presentation" aria-multiselectable="false">
         <div v-for="term in terms" :key="term.term_id" class="c-list-box__item o-accordion__item">
           <!-- <button id="type-filter-heading" class="js-accordion__header c-list-box__heading o-accordion__header" type="button" aria-selected="false" aria-controls="type-filter-panel" aria-expanded="true">Program Categories
