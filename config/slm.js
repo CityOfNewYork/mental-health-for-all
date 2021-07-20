@@ -11,7 +11,7 @@ let remotes = {
 let banners = {
   'The Crime Victim Assistance Program (CVAP)': 'a',
   'Family Justice Centers': 'b',
-  'Program for Survivors of Torture': 'c',
+  'Program for Survivors of Torture': false,
   'Mission: VetCheck': 'd',
   'The Trevor Project': 'e',
   'LGBT National Help Center': 'e',

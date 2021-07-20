@@ -1,8 +1,8 @@
 article class='o-container u-bottom-spacing-small js-sticky-container desktop:flex'
   div class='o-article-sidebar desktop:w-sidebar'
     div class='o-content-container--compact u-shift-up'
-      ol class='c-nav-list js-sticky js-section-set o-sticky-nav' style=('width: 357px;')
-        - let sections = ['veterans', 'children-and-youth', 'lgbtq', 'seniors', 'immigrants'];
+      ol class='c-nav-list js-sticky js-section-set o-sticky-nav'
+        - let sections = ['secondary', 'primary', 'adults', 'seniors', 'immigrants'];
 
         - for (let i in this.service.sections)
           li class='c-nav-list__item'
@@ -21,10 +21,12 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
 
           == this.service.body.whatItIs.content
 
-      div class='tablet:grid grid-cols-2 gap-6 u-bottom-spacing'
+      - let columns = (this.service.body.hasOwnProperty('whoItIsFor') && this.service.body.hasOwnProperty('cost')) ? 'tablet:grid grid-cols-2 gap-6 u-bottom-spacing' : 'u-bottom-spacing';
+
+      div class='${columns}'
         - if this.service.body.hasOwnProperty('whoItIsFor')
-          section class='c-tip u-sm-gutter bg-color-purple o-content-container text-center rounded-lg mb-4' data-id='${this.createSlug(this.service.body.whoItIsFor.title)}'
-            div id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='c-tip__sticker sticker bg-color-purple'
+          section class='c-tip u-sm-gutter bg-primary--primary o-content-container rounded-lg mb-4' data-id='${this.createSlug(this.service.body.whoItIsFor.title)}'
+            div id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='c-tip__sticker sticker bg-primary--primary'
               svg class='icon--large' role='img' aria-hidden='true'
                 use xlink:href='#icon-lightbulb'
 
@@ -35,15 +37,10 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
               == this.service.body.whoItIsFor.content
 
         - if this.service.body.hasOwnProperty('cost')
-          / section id='${this.createSlug(this.service.body.cost.title)}' class='o-content-container--text s-wysiwyg u-top-spacing u-bottom-spacing-small' tabindex='-1'
-          /   h2 id='section-call-to-action' tabindex='-1'
-          /     == this.service.body.cost.title
-
-          /   == this.service.body.cost.content
-          section class='c-tip u-sm-gutter bg-color-gray-light text-color-dark-gray-dark o-content-container text-center rounded-lg' data-id='${this.createSlug(this.service.body.cost.title)}'
+          section class='c-tip u-sm-gutter bg-color-gray-light text-color-dark-gray-dark o-content-container rounded-lg' data-id='${this.createSlug(this.service.body.cost.title)}'
             div id='${this.createSlug(this.service.body.cost.title)}' class='c-tip__sticker sticker bg-color-gray-light text-color-dark-gray-dark'
               svg class='icon--large' role='img' aria-hidden='true'
-                use xlink:href='#icon-lightbulb'
+                use xlink:href='#icon-${this.service.body.cost.type}'
 
             div class='c-tip__content relative'
               h2 id='section-call-to-action' tabindex='-1'

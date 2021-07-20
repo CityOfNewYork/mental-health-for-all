@@ -32,16 +32,29 @@ svg {
   font-size: 1.3125rem;
 }
 
-.list-unordered--check ul {
-  list-style: disc;
+.list-unordered--check {
+  ul, ol {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+  }
 
-  li {
-    padding-top: 0;
-    padding-left: rem-calc(14);
+  li,
+  ul li,
+  ol li {
+    margin: revert;
+    padding-top: revert;
+    padding-left: revert;
+    padding-right: revert;
+    text-indent: 0;
 
     &:before {
       display: none;
     }
+  }
+
+  li:last-child {
+    padding-bottom: 0;
   }
 }
 

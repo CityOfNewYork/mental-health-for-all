@@ -8,7 +8,10 @@ html lang='en' class='no-js'
     meta name='mobile-web-app-capable' content='yes'
 
     title = title
-    / meta name='description' content='{{meta_desc}}'
+
+    - if (typeof description !== 'undefined')
+      meta name='description' content='${description}'
+
     / meta name='keywords' content='{{meta_keywords}}'
 
     / {% if meta_noindex == true %}
