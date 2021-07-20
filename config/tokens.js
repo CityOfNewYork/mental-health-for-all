@@ -16,10 +16,13 @@ tokens.colors['color-red'] = '#E93E51';
 tokens.colors['color-yellow'] = '#FDB714';
 tokens.colors['color-yellow-light'] = '#FFCB68';
 
+// #378e27 Green
+// #621ac1 Pink
+
 tokens.colors['transparent'] = 'transparent';
 
 tokens['colors-default']['color-primary'] = 'color-purple-dark';
-// tokens['colors-default']['color-secondary'] = ''
+tokens['colors-default']['color-secondary'] = 'color-orange';
 // tokens['colors-default']['color-background'] = ''
 // tokens['colors-default']['color-background-shade'] = ''
 // tokens['colors-default']['color-background-footer'] = ''
@@ -61,6 +64,14 @@ tokens.populations = {
   'families': {
     'primary': tokens.colors['color-pink'],
     'secondary': tokens.colors['color-pink']
+  },
+  'primary': {
+    'primary': tokens.colors['color-purple'],
+    'secondary': tokens.colors['color-purple']
+  },
+  'secondary': {
+    'primary': tokens.colors['color-orange'],
+    'secondary': tokens.colors['color-orange']
   },
   'cat': {
     'primary': tokens.colors['color-purple'],
