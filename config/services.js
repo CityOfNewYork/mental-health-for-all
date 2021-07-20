@@ -76,7 +76,7 @@ module.exports = [
       },
     },
     link: './programs/support-during-a-crisis',
-    featured: true,
+    featured: [],
     categories: [
       {
         id: 3,
@@ -191,7 +191,16 @@ module.exports = [
       },
     },
     link: './programs/support-during-a-crisis',
-    featured: true,
+    featured: [
+      {
+        id: 6,
+        name: 'Everyone',
+      },
+      {
+        id: 8,
+        name: 'Adults',
+      },
+    ],
     categories: [
       {
         id: 3,
@@ -323,7 +332,7 @@ module.exports = [
       },
     },
     link: './programs/the-crime-victim-assistance-program-cvap',
-    featured: true,
+    featured: [],
     categories: [
       {
         id: 1,
@@ -389,7 +398,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        id: 1,
+        name: 'Veterans',
+      },
+    ],
     categories: [
       {
         id: 1,
@@ -492,7 +506,12 @@ module.exports = [
       },
     },
     link: './programs/family-justice-centers',
-    featured: true,
+    featured: [
+      {
+        id: 2,
+        name: 'Families',
+      },
+    ],
     categories: [
       {
         id: 1,
@@ -581,7 +600,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        id: 4,
+        name: 'Seniors',
+      },
+    ],
     categories: [
       {
         id: 5,
@@ -659,7 +683,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        id: 4,
+        name: 'Seniors',
+      },
+    ],
     categories: [
       {
         id: 7,
@@ -735,7 +764,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        "id": 7,
+        "name": "Immigrants",
+      },
+    ],
     categories: [
       {
         id: 1,
@@ -829,7 +863,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        id: 8,
+        name: 'Adults',
+      },
+    ],
     categories: [
       {
         id: 6,
@@ -916,7 +955,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        "id": 7,
+        "name": "Immigrants",
+      },
+    ],
     categories: [
       {
         id: 10,
@@ -993,7 +1037,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        id: 5,
+        name: 'Children and Youth',
+      },
+    ],
     categories: [
       {
         id: 1,
@@ -1074,7 +1123,7 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [],
     categories: [
       {
         id: 7,
@@ -1140,7 +1189,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        id: 2,
+        name: 'Families',
+      },
+    ],
     categories: [
       {
         id: 1,
@@ -1217,7 +1271,7 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [],
     categories: [
       {
         id: 10,
@@ -1319,7 +1373,7 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [],
     categories: [
       {
         id: 6,
@@ -1386,7 +1440,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        id: 6,
+        name: 'Everyone',
+      },
+    ],
     categories: [
       {
         id: 6,
@@ -1454,7 +1513,7 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [],
     categories: [
       {
         id: 9,
@@ -1517,7 +1576,7 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [],
     categories: [
       {
         id: 8,
@@ -1573,7 +1632,7 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [],
     categories: [
       {
         id: 10,
@@ -1645,7 +1704,12 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [
+      {
+        id: 5,
+        name: 'Children and Youth',
+      },
+    ],
     categories: [
       {
         id: 9,
@@ -1719,7 +1783,7 @@ module.exports = [
       },
     },
     link: './programs/',
-    featured: true,
+    featured: [],
     categories: [
       {
         id: 9,

@@ -81,8 +81,8 @@
             ul aria-hidden='false' role='region' id='aria-${slug}' class='hidden'
               li class='c-list-box__subitem bg-${slug}--primary'
 
-                - filteredServices = this.services.filter(service => service.population.some((people) => people.id === this.population[i].id))
-                - for (let i in this.shuffle(filteredServices).slice(0, 2))
+                - filteredServices = this.services.filter(service => service.featured.some((people) => people.id === this.population[i].id))
+                - for (let i in filteredServices)
                   - card = filteredServices[i]
 
                   div class='c-block-list__item text-color-dark-gray-dark'
