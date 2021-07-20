@@ -15,7 +15,7 @@ let banners = {
   'Mission: VetCheck': 'd',
   'The Trevor Project': 'e',
   'LGBT National Help Center': 'e',
-  'Single Point of Access (SPOA)': 'f',
+  'Mobile Treatment Services Accessible Through the Single Point of Access': 'f',
   'Mobile crisis teams': 'f',
   'Friendly Visiting and Friendly VOICES': 'g',
   'Geriatric Mental Health Initiative': 'g',
