@@ -15,11 +15,15 @@ header class='c-hero c-hero--large bg-color-purple bg-banner-${this.service.bann
 
     - if this.service.categories && this.service.categories.length > 0
       p class='c-hero__tags desktop:w-5/12'
-        - for (let i in this.service.categories)
-          span class='button--pill button--pill--alt order-last'
-            = this.service.categories[i].name
-
         - if this.service.population && this.service.population.length > 0
           - for (let i in this.service.population)
-            span class='button--pill order-last ${this.generateClassName(this.service.population[i].name)}'
-              = this.service.population[i].name
+            - let p = this.service.population[i];
+
+            a class='button--pill bg-${this.createSlug(p.name)}--primary' href='#' = p.name
+
+        - for (let i in this.service.categories)
+          - let c = this.service.categories[i];
+
+          a class='button--pill bg-${this.createSlug(c.name)}--primary' href='#' = c.name
+
+
