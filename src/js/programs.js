@@ -139,11 +139,39 @@ class Programs {
         },
 
         /**
+         * Filters the term data and toggles the checked attribute, then, invokes
+         * the filtering method.
+         *
+         * @param   {Object}  event   The click event
+         * @param   {String}  parent  The taxonomy parent
+         * @param   {Number}  parent  The taxonomy id
+         *
+         * @return  {Object}            Vue Instance
+         */
+        link: function(event, parent, id) {
+          this.change({
+            event: event,
+            data: {
+              parent: parent,
+              id: id
+            }
+          });
+
+          let term = this.terms.find(t => t.slug === parent)['filters']
+            .find(term => term.id === id);
+
+          this.$set(term, 'checked', !term.checked);
+
+          return this;
+        },
+
+        /**
          * Generate class names based on population name
          * @param {*} name
          */
         classNameGenerator: function(name) {
           let className = ['bg-' + name.toLowerCase() + '--secondary'];
+
           return className;
         },
 
