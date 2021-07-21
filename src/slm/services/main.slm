@@ -40,7 +40,7 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
           section class='c-tip u-sm-gutter bg-color-gray-light text-color-dark-gray-dark o-content-container rounded-lg' data-id='${this.createSlug(this.service.body.cost.title)}'
             div id='${this.createSlug(this.service.body.cost.title)}' class='c-tip__sticker sticker bg-color-gray-light text-color-dark-gray-dark'
               svg class='icon--large' role='img' aria-hidden='true'
-                use xlink:href='#icon-${this.service.body.cost.type}'
+                use xlink:href='#mhfa-icon-${this.service.body.cost.type}'
 
             div class='c-tip__content relative'
               h2 id='section-call-to-action'
@@ -90,18 +90,6 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
             div class='o-content-container bg-color-yellow-light hidden' id='aria-${this.createSlug(section.title)}' aria-hidden='true' role='region' aria-labelledby='aria-lb-${this.createSlug(section.title)}'
               div class='bg-color-white rounded-lg p-8'
                 == section.content
-
-        / ul class="js-accordion c-list-box c-list-box--tertiary u-sm-gutter o-accordion" role="presentation" aria-multiselectable="false"
-        /   li class="c-list-box__item o-accordion__item is-expanded"
-        /     button class="c-list-box__heading js-accordion__header bg-grade-schooler--secondary o-accordion__header" id="milestones-header-social" type="button" aria-selected="false" aria-controls="milestones-panel-social" aria-expanded="true"
-        /       | Social
-
-        /       svg class="o-accordion__caret icon" aria-hidden="true"
-        /         use xlink:href="#icon-caret-down"
-
-        /     ul class="c-list-box__content js-accordion__content o-accordion__content" id="milestones-panel-social" aria-hidden="false" role="region" aria-labelledby="milestones-header-social" style="height: 216.562px;"
-        /       li class="c-list-box__subitem"
-        /         | Begin to separate from caregiver without a lot of stress
 
 div class='mobile:pt-5 tablet:pt-12 pb-6'
   a href='#main' class='back-to-top bg-color-blue-light hover:bg-color-blue no-underline' id='myBtn' data-js='back-to-top' title='Back To Top'
