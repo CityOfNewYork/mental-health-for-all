@@ -80,7 +80,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/support-during-a-crisis',
     featured: [],
     categories: [
       {
@@ -225,7 +224,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/support-during-a-crisis',
     featured: [
       {
         id: 6,
@@ -365,7 +363,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/the-crime-victim-assistance-program-cvap',
     featured: [],
     categories: [
       {
@@ -472,7 +469,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 1,
@@ -596,7 +592,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/family-justice-centers',
     featured: [
       {
         id: 2,
@@ -715,7 +710,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 4,
@@ -797,7 +791,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 4,
@@ -878,7 +871,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 7,
@@ -967,7 +959,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 8,
@@ -1083,7 +1074,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 7,
@@ -1191,7 +1181,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 5,
@@ -1305,7 +1294,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -1370,7 +1358,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 2,
@@ -1447,7 +1434,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -1541,7 +1527,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -1632,7 +1617,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 6,
@@ -1730,7 +1714,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 3,
@@ -1826,7 +1809,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -1889,7 +1871,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -1951,7 +1932,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [
       {
         id: 5,
@@ -2058,7 +2038,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -2128,7 +2107,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -2186,7 +2164,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -2262,7 +2239,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -2334,7 +2310,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -2401,7 +2376,6 @@ module.exports = [
         ],
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {
@@ -2471,7 +2445,6 @@ module.exports = [
         `,
       },
     },
-    link: './programs/',
     featured: [],
     categories: [
       {

@@ -1,7 +1,7 @@
 'use strict';
 
 import Vue from 'vue/dist/vue.esm.browser';
-import ProgramsArchive from '../views/programs/archive.vue';
+import ProgramsArchive from '../views/services/archive.vue';
 import Services from '../../dist/data/services.json';
 
 /**

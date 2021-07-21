@@ -28,7 +28,7 @@ header class='o-navigation'
     nav class='o-navigation__nav' role='navigation' aria-label='Primary'
       ul class='o-inline'
         li class='o-inline__item'
-          a href='${this.root}/programs/index' class='o-navigation__nav-link' Services
+          a href='${this.root}/services/index' class='o-navigation__nav-link' Services
 
         li class='o-inline__item'
           a href='#' data-js='offcanvas-ages' data-toggle='offcanvas-ages' class='o-navigation__nav-link' About

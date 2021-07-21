@@ -43,7 +43,7 @@
             == "Immigrants"
           span data-js="rotate-controller" id="rotate" class="animated"
 
-      a.button--outline.button--outline--white href='${this.root}/programs/index.html' Explore Mental Health services
+      a.button--outline.button--outline--white href='${this.root}/services/index.html' Explore Mental Health services
 
   section class='o-scroll-column o-scroll-column--right'
     div clas='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
@@ -89,10 +89,10 @@
                     == this.include('/slm/partials/components/card/card.slm');
 
                 div class='text-center py-5'
-                  a href='${this.root}/programs/index.html' class='button--full-width button--primary text-${slug}--primary' See all services
+                  a href='${this.root}/services/index.html' class='button--full-width button--primary text-${slug}--primary' See all services
 
       div class='text-center py-5'
-        a href='${this.root}/programs/index.html' class='button--outline button--outline--gray' See all services
+        a href='${this.root}/services/index.html' class='button--outline button--outline--gray' See all services
 
   = content('scripts')
     javascript:
