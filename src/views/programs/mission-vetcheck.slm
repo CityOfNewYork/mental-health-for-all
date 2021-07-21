@@ -1,6 +1,8 @@
 = extend('/slm/layouts/default')
 
 - title = 'Mission: VetCheck | Services | Mental Health for All'
+/ - description = '{{ SERVICE_DESCRIPTION }}'
+
 - this.service = this.services.find(service => service.title == 'Mission: VetCheck')
 - this.service.slug = 'mission-vetcheck';
 

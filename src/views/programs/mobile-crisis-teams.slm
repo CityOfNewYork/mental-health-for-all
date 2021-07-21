@@ -1,7 +1,9 @@
 = extend('/slm/layouts/default')
 
-- title = 'Mobile crisis teams | Services | Mental Health for All'
-- this.service = this.services.find(service => service.title == 'Mobile crisis teams')
+- title = 'Mobile Crisis Teams | Services | Mental Health for All'
+/ - description = '{{ SERVICE_DESCRIPTION }}'
+
+- this.service = this.services.find(service => service.title == 'Mobile Crisis Teams')
 - this.service.slug = 'mobile-crisis-teams';
 
 = content('main')

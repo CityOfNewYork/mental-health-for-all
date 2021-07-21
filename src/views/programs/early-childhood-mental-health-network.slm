@@ -1,6 +1,8 @@
 = extend('/slm/layouts/default')
 
 - title = 'Early Childhood Mental Health Network | Services | Mental Health for All'
+/ - description = '{{ SERVICE_DESCRIPTION }}'
+
 - this.service = this.services.find(service => service.title == 'Early Childhood Mental Health Network')
 - this.service.slug = 'early-childhood-mental-health-network';
 
