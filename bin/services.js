@@ -84,6 +84,7 @@ module.exports = {
         category.slug = createSlug(category.name)
         cat.push(category)
       })
+
       service.population.map(people => {
         people.slug = createSlug(people.name)
         pop.push(people)
