@@ -63,7 +63,7 @@ $tokens:(
   ),
   colors-default: (
     color-primary: color-purple-dark,
-    color-secondary: color-blue,
+    color-secondary: color-orange,
     color-background: color-white,
     color-background-shade: color-gray-light,
     color-text: color-dark-gray-dark,
@@ -182,7 +182,7 @@ $tokens:(
       primary: #154A94,
       secondary: #154A94
     ),
-    lgbtq: (
+    lgbtq-new-yorkers: (
       primary: #C1408B,
       secondary: #C1408B
     ),
@@ -205,6 +205,14 @@ $tokens:(
     families: (
       primary: #d8006d,
       secondary: #d8006d
+    ),
+    primary: (
+      primary: #C1408B,
+      secondary: #C1408B
+    ),
+    secondary: (
+      primary: #FA660A,
+      secondary: #FA660A
     ),
     cat: (
       primary: #C1408B,
