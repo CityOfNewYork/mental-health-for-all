@@ -1,0 +1,20 @@
+= extend('/slm/layouts/default')
+
+- title = 'Mission: VetCheck | Services | Mental Health for All'
+/ - description = '{{ SERVICE_DESCRIPTION }}'
+
+- this.service = this.services.find(service => service.title == 'Mission: VetCheck')
+- this.service.slug = 'mission-vetcheck';
+
+= content('main')
+  = partial('/slm/services/banner.slm')
+  = partial('/slm/services/main.slm')
+
+= content('scripts')
+  javascript:
+    window.addEventListener('load', () => {
+      document.querySelectorAll('[data-js="lazy"]').forEach(i => {
+        i.classList.remove('not-loaded');
+        i.classList.add('loaded');
+      });
+    });

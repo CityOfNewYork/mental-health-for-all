@@ -52,7 +52,7 @@ module.exports = {
       let template = 'src/slm/services/service.slm';
       let data = fs.readFileSync(template, 'utf8');
       let slug = createSlug(service.title);
-      let write = `src/views/programs/${slug}.slm`;
+      let write = `src/views/services/${slug}.slm`;
 
       data = data
         .replace(/{{ SERVICE_TITLE }}/g, service.title)
@@ -84,6 +84,7 @@ module.exports = {
         category.slug = createSlug(category.name)
         cat.push(category)
       })
+
       service.population.map(people => {
         people.slug = createSlug(people.name)
         pop.push(people)

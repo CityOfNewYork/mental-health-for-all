@@ -1,7 +1,7 @@
 'use strict';
 
 import Vue from 'vue/dist/vue.esm.browser';
-import ProgramsArchive from '../views/programs/archive.vue';
+import ProgramsArchive from '../views/services/archive.vue';
 import Services from '../../dist/data/services.json';
 
 /**
@@ -146,7 +146,7 @@ class Programs {
          * @param   {String}  parent  The taxonomy parent
          * @param   {Number}  parent  The taxonomy id
          *
-         * @return  {Object}            Vue Instance
+         * @return  {Object}          Vue Instance
          */
         link: function(event, parent, id) {
           this.change({
