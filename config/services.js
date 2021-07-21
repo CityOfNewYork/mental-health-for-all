@@ -46,6 +46,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'health-insurance',
         content: `
           <p>You do not need insurance to get services from a Mobile Crisis Team.</p>
 
@@ -168,6 +169,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Free</p>
         `,
@@ -447,6 +449,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Free</p>
         `,
@@ -531,6 +534,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Free</p>
         `,
@@ -675,6 +679,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Free</p>
         `,
@@ -763,6 +768,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Free</p>
         `,
@@ -843,6 +849,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Free</p>
         `,
@@ -937,6 +944,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Clubhouses are free for people to access.</p>
         `,
@@ -1052,6 +1060,7 @@ module.exports = [
         },
       cost: {
         title: 'Cost',
+        type: 'low-cost',
         content: `
         <p>NYC Care provides health care at low- or no-cost.</p>
         `,
@@ -1149,6 +1158,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
         <p>Services at drop-in centers are provided at no cost.</p>
         `,
@@ -1278,6 +1288,7 @@ module.exports = [
         },
         cost: {
           title: 'Cost',
+          type: 'free',
           content: `
           <p>All FRC services are free. You don’t need a referral to access services.</p>
           `,
@@ -1342,6 +1353,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'health-insurance',
         content: `
           <p>Centers accept Medicaid and other insurance. They’ll also work with you to ensure access.</p>
         `,
@@ -1474,6 +1486,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>You can get a free Naloxone kit at participating community-based programs and pharmacies near you. You can also attend a virtual training and get a kit by mail.</p>
         `,
@@ -1600,6 +1613,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Syringe Service Programs are free.</p>
           `,
@@ -1906,6 +1920,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'health-insurance',
         content: `
           <p>Although many services are at no cost to families, some services such as treatment may have a fee. Ask your school mental health program for more information.</p>
           <div class="list-unordered--check">
@@ -2147,6 +2162,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'health-insurance',
         content: `
           <p>If you have insurance, it will be billed.</p>
           <p>If you’re ineligible for health insurance or cannot afford health insurance, you may be eligible for <a href="https://www.nyccare.nyc/" >NYC Care</a>.</p>
@@ -2223,6 +2239,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>The LGBT National Help Center’s hotlines are free.</p>
         `,
@@ -2275,6 +2292,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Talking to a counselor is free.</p>
         `,
@@ -2354,6 +2372,7 @@ module.exports = [
       },
       cost: {
         title: 'Cost',
+        type: 'free',
         content: `
           <p>Talking to a counselor is free.</p>
         `,
