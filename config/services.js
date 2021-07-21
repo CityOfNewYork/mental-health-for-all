@@ -16,7 +16,7 @@ module.exports = [
         content: `
           <p>Anyone who is experiencing a mental health crisis can reach out to NYC Well to consider a mobile crisis team.</p>
 
-          <p>Mobile crisis teams are here to help. They’re groups of health professionals, such as nurses, social workers, and psychiatrists, who can provide mental health services in your home.</p>
+          <p>Mobile crisis teams are groups of health professionals, such as nurses, social workers, and psychiatrists, who can provide mental health services in your home.</p>
 
           <p>Depending on what a person is willing to accept, the teams may offer a range of services during and immediately following a crisis, including:</p>
 
@@ -39,7 +39,8 @@ module.exports = [
       whoItIsFor: {
         title: 'Who it’s for',
         content: `
-          <p>A person is eligible to receive MCT services if: the person is in New York City and is experiencing, or is at risk of, a behavioral health crisis defined as a non-life-threatening situation in which a person experiences an intense behavioral, emotional, or psychiatric response that may be triggered by a precipitating event. (NOTE: this was taken from the NYC Well website.)</p>
+          <p>A person is eligible to receive MCT services if: the person is in New York City and is experiencing, or is at risk of, a behavioral health crisis.</p>
+          <p>A behavioral health crisis is a non-life-threatening situation in which a person experiences an intense behavioral, emotional, or psychiatric response that may be triggered by a precipitating event.</p>
           <p>You can request a team for yourself or someone you know. Teams serve adults and children.</p>
         `,
       },
@@ -420,7 +421,7 @@ module.exports = [
     subtitle:
       'Mission: VetCheck connects veterans to trained volunteers through one-on-one supportive check-in calls.',
     programProvider:
-      'NYC Department of Veterans’ Services & The Mayor’s Office of Community Mental Health (OCMH)',
+      'NYC Department of Veterans’ Services (DVS) and Mayor’s Office of Community Mental Health (OCMH)',
     sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
     body: {
       whatItIs: {
@@ -542,9 +543,9 @@ module.exports = [
         title: 'How to get in touch',
         content: [
           {
-            type: 'website',
+            type: 'calling',
             body: `
-            <h3><a href="https://www1.nyc.gov/site/nypd/services/victim-services/cvap.page">Visit a Family Justice Center</a></li></h3>
+            <h3><a href="https://www1.nyc.gov/site/ocdv/programs/family-justice-centers.page">Call a Family Justice Center</a></li></h3>
 
             <div class="list-unordered--check">
               <ul>
@@ -636,6 +637,11 @@ module.exports = [
       {
         id: 8,
         name: 'Adults',
+      },
+      {
+        id: 4,
+        name: "Seniors",
+        slug: "seniors"
       },
       {
         id: 1,
@@ -751,7 +757,6 @@ module.exports = [
 
           <p><strong>Friendly Visiting</strong> is a program for homebound older adults who have ongoing health challenges that make it difficult for them to go out. </p>
           <p>You can get paired with a volunteer visitor or peer who is close to your age. A volunteer can visit you in your home to talk about shared interests and experiences. You may also join a virtual group to talk with others.</p>
-          <p>Due to COVID-19, volunteers are currently maintaining social distancing guidelines and are connecting with their matches by phone and video calls.</p>
           <p><strong>Friendly VOICES</strong> is a program for older adults who are isolated for other reasons (such as COVID-19).</p>
           <p>You’ll be matched with a volunteer whom you can keep in touch by phone or video calls. You also have the option to join a virtual group or be matched with a peer close to your age.</p>
         `,
@@ -921,8 +926,6 @@ module.exports = [
         content: `
           <p>Clubhouses are evidence-based models of psychiatric rehabilitation – one-stop places that help people with serious mental illness by providing:</p>
 
-          <p>You can find meaningful work and educational opportunities and social connections in these unique, member-run spaces.</p>
-
           <div class="list-unordered--check">
             <ul>
               <li>peer support</li>
@@ -994,7 +997,7 @@ module.exports = [
       },
       {
         id: 10,
-        name: "Care Serious mental illness",
+        name: "Care for Serious Mental Illness",
       },
     ],
     population: [
@@ -1023,7 +1026,7 @@ module.exports = [
   {
     title: 'NYC Care',
     subtitle:
-    'Low- or no- cost healthcare for New Yorkers who can’t afford or are ineligible for health insurance',
+    'New Yorkers who are ineligible for health insurance or can’t afford it can access low- or no- cost healthcare through NYC Care.',
     programProvider: 'NYC Health + Hospitals',
     sections: [
       'What it is',
@@ -1076,7 +1079,7 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-        <p>Learn more about NYC Care by visiting<a href="https://www.nyccare.nyc/">nyccare.nyc</a></p>
+        <p>Learn more about NYC Care by visiting <a href="https://www.nyccare.nyc/">nyccare.nyc</a></p>
         `,
       },
     },
@@ -1134,7 +1137,7 @@ module.exports = [
       whatItIs: {
         title: 'What it is',
         content: `
-        <p>If you’re age 14 – 24 and need emergency shelter, you can go to a Drop-in Center. You can get essentials like:</p>
+        <p>If you’re age 14 – 24 and need emergency shelter, you can go to a Drop-in Center for essentials like:</p>
 
         <div class="list-unordered--check">
         <ul>
@@ -1197,17 +1200,33 @@ module.exports = [
     ],
     categories: [
       {
-        id: 3,
-        name: "Crisis Support",
-      },
-      {
-        id: 4,
-        name: "Grief Support",
+        id: 6,
+        name: "Substance Use Services",
       },
       {
         id: 7,
         name: "Peer Support",
       },
+      {
+        id: 8,
+        name: "Counseling",
+      },
+      {
+        id: 3,
+        name: "Crisis Support",
+      },
+      {
+        id: 5,
+        name: "Help with Anxiety",
+      },
+      {
+        id: 1,
+        name: "Trauma Support",
+      },
+      {
+        id: 4,
+        name: "Grief Support",
+      }
     ],
     population: [
       {
@@ -1416,7 +1435,7 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3><a href="tel:911f">Call 911 </a> if there’s a medical emergency.</h3>
+            <h3>Call 911 if there’s a medical emergency.</h3>
           `,
           },
           {
@@ -1597,7 +1616,7 @@ module.exports = [
       cost: {
         title: 'Cost',
         content: `
-          <p>Syringe Service Programs are free</p>
+          <p>Syringe Service Programs are free.</p>
           `,
         },
         howToGetInTouch: {
@@ -1672,7 +1691,7 @@ module.exports = [
   {
     title: 'Gotham Pride Health Centers',
     subtitle:
-      'Mental health support and sexual/reproductive services for LGBTQ New Yorkers.',
+      'Pride Health Centers provide primary care services, mental health support and sexual/reproductive services for LGBTQ New Yorkers.',
     programProvider: 'NYC Health + Hospitals Pride Health Centers',
     sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
     body: {
@@ -1695,7 +1714,7 @@ module.exports = [
       whoItIsFor: {
         title: 'Who it’s for',
         content: `
-          <p>Pride Health Centers are geared towards serving LGBTQ New Yorkers</p>
+          <p>Pride Health Centers are geared towards serving LGBTQ New Yorkers.</p>
           `,
         },
         howToGetInTouch: {
@@ -1721,7 +1740,7 @@ module.exports = [
     categories: [
       {
         id: 10,
-        name: "Care Serious mental illness",
+        name: "Care for Serious Mental Illness",
       },
       {
         id: 8,
@@ -1789,7 +1808,7 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3><a href="tel:844-692-4692">Call 844-NYC-4NYC (1-844-692-4692)</a> to make an appointment or find a clinic near you.</h3>
+            <h3><a href="tel:844-692-4692">Call 844-NYC-4NYC (844-692-4692)</a> to make an appointment or find a clinic near you.</h3>
           `,
           },
           {
@@ -1864,15 +1883,7 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <p><strong>If you want a referral to SPOA,</strong> contact your mental health provider. </p>
-          `,
-          },
-          {
-            type: 'website',
-            body: `
-            <h3><strong>If you want to refer someone with a serious mental illness,</span>  complete the online application by logging into <a href="https://a816-healthpsi.nyc.gov/NYCMED/Account/Login" >NYCMED</a>. If you do not have a NYCMED account, you must create one.</h3>
-            <p>Your application must include a recent psychiatric evaluation, a recent psychosocial evaluation and a client consent form.</p>
-            <p>If you have any questions on how to apply, email <a href="mailto:SPOASupport@health.nyc.gov" >SPOASupport@health.nyc.gov</a></p>
+            <h3><strong>If you want a referral to SPOA,</strong> contact your mental health provider.</h3>
           `,
           },
         ],
@@ -1937,12 +1948,6 @@ module.exports = [
             <h3>Ask your Parent Coordinator, School Social Worker, or School Counselor about your school's mental health program.</h3>
           `,
           },
-          {
-            type: 'website',
-            body: `
-            <h3>Visit the DOE website on <a href="https://www.schools.nyc.gov/school-life/health-and-wellness/mental-health" >Mental Health</a> for more information.</h3>
-          `,
-          },
         ],
       },
     },
@@ -1956,7 +1961,7 @@ module.exports = [
     categories: [
       {
         id: 10,
-        name: "Care Serious mental illness",
+        name: "Care for Serious Mental Illness",
       },
       {
         id: 8,
@@ -2108,7 +2113,7 @@ module.exports = [
       whoItIsFor: {
         title: 'Who it’s for',
         content: `
-          <p>Available for all pregnant patients and pediatrics patients under the age of three at select Health + Hospitals locations</p>
+          <p>Available for all pregnant patients and pediatrics patients under the age of three at select Health + Hospitals location.</p>
         `,
       },
       howToGetInTouch: {
@@ -2117,7 +2122,7 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3>Contact your OB or pediatrician at an H+H facility for more information, or call<a href="tel:844-692-4692"844-NYC-4NYC</a> to make an appointment.</h3>
+            <h3>Contact your OB or pediatrician at an H+H facility for more information, or call<a href="tel:844-692-4692">844-NYC-4NYC</a> to make an appointment.</h3>
           `,
           },
         ],
@@ -2154,13 +2159,6 @@ module.exports = [
         content: `
         <p>NYC Health + Hospitals’ comprehensive care teams treat common mental health conditions in the primary care setting.  Conditions that are treated include depression and anxiety. There is a particular emphasis on adolescents.</p>
         <p>As a primary care patient, you can receive mental health screenings as part of your routine visits. If necessary, you can be referred to additional support.</p>
-        <div class="list-unordered--check">
-          <ul>
-            <li>mental health</li>
-            <li>social needs like food or income</li>
-          <ul>
-        </div>
-        <p>Screenings done with mothers during pregnancy carry into postpartum follow-up and pediatric visits. The proper care is conducted through a social worker or other mental health professional.</p>
         `,
       },
       whoItIsFor: {
@@ -2182,7 +2180,7 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>Call NYC Health + Hospitals at <a href="tel:844-692-4692"844-NYC-4NYC</a> to make an appointment.</h3>
+            <h3>Call NYC Health + Hospitals at <a href="tel:844-692-4692">844-NYC-4NYC</a> to make an appointment.</h3>
           `,
           },
         ],
@@ -2193,7 +2191,7 @@ module.exports = [
     categories: [
       {
         id: 10,
-        name: "Care Serious mental illness",
+        name: "Care for Serious Mental Illness",
       },
       {
         id: 8,
@@ -2493,30 +2491,6 @@ module.exports = [
       {
         id: 6,
         name: "Everyone",
-      },
-      {
-        id: 2,
-        name: "Families",
-      },
-      {
-        id: 3,
-        name: "LGBTQ New Yorkers",
-      },
-      {
-        id: 8,
-        name: "Adults",
-      },
-      {
-        id: 4,
-        name: "Seniors",
-      },
-      {
-        id: 7,
-        name: "Immigrants",
-      },
-      {
-        id: 1,
-        name: "Veterans",
       }
     ],
   },
