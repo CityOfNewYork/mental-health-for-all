@@ -12920,8 +12920,8 @@ var Programs = (function () {
   const __vue_script__ = __vue_component__$1;
 
   /* template */
-  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"o-container u-bottom-spacing u-top-spacing-small desktop:flex"},[_c('div',{staticClass:"o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"},[_c('div',{staticClass:"c-list-box c-list-box--quaternary js-accordion o-accordion",attrs:{"data-multiselectable":"false","role":"presentation","aria-multiselectable":"false"}},_vm._l((_vm.terms),function(term){return _c('div',{key:term.term_id,staticClass:"c-list-box__item o-accordion__item"},[_c('button',{class:'c-list-box__heading o-accordion__header bg-' + term.slug + '--secondary active',attrs:{"data-js":"accordion","type":"button","aria-controls":'aria-c-' + term.slug,"aria-expanded":"true"}},[_vm._v("\n          "+_vm._s(term.name)+"\n          "),_c('svg',{staticClass:"o-accordion__caret icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-caret-down"}})])]),_vm._v(" "),_c('ul',{attrs:{"role":"region","aria-hidden":"false","id":'aria-c-' + term.slug}},[_c('li',{class:'c-list-box__subitem bg-' + term.slug + '--primary'},[_c('button',{on:{"click":function($event){return _vm.toggle({ event: $event, data: { parent: term.slug } })}}},[_vm._v("\n              Toggle All\n            ")])]),_vm._v(" "),_vm._l((term.filters),function(filter){return _c('li',{key:filter.slug,class:'c-list-box__subitem bg-' + term.slug + '--primary'},[_c('label',{staticClass:"checkbox"},[_c('input',{staticClass:"checkbox__field",attrs:{"type":"checkbox"},domProps:{"value":filter.slug,"checked":filter.checked},on:{"change":function($event){return _vm.change({ event: $event, data: filter })}}}),_vm._v(" "),_c('svg',{staticClass:"checkbox__indicator"},[_c('use',{attrs:{"xlink:href":"#icon-check"}})]),_vm._v(" "),_c('span',{domProps:{"innerHTML":_vm._s(filter.name)}},[_vm._v(_vm._s(filter.name))])])])})],2)])}),0)]),_vm._v(" "),_c('div',{staticClass:"o-article desktop:w-article"},[_c('section',{staticClass:"c-block-list"},_vm._l((_vm.posts),function(page){return _c('div',{key:("page-" + (_vm.posts.indexOf(page)))},[(page && page.show)?_c('div',[_c('div',{staticClass:"c-block-list--shade o-content-container u-sm-gutter",attrs:{"data-js":"filtered-results"}},_vm._l((page.posts),function(post){return _c('div',{key:post.id,staticClass:"c-block-list__item u-sm-gutter"},[_c('div',{staticClass:"c-card rounded-lg mr-0 flex"},[_c('div',{staticClass:"c-card__title"},[_c('a',{attrs:{"href":_vm.slugify(post.title),"title":post.title,"rel":""}},[_vm._v("\n                    "+_vm._s(post.title)+"\n                  ")])]),_vm._v(" "),_c('div',{staticClass:"c-card__subtitle"},[_c('p',[_vm._v(_vm._s(post.programProvider))])]),_vm._v(" "),_c('div',{staticClass:"c-card__body"},[_vm._v("\n                  "+_vm._s(post.body)+"\n                ")]),_vm._v(" "),_c('div',{staticClass:"c-card__tags order-last"},[_vm._l((post.categories),function(category){return _c('span',{key:category.name},[_c('button',{staticClass:"button--pill js-category button--pill--alt",on:{"click":function($event){return _vm.change({ event: $event, data: {parent: 'cat', id: category.id} })}}},[_vm._v("\n                        "+_vm._s(category.name)+"\n                      ")])])}),_vm._v(" "),_vm._l((post.population),function(people){return _c('span',{key:people.id},[_c('button',{staticClass:"button--pill js-category button--pill--alt",class:_vm.classNameGenerator(people.name),on:{"click":function($event){return _vm.change({ event: $event, data: {parent: 'pop', id: people.id} })}}},[_vm._v("\n                        "+_vm._s(people.name)+"\n                      ")])])})],2)])])}),0)]):_vm._e()])}),0),_vm._v(" "),_c('div',{staticClass:"o-content-container--compact pagination mobile:flex justify-between"},[_c('div',{staticClass:"previous tablet:mr-3 mb-3 tablet:mb-0 text-center",attrs:{"id":"paginate"}}),_vm._v(" "),_c('div',{staticClass:"paginate text-center"},[(_vm.next)?_c('button',{staticClass:"button--outline button--outline--gray paginate",attrs:{"data-amount":"1"},on:{"click":_vm.paginate}},[_vm._v("\n          Next\n        ")]):_vm._e()])]),_vm._v(" "),_c('p',[(_vm.next)?_c('button',{attrs:{"data-amount":"1"},on:{"click":_vm.paginate}},[_vm._v("\n        Load More Posts\n      ")]):_vm._e()])])])};
-  var __vue_staticRenderFns__ = [];
+  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"o-container u-bottom-spacing u-top-spacing-small desktop:flex"},[_c('div',{staticClass:"o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"c-list-box c-list-box--quaternary js-accordion o-accordion",attrs:{"data-multiselectable":"false","role":"presentation","aria-multiselectable":"false"}},_vm._l((_vm.terms),function(term){return _c('div',{key:term.term_id,staticClass:"c-list-box__item o-accordion__item"},[_c('button',{class:'c-list-box__heading o-accordion__header bg-' + term.slug + '--secondary active',attrs:{"data-js":"accordion","type":"button","aria-controls":'aria-c-' + term.slug,"aria-expanded":"true"}},[_vm._v("\n          "+_vm._s(term.name)+"\n          "),_c('svg',{staticClass:"o-accordion__caret icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-caret-down"}})])]),_vm._v(" "),_c('ul',{attrs:{"role":"region","aria-hidden":"false","id":'aria-c-' + term.slug}},[_c('li',{class:'c-list-box__subitem bg-' + term.slug + '--primary'},[_c('button',{on:{"click":function($event){return _vm.toggle({ event: $event, data: { parent: term.slug } })}}},[_vm._v("\n              Toggle All\n            ")])]),_vm._v(" "),_vm._l((term.filters),function(filter){return _c('li',{key:filter.slug,class:'c-list-box__subitem bg-' + term.slug + '--primary'},[_c('label',{staticClass:"checkbox"},[_c('input',{staticClass:"checkbox__field",attrs:{"type":"checkbox"},domProps:{"value":filter.slug,"checked":filter.checked},on:{"change":function($event){return _vm.change({ event: $event, data: filter })}}}),_vm._v(" "),_c('svg',{staticClass:"checkbox__indicator"},[_c('use',{attrs:{"xlink:href":"#icon-check"}})]),_vm._v(" "),_c('span',{domProps:{"innerHTML":_vm._s(filter.name)}},[_vm._v(_vm._s(filter.name))])])])})],2)])}),0)]),_vm._v(" "),_c('div',{staticClass:"o-article desktop:w-article"},[_c('section',{staticClass:"c-block-list"},_vm._l((_vm.posts),function(page){return _c('div',{key:("page-" + (_vm.posts.indexOf(page)))},[(page && page.show)?_c('div',[_c('div',{staticClass:"c-block-list--shade o-content-container u-sm-gutter",attrs:{"data-js":"filtered-results"}},_vm._l((page.posts),function(post){return _c('div',{key:post.id,staticClass:"c-block-list__item u-sm-gutter"},[_c('div',{staticClass:"c-card rounded-lg mr-0 flex"},[_c('div',{staticClass:"c-card__title"},[_c('a',{attrs:{"href":_vm.slugify(post.title),"title":post.title,"rel":""}},[_vm._v("\n                    "+_vm._s(post.title)+"\n                  ")])]),_vm._v(" "),_c('div',{staticClass:"c-card__subtitle"},[_c('p',[_vm._v(_vm._s(post.programProvider))])]),_vm._v(" "),_c('div',{staticClass:"c-card__body"},[_vm._v("\n                  "+_vm._s(post.body)+"\n                ")]),_vm._v(" "),_c('div',{staticClass:"c-card__tags order-last"},[_vm._l((post.population),function(people){return _c('button',{key:people.id,class:'button--pill bg-' + _vm.slugify(people.name) + '--primary',on:{"click":function($event){return _vm.link($event, 'pop', people.id)}}},[_vm._v("\n                    "+_vm._s(people.name)+"\n                  ")])}),_vm._l((post.categories),function(category){return _c('button',{key:category.name,class:'button--pill bg-' + _vm.slugify(category.name) + '--primary',on:{"click":function($event){return _vm.link($event, 'cat', category.id)}}},[_vm._v("\n                    "+_vm._s(category.name)+"\n                  ")])})],2)])])}),0)]):_vm._e()])}),0),_vm._v(" "),_c('div',{staticClass:"o-content-container--compact pagination mobile:flex justify-between"},[_c('div',{staticClass:"previous tablet:mr-3 mb-3 tablet:mb-0 text-center",attrs:{"id":"paginate"}}),_vm._v(" "),_c('div',{staticClass:"paginate text-center"},[(_vm.next)?_c('button',{staticClass:"button--outline button--outline--gray paginate",attrs:{"data-amount":"1"},on:{"click":_vm.paginate}},[_vm._v("\n          Next\n        ")]):_vm._e()])]),_vm._v(" "),_c('p',[(_vm.next)?_c('button',{attrs:{"data-amount":"1"},on:{"click":_vm.paginate}},[_vm._v("\n        Load More Posts\n      ")]):_vm._e()])])])};
+  var __vue_staticRenderFns__ = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"px-8 py-3"},[_c('h3',[_vm._v("Filter Services:")])])}];
 
     /* style */
     const __vue_inject_styles__ = undefined;
@@ -12954,62 +12954,406 @@ var Programs = (function () {
 
   var Services = [
   	{
-  		subtitle: "Counseling with bilingual-bicultural therapists at NYC Health + Hospitals to help you build stronger relationships in your family.",
-  		title: "Family Counseling",
-  		programProvider: "NYC Health + Hospitals",
-  		body: "Counseling with bilingual-bicultural therapists at NYC Health + Hospitals to help you build stronger relationships in your family.",
-  		link: "./programs/",
-  		featured: true,
+  		subtitle: "Find treatment for opioid use disorder (OUD) with medications like methadone and buprenorphine at your health care provider or one of these resources.",
+  		title: "Medications for Opioid Use Disorder",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "Find treatment for opioid use disorder (OUD) with medications like methadone and buprenorphine at your health care provider or one of these resources.",
+  		featured: [
+  		],
   		categories: [
   			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
   				id: 8,
-  				name: "Counseling"
+  				name: "Counseling",
+  				slug: "counseling"
   			}
   		],
   		population: [
   			{
-  				id: 2,
-  				name: "Families"
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
   			}
   		]
   	},
   	{
-  		subtitle: "Mental health support and sexual/reproductive services for LGBTQ New Yorkers.",
-  		title: "Gotham Pride Health Centers",
-  		programProvider: "NYC Health + Hospitals",
-  		body: "Mental health support and sexual/reproductive services for LGBTQ New Yorkers.",
-  		link: "./programs/",
-  		featured: true,
+  		subtitle: "Parents can get support through NYC Well and the Center on Addiction if their children struggle with drug or alcohol use.",
+  		title: "Child Use of Prescription Pain Relievers or Heroin",
+  		programProvider: "NYC Well",
+  		body: "Parents can get support through NYC Well and the Center on Addiction if their children struggle with drug or alcohol use.",
+  		featured: [
+  		],
   		categories: [
   			{
-  				id: 9,
-  				name: "Mental Health Care"
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "LGBTQ New Yorkers under age 25 can connect to a Trevor counselor if they’re in crisis, feeling suicidal, or need a safe and judgment-free place to talk.",
+  		title: "The Trevor Project",
+  		programProvider: "The Trevor Project",
+  		body: "LGBTQ New Yorkers under age 25 can connect to a Trevor counselor if they’re in crisis, feeling suicidal, or need a safe and judgment-free place to talk.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
   			}
   		],
   		population: [
   			{
   				id: 3,
-  				name: "LGBTQ"
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
   			}
   		]
   	},
   	{
-  		subtitle: "Drug use supplies and overdose prevention education for people who use drugs",
-  		title: "Syringe Service Programs",
-  		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
-  		body: "Drug use supplies and overdose prevention education for people who use drugs",
-  		link: "./programs/",
-  		featured: true,
+  		subtitle: "LGBTQ New Yorkers can call National Help Center Hotlines to connect with peers about coming out, relationships, and other concerns.",
+  		title: "LGBT National Help Center",
+  		programProvider: "LGBT National Help Center",
+  		body: "LGBTQ New Yorkers can call National Help Center Hotlines to connect with peers about coming out, relationships, and other concerns.",
+  		featured: [
+  		],
   		categories: [
   			{
-  				id: 6,
-  				name: "Substance Use Services"
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Routine mental health screenings for primary care patients at NYC Health + Hospitals locations.",
+  		title: "Mental Health Integrated in Primary Care",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Routine mental health screenings for primary care patients at NYC Health + Hospitals locations.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
   			}
   		],
   		population: [
   			{
   				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Routine screenings for pregnant patients and their children under 3 years old are available at select Health + Hospitals locations.",
+  		title: "3-2-1 Impact",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Routine screenings for pregnant patients and their children under 3 years old are available at select Health + Hospitals locations.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Mental health resources at NYCDOE schools to meet the emotional health and academic needs of your child.",
+  		title: "School Mental Health Services",
+  		programProvider: "Department of Education (DOE) and Department of Health and Mental Hygiene (DOHMH)",
+  		body: "Mental health resources at NYCDOE schools to meet the emotional health and academic needs of your child.",
+  		featured: [
+  			{
+  				id: 5,
+  				name: "Children and Youth"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			},
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "New Yorkers with a serious mental illness can get referred to specialty mental health services.",
+  		title: "Mobile Treatment Services Accessible Through the Single Point of Access",
+  		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
+  		body: "New Yorkers with a serious mental illness can get referred to specialty mental health services.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Families can get bilingual counseling with therapists at NYC Health + Hospitals to improve communication and build stronger relationships.",
+  		title: "Family Counseling",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Families can get bilingual counseling with therapists at NYC Health + Hospitals to improve communication and build stronger relationships.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Pride Health Centers provide primary care services, mental health support and sexual/reproductive services for LGBTQ New Yorkers.",
+  		title: "Gotham Pride Health Centers",
+  		programProvider: "NYC Health + Hospitals Pride Health Centers",
+  		body: "Pride Health Centers provide primary care services, mental health support and sexual/reproductive services for LGBTQ New Yorkers.",
+  		featured: [
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			},
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Safer use supplies and education for people who use drugs",
+  		title: "Syringe Service Programs",
+  		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
+  		body: "Safer use supplies and education for people who use drugs",
+  		featured: [
+  			{
+  				id: 6,
   				name: "Everyone"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
   			}
   		]
   	},
@@ -13018,186 +13362,291 @@ var Programs = (function () {
   		title: "Naloxone",
   		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
   		body: "Free Naloxone kits from community-based programs and pharmacies to reverse an opioid overdose.",
-  		link: "./programs/",
-  		featured: true,
+  		featured: [
+  		],
   		categories: [
   			{
   				id: 6,
-  				name: "Substance Use Services"
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
   			}
   		],
   		population: [
   			{
   				id: 6,
-  				name: "Everyone"
+  				name: "Everyone",
+  				slug: "everyone"
   			}
   		]
   	},
   	{
-  		subtitle: "Psychiatric emergency services for New Yorkers at NYC Health + Hospitals",
-  		title: "Comprehensive Psychiatric Emergency Services Program (CPEP)",
+  		subtitle: "Psychiatric emergency services for New Yorkers.",
+  		title: "Comprehensive Psychiatric Emergency Services Program (CPEP) at Health + Hospitals",
   		programProvider: "NYC Health + Hospitals",
-  		body: "Psychiatric emergency services for New Yorkers at NYC Health + Hospitals",
-  		link: "./programs/",
-  		featured: true,
+  		body: "Psychiatric emergency services for New Yorkers.",
+  		featured: [
+  		],
   		categories: [
   			{
   				id: 10,
-  				name: "Serious mental illness"
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
   			},
-  			{
-  				id: 9,
-  				name: "Mental Health Care"
-  			}
-  		],
-  		population: [
-  			{
-  				id: 6,
-  				name: "Everyone"
-  			}
-  		]
-  	},
-  	{
-  		subtitle: "Family support services for parents of youth with mental health challenges.",
-  		title: "NYC Family Resource Centers",
-  		programProvider: "NYC Department of Health and Mental Hygiene",
-  		body: "Family support services for parents of youth with mental health challenges.",
-  		link: "./programs/",
-  		featured: true,
-  		categories: [
-  			{
-  				id: 7,
-  				name: "Peer Support"
-  			}
-  		],
-  		population: [
-  			{
-  				id: 2,
-  				name: "Families"
-  			},
-  			{
-  				id: 5,
-  				name: "Children and Youth"
-  			}
-  		]
-  	},
-  	{
-  		subtitle: "Emergency drop-in centers for homeless and runaway youth who need food and other essentials.",
-  		title: "Drop-in Centers for Runaway and Homeless Youth",
-  		programProvider: "Department of Youth and Community Development (DYCD)",
-  		body: "Emergency drop-in centers for homeless and runaway youth who need food and other essentials.",
-  		link: "./programs/",
-  		featured: true,
-  		categories: [
   			{
   				id: 1,
-  				name: "Trauma Support"
-  			},
-  			{
-  				id: 5,
-  				name: "Help with Anxiety"
-  			},
-  			{
-  				id: 6,
-  				name: "Substance Use Services"
-  			},
-  			{
-  				id: 8,
-  				name: "Counseling"
-  			}
-  		],
-  		population: [
-  			{
-  				id: 5,
-  				name: "Children and Youth"
-  			}
-  		]
-  	},
-  	{
-  		subtitle: "Low- or no- cost healthcare for New Yorkers who can’t afford or are ineligible for health insurance",
-  		title: "NYC Care",
-  		programProvider: "NYC Health + Hospitals",
-  		body: "Low- or no- cost healthcare for New Yorkers who can’t afford or are ineligible for health insurance",
-  		link: "./programs/",
-  		featured: true,
-  		categories: [
-  			{
-  				id: 10,
-  				name: "Serious mental illness"
-  			},
-  			{
-  				id: 9,
-  				name: "Mental Health Care"
+  				name: "Trauma Support",
+  				slug: "trauma-support"
   			}
   		],
   		population: [
   			{
   				id: 6,
-  				name: "Everyone"
+  				name: "Everyone",
+  				slug: "everyone"
   			}
   		]
   	},
   	{
   		subtitle: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
   		title: "Early Childhood Mental Health Network",
-  		programProvider: "Department of Health and Mental Hygiene",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
   		body: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
-  		link: "./programs/",
-  		featured: true,
+  		featured: [
+  			{
+  				id: 2,
+  				name: "Families"
+  			}
+  		],
   		categories: [
   			{
   				id: 1,
-  				name: "Trauma Support"
+  				name: "Trauma Support",
+  				slug: "trauma-support"
   			},
   			{
   				id: 5,
-  				name: "Help with Anxiety"
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
   			},
   			{
   				id: 7,
-  				name: "Peer Support"
-  			},
-  			{
-  				id: 9,
-  				name: "Mental Health Care"
+  				name: "Peer Support",
+  				slug: "peer-support"
   			}
   		],
   		population: [
   			{
   				id: 2,
-  				name: "Children and Families"
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
   			}
   		]
   	},
   	{
-  		subtitle: "People who struggle with mental illness and substance abuse can go to a Clubhouse to connect with peers and get help rejoining society.",
-  		title: "Clubhouses",
-  		programProvider: "Department of Health and Mental Hygiene",
-  		body: "People who struggle with mental illness and substance abuse can go to a Clubhouse to connect with peers and get help rejoining society.",
-  		link: "./programs/",
-  		featured: true,
+  		subtitle: "Homeless and runaway youth who need food and other essentials can go to emergency drop-in centers throughout New York City.",
+  		title: "Drop-in Centers for Runaway and Homeless Youth",
+  		programProvider: "Department of Youth and Community Development (DYCD)",
+  		body: "Homeless and runaway youth who need food and other essentials can go to emergency drop-in centers throughout New York City.",
+  		featured: [
+  			{
+  				id: 5,
+  				name: "Children and Youth"
+  			}
+  		],
   		categories: [
   			{
   				id: 6,
-  				name: "Substance Use Services"
-  			},
-  			{
-  				id: 10,
-  				name: "Serious mental illness"
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
   			},
   			{
   				id: 7,
-  				name: "Peer Support"
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			},
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "New Yorkers who are ineligible for health insurance or can’t afford it can access low- or no- cost healthcare through NYC Care.",
+  		title: "NYC Care",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "New Yorkers who are ineligible for health insurance or can’t afford it can access low- or no- cost healthcare through NYC Care.",
+  		featured: [
+  			{
+  				id: 7,
+  				name: "Immigrants"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			},
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "People who experience serious mental illness can go to a Clubhouse to connect with peers and get access to opportunities.",
+  		title: "Clubhouses",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "People who experience serious mental illness can go to a Clubhouse to connect with peers and get access to opportunities.",
+  		featured: [
+  			{
+  				id: 8,
+  				name: "Adults"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
   			}
   		],
   		population: [
   			{
   				id: 8,
-  				name: "Adults"
+  				name: "Adults",
+  				slug: "adults"
   			},
   			{
   				id: 4,
-  				name: "Seniors"
+  				name: "Seniors",
+  				slug: "seniors"
+  			},
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
   			}
   		]
   	},
@@ -13206,38 +13655,44 @@ var Programs = (function () {
   		title: "Program for Survivors of Torture",
   		programProvider: "Bellevue and NYC Health + Hospitals",
   		body: "Immigrants who survived torture and are applying for asylum can access medical, mental health, and other services.",
-  		link: "./programs/",
-  		featured: true,
+  		featured: [
+  			{
+  				id: 7,
+  				name: "Immigrants"
+  			}
+  		],
   		categories: [
   			{
   				id: 1,
-  				name: "Trauma Support"
+  				name: "Trauma Support",
+  				slug: "trauma-support"
   			},
   			{
-  				id: 7,
-  				name: "Peer Support"
-  			},
-  			{
-  				id: 9,
-  				name: "Mental Health Care"
-  			},
-  			{
-  				id: 10,
-  				name: "Serious mental illness"
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
   			}
   		],
   		population: [
   			{
   				id: 2,
-  				name: "Children and Families"
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
   			},
   			{
   				id: 8,
-  				name: "Adults"
+  				name: "Adults",
+  				slug: "adults"
   			},
   			{
   				id: 7,
-  				name: "Immigrants"
+  				name: "Immigrants",
+  				slug: "immigrants"
   			}
   		]
   	},
@@ -13246,18 +13701,24 @@ var Programs = (function () {
   		title: "Friendly Visiting and Friendly VOICES",
   		programProvider: "Department for the Aging (DFTA)",
   		body: "Older New Yorkers who feel isolated can connect with a peer to talk about shared interests.",
-  		link: "./programs/",
-  		featured: true,
+  		featured: [
+  			{
+  				id: 4,
+  				name: "Seniors"
+  			}
+  		],
   		categories: [
   			{
   				id: 7,
-  				name: "Peer Support"
+  				name: "Peer Support",
+  				slug: "peer-support"
   			}
   		],
   		population: [
   			{
   				id: 4,
-  				name: "Seniors"
+  				name: "Seniors",
+  				slug: "seniors"
   			}
   		]
   	},
@@ -13266,178 +13727,270 @@ var Programs = (function () {
   		title: "Geriatric Mental Health Initiative",
   		programProvider: "Department for the Aging (DFTA)",
   		body: "New Yorkers age 60 and older can get mental health screenings, on-site counseling, and referrals at senior centers near them.",
-  		link: "./programs/",
-  		featured: true,
+  		featured: [
+  			{
+  				id: 4,
+  				name: "Seniors"
+  			}
+  		],
   		categories: [
   			{
   				id: 5,
-  				name: "Help with Anxiety"
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
   			},
   			{
   				id: 10,
-  				name: "Serious mental illness"
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
   			},
   			{
-  				id: 9,
-  				name: "Mental Health Care"
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
   			}
   		],
   		population: [
   			{
   				id: 4,
-  				name: "Seniors"
+  				name: "Seniors",
+  				slug: "seniors"
   			}
   		]
   	},
   	{
-  		subtitle: "Legal and social services for survivors of domestic and gender-based violence",
+  		subtitle: "NYC Family Justice Centers connect survivors of domestic and gender-based violence to mental health, legal, and social services.",
   		title: "Family Justice Centers",
-  		programProvider: "Mayor's Office to End Domestic and Gender-Based Violence",
-  		body: "Legal and social services for survivors of domestic and gender-based violence",
-  		link: "./programs/family-justice-centers",
-  		featured: true,
+  		programProvider: "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) and NYC Health + Hospitals",
+  		body: "NYC Family Justice Centers connect survivors of domestic and gender-based violence to mental health, legal, and social services.",
+  		featured: [
+  			{
+  				id: 2,
+  				name: "Families"
+  			}
+  		],
   		categories: [
   			{
   				id: 1,
-  				name: "Trauma Support"
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
   			}
   		],
   		population: [
   			{
   				id: 6,
-  				name: "Everyone"
-  			},
-  			{
-  				id: 2,
-  				name: "Children and Families"
-  			},
-  			{
-  				id: 8,
-  				name: "Adults"
-  			},
-  			{
-  				id: 3,
-  				name: "LGBTQ"
-  			},
-  			{
-  				id: 7,
-  				name: "Immigrants"
+  				name: "Everyone",
+  				slug: "everyone"
   			}
   		]
   	},
   	{
   		subtitle: "Mission: VetCheck connects veterans to trained volunteers through one-on-one supportive check-in calls.",
   		title: "Mission: VetCheck",
-  		programProvider: "NYC Department of Veterans’ Services & The Mayor’s Office of Community Mental Health and Unite Us",
+  		programProvider: "NYC Department of Veterans’ Services (DVS) and Mayor’s Office of Community Mental Health (OCMH)",
   		body: "Mission: VetCheck connects veterans to trained volunteers through one-on-one supportive check-in calls.",
-  		link: "./programs/",
-  		featured: true,
-  		categories: [
-  			{
-  				id: 1,
-  				name: "Trauma Support"
-  			},
-  			{
-  				id: 5,
-  				name: "Help with Anxiety"
-  			}
-  		],
-  		population: [
+  		featured: [
   			{
   				id: 1,
   				name: "Veterans"
   			}
-  		]
-  	},
-  	{
-  		subtitle: "Mental health support for victims of domestic violence and other crimes",
-  		title: "The Crime Victim Assistance Program (CVAP)",
-  		programProvider: "NYPD & Safe Horizon",
-  		body: "Mental health support for victims of domestic violence and other crimes",
-  		link: "./programs/the-crime-victim-assistance-program-cvap",
-  		featured: true,
+  		],
   		categories: [
   			{
   				id: 1,
-  				name: "Trauma Support"
-  			}
-  		],
-  		population: [
-  			{
-  				id: 6,
-  				name: "Everyone"
-  			}
-  		]
-  	},
-  	{
-  		subtitle: "Free short-term counseling",
-  		title: "NYC Well",
-  		programProvider: "ThriveNYC",
-  		body: "Free short-term counseling",
-  		link: "./programs/support-during-a-crisis",
-  		featured: true,
-  		categories: [
-  			{
-  				id: 3,
-  				name: "Crisis Support"
+  				name: "Trauma Support",
+  				slug: "trauma-support"
   			},
   			{
   				id: 5,
-  				name: "Help with Anxiety"
-  			},
-  			{
-  				id: 4,
-  				name: "Grief Support"
-  			},
-  			{
-  				id: 6,
-  				name: "Substance Use Services"
-  			},
-  			{
-  				id: 10,
-  				name: "Serious mental illness"
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
   			},
   			{
   				id: 7,
-  				name: "Peer Support"
-  			},
-  			{
-  				id: 8,
-  				name: "Counseling"
+  				name: "Peer Support",
+  				slug: "peer-support"
   			}
   		],
   		population: [
   			{
-  				id: 6,
-  				name: "Everyone"
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
   			}
   		]
   	},
   	{
-  		subtitle: "Request help to your home during a psychological crisis",
-  		title: "Mobile crisis teams",
-  		programProvider: "ThriveNYC",
-  		body: "Request help to your home during a psychological crisis",
-  		link: "./programs/support-during-a-crisis",
-  		featured: true,
+  		subtitle: "The Crime Victim Assistance Program (CVAP) connects victims of crime, violence, or abuse to advocates who can connect them to mental health support, benefits, and other services.",
+  		title: "Crime Victim Assistance Program (CVAP)",
+  		programProvider: "NYPD, Safe Horizon, and Mayor’s Office of Criminal Justice (MOCJ)",
+  		body: "The Crime Victim Assistance Program (CVAP) connects victims of crime, violence, or abuse to advocates who can connect them to mental health support, benefits, and other services.",
+  		featured: [
+  		],
   		categories: [
   			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
   				id: 3,
-  				name: "Crisis Support"
+  				name: "Crisis Support",
+  				slug: "crisis-support"
   			},
   			{
-  				id: 10,
-  				name: "Serious mental illness"
-  			},
-  			{
-  				id: 9,
-  				name: "Mental Health Care"
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
   			}
   		],
   		population: [
   			{
   				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "NYC Well is your connection to free, confidential mental health support. Speak to a counselor via phone, text, or chat and get access to mental health and substance use services, in more than 200 languages.",
+  		title: "NYC Well",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "NYC Well is your connection to free, confidential mental health support. Speak to a counselor via phone, text, or chat and get access to mental health and substance use services, in more than 200 languages.",
+  		featured: [
+  			{
+  				id: 6,
   				name: "Everyone"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			},
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Teams of mental health professionals that can come to your home if you’re experiencing a psychological crisis",
+  		title: "Mobile Crisis Teams",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "Teams of mental health professionals that can come to your home if you’re experiencing a psychological crisis",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
   			}
   		]
   	}
@@ -13493,7 +14046,7 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              terms: 'https://cityofnewyork.github.io/mhfa/data/terms.json',
+              terms: 'https://nycopportunity.github.io/mhfa/data/terms.json',
 
               /**
                * A required endpoint for the list of services. This is based on
@@ -13501,7 +14054,7 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              programs: 'https://cityofnewyork.github.io/mhfa/data/services.json',
+              programs: 'https://nycopportunity.github.io/mhfa/data/services.json',
             },
 
             /**
@@ -13578,11 +14131,39 @@ var Programs = (function () {
           },
 
           /**
+           * Filters the term data and toggles the checked attribute, then, invokes
+           * the filtering method.
+           *
+           * @param   {Object}  event   The click event
+           * @param   {String}  parent  The taxonomy parent
+           * @param   {Number}  parent  The taxonomy id
+           *
+           * @return  {Object}          Vue Instance
+           */
+          link: function(event, parent, id) {
+            this.change({
+              event: event,
+              data: {
+                parent: parent,
+                id: id
+              }
+            });
+
+            let term = this.terms.find(t => t.slug === parent)['filters']
+              .find(term => term.id === id);
+
+            this.$set(term, 'checked', !term.checked);
+
+            return this;
+          },
+
+          /**
            * Generate class names based on population name
            * @param {*} name
            */
           classNameGenerator: function(name) {
             let className = ['bg-' + name.toLowerCase() + '--secondary'];
+
             return className;
           },
 
