@@ -1,3 +1,14 @@
+/**
+ * General Overrides
+ */
+
+// Dependencies
+@import 'config/media';
+
+:root {
+  --o-attribution-font-size: 0.9rem
+}
+
 button {
   transition: background-color .25s linear
 }
@@ -58,10 +69,38 @@ svg {
   }
 }
 
-:root {
-  --o-attribution-font-size: 0.9rem
-}
-
 .small {
   font-size: 75%
+}
+
+.mhfa-logo-main {
+  width: 138px;
+  height: 31px;
+}
+
+.icon-google-translate-title {
+  position: absolute;
+  width: 132px;
+  height: 12px;
+  right: 0;
+}
+
+@media screen and (min-width: $screen-tablet) {
+  .mhfa-logo-main {
+    width: 249px;
+    height: 56px;
+  }
+
+  .icon-google-translate-title {
+    width: 175px;
+    height: 16px;
+  }
+}
+
+.o-navigation__nav {
+  padding: 1rem 0;
+}
+
+.o-navigation__nav ul li {
+  vertical-align: top
 }
