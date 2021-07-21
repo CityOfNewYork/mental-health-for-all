@@ -146,7 +146,7 @@ class Programs {
          * @param   {String}  parent  The taxonomy parent
          * @param   {Number}  parent  The taxonomy id
          *
-         * @return  {Object}            Vue Instance
+         * @return  {Object}          Vue Instance
          */
         link: function(event, parent, id) {
           this.change({
