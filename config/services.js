@@ -100,35 +100,7 @@ module.exports = [
       {
         id: 6,
         name: 'Everyone',
-      },
-      {
-        id: 5,
-        name: "Children and Youth",
-      },
-      {
-        id: 2,
-        name: "Families",
-      },
-      {
-        id: 8,
-        name: "Adults",
-      },
-      {
-        id: 4,
-        name: "Seniors",
-      },
-      {
-        id: 7,
-        name: "Immigrants",
-      },
-      {
-        id: 1,
-        name: "Veterans",
-      },
-      {
-        id: 3,
-        name: "LGBTQ New Yorkers",
-      },
+      }
     ],
   },
   {
@@ -385,35 +357,7 @@ module.exports = [
       {
         id: 6,
         name: 'Everyone',
-      },
-      {
-        id: 2,
-        name: "Families",
-      },
-      {
-        id: 5,
-        name: "Children and Youth",
-      },
-      {
-        id: 8,
-        name: "Adults",
-      },
-      {
-        id: 4,
-        name: "Seniors",
-      },
-      {
-        id: 1,
-        name: "Veterans",
-      },
-      {
-        id: 3,
-        name: "LGBTQ New Yorkers",
-      },
-      {
-        id: 7,
-        name: "Immigrants",
-      },
+      }
     ],
   },
   {
@@ -625,36 +569,7 @@ module.exports = [
       {
         id: 6,
         name: 'Everyone',
-      },
-      {
-        id: 2,
-        name: 'Families',
-      },
-      {
-        id: 5,
-        name: "Children and Youth",
-      },
-      {
-        id: 8,
-        name: 'Adults',
-      },
-      {
-        id: 4,
-        name: "Seniors",
-        slug: "seniors"
-      },
-      {
-        id: 1,
-        name: "Veterans",
-      },
-      {
-        id: 3,
-        name: 'LGBTQ New Yorkers',
-      },
-      {
-        id: 7,
-        name: 'Immigrants',
-      },
+      }
     ],
   },
   {
@@ -1252,79 +1167,6 @@ module.exports = [
     ],
   },
   {
-    title: 'NYC Family Resource Centers',
-    subtitle:
-      'Family support services for parents of youth with mental health challenges.',
-      programProvider: 'NYC Department of Health and Mental Hygiene',
-      sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
-      body: {
-        whatItIs: {
-          title: 'What it is',
-        content: `
-        <p>Raising a child with emotional and behavioral difficulties can be challenging.</p>
-          <p>Family Resource Centers (FRCs) provide family support services
-          to parents/caregivers of children and youth. If you have a child with mental health needs, you can get support like:
-          </p>
-
-          <div class="list-unordered--check">
-          <ul>
-          <li>Emotional support</li>
-          <li>Advocacy to help navigate child-serving systems</li>
-          <li>Information about mental health conditions, services, and family rights</li>
-          <li>Referrals to appropriate services and resources</li>
-          <li>Skill development through educational workshops</li>
-          <li>Recreational activities</li>
-          <li>Respite</li>
-          </ul>
-          </div>
-
-          <p>Support services are individual and group-based.</p>
-          `,
-        },
-        whoItIsFor: {
-          title: 'Who it’s for',
-          content: `
-          <p>Parents and caregivers of children and youth from birth – age 24</p>
-          `,
-        },
-        cost: {
-          title: 'Cost',
-          content: `
-          <p>All FRC services are free. You don’t need a referral to access services.</p>
-          `,
-        },
-      howToGetInTouch: {
-        title: 'How to get in touch',
-        content: [
-          {
-            type: 'website',
-            body: `
-            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/mh/fam-sup-dir.pdf">Contact a Family Resource Center</a>. They’re available in every borough.</h3>
-            `,
-          },
-        ],
-      },
-    },
-    link: './programs/',
-    featured: [],
-    categories: [
-      {
-        id: 7,
-        name: 'Peer Support',
-      },
-    ],
-    population: [
-      {
-        id: 2,
-        name: 'Families',
-      },
-      {
-        id: 5,
-        name: 'Children and Youth',
-      },
-    ],
-  },
-  {
     title: 'Early Childhood Mental Health Network',
     subtitle:
       'Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.',
@@ -1553,34 +1395,6 @@ module.exports = [
       {
         id: 6,
         name: "Everyone",
-      },
-      {
-        id: 5,
-        name: "Children and Youth",
-      },
-      {
-        id: 2,
-        name: "Families",
-      },
-      {
-        id: 3,
-        name: "LGBTQ New Yorkers",
-      },
-      {
-        id: 8,
-        name: "Adults",
-      },
-      {
-        id: 4,
-        name: "Seniors",
-      },
-      {
-        id: 7,
-        name: "Immigrants",
-      },
-      {
-        id: 1,
-        name: "Veterans",
       }
     ],
   },
@@ -1657,34 +1471,6 @@ module.exports = [
       {
         id: 6,
         name: "Everyone",
-      },
-      {
-        id: 5,
-        name: "Children and Youth",
-      },
-      {
-        id: 2,
-        name: "Families",
-      },
-      {
-        id: 3,
-        name: "LGBTQ New Yorkers",
-      },
-      {
-        id: 8,
-        name: "Adults",
-      },
-      {
-        id: 4,
-        name: "Seniors",
-      },
-      {
-        id: 7,
-        name: "Immigrants",
-      },
-      {
-        id: 1,
-        name: "Veterans",
       }
     ],
   },
@@ -2012,84 +1798,6 @@ module.exports = [
     ],
   },
   {
-    title: 'Assisted Outpatient Treatment (AOT)',
-    subtitle:
-      'Court-ordered treatment program for those with serious mental illness who are a danger to themselves or others.',
-    programProvider: 'Department of Mental Health and Hygiene (DOHMH)',
-    sections: ['What it is', 'Who it’s for', 'How to get in touch'],
-    body: {
-      whatItIs: {
-        title: 'What it is',
-        content: `
-        <p>The Assisted Outpatient Treatment program (AOT) was created by Kendra’s law. Kendra’s law states that people with serious mental illness who are a danger to themselves or others can be court-ordered to participate in mental health treatment.</p>
-        <p>If you have a serious mental illness, AOT can help you receive treatment services that may allow you to live independently in your community.</p>
-        <p>You might be considered for AOT if someone you know feels it is a challenge for you to live safely or independently in the community without the right mental health treatment, or if previous treatment plans did not work. This person can reach out to the AOT team, who will ask the courts to review your case.</p>
-        `,
-      },
-      whoItIsFor: {
-        title: 'Who it’s for',
-        content: `
-        <p>You can be assigned to the AOT program if you:</p>
-        <div class="list-unordered--check">
-          <ul>
-            <li>Are 18 years or older</li>
-            <li>Suffer from a mental illness</li>
-            <li>Have a hard time living independently in your community according to a doctor’s exam</li>
-            <li>Find it difficult to stick to the treatment plan you agreed on with your provider, which has led to:
-              <ul>
-                <li>Two psychiatric hospitalizations or incarcerations in the last three years</li>
-                <li>An attempt to hurt yourself or someone else, or having hurt yourself or someone else, at least once in the last four years</li>
-              </ul>
-            </li>
-          <ul>
-        </div>
-        `,
-      },
-      howToGetInTouch: {
-        title: 'How to get in touch',
-        content: [
-          {
-            type: 'website',
-            body: `
-            <h3><a href="https://www1.nyc.gov/site/doh/health/health-topics/assisted-outpatient-treatment.page">Learn more about AOT and how to refer someone</a></h3>
-            <p>Almost anyone with personal contact with the individual can make a referral. This includes family, roommates, treatment providers, and parole or probation officers.</p>
-          `,
-          },
-        ],
-      },
-    },
-    link: './programs/',
-    featured: [],
-    categories: [
-      {
-        id: 10,
-        name: 'Care for Serious Mental Illness',
-      },
-    ],
-    population: [
-      {
-        id: 3,
-        name: "LGBTQ New Yorkers",
-      },
-      {
-        id: 8,
-        name: "Adults",
-      },
-      {
-        id: 4,
-        name: "Seniors",
-      },
-      {
-        id: 7,
-        name: "Immigrants",
-      },
-      {
-        id: 1,
-        name: "Veterans",
-      }
-    ],
-  },
-  {
     title: '3-2-1 Impact',
     subtitle:
       'Routine screenings for pregnant patients and their children under 3 years old are available at select Health + Hospitals locations.',
@@ -2122,7 +1830,7 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3>Contact your OB or pediatrician at an H+H facility for more information, or call<a href="tel:844-692-4692">844-NYC-4NYC</a> to make an appointment.</h3>
+            <h3>Contact your OB or pediatrician at an H+H facility for more information, or call <a href="tel:844-692-4692">844-NYC-4NYC</a> to make an appointment.</h3>
           `,
           },
         ],
