@@ -1,0 +1,19 @@
+= extend('/slm/layouts/default')
+
+- title = 'About Us'
+
+= content('main')
+  / = partial('/slm/services/banner.slm')
+  header class='c-hero c-hero--large bg-color-purple bg-banner-purple not-loaded' data-js='lazy'
+    div class='o-container relative' style='z-index: 1'
+      - if this.aboutUs.title
+        h1 class='c-hero__title desktop:w-8/12'
+          = this.aboutUs.title
+
+  section class='o-container u-top-spacing'
+    div class='o-content-container pl-0'
+      div class='c-signup-form aligncenter'
+        == this.aboutUs.content
+
+  = content('scripts')
+    javascript:

@@ -31,7 +31,7 @@ header class='o-navigation'
           a href='${this.root}/services/index' class='o-navigation__nav-link' Services
 
         li class='o-inline__item'
-          a href='#' data-js='offcanvas-ages' data-toggle='offcanvas-ages' class='o-navigation__nav-link' About
+          a href='${this.root}/about-us' data-js='offcanvas-ages' data-toggle='offcanvas-ages' class='o-navigation__nav-link' About
 
         / {% if function('Search\\visible') %}
         /   li class='o-inline__item'

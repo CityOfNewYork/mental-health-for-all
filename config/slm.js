@@ -2,6 +2,7 @@ let package = require('../package.json');
 let services = require('./services');
 let banners = require('./banners');
 let substanceAbuse = require('./substance-abuse');
+let aboutUs = require('./about-us');
 let population = require('./population.json');
 
 let remotes = {
@@ -43,6 +44,7 @@ module.exports = {
     'Substance Use Services',
   ],
   population: population,
+  aboutUs: aboutUs,
   generateClassName: (title) => {
     let className = `bg-${title.toLowerCase()}--secondary`;
     return className;
