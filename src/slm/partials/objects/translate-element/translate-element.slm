@@ -20,7 +20,7 @@ label class='o-navigation__nav-link cursor-pointer' for='js-google-translate-con
       option value='ur' اردو
       option value='bn' বাংলা
 
-  svg class='icon-google-translate-title text-color-gray-dark' width='175' height='16' viewBox='0 0 175 16' xmlns='http://www.w3.org/2000/svg' role='img'
+  svg class='icon-google-translate-title text-black' width='175' height='16' viewBox='0 0 175 16' xmlns='http://www.w3.org/2000/svg' role='img'
     title id='icon-logo-google-translate-title' Powered by Google Translate
 
     path fill-rule='evenodd' clip-rule='evenodd' d='M128.789 4.79395C128.051 4.79395 127.023 5.31595 126.733 6.12728H126.675V4.90261H125.4V11.9999H126.733V8.18395C126.733 6.87995 127.66 6.11261 128.572 6.11261C128.862 6.11261 129.094 6.14128 129.282 6.21395L129.789 4.96861C129.514 4.85261 129.224 4.79395 128.789 4.79395Z' fill='currentColor'

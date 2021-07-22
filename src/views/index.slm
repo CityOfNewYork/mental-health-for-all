@@ -4,9 +4,9 @@
 
 = content('main')
   section class='o-static-column o-static-column--left c-side-hero js-static bg-toddler--primary'
-    div class='c-side-hero__image bg-main bg-color-purple'
+    div class='c-side-hero__image bg-main bg-primary'
 
-    div class='c-side-hero__content bg-color-purple desktop:bg-transparent overflow-hidden'
+    div class='c-side-hero__content bg-primary text-white desktop:bg-transparent overflow-hidden'
       svg class='bg-light-a desktop:hidden' viewBox='0 0 1260 384' fill='none' xmlns='http://www.w3.org/2000/svg'
         path d='M540.959 -34.3182L1259.95 -34.3182L1116.69 460.74L0.698089 455.732L540.959 -34.3182Z' fill='url(#bg-light-a)' fill-opacity='0.8'
 
@@ -49,9 +49,9 @@
     div clas='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
       div class='c-list-box c-list-box--quaternary o-accordion'
         div class='c-list-box__item o-accordion__item'
-          div class='c-list-box__heading o-accordion__header bg-color-gray-light text-color-dark-gray-dark flex items-center'
+          div class='c-list-box__heading o-accordion__header bg-gray-light text-black flex items-center'
             div class='pr-4'
-              div class='sticker sticker--medium text-color-purple bg-color-white' aria-hidden='true'
+              div class='sticker sticker--medium text-primary bg-white' aria-hidden='true'
                 svg style='width: 29px'
                   use xlink:href='#mhfa-icon-calling'
 
@@ -60,19 +60,19 @@
 
               span class='c-list-box__subheading' The hotlines below are free, confidential, and available 24/7
 
-          ul class='c-list-box__content bg-color-gray-light'
+          ul class='c-list-box__content bg-gray-light'
             li class='c-list-box__subitem pb-0'
-              a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary button--text hover:text-color-purple hover:border-color-purple' Speak to a counselor from NYC Well
+              a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary button--text hover:text-primary hover:border-primary' Speak to a counselor from NYC Well
 
             li class='c-list-box__subitem'
-              a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary button--text hover:text-color-purple hover:border-color-purple' National Suicide Prevention Lifeline
+              a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary button--text hover:text-primary hover:border-primary' National Suicide Prevention Lifeline
 
       div class='c-list-box c-list-box--quaternary js-accordion o-accordion pt-0' aria-multiselectable='true' data-multiselectable='true' role='presentation'
         - for (let i in this.population)
           - let slug = this.createSlug(this.population[i].name);
 
           div class='c-list-box__item o-accordion__item'
-            button data-js='accordion' type='button' aria-controls='aria-${slug}' aria-expanded='false' class='c-list-box__heading o-accordion__header bg-${slug}--secondary'
+            button data-js='accordion' type='button' aria-controls='aria-${slug}' aria-expanded='false' class='c-list-box__heading o-accordion__header bg-${slug}--primary'
               == this.population[i].name
 
               svg class='o-accordion__caret icon' aria-hidden='true'
@@ -85,7 +85,7 @@
                 - for (let i in filteredServices)
                   - card = filteredServices[i]
 
-                  div class='c-block-list__item text-color-dark-gray-dark'
+                  div class='c-block-list__item text-black'
                     == this.include('/slm/partials/components/card/card.slm');
 
                 div class='text-center py-5'

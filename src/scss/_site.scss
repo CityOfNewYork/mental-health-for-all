@@ -3,7 +3,10 @@
  */
 
 // Dependencies
+@import 'config/tokens';
 @import 'config/media';
+
+$colors: map-get($tokens, 'colors');
 
 :root {
   --o-attribution-font-size: 0.9rem
@@ -23,6 +26,11 @@ a {
 
 svg {
   pointer-events: none;
+}
+
+.o-footer,
+.o-footer a {
+  color: map-get($colors, 'magenta-dark');
 }
 
 .c-list-box__heading.active {

@@ -1,7 +1,7 @@
 - let date = new Date();
 - let opts = {year: 'numeric', month: 'long', day: 'numeric'};
 
-footer class='o-footer bg-color-yellow-light text-color-purple-dark py-0 overflow-hidden' role='contentinfo'
+footer class='o-footer py-0 overflow-hidden' role='contentinfo'
   div class='o-container'
     svg class='bg-light-c' aria-hidden='true' class='absolute' width='877' height='353' viewBox='0 0 877 353' fill='none' xmlns='http://www.w3.org/2000/svg'
       g clip-path='url(#clip-graphic-light-c)'
