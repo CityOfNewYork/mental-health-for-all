@@ -1,5 +1,5 @@
 / div class='js-parallax relative'
-header class='c-hero c-hero--large bg-color-purple bg-banner-${this.service.banner} not-loaded' data-js='lazy'
+header class='c-hero c-hero--large bg-primary bg-banner-${this.service.banner} not-loaded' data-js='lazy'
   div class='o-container relative' style='z-index: 1'
     - if this.service.title
       h1 class='c-hero__title desktop:w-8/12'
@@ -24,6 +24,6 @@ header class='c-hero c-hero--large bg-color-purple bg-banner-${this.service.bann
         - for (let i in this.service.categories)
           - let c = this.service.categories[i];
 
-          a class='button--pill bg-${this.createSlug(c.name)}--primary' href='#' = c.name
+          a class='button--pill bg-yellow--primary' href='#' = c.name
 
 

@@ -7,14 +7,16 @@
 // @use 'config/color';
 
 $populations: map-get($tokens, 'populations');
+$defaults: map-get($tokens, 'colors-default');
 
 // Declarations
 @each $key, $value in $populations {
   $primary: map-get($value, 'primary');
-  $secondary: map-get($value, 'secondary');
+  $secondary: darken($primary, 10%);
 
   .bg-#{$key}--primary,
   .hover\:bg-#{$key}--primary:hover {
+    color: map-get($value, 'text') !important;
     background-color: $primary !important;
   }
 
@@ -28,11 +30,13 @@ $populations: map-get($tokens, 'populations');
 
   button.bg-#{$key}--primary,
   a.bg-#{$key}--primary {
+    color: map-get($value, 'text') !important;
     transition: background-color 250ms linear;
 
     &:hover,
     &:focus,
     &.is-active {
+      color: map-get($value, 'text') !important;
       background-color: $secondary !important;
       border-color: $secondary !important;
       outline: none;
@@ -41,6 +45,7 @@ $populations: map-get($tokens, 'populations');
 
   .bg-#{$key}--secondary,
   .hover\:bg-#{$key}--secondary:hover {
+    color: map-get($value, 'text') !important;
     background-color: $secondary !important;
   }
 
@@ -54,9 +59,12 @@ $populations: map-get($tokens, 'populations');
 
   button.bg-#{$key}--secondary,
   a.bg-#{$key}--secondary {
+    color: map-get($value, 'text') !important;
+
     &:hover,
     &:focus,
     &.is-active {
+      color: map-get($value, 'text') !important;
       background-color: $primary !important;
       border-color: $primary !important;
       outline: none;
@@ -67,12 +75,9 @@ $populations: map-get($tokens, 'populations');
     .stop1 {
       stop-color: $secondary;
     }
+
     .stop2 {
       stop-color: $primary;
     }
-  }
-
-  .gradient-#{$key} {
-    background-image: url('#{$cdn}#{$path-to-images}gradient-baby.png');
   }
 }

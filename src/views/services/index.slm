@@ -1,12 +1,12 @@
 
 = extend('/slm/layouts/default')
 
-- title = 'Programs | Mental Health for All'
+- title = 'Services | Mental Health for All'
 
 = content('main')
   div
     div class='js-parallax'
-      header class='c-hero c-hero--short bg-color-purple'
+      header class='c-hero c-hero--short bg-primary'
         svg class='bg-light-b' viewBox='0 0 1260 384' fill='none' xmlns='http://www.w3.org/2000/svg'
           path d='M540.959 -34.3182L1259.95 -34.3182L1116.69 460.74L0.698089 455.732L540.959 -34.3182Z' fill='url(#bg-light-b)' fill-opacity='0.8'
 

@@ -25,84 +25,39 @@ $tokens:(
     font-size-xxx-large: 66px
   ),
   colors: (
-    color-black: #000,
-    color-white: #fff,
-    color-gray-light: #eee,
-    color-gray: #999,
-    color-gray-mid: #838a97,
-    color-gray-dark: #6a6a6a,
-    color-dark-gray: #51596b,
-    color-dark-gray-mid: #343e4c,
-    color-dark-gray-dark: #333,
-    color-blue-lightest: #eef3f7,
-    color-blue-light: #2793e0,
-    color-blue: #0055b8,
-    color-blue-mid: #184e9e,
-    color-blue-dark: #154A94,
-    color-red: #E93E51,
-    color-pink: #d8006d,
-    color-pink-dark: #7f1c4e,
-    color-green: #21ad0e,
-    color-green-dark: #1d5d11,
-    color-green-light: #7fe62d,
-    color-light-green: #02A586,
-    color-light-green-dark: #015948,
-    color-light-green-light: #42D1B5,
-    color-orange-light: #ffb900,
-    color-orange-mid: #ff9d00,
-    color-orange: #FA660A,
-    color-orange-dark: #bc3b09,
-    color-orange-vroom: #F6901E,
-    color-purple: #C1408B,
-    color-purple-dark: #9F2D71,
-    color-shadow: rgba(0, 0, 0, .2),
-    color-purple-light: #ECC8DE,
-    color-yellow: #FDB714,
-    color-yellow-light: #FFCB68,
-    transparent: transparent
+    coral: #F35C48,
+    green: #1A9D65,
+    teal: #0089A2,
+    blue: #154A94,
+    fucia: #3F289C,
+    purple: #8A4CC7,
+    slate: #51596B,
+    orange: #FA660A,
+    magenta: #C1408B,
+    magenta-dark: #9F2D71,
+    red: #E93E51,
+    yellow: #FDB714,
+    yellow-light: #FED77C,
+    black: #333,
+    white: #FFF,
+    gray: #999,
+    gray-light: #EEE,
+    transparent: transparent,
+    shadow: rgba(0, 0, 0, .2),
+    primary: #C1408B,
+    secondary: #9F2D71
   ),
   colors-default: (
-    color-primary: color-purple-dark,
-    color-secondary: color-orange,
-    color-background: color-white,
-    color-background-shade: color-gray-light,
-    color-text: color-dark-gray-dark,
-    color-text-invert: color-white,
-    color-text-weak: color-gray,
-    color-text-link: color-blue-light,
-    color-background-footer: color-blue,
-    color-error: color-pink
-  ),
-  colors-baby: (
-    primary: color-pink,
-    secondary: color-pink-dark
-  ),
-  colors-toddler: (
-    primary: color-orange,
-    secondary: color-orange-dark,
-    tertiary: color-orange-light
-  ),
-  colors-pre-schooler: (
-    primary: color-green,
-    secondary: color-green-dark,
-    tertiary: color-green-light
-  ),
-  colors-grade-schooler: (
-    primary: color-light-green,
-    secondary: color-light-green-dark,
-    tertiary: color-light-green-light
-  ),
-  colors-pre-teen: (
-    primary: color-blue,
-    secondary: color-blue-dark
-  ),
-  colors-teen: (
-    primary: color-purple,
-    secondary: color-purple-dark
-  ),
-  colors-young-adult: (
-    primary: color-dark-gray,
-    secondary: color-dark-gray-mid
+    color-primary: magenta,
+    color-secondary: magenta-dark,
+    color-background: white,
+    color-background-shade: gray-light,
+    color-text: black,
+    color-text-invert: white,
+    color-text-weak: gray,
+    color-text-link: magenta,
+    color-background-footer: yellow-light,
+    color-error: red
   ),
   transitions: (
     button-transition: all ease-in-out .15s,
@@ -174,53 +129,65 @@ $tokens:(
   icons: (icon-afterschool-guides, icon-anytime-anywhere, icon-arrow-right, icon-at-an-appt, icon-at-the-park, icon-at-the-store, icon-bathtime, icon-bedtime, icon-baby, icon-book, icon-calendar, icon-caret-down, icon-caret-left, icon-caret-right, icon-caret-line-down, icon-caret-line-left, icon-caret-line-right, icon-caret-line-up, icon-chevron-down, icon-chevron-left, icon-chevron-right, icon-chevron-up, icon-cash-expenses, icon-check, icon-check-outlined, icon-child-care, icon-city-id-card, icon-cleaning-up, icon-clock-o, icon-close, icon-diaper-change, icon-education, icon-enrichment, icon-envelope-o, icon-family-services, icon-food, icon-getting-dressed, icon-grade-schooler, icon-health-care, icon-housing, icon-laundry, icon-lightbulb, icon-map-marker, icon-mealtime, icon-on-the-go, icon-people-with-disabilities, icon-playtime, icon-pre-schooler, icon-pre-teen, icon-recurring, icon-search, icon-sms, icon-star, icon-summer-guides, icon-teen, icon-toddler, icon-topic, icon-work, icon-young-adult),
   logos: (logo-growingupnyc, logo-nyc-childrens-cabinet, logo-vroom, logo-vroom-ar, logo-vroom-bn, logo-vroom-es, logo-vroom-fr, logo-vroom-ht, logo-vroom-ko, logo-vroom-pl, logo-vroom-ru, logo-vroom-ur, logo-vroom-zh-hant),
   populations: (
-    veterans: (
-      primary: #FA660A,
-      secondary: #FA660A
+    everyone: (
+      text: #FFF,
+      primary: #F35C48
     ),
     children-and-youth: (
-      primary: #154A94,
-      secondary: #154A94
-    ),
-    lgbtq-new-yorkers: (
-      primary: #C1408B,
-      secondary: #C1408B
-    ),
-    seniors: (
-      primary: #E93E51,
-      secondary: #E93E51
-    ),
-    immigrants: (
-      primary: #02A586,
-      secondary: #02A586
-    ),
-    everyone: (
-      primary: #21ad0e,
-      secondary: #21ad0e
-    ),
-    adults: (
-      primary: #51596b,
-      secondary: #51596b
+      text: #FFF,
+      primary: #E93E51
     ),
     families: (
-      primary: #d8006d,
-      secondary: #d8006d
+      text: #FFF,
+      primary: #1A9D65
     ),
-    primary: (
-      primary: #C1408B,
-      secondary: #C1408B
+    lgbtq-new-yorkers: (
+      text: #FFF,
+      primary: #0089A2
     ),
-    secondary: (
-      primary: #FA660A,
-      secondary: #FA660A
+    adults: (
+      text: #FFF,
+      primary: #154A94
+    ),
+    seniors: (
+      text: #FFF,
+      primary: #3F289C
+    ),
+    immigrants: (
+      text: #FFF,
+      primary: #8A4CC7
+    ),
+    veterans: (
+      text: #FFF,
+      primary: #51596B
+    ),
+    magenta: (
+      text: #FFF,
+      primary: #C1408B
+    ),
+    orange: (
+      text: #FFF,
+      primary: #FA660A
+    ),
+    blue: (
+      text: #FFF,
+      primary: #154A94
+    ),
+    red: (
+      text: #FFF,
+      primary: #E93E51
+    ),
+    yellow: (
+      text: #333,
+      primary: #FDB714
     ),
     cat: (
-      primary: #C1408B,
-      secondary: #C1408B
+      text: #FFF,
+      primary: #C1408B
     ),
     pop: (
-      primary: #C1408B,
-      secondary: #C1408B
+      text: #FFF,
+      primary: #C1408B
     )
   )
 );

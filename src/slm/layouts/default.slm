@@ -51,6 +51,7 @@ html lang='en' class='no-js'
 
     / script src='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js'
     script src='${this.root}/js/default.js'
+    script src="https://translate.google.com/translate_a/element.js?cb=window.googleTranslateInit"
 
     javascript:
       var gunyc = new Default();
@@ -59,6 +60,16 @@ html lang='en' class='no-js'
       gunyc.icons('${this.root}/svg/svgs.svg');
       gunyc.toggle();
       gunyc.accordion();
+
+      window.googleTranslateInit = function() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'es,ru,ko,ar,ht,zh-CN,fr,pl,ur,bn',
+          autoDisplay: false
+        }, 'js-google-translate');
+      };
+
+      gunyc.translateElement();
 
     = content('scripts')
 

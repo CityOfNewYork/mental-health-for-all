@@ -2,12 +2,13 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
   div class='o-article-sidebar desktop:w-sidebar'
     div class='o-content-container--compact u-shift-up'
       ol class='c-nav-list js-sticky js-section-set o-sticky-nav'
-        - let sections = ['secondary', 'primary', 'adults', 'seniors', 'immigrants'];
+        - let sections = {"What it is": 'orange', "Who it’s for": 'magenta', 'Cost': 'blue', 'How to get in touch': 'red', 'Other ways to get help': 'yellow'};
 
         - for (let i in this.service.sections)
+          - let label = this.service.sections[i];
           li class='c-nav-list__item'
-            a class='scroll js-section c-nav-list__link bg-${sections[i]}--secondary' data-section='${this.createSlug(this.service.sections[i])}' href='#${this.createSlug(this.service.sections[i])}'
-              == this.service.sections[i]
+            a class='scroll js-section c-nav-list__link bg-${sections[label]}--primary' data-section='${this.createSlug(label)}' href='#${this.createSlug(label)}'
+              == label
 
               svg class='icon--caret' aria-hidden='true'
                 use xlink:href='#icon-caret-right'
@@ -25,8 +26,8 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
 
       div class='${columns}'
         - if this.service.body.hasOwnProperty('whoItIsFor')
-          section class='c-tip u-sm-gutter bg-primary--primary o-content-container rounded-lg mb-4' data-id='${this.createSlug(this.service.body.whoItIsFor.title)}'
-            div id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='c-tip__sticker sticker bg-primary--primary'
+          section class='c-tip u-sm-gutter bg-primary o-content-container rounded-lg mb-4' data-id='${this.createSlug(this.service.body.whoItIsFor.title)}'
+            div id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='c-tip__sticker sticker bg-primary'
               svg class='icon--large' role='img' aria-hidden='true'
                 use xlink:href='#icon-lightbulb'
 
@@ -37,8 +38,8 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
               == this.service.body.whoItIsFor.content
 
         - if this.service.body.hasOwnProperty('cost')
-          section class='c-tip u-sm-gutter bg-color-gray-light text-color-dark-gray-dark o-content-container rounded-lg' data-id='${this.createSlug(this.service.body.cost.title)}'
-            div id='${this.createSlug(this.service.body.cost.title)}' class='c-tip__sticker sticker bg-color-gray-light text-color-dark-gray-dark'
+          section class='c-tip u-sm-gutter bg-gray-light text-black o-content-container rounded-lg' data-id='${this.createSlug(this.service.body.cost.title)}'
+            div id='${this.createSlug(this.service.body.cost.title)}' class='c-tip__sticker sticker bg-gray-light text-black'
               svg class='icon--large' role='img' aria-hidden='true'
                 use xlink:href='#mhfa-icon-${this.service.body.cost.type}'
 
@@ -61,7 +62,7 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
                 div class='c-card rounded-lg'
                   div class='c-card__title'
                     a href=this.service.slug title=this.service.title
-                      div class='c-card__sticker sticker bg-color-purple text-color-white' aria-hidden='true'
+                      div class='c-card__sticker sticker bg-red text-white' aria-hidden='true'
                         svg class='icon--large'
                           use xlink:href='#mhfa-icon-${this.card.type}'
 
@@ -80,15 +81,15 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
 
         section class='c-list-box c-list-box--quaternary u-sm-gutter o-accordion'
           div id='${this.createSlug(section.title)}'
-            button class='c-list-box__heading o-accordion__header bg-color-yellow-light hover:bg-color-yellow text-color-dark-gray-dark' data-js='accordion' type='button' aria-controls='aria-${this.createSlug(section.title)}' aria-expanded='false'
+            button class='c-list-box__heading o-accordion__header bg-yellow--primary' data-js='accordion' type='button' aria-controls='aria-${this.createSlug(section.title)}' aria-expanded='false'
               span id='aria-lb-${this.createSlug(section.title)}' style='pointer-events: none'
                 = section.title
 
               svg class='o-accordion__caret icon' aria-hidden='true'
                 use xlink:href='#icon-caret-down'
 
-            div class='o-content-container bg-color-yellow-light hidden' id='aria-${this.createSlug(section.title)}' aria-hidden='true' role='region' aria-labelledby='aria-lb-${this.createSlug(section.title)}'
-              div class='bg-color-white rounded-lg p-8'
+            div class='o-content-container bg-yellow-light hidden' id='aria-${this.createSlug(section.title)}' aria-hidden='true' role='region' aria-labelledby='aria-lb-${this.createSlug(section.title)}'
+              div class='bg-white rounded-lg p-8'
                 == section.content
 
 div class='mobile:pt-5 tablet:pt-12 pb-6'
