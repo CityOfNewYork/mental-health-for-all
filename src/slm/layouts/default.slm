@@ -27,11 +27,11 @@ html lang='en' class='no-js'
     /! Global site tag (gtag.js) - Google Analytics
     script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9HQEJJG8G2"
     javascript:
-      | window.dataLayer = window.dataLayer || [];
-      | function gtag(){dataLayer.push(arguments);}
-      | gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      | gtag('config', 'G-9HQEJJG8G2');
+      gtag('config', 'G-9HQEJJG8G2');
 
     = content('head');
 
