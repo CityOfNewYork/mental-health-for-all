@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'About Us',
+  title: 'About',
   content: `
     <p>In New York City, mental health care and support is not a privilege reserved for those who can afford it. It is a human right for all.</p>
 
