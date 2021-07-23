@@ -1,7 +1,11 @@
 let tokens = require('@nycopportunity/growingup-patterns/config/tokens');
+let banners = require('./banners');
 
 // Fix the tokens output path to prevent the watch script from firing multiple times.
 tokens.output = `"${process.env.PWD}/src/config/_tokens.scss"`;
+
+// Get banner letters from the banner assignment
+tokens.banners = [...new Set(Object.values(banners).filter(b => b))];
 
 /**
  * Mental Health for All Colors
@@ -66,15 +70,15 @@ tokens.populations = {
     'text': textWhite,
     'primary': tokens.colors['teal']
   },
-  'adults': {
+  'immigrants': {
     'text': textWhite,
     'primary': tokens.colors['blue']
   },
-  'seniors': {
+  'adults': {
     'text': textWhite,
     'primary': tokens.colors['fucia']
   },
-  'immigrants': {
+  'seniors': {
     'text': textWhite,
     'primary': tokens.colors['purple']
   },
