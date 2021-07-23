@@ -24,7 +24,7 @@ footer class='o-footer py-0 overflow-hidden' role='contentinfo'
             svg style='width: 169px' width='169' height='43' viewBox='0 0 249 63' fill='none' xmlns='http://www.w3.org/2000/svg'
               use xlink:href='#mhfa-logo'
 
-          a class='tablet:inline-flex tablet:p-0' href='${this.root}/services' title='View all Mental Health Services' Services
+          a class='tablet:inline-flex tablet:p-0' href='${this.root}/services/index' title='View all Mental Health Services' Services
 
           a class='tablet:inline-flex tablet:p-0' href='${this.root}/about' title='Learn more about Mental Health for All' About
 

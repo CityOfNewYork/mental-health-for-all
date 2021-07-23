@@ -3,9 +3,12 @@
  */
 
 // Dependencies
+@import 'config/tokens';
 @import 'config/media';
 
 // Declarations
+
+$banners: map-get($tokens, 'banners');
 
 /**
  * Homepage
@@ -54,8 +57,6 @@
   opacity: 1;
 }
 
-$banners: ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j');
-
 @media screen and (max-width: $screen-tablet) {
   @each $b in $banners {
     .bg-banner-#{$b} {
@@ -69,6 +70,7 @@ $banners: ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j');
 }
 
 @media screen and (min-width: $screen-tablet) {
+  [class*='bg-banner'],
   [class*='bg-banner']:before {
     background-size: cover;
     background-position: 30% 30%;

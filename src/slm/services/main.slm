@@ -1,4 +1,4 @@
-article class='o-container u-bottom-spacing-small js-sticky-container desktop:flex'
+article class='o-container js-sticky-container desktop:flex'
   div class='o-article-sidebar desktop:w-sidebar'
     div class='o-content-container--compact u-shift-up'
       ol class='c-nav-list js-sticky js-section-set o-sticky-nav'
@@ -79,7 +79,7 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
       - if this.service.body.hasOwnProperty('substanceAbuse')
         - let section = this.service.body.substanceAbuse;
 
-        section class='c-list-box c-list-box--quaternary u-sm-gutter o-accordion'
+        section class='c-list-box c-list-box--quaternary o-accordion'
           div id='${this.createSlug(section.title)}'
             button class='c-list-box__heading o-accordion__header bg-yellow--primary' data-js='accordion' type='button' aria-controls='aria-${this.createSlug(section.title)}' aria-expanded='false'
               span id='aria-lb-${this.createSlug(section.title)}' style='pointer-events: none'
@@ -92,6 +92,4 @@ article class='o-container u-bottom-spacing-small js-sticky-container desktop:fl
               div class='bg-white rounded-lg p-8'
                 == section.content
 
-div class='mobile:pt-5 tablet:pt-12 pb-6'
-  a href='#main' class='back-to-top bg-color-blue-light hover:bg-color-blue no-underline' id='myBtn' data-js='back-to-top' title='Back To Top'
-    | Back To Top
+= partial('/slm/partials/back-to-top.slm')

@@ -1,5 +1,5 @@
 <template>
-  <section class="o-container u-bottom-spacing u-top-spacing-small desktop:flex">
+  <section class="o-container u-top-spacing-small desktop:flex">
     <div class='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'>
       <div class='px-8 py-3'>
         <h3>Filter Services:</h3>
@@ -13,15 +13,8 @@
           </button>
 
           <ul role="region" aria-hidden="false" :id="'aria-c-' + term.slug">
-            <li :class="'c-list-box__subitem bg-' + term.slug + '--primary'">
-              <button
-                @click="toggle({ event: $event, data: { parent: term.slug } })"
-              >
-                Toggle All
-              </button>
-            </li>
-
             <li v-for="filter in term.filters" :key="filter.slug" :class="'c-list-box__subitem bg-' + term.slug + '--primary'">
+            <!-- <li v-for="filter in term.filters" :key="filter.slug" :class="'c-list-box__subitem bg-gray-light text-black'"> -->
               <label class="checkbox">
                 <input
                   class="checkbox__field"
@@ -31,8 +24,15 @@
                   @change="change({ event: $event, data: filter })"
                 />
                 <svg class="checkbox__indicator"><use xlink:href="#icon-check"></use></svg>
-                <span v-html="filter.name">{{ filter.name }}</span>
+                <span v-html="filter.name" class="select-none">{{ filter.name }}</span>
               </label>
+            </li>
+
+            <li :class="'c-list-box__subitem bg-' + term.slug + '--primary text-center'">
+            <!-- <li :class="'c-list-box__subitem bg-gray-light text-black'"> -->
+              <button class="button--outline p-3 w-full mb-4" @click="toggle({ event: $event, data: { parent: term.slug } })">
+                Toggle All
+              </button>
             </li>
           </ul>
         </div>
@@ -54,8 +54,8 @@
       <div v-for="page in posts" :key="`page-${posts.indexOf(page)}`" >
         <div v-if="page && page.show" >
           <!-- <h3>Page {{ posts.indexOf(page) }}</h3> -->
-            <div class="c-block-list--shade o-content-container u-sm-gutter" data-js="filtered-results">
-              <div v-for="post in page.posts" :key="post.id" class="c-block-list__item u-sm-gutter">
+            <div class="c-block-list--shade o-content-container" data-js="filtered-results">
+              <div v-for="post in page.posts" :key="post.id" class="u-lg-gutter">
                 <div class="c-card rounded-lg mr-0 flex">
                   <div class="c-card__title">
                     <a :href="slugify(post.title)" :title="post.title" rel="">
@@ -88,10 +88,8 @@
         </div>
       </section>
 
-      <div class="o-content-container--compact pagination mobile:flex justify-between">
-        <div id="paginate" class="previous tablet:mr-3 mb-3 tablet:mb-0 text-center">
-          <!---->
-        </div>
+      <!-- <div class="o-content-container--compact pagination mobile:flex justify-between">
+        <div id="paginate" class="previous tablet:mr-3 mb-3 tablet:mb-0 text-center"></div>
 
         <div class="paginate text-center">
           <button @click="paginate" v-if="next" data-amount="1" class="button--outline button--outline--gray paginate">
@@ -102,7 +100,7 @@
 
       <p>
         <button @click="paginate" v-if="next" data-amount="1">Load More Posts</button>
-      </p>
+      </p> -->
     </div>
   </section>
 </template>
