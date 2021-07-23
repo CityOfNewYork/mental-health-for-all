@@ -2,6 +2,7 @@ module.exports = [
   {
     title: 'Mobile Crisis Teams',
     subtitle: 'Teams of mental health professionals that can come to your home if you’re experiencing a psychological crisis',
+    metaDescription: 'Mobile Crisis Teams consist of mental health professionals that can come to your home if you’re experiencing a psychological crisis.',
     programProvider: 'Department of Health and Mental Hygiene (DOHMH)',
     sections: [
       'What it is',
@@ -106,6 +107,7 @@ module.exports = [
   {
     title: 'NYC Well',
     subtitle: 'NYC Well is your connection to free, confidential mental health support. Speak to a counselor via phone, text, or chat and get access to mental health and substance use services, in more than 200 languages.',
+    metaDescription: 'NYC Well is your connection to free, confidential mental health support and substance use services.',
     programProvider: 'Department of Health and Mental Hygiene (DOHMH)',
     sections: [
       'What it is',
@@ -277,6 +279,7 @@ module.exports = [
     title: 'Crime Victim Assistance Program (CVAP)',
     subtitle:
       'The Crime Victim Assistance Program (CVAP) connects victims of crime, violence, or abuse to advocates who can connect them to mental health support, benefits, and other services.',
+    metaDescription: 'The Crime Victim Assistance Program (CVAP) serves victims of crime, violence, or abuse. CVAP Advocates connect victims to mental health support, benefits, and other services.',
     programProvider: 'NYPD, Safe Horizon, and Mayor’s Office of Criminal Justice (MOCJ)',
     sections: [
       'What it is',
@@ -661,6 +664,7 @@ module.exports = [
     title: 'Friendly Visiting and Friendly VOICES',
     subtitle:
       'Older New Yorkers who feel isolated can connect with a peer to talk about shared interests.',
+    metaDescription: 'Friendly Programs connect older New Yorkers who feel isolated or lonely with peers to talk about shared interests.',
     programProvider: 'Department for the Aging (DFTA)',
     sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
     body: {
@@ -735,6 +739,7 @@ module.exports = [
     title: 'Program for Survivors of Torture',
     subtitle:
       'Immigrants who survived torture and are applying for asylum can access medical, mental health, and other services.',
+    metaDescription: 'The Program for Survivors of Torture connects immigrants who survived torture to medical, mental health, and other services.',
     programProvider: 'Bellevue and NYC Health + Hospitals',
     sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
     body: {
@@ -1169,6 +1174,7 @@ module.exports = [
     title: 'Early Childhood Mental Health Network',
     subtitle:
       'Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.',
+    metaDescription: 'The Early Childhood Mental Health Network provides specialized mental health treatment for young children.',
     programProvider: 'Department of Health and Mental Hygiene (DOHMH)',
     sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
     body: {
@@ -1247,6 +1253,7 @@ module.exports = [
     title: 'Comprehensive Psychiatric Emergency Services Program (CPEP) at Health + Hospitals',
     subtitle:
       'Psychiatric emergency services for New Yorkers.',
+    metaDescription: 'NYC Health + Hospitals offers psychiatric emergency services for all New Yorkers.',
     programProvider: 'NYC Health + Hospitals',
     sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
     body: {
@@ -1400,6 +1407,7 @@ module.exports = [
     title: 'Syringe Service Programs',
     subtitle:
       'Safer use supplies and education for people who use drugs',
+    metaDescription: 'Syringe service programs provide safer use supplies and education to New Yorkers who use drugs.',
     programProvider: 'Department of Mental Health and Hygiene (DOHMH)',
     sections: ['What it is', 'Who it’s for', 'Cost', 'How to get in touch'],
     body: {
@@ -1631,6 +1639,7 @@ module.exports = [
     title: 'Mobile Treatment Services Accessible Through the Single Point of Access',
     subtitle:
       'New Yorkers with a serious mental illness can get referred to specialty mental health services.',
+    metaDescription: 'New Yorkers with a serious mental illness can get referred to specialty mental health services through Single Point of Access.',
     programProvider: 'Department of Mental Health and Hygiene (DOHMH)',
     sections: ['What it is', 'Who it’s for', 'How to get in touch'],
     body: {
@@ -1796,6 +1805,7 @@ module.exports = [
     title: '3-2-1 Impact',
     subtitle:
       'Routine screenings for pregnant patients and their children under 3 years old are available at select Health + Hospitals locations.',
+    metaDescription: '3-2-1 Impact provides routine screenings for pregnant patients and their children under 3 years old at select Health + Hospitals locations.',
     programProvider: 'NYC Health + Hospitals',
     sections: ['What it is', 'Who it’s for', 'How to get in touch'],
     body: {
