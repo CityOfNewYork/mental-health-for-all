@@ -12920,8 +12920,320 @@ var Programs = (function () {
   const __vue_script__ = __vue_component__$1;
 
   /* template */
-  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"o-container u-bottom-spacing u-top-spacing-small desktop:flex"},[_c('div',{staticClass:"o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"c-list-box c-list-box--quaternary js-accordion o-accordion",attrs:{"data-multiselectable":"false","role":"presentation","aria-multiselectable":"false"}},_vm._l((_vm.terms),function(term){return _c('div',{key:term.term_id,staticClass:"c-list-box__item o-accordion__item"},[_c('button',{class:'c-list-box__heading o-accordion__header bg-' + term.slug + '--secondary active',attrs:{"data-js":"accordion","type":"button","aria-controls":'aria-c-' + term.slug,"aria-expanded":"true"}},[_vm._v("\n          "+_vm._s(term.name)+"\n          "),_c('svg',{staticClass:"o-accordion__caret icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-caret-down"}})])]),_vm._v(" "),_c('ul',{attrs:{"role":"region","aria-hidden":"false","id":'aria-c-' + term.slug}},[_c('li',{class:'c-list-box__subitem bg-' + term.slug + '--primary'},[_c('button',{on:{"click":function($event){return _vm.toggle({ event: $event, data: { parent: term.slug } })}}},[_vm._v("\n              Toggle All\n            ")])]),_vm._v(" "),_vm._l((term.filters),function(filter){return _c('li',{key:filter.slug,class:'c-list-box__subitem bg-' + term.slug + '--primary'},[_c('label',{staticClass:"checkbox"},[_c('input',{staticClass:"checkbox__field",attrs:{"type":"checkbox"},domProps:{"value":filter.slug,"checked":filter.checked},on:{"change":function($event){return _vm.change({ event: $event, data: filter })}}}),_vm._v(" "),_c('svg',{staticClass:"checkbox__indicator"},[_c('use',{attrs:{"xlink:href":"#icon-check"}})]),_vm._v(" "),_c('span',{domProps:{"innerHTML":_vm._s(filter.name)}},[_vm._v(_vm._s(filter.name))])])])})],2)])}),0)]),_vm._v(" "),_c('div',{staticClass:"o-article desktop:w-article"},[_c('section',{staticClass:"c-block-list"},_vm._l((_vm.posts),function(page){return _c('div',{key:("page-" + (_vm.posts.indexOf(page)))},[(page && page.show)?_c('div',[_c('div',{staticClass:"c-block-list--shade o-content-container u-sm-gutter",attrs:{"data-js":"filtered-results"}},_vm._l((page.posts),function(post){return _c('div',{key:post.id,staticClass:"c-block-list__item u-sm-gutter"},[_c('div',{staticClass:"c-card rounded-lg mr-0 flex"},[_c('div',{staticClass:"c-card__title"},[_c('a',{attrs:{"href":_vm.slugify(post.title),"title":post.title,"rel":""}},[_vm._v("\n                    "+_vm._s(post.title)+"\n                  ")])]),_vm._v(" "),_c('div',{staticClass:"c-card__subtitle"},[_c('p',[_vm._v(_vm._s(post.programProvider))])]),_vm._v(" "),_c('div',{staticClass:"c-card__body"},[_vm._v("\n                  "+_vm._s(post.body)+"\n                ")]),_vm._v(" "),_c('div',{staticClass:"c-card__tags order-last"},[_vm._l((post.population),function(people){return _c('button',{key:people.id,class:'button--pill bg-' + _vm.slugify(people.name) + '--primary',on:{"click":function($event){return _vm.link($event, 'pop', people.id)}}},[_vm._v("\n                    "+_vm._s(people.name)+"\n                  ")])}),_vm._l((post.categories),function(category){return _c('button',{key:category.name,class:'button--pill bg-' + _vm.slugify(category.name) + '--primary',on:{"click":function($event){return _vm.link($event, 'cat', category.id)}}},[_vm._v("\n                    "+_vm._s(category.name)+"\n                  ")])})],2)])])}),0)]):_vm._e()])}),0),_vm._v(" "),_c('div',{staticClass:"o-content-container--compact pagination mobile:flex justify-between"},[_c('div',{staticClass:"previous tablet:mr-3 mb-3 tablet:mb-0 text-center",attrs:{"id":"paginate"}}),_vm._v(" "),_c('div',{staticClass:"paginate text-center"},[(_vm.next)?_c('button',{staticClass:"button--outline button--outline--gray paginate",attrs:{"data-amount":"1"},on:{"click":_vm.paginate}},[_vm._v("\n          Next\n        ")]):_vm._e()])]),_vm._v(" "),_c('p',[(_vm.next)?_c('button',{attrs:{"data-amount":"1"},on:{"click":_vm.paginate}},[_vm._v("\n        Load More Posts\n      ")]):_vm._e()])])])};
-  var __vue_staticRenderFns__ = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"px-8 py-3"},[_c('h3',[_vm._v("Filter Services:")])])}];
+  var __vue_render__ = function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c(
+      "section",
+      { staticClass: "o-container u-top-spacing-small desktop:flex" },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "c-list-box c-list-box--quaternary js-accordion o-accordion",
+                attrs: {
+                  "data-multiselectable": "false",
+                  role: "presentation",
+                  "aria-multiselectable": "false"
+                }
+              },
+              _vm._l(_vm.terms, function(term) {
+                return _c(
+                  "div",
+                  {
+                    key: term.term_id,
+                    staticClass: "c-list-box__item o-accordion__item"
+                  },
+                  [
+                    _c(
+                      "button",
+                      {
+                        class:
+                          "c-list-box__heading o-accordion__header bg-" +
+                          term.slug +
+                          "--primary active",
+                        attrs: {
+                          "data-js": "accordion",
+                          type: "button",
+                          "aria-controls": "aria-c-" + term.slug,
+                          "aria-expanded": "true"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n          " + _vm._s(term.name) + "\n          "
+                        ),
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "o-accordion__caret icon",
+                            attrs: { "aria-hidden": "true" }
+                          },
+                          [
+                            _c("use", {
+                              attrs: { "xlink:href": "#icon-caret-down" }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "ul",
+                      {
+                        attrs: {
+                          role: "region",
+                          "aria-hidden": "false",
+                          id: "aria-c-" + term.slug
+                        }
+                      },
+                      [
+                        _vm._l(term.filters, function(filter) {
+                          return _c(
+                            "li",
+                            {
+                              key: filter.slug,
+                              class:
+                                "c-list-box__subitem bg-" +
+                                term.slug +
+                                "--primary"
+                            },
+                            [
+                              _c("label", { staticClass: "checkbox" }, [
+                                _c("input", {
+                                  staticClass: "checkbox__field",
+                                  attrs: { type: "checkbox" },
+                                  domProps: {
+                                    value: filter.slug,
+                                    checked: filter.checked
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.change({
+                                        event: $event,
+                                        data: filter
+                                      })
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "svg",
+                                  { staticClass: "checkbox__indicator" },
+                                  [
+                                    _c("use", {
+                                      attrs: { "xlink:href": "#icon-check" }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass: "select-none",
+                                    domProps: { innerHTML: _vm._s(filter.name) }
+                                  },
+                                  [_vm._v(_vm._s(filter.name))]
+                                )
+                              ])
+                            ]
+                          )
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          {
+                            class:
+                              "c-list-box__subitem bg-" +
+                              term.slug +
+                              "--primary text-center"
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "button--outline p-3 w-full mb-4",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.toggle({
+                                      event: $event,
+                                      data: { parent: term.slug }
+                                    })
+                                  }
+                                }
+                              },
+                              [_vm._v("\n              Toggle All\n            ")]
+                            )
+                          ]
+                        )
+                      ],
+                      2
+                    )
+                  ]
+                )
+              }),
+              0
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "o-article desktop:w-article" }, [
+          _c(
+            "section",
+            { staticClass: "c-block-list" },
+            _vm._l(_vm.posts, function(page) {
+              return _c("div", { key: "page-" + _vm.posts.indexOf(page) }, [
+                page && page.show
+                  ? _c("div", [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "c-block-list--shade o-content-container",
+                          attrs: { "data-js": "filtered-results" }
+                        },
+                        _vm._l(page.posts, function(post) {
+                          return _c(
+                            "div",
+                            { key: post.id, staticClass: "u-lg-gutter" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "c-card rounded-lg mr-0 flex" },
+                                [
+                                  _c("div", { staticClass: "c-card__title" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.slugify(post.title),
+                                          title: post.title,
+                                          rel: ""
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                    " +
+                                            _vm._s(post.title) +
+                                            "\n                  "
+                                        )
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "c-card__subtitle" }, [
+                                    _c("p", [
+                                      _vm._v(_vm._s(post.programProvider))
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "c-card__body" }, [
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(post.body) +
+                                        "\n                "
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "c-card__tags order-last" },
+                                    [
+                                      _vm._l(post.population, function(people) {
+                                        return _c(
+                                          "button",
+                                          {
+                                            key: people.id,
+                                            class:
+                                              "button--pill bg-" +
+                                              _vm.slugify(people.name) +
+                                              "--primary",
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.link(
+                                                  $event,
+                                                  "pop",
+                                                  people.id
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                    " +
+                                                _vm._s(people.name) +
+                                                "\n                  "
+                                            )
+                                          ]
+                                        )
+                                      }),
+                                      _vm._l(post.categories, function(category) {
+                                        return _c(
+                                          "button",
+                                          {
+                                            key: category.name,
+                                            class:
+                                              "button--pill bg-yellow--primary",
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.link(
+                                                  $event,
+                                                  "cat",
+                                                  category.id
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                    " +
+                                                _vm._s(category.name) +
+                                                "\n                  "
+                                            )
+                                          ]
+                                        )
+                                      })
+                                    ],
+                                    2
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            }),
+            0
+          )
+        ])
+      ]
+    )
+  };
+  var __vue_staticRenderFns__ = [
+    function() {
+      var _vm = this;
+      var _h = _vm.$createElement;
+      var _c = _vm._self._c || _h;
+      return _c("div", { staticClass: "px-8 py-3" }, [
+        _c("h3", [_vm._v("Filter Services:")])
+      ])
+    }
+  ];
+  __vue_render__._withStripped = true;
 
     /* style */
     const __vue_inject_styles__ = undefined;
