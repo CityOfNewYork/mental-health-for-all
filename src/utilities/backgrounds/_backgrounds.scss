@@ -103,6 +103,10 @@ $banners: map-get($tokens, 'banners');
   .bg-banner-j, .bg-banner-j:before {
     background-position: 30% 40%;
   }
+
+  .bg-banner-x, .bg-banner-x:before {
+    background-position: 90% 30%;
+  }
 }
 
 /**

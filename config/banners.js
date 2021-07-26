@@ -10,7 +10,7 @@ module.exports = {
   'Mobile Crisis Teams': 'm',
   'Friendly Visiting and Friendly VOICES': 'g',
   'Geriatric Mental Health Initiative': 'c',
-  'NYC Well': 'o',
+  'NYC Well': 'x',
   'NYC Care': 'p',
   'NYC Family Resource Centers': 'b',
   'Early Childhood Mental Health Network': 'q',
