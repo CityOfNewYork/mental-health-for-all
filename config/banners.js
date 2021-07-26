@@ -1,4 +1,5 @@
 module.exports = {
+  'About': 'about',
   'The Crime Victim Assistance Program (CVAP)': 'a',
   'Family Justice Centers': 'b',
   'Program for Survivors of Torture': false,

@@ -3,14 +3,10 @@
 - title = `${this.about.title} | Mental Health for All`
 
 = content('main')
-  / = partial('/slm/services/banner.slm')
-  / header class='c-hero c-hero--large bg-primary not-loaded' data-js='lazy'
-  header class='c-hero c-hero--short bg-primary'
-    = partial('/slm/partials/bg-light-b.slm');
-
-    div class='o-container relative text-center' style='z-index: 1'
-      h1 class='c-hero__title inline-block'
-        = this.about.title
+  header class='c-hero c-hero--large bg-primary bg-banner-about not-loaded' data-js='lazy'
+    div class='o-container relative' style='z-index: 1'
+        h1 class='c-hero__title mb-0'
+          = this.about.title
 
   section class='o-container u-top-spacing u-bottom-spacing'
     div class='o-content-container pl-0'
@@ -22,3 +18,4 @@
 
   = content('scripts')
     javascript:
+      gunyc.banners()
