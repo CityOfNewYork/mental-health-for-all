@@ -12,7 +12,7 @@
             <svg class="o-accordion__caret icon" aria-hidden="true"><use xlink:href="#icon-caret-down"></use></svg>
           </button>
 
-          <ul role="region" aria-hidden="false" :id="'aria-c-' + term.slug">
+          <ul role="region" aria-hidden="false" :id="'aria-c-' + term.slug" class="active hidden">
             <li v-for="filter in term.filters" :key="filter.slug" :class="'c-list-box__subitem bg-' + term.slug + '--primary'">
             <!-- <li v-for="filter in term.filters" :key="filter.slug" :class="'c-list-box__subitem bg-gray-light text-black'"> -->
               <label class="checkbox">

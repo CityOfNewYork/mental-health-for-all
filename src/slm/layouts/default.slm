@@ -71,6 +71,8 @@ html lang='en' class='no-js'
 
       gunyc.translateElement();
 
+      window.gunyc = gunyc
+
     = content('scripts')
 
     / The reload script. This should not be compile during production builds
