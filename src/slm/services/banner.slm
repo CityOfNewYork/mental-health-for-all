@@ -19,11 +19,11 @@ header class='c-hero c-hero--large bg-primary bg-banner-${this.service.banner} n
           - for (let i in this.service.population)
             - let p = this.service.population[i];
 
-            a class='button--pill bg-${this.createSlug(p.name)}--primary' href='#' = p.name
+            a class='button--pill bg-${this.createSlug(p.name)}--primary' href='${this.root}/services/index?pop=${p.id}' = p.name
 
         - for (let i in this.service.categories)
           - let c = this.service.categories[i];
 
-          a class='button--pill bg-yellow--primary' href='#' = c.name
+          a class='button--pill bg-yellow--primary' href='${this.root}/services/index?cat=${c.id}' = c.name
 
 

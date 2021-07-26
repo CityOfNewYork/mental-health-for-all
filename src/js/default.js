@@ -36,6 +36,15 @@ class Default {
     });
   }
 
+  banners() {
+    window.addEventListener('load', () => {
+      document.querySelectorAll('[data-js="lazy"]').forEach((i) => {
+        i.classList.remove('not-loaded');
+        i.classList.add('loaded');
+      });
+    });
+  }
+
   icons(path) {
     return new Icons(path);
   }

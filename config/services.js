@@ -60,7 +60,7 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3>Call <a href="tel:888-692-9355">888-NYC-WELL (888-692-9355)</a> to request a mobile crisis team</h3>
+            <h3>Call <a href="tel:8886929355">888-NYC-WELL (888-692-9355)</a> to request a mobile crisis team</h3>
 
             <div class="list-unordered--check">
               <ul>
@@ -76,9 +76,9 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-          <p>Learn more about <a href="https://www1.nyc.gov/site/doh/health/health-topics/crisis-emergency-services-mobile-crisis-teams.page">Mobile Crisis Teams</a>.</p>
+          <p>Learn more about <a href="https://www1.nyc.gov/site/doh/health/health-topics/crisis-emergency-services-mobile-crisis-teams.page" target="_blank" rel="noopener nofollow">Mobile Crisis Teams</a>.</p>
 
-          <p>Visit <a href="https://nycwell.cityofnewyork.us/en/crisis-services/know-who-to-call/">NYC Well</a> to learn more about who else to call during a crisis.</p>
+          <p>Visit <a href="https://nycwell.cityofnewyork.us/en/crisis-services/know-who-to-call/" target="_blank" rel="noopener nofollow">NYC Well</a> to learn more about who else to call during a crisis.</p>
         `,
       },
     },
@@ -158,7 +158,7 @@ module.exports = [
 
             <div class="list-unordered--check">
               <ul>
-                <li><a href="tel:888-692-9355">(888) NYC-WELL (888-692-9355)</a></li>
+                <li><a href="tel:8886929355">(888) NYC-WELL (888-692-9355)</a></li>
 
                 <li>It’s free, confidential, and available 24 hours a day, 7 days a week.</li>
               </ul>
@@ -184,7 +184,7 @@ module.exports = [
 
             <div class="list-unordered--check">
               <ul>
-                <li>Go to <a href="https://nycwell.cityofnewyork.us/en/">NYC Well</a></li>
+                <li>Go to <a href="https://nycwell.cityofnewyork.us/en/" target="_blank" rel="noopener nofollow">NYC Well</a></li>
               </ul>
             </div>
           `,
@@ -194,9 +194,9 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-          <p>Check out NYC Well’s App Library <a href="https://nycwell.cityofnewyork.us/en/app-library/" >here</a>, whether you want to explore the world of mental health and wellness on your own, or if you’re looking to continue to build the skills taught by NYC Well staff.</p>
-          <p>Search the NYC Well database <a href="https://nycwell.cityofnewyork.us/en/find-services/" >here</a> for behavioral health and substance use services.</p>
-          <p>Learn more from <a href="https://nycwell.cityofnewyork.us/en/" >nyc.gov/nycwell</a></p>
+          <p>Check out NYC Well’s App Library <a href="https://nycwell.cityofnewyork.us/en/app-library/" target="_blank" rel="noopener nofollow">here</a>, whether you want to explore the world of mental health and wellness on your own, or if you’re looking to continue to build the skills taught by NYC Well staff.</p>
+          <p>Search the NYC Well database <a href="https://nycwell.cityofnewyork.us/en/find-services/" target="_blank" rel="noopener nofollow">here</a> for behavioral health and substance use services.</p>
+          <p>Learn more from <a href="https://nycwell.cityofnewyork.us/en/" target="_blank" rel="noopener nofollow">nyc.gov/nycwell</a></p>
         `,
       },
     },
@@ -325,7 +325,7 @@ module.exports = [
             {
               type: 'website',
               body: `
-            <h3><a href="https://www1.nyc.gov/site/nypd/services/victim-services/cvap.page">Call a victim advocate near you</a></h3>
+            <h3><a href="https://www1.nyc.gov/site/nypd/services/victim-services/cvap.page" target="_blank" rel="noopener nofollow">Call a victim advocate near you</a></h3>
             <p>You can find a victim advocate in all NYPD precincts. Advocates can assist you in any language.</p>
           `,
           },
@@ -334,7 +334,7 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-          <p>Call the City's 24-hour Domestic Violence Hotline at <a href="tel:800-621-4673">800-621-HOPE</a> for immediate safety planning, shelter assistance, and other resources.</p>
+          <p>Call the City's 24-hour Domestic Violence Hotline at <a href="tel:8006214673">800-621-HOPE</a> for immediate safety planning, shelter assistance, and other resources.</p>
 
           <p>TTY: 800-810-7444</p>
         `,
@@ -407,13 +407,13 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3>Request a Check-in by <a href="https://mentalhealth.cityofnewyork.us/mission-vetcheck" >filling out this form.</a> Check-ins happen weekly.</h3>
+            <h3>Request a Check-in by <a href="https://mentalhealth.cityofnewyork.us/mission-vetcheck" target="_blank" rel="noopener nofollow">filling out this form.</a> Check-ins happen weekly.</h3>
           `,
           },
           {
             type: 'website',
             body: `
-            <h3>If you’d like to volunteer with Mission: VetCheck, you can sign up <a href="https://mentalhealth.cityofnewyork.us/mission-vetcheck">here</a>.</h3>
+            <h3>If you’d like to volunteer with Mission: VetCheck, you can sign up <a href="https://mentalhealth.cityofnewyork.us/mission-vetcheck" target="_blank" rel="noopener nofollow">here</a>.</h3>
           `,
           },
         ],
@@ -492,7 +492,7 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3><a href="https://www1.nyc.gov/site/ocdv/programs/family-justice-centers.page">Call a Family Justice Center</a></li></h3>
+            <h3><a href="https://www1.nyc.gov/site/ocdv/programs/family-justice-centers.page" target="_blank" rel="noopener nofollow">Call a Family Justice Center</a></li></h3>
 
             <div class="list-unordered--check">
               <ul>
@@ -500,11 +500,11 @@ module.exports = [
                 <li>Family Justice Centers are providing remote services, and limited in-person services by appointment only for clients citywide that cannot engage in remote services safely or effectively.</li>
                 <li>Survivors can still reach the Centers directly Monday to Friday, 9 a.m. to 5 p.m. on the FJC phone lines.</li>
                   <ul>
-                    <li>Brooklyn:<a href="tel:718-250-5113">718-250-5113</a></li>
-                    <li>Bronx:<a href="tel:718-508-1220">718-508-1220</a></li>
-                    <li>Manhattan:<a href="tel:212-602-2800">212-602-2800</a></li>
-                    <li>Queens:<a href="tel:718-575-4545">718-575-4545</a></li>
-                    <li>Staten Island:<a href="tel:718-697-4300">718-697-4300</a></li>
+                    <li>Brooklyn:<a href="tel:7182505113">718-250-5113</a></li>
+                    <li>Bronx:<a href="tel:7185081220">718-508-1220</a></li>
+                    <li>Manhattan:<a href="tel:2126022800">212-602-2800</a></li>
+                    <li>Queens:<a href="tel:7185754545">718-575-4545</a></li>
+                    <li>Staten Island:<a href="tel:7186974300">718-697-4300</a></li>
                   </ul>
               </ul>
             </div>
@@ -525,11 +525,11 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>Call the City's 24-hour Domestic Violence Hotline at <a href="tel:800-621-HOPE">800-621-HOPE (4673)</a> for immediate safety planning, shelter assistance, and other resources.</h3>
+            <h3>Call the City's 24-hour Domestic Violence Hotline at <a href="tel:8006214673">800-621-HOPE (4673)</a> for immediate safety planning, shelter assistance, and other resources.</h3>
 
             <div class="list-unordered--check">
               <ul>
-                <li>TTY: <a href="tel:800-810-7444">800-810-7444</a></li>
+                <li>TTY: <a href="tel:8008107444">800-810-7444</a></li>
               </ul>
             </div>
           `,
@@ -539,7 +539,7 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-          <h3>Find resources and support in NYC by searching the City's <a href="https://www1.nyc.gov/nychope/site/page/home" >NYC HOPE Resource Directory</a></h3>
+          <h3>Find resources and support in NYC by searching the City's <a href="https://www1.nyc.gov/nychope/site/page/home" target="_blank" rel="noopener nofollow">NYC HOPE Resource Directory</a></h3>
         `,
       },
     },
@@ -608,7 +608,7 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3><a href="https://www1.nyc.gov/site/dfta/services/find-help.page">Find a senior center with a mental health clinician</a></li></h3>
+            <h3><a href="https://www1.nyc.gov/site/dfta/services/find-help.page" target="_blank" rel="noopener nofollow">Find a senior center with a mental health clinician</a></li></h3>
 
             <div class="list-unordered--check">
               <ul>
@@ -621,13 +621,13 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>Call AGING Connect at <a href="tel:212-244-6469">212-244-6469</a> and ask about Geriatric Mental Health</h3>
+            <h3>Call AGING Connect at <a href="tel:2122446469">212-244-6469</a> and ask about Geriatric Mental Health</h3>
           `,
           },
           {
             type: 'calling',
             body: `
-            <h3>Learn more at <a href="https://www1.nyc.gov/site/dfta/services/thrivenyc-at-dfta.page"> Department for the Aging</a>.</h3>
+            <h3>Learn more at <a href="https://www1.nyc.gov/site/dfta/services/thrivenyc-at-dfta.page" target="_blank" rel="noopener nofollow"> Department for the Aging</a>.</h3>
           `,
           },
         ],
@@ -698,13 +698,13 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>Call AGING Connect at <a href="tel:212-244-6469">212-244-6469</a> and ask about the Friendly Programs.</h3>
+            <h3>Call AGING Connect at <a href="tel:2122446469">212-244-6469</a> and ask about the Friendly Programs.</h3>
           `,
           },
           {
             type: 'calling',
             body: `
-            <h3><a href="https://www.surveymonkey.com/r/G8VSSVS">Fill out the interest form to enroll in Friendly VOICES.</a> You’ll be contacted with next steps.</h3>
+            <h3><a href="https://www.surveymonkey.com/r/G8VSSVS" target="_blank" rel="noopener nofollow">Fill out the interest form to enroll in Friendly VOICES.</a> You’ll be contacted with next steps.</h3>
           `,
           },
         ],
@@ -712,7 +712,7 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-          <p>Learn more online from the <a href="https://www1.nyc.gov/site/dfta/services/friendly-programs.page">Department for the Aging</a></p>
+          <p>Learn more online from the <a href="https://www1.nyc.gov/site/dfta/services/friendly-programs.page" target="_blank" rel="noopener nofollow">Department for the Aging</a></p>
         `,
       },
     },
@@ -780,13 +780,13 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3>If you or someone you know is interested in becoming a client, complete a <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2QK6MtLyn1zCkzP1XeYbMZxN7T9xDzkliJ7jAmWwPGls9Uw/viewform">referral form</a>.</h3>
+            <h3>If you or someone you know is interested in becoming a client, complete a <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2QK6MtLyn1zCkzP1XeYbMZxN7T9xDzkliJ7jAmWwPGls9Uw/viewform" target="_blank" rel="noopener nofollow">referral form</a>.</h3>
           `,
           },
           {
             type: 'website',
             body: `
-            <h3>Email for more information <a href="mailto: info@survivorsoftorture.org">info@survivorsoftorture.org.</a></h3>
+            <h3>Email for more information <a href="mailto: info@survivorsoftorture.org" target="_blank" rel="noopener nofollow">info@survivorsoftorture.org.</a></h3>
           `,
           },
         ],
@@ -794,7 +794,7 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-          <p>Learn more from <a href="https://www.survivorsoftorture.org/">survivorsoftorture.org</a></p>
+          <p>Learn more from <a href="https://www.survivorsoftorture.org/" target="_blank" rel="noopener nofollow">survivorsoftorture.org</a></p>
         `,
       },
     },
@@ -875,13 +875,13 @@ module.exports = [
           {
             type: 'calling',
             body: `
-              <h3>Call <a href="tel:888-NYC-Well">888-NYC-Well</a> and ask for a Clubhouse near you.</h3>
+              <h3>Call <a href="tel:888NYCWell">888-NYC-Well</a> and ask for a Clubhouse near you.</h3>
           `,
           },
           {
             type: 'website',
             body: `
-            <h3>Visit the <a href="https://nycwell.cityofnewyork.us/en/find-services/">NYC Well service directory</a> to find a clubhouse. Search for "Clubhouse"</h3>
+            <h3>Visit the <a href="https://nycwell.cityofnewyork.us/en/find-services/" target="_blank" rel="noopener nofollow">NYC Well service directory</a> to find a clubhouse. Search for "Clubhouse"</h3>
           `,
           },
         ],
@@ -962,7 +962,7 @@ module.exports = [
 
         <p>NYC Care is a health access program at NYC Health + Hospitals. As a NYC Care member, you can access your primary care provider at a care site near you.</p>
         <p>You’ll also have access to a full suite of healthcare, including comprehensive mental health support at low- or no-cost.</p>
-        <p>There are NYC Care locations in all 5 boroughs.</p> <a href="https://www.nyccare.nyc/locations/">Find a location near you.</a>
+        <p>There are NYC Care locations in all 5 boroughs.</p> <a href="https://www.nyccare.nyc/locations/" target="_blank" rel="noopener nofollow">Find a location near you.</a>
 
         `,
       },
@@ -991,7 +991,7 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>Call <a href="tel:646-NYC-CARE">646-NYC-CARE</a> to get more information or check your eligibility.</h3>
+            <h3>Call <a href="tel:646NYCCARE">646-NYC-CARE</a> to get more information or check your eligibility.</h3>
             `,
           },
         ],
@@ -999,7 +999,7 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-        <p>Learn more about NYC Care by visiting <a href="https://www.nyccare.nyc/">nyccare.nyc</a></p>
+        <p>Learn more about NYC Care by visiting <a href="https://www.nyccare.nyc/" target="_blank" rel="noopener nofollow">nyccare.nyc</a></p>
         `,
       },
     },
@@ -1089,7 +1089,7 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3><a href="https://www1.nyc.gov/site/dycd/services/runaway-homeless-youth/borough-based-drop-in-centers.page">Find a drop-in center near you.</a></h3>
+            <h3><a href="https://www1.nyc.gov/site/dycd/services/runaway-homeless-youth/borough-based-drop-in-centers.page" target="_blank" rel="noopener nofollow">Find a drop-in center near you.</a></h3>
             <p>There are drop-in centers in every borough. Some are open 24/7; check the hours of operation before going.</p>
             `,
           },
@@ -1097,8 +1097,8 @@ module.exports = [
             type: 'calling',
             body: `
             <h3>Call DYCD Youth Connect</h3>
-            <p>Call in NYC: <a href="tel:800-246-4646">800-246-4646</a></p>
-            <p>Outside NYC: <a href="tel:646-343-6800">646-343-6800</a></p>
+            <p>Call in NYC: <a href="tel:8002464646">800-246-4646</a></p>
+            <p>Outside NYC: <a href="tel:6463436800">646-343-6800</a></p>
             <p>Hours of operation are from Monday – Friday 9 AM – 5 PM.</p>
             `,
           },
@@ -1107,7 +1107,7 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-          <p>Check this <a href="https://www1.nyc.gov/assets/dycd/downloads/pdf/2021_RHY_PalmCard_REVISED_v2.pdf" >PDF for Runaway &amp; Homeless Youth Services</a>.</p>
+          <p>Check this <a href="https://www1.nyc.gov/assets/dycd/downloads/pdf/2021_RHY_PalmCard_REVISED_v2.pdf" target="_blank" rel="noopener nofollow">PDF for Runaway &amp; Homeless Youth Services</a>.</p>
         `,
       },
     },
@@ -1212,7 +1212,7 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3><a href="https://www.ttacny.org/page/about-us/about-the-ecmh-network/">Call and make an appointment at a Center near you. </a>There are Centers in every borough.</h3>
+            <h3><a href="https://www.ttacny.org/page/about-us/about-the-ecmh-network/" target="_blank" rel="noopener nofollow">Call and make an appointment at a Center near you. </a>There are Centers in every borough.</h3>
           `,
           },
         ],
@@ -1289,7 +1289,7 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>Call NYC Health + Hospitals at <a href="tel:844-692-4692">844-NYC-4NYC</a>. Ask about emergency mental health services.</h3>
+            <h3>Call NYC Health + Hospitals at <a href="tel:8446924692">844-NYC-4NYC</a>. Ask about emergency mental health services.</h3>
           `,
           },
         ],
@@ -1346,21 +1346,21 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/naloxone-list-of-prevention-programs.pdf">Contact a community-based program (PDF) to get a free kit</a>.</h3>
+            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/naloxone-list-of-prevention-programs.pdf" target="_blank" rel="noopener nofollow">Contact a community-based program (PDF) to get a free kit</a>.</h3>
             <p>There are programs in every borough.</p>
             `,
           },
           {
             type: 'website',
             body: `
-            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/naloxone-list-of-pharmacy.pdf">Visit a pharmacy (PDF) to get a free kit</a>.</h3>
+            <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/naloxone-list-of-pharmacy.pdf" target="_blank" rel="noopener nofollow">Visit a pharmacy (PDF) to get a free kit</a>.</h3>
             <p>Ask the pharmacist for a free “Emergency Overdose Rescue Kit”.</p>
             `,
           },
           {
             type: 'website',
             body: `
-            <h3><a href="https://www1.nyc.gov/site/doh/health/health-topics/naloxone.page">Attend a virtual training and get a kit by mail</a>.</h3>
+            <h3><a href="https://www1.nyc.gov/site/doh/health/health-topics/naloxone.page" target="_blank" rel="noopener nofollow">Attend a virtual training and get a kit by mail</a>.</h3>
             <p>Trainings are hosted by DOHMH.</p>
           `,
           },
@@ -1373,8 +1373,8 @@ module.exports = [
 
           <div class="list-unordered--check">
             <ul>
-              <li>Check the <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/naloxone-list-of-pharmacy.pdf" >list of participating pharmacies (PDF)</a></li>
-              <li>You can also use the <a href="https://a816-healthpsi.nyc.gov/NYCHealthMap/home/ByServices?services=2" >NYC Health Map</a> to find a pharmacy near you.</li>
+              <li>Check the <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/naloxone-list-of-pharmacy.pdf" target="_blank" rel="noopener nofollow">list of participating pharmacies (PDF)</a></li>
+              <li>You can also use the <a href="https://a816-healthpsi.nyc.gov/NYCHealthMap/home/ByServices?services=2" target="_blank" rel="noopener nofollow">NYC Health Map</a> to find a pharmacy near you.</li>
               <li>When contacting a pharmacy, ask the pharmacist about getting naloxone/Narcan®.
                 <ul>
                   <li>You do not need a prescription from your doctor.</li>
@@ -1382,8 +1382,8 @@ module.exports = [
                   <li>If a pharmacy is enrolled in the Naloxone Co-payment Assistance Program (N-CAP), up to $40 of your insurance copay can be covered. Ask your pharmacist about the program when requesting naloxone.</li>
                 </ul>
               </li>
-              <li>If you are having a hard time getting naloxone, email <a href="mailto:naloxone@health.nyc.gov" >naloxone@health.nyc.gov</a></li>
-              <li>Get <a href="https://www1.nyc.gov/site/doh/health/health-topics/alcohol-and-drug-use-prevent-overdose.page" >more information about preventing overdose</a>.</li>
+              <li>If you are having a hard time getting naloxone, email <a href="mailto:naloxone@health.nyc.gov" target="_blank" rel="noopener nofollow">naloxone@health.nyc.gov</a></li>
+              <li>Get <a href="https://www1.nyc.gov/site/doh/health/health-topics/alcohol-and-drug-use-prevent-overdose.page" target="_blank" rel="noopener nofollow">more information about preventing overdose</a>.</li>
           </ul>
           </div>
         `,
@@ -1446,7 +1446,7 @@ module.exports = [
             {
               type: 'website',
               body: `
-              <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/syringe-service.pdf">Visit a Syringe Service Program</a>.</h3>
+              <h3><a href="https://www1.nyc.gov/assets/doh/downloads/pdf/basas/syringe-service.pdf" target="_blank" rel="noopener nofollow">Visit a Syringe Service Program</a>.</h3>
               <p>You’ll find them in all boroughs</p>
           `,
           },
@@ -1515,7 +1515,7 @@ module.exports = [
             {
               type: 'website',
               body: `
-              <h3><a href="https://www.nychealthandhospitals.org/services/lgbtq-health-care-services/">Visit a Pride Health Center</a>.</h3>
+              <h3><a href="https://www.nychealthandhospitals.org/services/lgbtq-health-care-services/" target="_blank" rel="noopener nofollow">Visit a Pride Health Center</a>.</h3>
               <p>There are five Pride Health Centers in Manhattan and Brooklyn.</p>
           `,
           },
@@ -1599,13 +1599,13 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3><a href="tel:844-692-4692">Call 844-NYC-4NYC (844-692-4692)</a> to make an appointment or find a clinic near you.</h3>
+            <h3><a href="tel:8446924692">Call 844-NYC-4NYC (844-692-4692)</a> to make an appointment or find a clinic near you.</h3>
           `,
           },
           {
             type: 'website',
             body: `
-            <h3><a href="https://nycwell.cityofnewyork.us/en/find-services/">Search for a provider on NYC Well</a></h3>
+            <h3><a href="https://nycwell.cityofnewyork.us/en/find-services/" target="_blank" rel="noopener nofollow">Search for a provider on NYC Well</a></h3>
             <div class="list-unordered--check">
               <ul>
                 <li>There are over 600 providers who offer family counseling.</li>
@@ -1657,7 +1657,7 @@ module.exports = [
             <li>Intensive Mobile Treatment (IMT)</li>
           </ul>
         </div>
-        <p>Through <a href="https://www1.nyc.gov/site/doh/providers/resources/mental-illness-single-point-of-access.page" >Single Point of Access (SPOA)</a>, your provider can connect you to specialty mental health services and coordination of care If you have a serious mental illness.</p>
+        <p>Through <a href="https://www1.nyc.gov/site/doh/providers/resources/mental-illness-single-point-of-access.page" target="_blank" rel="noopener nofollow">Single Point of Access (SPOA)</a>, your provider can connect you to specialty mental health services and coordination of care If you have a serious mental illness.</p>
         <p>You’ll need a referral for these services. Your mental health provider — outpatient or inpatient doctor — can start the process of qualifying you for these services.</p>
         `,
       },
@@ -1704,7 +1704,7 @@ module.exports = [
       whatItIs: {
         title: 'What it is',
         content: `
-        <p>Mental health resources are available to every public school in New York City. The <a href="https://www.schools.nyc.gov/school-life/health-and-wellness/mental-health" >School Mental Health Program</a> offers support so schools can meet the emotional health and academic needs of their students.</p>
+        <p>Mental health resources are available to every public school in New York City. The <a href="https://www.schools.nyc.gov/school-life/health-and-wellness/mental-health" target="_blank" rel="noopener nofollow">School Mental Health Program</a> offers support so schools can meet the emotional health and academic needs of their students.</p>
         `,
       },
       whoItIsFor: {
@@ -1835,7 +1835,7 @@ module.exports = [
           {
             type: 'website',
             body: `
-            <h3>Contact your OB or pediatrician at an H+H facility for more information, or call <a href="tel:844-692-4692">844-NYC-4NYC</a> to make an appointment.</h3>
+            <h3>Contact your OB or pediatrician at an H+H facility for more information, or call <a href="tel:8446924692">844-NYC-4NYC</a> to make an appointment.</h3>
           `,
           },
         ],
@@ -1884,7 +1884,7 @@ module.exports = [
         type: 'health-insurance',
         content: `
           <p>If you have insurance, it will be billed.</p>
-          <p>If you’re ineligible for health insurance or cannot afford health insurance, you may be eligible for <a href="https://www.nyccare.nyc/" >NYC Care</a>.</p>
+          <p>If you’re ineligible for health insurance or cannot afford health insurance, you may be eligible for <a href="https://www.nyccare.nyc/" target="_blank" rel="noopener nofollow">NYC Care</a>.</p>
         `,
       },
       howToGetInTouch: {
@@ -1893,7 +1893,7 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>Call NYC Health + Hospitals at <a href="tel:844-692-4692">844-NYC-4NYC</a> to make an appointment.</h3>
+            <h3>Call NYC Health + Hospitals at <a href="tel:8446924692">844-NYC-4NYC</a> to make an appointment.</h3>
           `,
           },
         ],
@@ -1969,7 +1969,7 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3><a href="https://www.glbthotline.org/">Visit the LGBT National Help Center’s Website</a>.</h3>
+            <h3><a href="https://www.glbthotline.org/" target="_blank" rel="noopener nofollow">Visit the LGBT National Help Center’s Website</a>.</h3>
           `,
           },
         ],
@@ -1999,7 +1999,7 @@ module.exports = [
       whatItIs: {
         title: 'What it is',
         content: `
-        <p><a href="https://www.thetrevorproject.org/" >The Trevor Project</a> helps LGBTQ young people under age 25 cope with mental health challenges. If you are a young person in crisis, feeling suicidal, or in need of a safe and judgment-free place to talk, call the TrevorLifeline.</p>
+        <p><a href="https://www.thetrevorproject.org/" target="_blank" rel="noopener nofollow">The Trevor Project</a> helps LGBTQ young people under age 25 cope with mental health challenges. If you are a young person in crisis, feeling suicidal, or in need of a safe and judgment-free place to talk, call the TrevorLifeline.</p>
         <p>Speaking to a counselor is anonymous, confidential, and free.</p>
         `,
       },
@@ -2022,13 +2022,13 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>Call the TrevorLifeline at <a href="tel:866-488-7386">866-488-7386</a> for crisis intervention and suicide prevention, available 24/7.</h3>
+            <h3>Call the TrevorLifeline at <a href="tel:8664887386">866-488-7386</a> for crisis intervention and suicide prevention, available 24/7.</h3>
           `,
           },
           {
             type: 'website',
             body: `
-            <h3><a href="https://trevorproject.secure.force.com/apex/TrevorChatPreChatForm?endpoint=https%3A%2F%2Ftrevorproject.secure.force.com%2Fapex%2FTrevorChatWaitingScreen%3Flanguage%3D%23deployment_id%3D57241000000LPlc%26org_id%3D00D410000005OLz%26button_id%3D57341000000LTDX%26session_id%3DsSEshedlL80qOQ==">Message a counselor online</a>, available 24/7.</h3>
+            <h3><a href="https://trevorproject.secure.force.com/apex/TrevorChatPreChatForm?endpoint=https%3A%2F%2Ftrevorproject.secure.force.com%2Fapex%2FTrevorChatWaitingScreen%3Flanguage%3D%23deployment_id%3D57241000000LPlc%26org_id%3D00D410000005OLz%26button_id%3D57341000000LTDX%26session_id%3DsSEshedlL80qOQ==" target="_blank" rel="noopener nofollow">Message a counselor online</a>, available 24/7.</h3>
           `,
           },
           {
@@ -2042,8 +2042,8 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-          <p>Learn more from <a href="https://www.thetrevorproject.org/" >thetrevorproject.org</a></p>
-          <p>You can also get more information about preventing suicide as well as unique resources for LGBTQ youth <a href="https://www.thetrevorproject.org/resources/" >here</a>.</p>
+          <p>Learn more from <a href="https://www.thetrevorproject.org/" target="_blank" rel="noopener nofollow">thetrevorproject.org</a></p>
+          <p>You can also get more information about preventing suicide as well as unique resources for LGBTQ youth <a href="https://www.thetrevorproject.org/resources/" target="_blank" rel="noopener nofollow">here</a>.</p>
         `,
       },
     },
@@ -2102,13 +2102,13 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>To find help or learn more, call NYC Well at <a href="tel:888-692-9355">888-NYC-WELL (888-692-9355)</a>, text “WELL” to 65173, or visit <a href="https://nycwell.cityofnewyork.us/en/" >nyc.gov/nycwell</a> </h3>
+            <h3>To find help or learn more, call NYC Well at <a href="tel:8886929355">888-NYC-WELL (888-692-9355)</a>, text “WELL” to 65173, or visit <a href="https://nycwell.cityofnewyork.us/en/" target="_blank" rel="noopener nofollow">nyc.gov/nycwell</a> </h3>
           `,
           },
           {
             type: 'calling',
             body: `
-            <h3>To talk to a Center on Addiction Helpline Specialist, call <a href="tel:855-378-4373">855-378-4373</a>, send a text message to 55753, or visit <a href="https://drugfree.org/" >drugfree.org</a></h3>
+            <h3>To talk to a Center on Addiction Helpline Specialist, call <a href="tel:8553784373">855-378-4373</a>, send a text message to 55753, or visit <a href="https://drugfree.org/" target="_blank" rel="noopener nofollow">drugfree.org</a></h3>
           `,
           },
         ],
@@ -2151,25 +2151,25 @@ module.exports = [
           {
             type: 'calling',
             body: `
-            <h3>For information on NYC’s virtual buprenorphine clinic, call  <a href="tel:212-562-2665">212-562-2665</a></h3>
+            <h3>For information on NYC’s virtual buprenorphine clinic, call  <a href="tel:2125622665">212-562-2665</a></h3>
           `,
           },
           {
             type: 'website',
             body: `
-            <h3>For treatment services in New York, visit the <a href="https://findaddictiontreatment.ny.gov/" >Treatment availability dashboard</a>.</h3>
+            <h3>For treatment services in New York, visit the <a href="https://findaddictiontreatment.ny.gov/" target="_blank" rel="noopener nofollow">Treatment availability dashboard</a>.</h3>
           `,
           },
           {
             type: 'website',
             body: `
-            <h3>To find buprenorphine treatment in New York, visit <a href="https://www.samhsa.gov/medication-assisted-treatment/practitioner-program-data/treatment-practitioner-locator?field_bup_state_value=37" >SAMHSA's Buprenorphine practitioner locator</a>.</h3>
+            <h3>To find buprenorphine treatment in New York, visit <a href="https://www.samhsa.gov/medication-assisted-treatment/practitioner-program-data/treatment-practitioner-locator?field_bup_state_value=37" target="_blank" rel="noopener nofollow">SAMHSA's Buprenorphine practitioner locator</a>.</h3>
           `,
           },
           {
             type: 'website',
             body: `
-            <h3>For a list of buprenorphine providers in primary care settings, see the <a href="https://www1.nyc.gov/site/doh/health/health-topics/opioid-treatment-medication.page" >Opioid Addiction Treatment With Buprenorphine and Methadone</a> page at NYC Health.</h3>
+            <h3>For a list of buprenorphine providers in primary care settings, see the <a href="https://www1.nyc.gov/site/doh/health/health-topics/opioid-treatment-medication.page" target="_blank" rel="noopener nofollow">Opioid Addiction Treatment With Buprenorphine and Methadone</a> page at NYC Health.</h3>
           `,
           },
         ],
@@ -2177,9 +2177,9 @@ module.exports = [
       otherWaysToGetHelp: {
         title: 'Other ways to get help',
         content: `
-          <p>NYC Well staff can provide brief counseling and referrals to care in over 200 languages and are available 24 hours a day, seven days a week. For support, call <a href="tel:888-692-9355">888-NYC-WELL (888-692-9355)</a> , text "WELL" to 65173 or chat online by visiting <a href="http://nyc.gov/nycwell" >nyc.gov/nycwell</a>.</p>
+          <p>NYC Well staff can provide brief counseling and referrals to care in over 200 languages and are available 24 hours a day, seven days a week. For support, call <a href="tel:8886929355">888-NYC-WELL (888-692-9355)</a> , text "WELL" to 65173 or chat online by visiting <a href="http://nyc.gov/nycwell" target="_blank" rel="noopener nofollow">nyc.gov/nycwell</a>.</p>
 
-          <p>Buprenorphine providers using telemedicine can see this <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/covid/covid-19-telemedicine-opioid-use.pdf" >resource on accessing telemedicine for opioid use disorder</a> during the COVID-19 pandemic.</p>
+          <p>Buprenorphine providers using telemedicine can see this <a href="https://www1.nyc.gov/assets/doh/downloads/pdf/covid/covid-19-telemedicine-opioid-use.pdf" target="_blank" rel="noopener nofollow">resource on accessing telemedicine for opioid use disorder</a> during the COVID-19 pandemic.</p>
         `,
       },
     },
