@@ -116,4 +116,18 @@ tokens.populations = {
   }
 };
 
+/**
+ * Update screens to NYCO standard
+ */
+
+tokens.screens = {
+  'xlarge': '1200px',
+  'large': '1112px',
+  'medium': '768px',
+  'mobile': '480px',
+  'small': '400px',
+  // Max width is discouraged over min width but this offset is needed when using it to avoid the pixel gap
+  'max-width-offset': '0.02px'
+};
+
 module.exports = tokens;
