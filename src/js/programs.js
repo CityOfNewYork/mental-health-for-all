@@ -63,6 +63,12 @@ class Programs {
              * @type  {String}
              */
             programs: 'https://nycopportunity.github.io/mhfa/data/services.json',
+            /**
+             *
+             *
+             * @type  {boolean}
+             */
+            isMounted: false,
           },
 
           /**
@@ -354,6 +360,24 @@ class Programs {
           .queue() // Queue up the first request
           .fetch('terms') // Get the terms from the 'terms' endpoint
           .catch(this.error);
+
+
+        },
+      updated: function() {
+        this.$nextTick(function () {
+          // Code that will run only after the
+          // entire view has been rendered
+            if (!this.isMounted && window.innerWidth > SCREEN_LARGE) {
+              if (document.querySelector('#aria-c-cat') != null) {
+                window.gunyc.toggleTrigger('#aria-c-cat')
+              }
+              if (document.querySelector('#aria-c-pop') != null) {
+                window.gunyc.toggleTrigger('#aria-c-pop')
+                this.isMounted = true
+              }
+            }
+          })
+
       },
     }).$mount('[data-js="programs"]');
   }

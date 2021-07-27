@@ -11,7 +11,21 @@ class Default {
   constructor() {}
 
   toggle() {
-    return new Toggle();
+    this.toggle = new Toggle();
+    return this.toggle
+  }
+
+  toggleTrigger(selector) {
+    // Use the toggle instance that the filters are using. It may be a different instance.
+
+    // Symbolic element for toggle method
+    this.trigger = document.createElement('button');
+    this.trigger.classList.remove(this.toggle.settings.activeClass);
+    this.trigger.setAttribute('aria-controls', selector);
+
+    // Toggle the element. This will show it if the element is hidden or hide it if it is visible
+    this.toggle.elementToggle(this.trigger, document.querySelector(selector), []);
+
   }
 
   accordion() {
