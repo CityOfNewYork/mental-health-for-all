@@ -3,6 +3,7 @@
 import Toggle from '@nycopportunity/pttrn-scripts/src/toggle/toggle';
 import Icons from '@nycopportunity/pttrn-scripts/src/icons/icons';
 import TranslateElement from '@nycopportunity/pttrn-scripts/src/google-translate-element/google-translate-element';
+import Menu from '@nycopportunity/pattern-menu/src/menu';
 import StaticColumn from './staticColumn';
 import TextRotation from './textRotation';
 
@@ -33,6 +34,10 @@ class Default {
 
   icons(path) {
     return new Icons(path);
+  }
+
+  menu() {
+    return new Menu();
   }
 
   staticColumn() {

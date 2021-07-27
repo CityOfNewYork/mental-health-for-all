@@ -21,8 +21,11 @@ footer class='o-footer py-0 overflow-hidden' role='contentinfo'
           a href='${this.root}' class='tablet:inline-flex tablet:p-0'
             span class='sr-only' Mental Health for All
 
-            svg style='width: 169px' width='169' height='43' viewBox='0 0 249 63' fill='none' xmlns='http://www.w3.org/2000/svg'
+            svg aria-hidden='true' class='mhfa-logo-footer' xmlns='http://www.w3.org/2000/svg'
               use xlink:href='#mhfa-logo'
+
+            svg aria-hidden='true' class='mhfa-logo-footer-stacked' xmlns='http://www.w3.org/2000/svg'
+              use xlink:href='#mhfa-logo-stacked'
 
           a class='tablet:inline-flex tablet:p-0' href='${this.root}/services/index' title='View all Mental Health Services' Services
 
@@ -35,7 +38,7 @@ footer class='o-footer py-0 overflow-hidden' role='contentinfo'
 
             span class='sr-only' = 'The Mayor\'s Office for Economic Opportunity'
 
-          svg style='max-width: 100%; width: 332px' width='332' height='63' viewBox='0 0 332 63' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'
+          svg class='logo-nyc-opportunity' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'
             use xlink:href='#mhfa-logo-nyc-opportunity'
 
       div class='o-attribution__copyright o-attribution__flex border-grey-light'

@@ -1,0 +1,11 @@
+aside#aria-c-menu class='o-menu o-menu-fixed hidden bg-white' aria-hidden='true'
+  nav class='o-menu__nav' aria-label='Menu'
+    a class='o-menu__nav-item' tabindex='-1' href='${this.root}/index' Home
+    a class='o-menu__nav-item' tabindex='-1' href='${this.root}/services/index' Services
+    a class='o-menu__nav-item' tabindex='-1' href='${this.root}/about' About
+
+  div class='pt-3'
+    button class='button--outline button--outline--gray w-full' data-js='menu' data-js-menu='close' aria-controls='aria-c-menu' aria-expanded='false' tabindex='-1'
+      span Close
+
+      span class='sr-only' = ' and return to site'

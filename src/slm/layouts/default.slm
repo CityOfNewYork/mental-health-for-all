@@ -36,18 +36,16 @@ html lang='en' class='no-js'
     = content('head');
 
   body
-    div class='o-offcanvas js-offcanvas' id='offcanvas-ages'
-      a href='#main' class='show-for-keyboard' Skip to main content
+    a href='#main' class='show-for-keyboard' Skip to main content
 
-      div class='o-offcanvas__main js-offcanvas__main'
-        == this.include('/slm/partials/objects/navigation/navigation-offcanvas.slm');
+    = partial('/slm/partials/objects/menu/menu.slm')
 
-        main id='main' role='main'
-          = content('main')
+    = partial('/slm/partials/objects/navigation/navigation.slm')
 
-        == this.include('/slm/partials/objects/footer/footer.slm');
+    main id='main' role='main'
+      = content('main')
 
-        / == this.include('/slm/partials/objects/banner/banner.slm');
+    = partial('/slm/partials/objects/footer/footer.slm');
 
     / script src='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js'
     script src='${this.root}/js/default.js'
@@ -60,6 +58,7 @@ html lang='en' class='no-js'
       gunyc.icons('${this.root}/svg/svgs.svg');
       gunyc.toggle();
       gunyc.accordion();
+      gunyc.menu();
 
       window.googleTranslateInit = function() {
         new google.translate.TranslateElement({

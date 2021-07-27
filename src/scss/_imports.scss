@@ -16,6 +16,8 @@
  ************************/
 
 @import '@nycopportunity/pattern-attribution/src/tokens';
+@import '@nycopportunity/pattern-navigation/src/tokens';
+@import '@nycopportunity/pattern-menu/src/tokens';
 @import '@nycopportunity/growingup-patterns/src/config/tokens';
 
 /***********
@@ -33,47 +35,48 @@
 @import '@nycopportunity/growingup-patterns/src/elements/sticker/sticker';
 @import '@nycopportunity/growingup-patterns/src/elements/table/table';
 @import '@nycopportunity/growingup-patterns/src/elements/spinner/spinner';
-@import '@nycopportunity/growingup-patterns/src/elements/alert/alert';
+// @import '@nycopportunity/growingup-patterns/src/elements/alert/alert';
 
 /*************
  * Components
  *************/
 
-@import '@nycopportunity/growingup-patterns/src/components/arrow-pager/arrow-pager';
+// @import '@nycopportunity/growingup-patterns/src/components/arrow-pager/arrow-pager';
 @import '@nycopportunity/growingup-patterns/src/components/block-list/block-list';
 @import '@nycopportunity/growingup-patterns/src/components/card/card';
-@import '@nycopportunity/growingup-patterns/src/components/details-list/details-list';
-@import '@nycopportunity/growingup-patterns/src/components/form/form';
+// @import '@nycopportunity/growingup-patterns/src/components/details-list/details-list';
+// @import '@nycopportunity/growingup-patterns/src/components/form/form';
 @import '@nycopportunity/growingup-patterns/src/components/hero/hero';
-// @import '@nycopportunity/growingup-patterns/src/config/dimensions';
-@import '@nycopportunity/growingup-patterns/src/components/language-switcher/language-switcher';
+// @import '@nycopportunity/growingup-patterns/src/components/language-switcher/language-switcher';
 @import '@nycopportunity/growingup-patterns/src/components/list-box/list-box';
 @import '@nycopportunity/growingup-patterns/src/components/side-navigation/side-navigation';
 @import '@nycopportunity/growingup-patterns/src/components/side-hero/side-hero';
-@import '@nycopportunity/growingup-patterns/src/components/tout/tout';
+// @import '@nycopportunity/growingup-patterns/src/components/tout/tout';
 @import '@nycopportunity/growingup-patterns/src/components/tip/tip';
 @import '@nycopportunity/growingup-patterns/src/components/tip-card/tip-card';
-@import '@nycopportunity/growingup-patterns/src/components/share/share';
-@import '@nycopportunity/growingup-patterns/src/components/age-guide-card/age-guide-card';
-@import '@nycopportunity/growingup-patterns/src/components/back-to-top/back-to-top';
+// @import '@nycopportunity/growingup-patterns/src/components/share/share';
+// @import '@nycopportunity/growingup-patterns/src/components/age-guide-card/age-guide-card';
+// @import '@nycopportunity/growingup-patterns/src/components/back-to-top/back-to-top';
 
 /**********
  * Objects
  **********/
 
 @import '@nycopportunity/growingup-patterns/src/objects/accordion/accordion';
-// @import '@nycopportunity/growingup-patterns/src/objects/alert-banner/alert-banner';
 @import '@nycopportunity/growingup-patterns/src/objects/article/article';
 @import '@nycopportunity/growingup-patterns/src/objects/container/container';
 @import '@nycopportunity/growingup-patterns/src/objects/content/content';
-@import '@nycopportunity/growingup-patterns/src/objects/feature-photo/feature-photo';
-@import '@nycopportunity/growingup-patterns/src/objects/flex-embed/flex-embed';
+// @import '@nycopportunity/growingup-patterns/src/objects/feature-photo/feature-photo';
+// @import '@nycopportunity/growingup-patterns/src/objects/flex-embed/flex-embed';
 @import '@nycopportunity/growingup-patterns/src/objects/footer/footer';
-@import '@nycopportunity/pattern-attribution/src/attribution';
 @import '@nycopportunity/growingup-patterns/src/objects/inline-list/inline-list';
-@import '@nycopportunity/growingup-patterns/src/objects/overlay/overlay';
-@import '@nycopportunity/growingup-patterns/src/objects/navigation/navigation';
+// @import '@nycopportunity/growingup-patterns/src/objects/overlay/overlay';
+// @import '@nycopportunity/growingup-patterns/src/objects/navigation/navigation';
 @import '@nycopportunity/growingup-patterns/src/objects/static-column/static-column';
+
+@import '@nycopportunity/pattern-navigation/src/navigation';
+@import '@nycopportunity/pattern-menu/src/menu';
+@import '@nycopportunity/pattern-attribution/src/attribution';
 
 /************
  * Utilities
@@ -85,13 +88,13 @@
 // @import '@nycopportunity/growingup-patterns/src/utilities/color/color-milestones';
 @import '@nycopportunity/growingup-patterns/src/utilities/font/font';
 @import '@nycopportunity/growingup-patterns/src/utilities/typography/typography';
-@import '@nycopportunity/growingup-patterns/src/utilities/offcanvas/offcanvas';
-@import '@nycopportunity/growingup-patterns/src/utilities/background-image/background-image';
-@import '@nycopportunity/growingup-patterns/src/utilities/sticky/sticky';
+// @import '@nycopportunity/growingup-patterns/src/utilities/offcanvas/offcanvas';
+// @import '@nycopportunity/growingup-patterns/src/utilities/background-image/background-image';
+// @import '@nycopportunity/growingup-patterns/src/utilities/sticky/sticky';
 
 @tailwind utilities;
 
-@import '@nycopportunity/growingup-patterns/src/utilities/form-effects/form-effects';
+// @import '@nycopportunity/growingup-patterns/src/utilities/form-effects/form-effects';
 @import '@nycopportunity/growingup-patterns/src/utilities/spacing/spacing';
 
 @import 'utilities/backgrounds/backgrounds';

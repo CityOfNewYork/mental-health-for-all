@@ -9,7 +9,15 @@
 $colors: map-get($tokens, 'colors');
 
 :root {
-  --o-attribution-font-size: 0.9rem
+  --o-attribution-font-size: 0.9rem;
+
+  --o-navigation-icon-width: 1.375rem !important;
+  --o-navigation-icon-height: 1.375rem !important;
+}
+
+body, html {
+  height: initial;
+  min-height: initial;
 }
 
 button {
@@ -24,8 +32,14 @@ a {
   font-weight: bold;
 }
 
-svg {
-  pointer-events: none;
+a *,
+svg,
+button * {
+  pointer-events: none
+}
+
+label {
+  cursor: pointer
 }
 
 .o-footer,
@@ -81,11 +95,6 @@ svg {
   font-size: 75%
 }
 
-.mhfa-logo-main {
-  width: 138px;
-  height: 31px;
-}
-
 .icon-google-translate-title {
   position: absolute;
   width: 132px;
@@ -93,15 +102,66 @@ svg {
   right: 0;
 }
 
+.mhfa-logo-main {
+  width: 100px;
+  height: 54px;
+}
+
+.mhfa-logo-footer {
+  display: none;
+  width: 168px;
+  height: 54px;
+}
+
+.mhfa-logo-footer-stacked {
+  width: 98px;
+  height: 54px;
+}
+
+.logo-nyc-opportunity {
+  max-width: 100%;
+  width: 284px;
+  height: 54px;
+}
+
+body, .o-navigation-spacing {
+  padding-bottom: 86px;
+}
+
+.o-navigation-spacing-bottom {
+  bottom: 86px;
+}
+
 @media screen and (min-width: $screen-tablet) {
+  .mhfa-logo-footer {
+    display: inline-block;
+  }
+
+  .mhfa-logo-footer-stacked {
+    display: none;
+  }
+
   .mhfa-logo-main {
     width: 249px;
     height: 56px;
   }
 
+  .logo-nyc-opportunity {
+    width: 332px;
+    height: 63px;
+  }
+
   .icon-google-translate-title {
     width: 175px;
     height: 16px;
+  }
+
+  body, .o-navigation-spacing {
+    padding-bottom: 0;
+  }
+
+  .o-navigation-spacing-bottom {
+    bottom: 0;
   }
 }
 
