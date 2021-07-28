@@ -16,32 +16,25 @@
             stop offset='1' stop-color='#DA7CB5' stop-opacity='0'
 
       h1 class='c-side-hero__title'
-        p
+        div
           | The official
-          svg.icon--nyc.mx-2 role="img"
+
+          svg class='icon--nyc mx-2' role='img'
             title New York City
-            use xlink:href="#icon-nyc-logo"
-          | Mental Health
-          |  resource for
+            use xlink:href='#icon-nyc-logo'
+
+          | Mental Health resource for
 
         div class='c-side-hero__title__large rotating-text'
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Children and youth"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Families"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Adults"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Seniors"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Veterans"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Seniors"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "LGBTQ"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Immigrants"
-          span data-js="rotate-controller" id="rotate" class="animated"
+          - let audiences = ['Children and youth', 'Families', 'Adults', 'Seniors', 'Veterans', 'Seniors', 'LGBTQ', 'Immigrants'];
+
+          - for (let audience in audiences)
+            - let a = audiences[audience];
+
+            span data-js='rotate-text' class='rotating-text__entry'
+              = a
+
+          span data-js='rotate-controller' id='rotate' class='animated'
 
       a.button--outline.button--outline--white href='${this.root}/services/index.html' Explore Mental Health services
 

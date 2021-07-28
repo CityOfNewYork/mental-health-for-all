@@ -59,6 +59,37 @@ $tokens:(
     color-background-footer: yellow-light,
     color-error: red
   ),
+  colors-baby: (
+    primary: color-pink,
+    secondary: color-pink-dark
+  ),
+  colors-toddler: (
+    primary: color-orange,
+    secondary: color-orange-dark,
+    tertiary: color-orange-light
+  ),
+  colors-pre-schooler: (
+    primary: color-green,
+    secondary: color-green-dark,
+    tertiary: color-green-light
+  ),
+  colors-grade-schooler: (
+    primary: color-light-green,
+    secondary: color-light-green-dark,
+    tertiary: color-light-green-light
+  ),
+  colors-pre-teen: (
+    primary: color-blue,
+    secondary: color-blue-dark
+  ),
+  colors-teen: (
+    primary: color-purple,
+    secondary: color-purple-dark
+  ),
+  colors-young-adult: (
+    primary: color-dark-gray,
+    secondary: color-dark-gray-mid
+  ),
   transitions: (
     button-transition: all ease-in-out .15s,
     link-transition: all ease-in-out .15s
@@ -91,10 +122,12 @@ $tokens:(
     animate-timing-function: cubic-bezier(0.23, 1, 0.32, 1)
   ),
   screens: (
-    small: 375px,
-    medium: 700px,
-    large: 1024px,
-    xlarge: 1200px
+    xlarge: 1200px,
+    large: 1112px,
+    medium: 768px,
+    mobile: 480px,
+    small: 400px,
+    max-width-offset: 0.02px
   ),
   padding: (
     column: 70px,
@@ -128,6 +161,7 @@ $tokens:(
   ),
   icons: (icon-afterschool-guides, icon-anytime-anywhere, icon-arrow-right, icon-at-an-appt, icon-at-the-park, icon-at-the-store, icon-bathtime, icon-bedtime, icon-baby, icon-book, icon-calendar, icon-caret-down, icon-caret-left, icon-caret-right, icon-caret-line-down, icon-caret-line-left, icon-caret-line-right, icon-caret-line-up, icon-chevron-down, icon-chevron-left, icon-chevron-right, icon-chevron-up, icon-cash-expenses, icon-check, icon-check-outlined, icon-child-care, icon-city-id-card, icon-cleaning-up, icon-clock-o, icon-close, icon-diaper-change, icon-education, icon-enrichment, icon-envelope-o, icon-family-services, icon-food, icon-getting-dressed, icon-grade-schooler, icon-health-care, icon-housing, icon-laundry, icon-lightbulb, icon-map-marker, icon-mealtime, icon-on-the-go, icon-people-with-disabilities, icon-playtime, icon-pre-schooler, icon-pre-teen, icon-recurring, icon-search, icon-sms, icon-star, icon-summer-guides, icon-teen, icon-toddler, icon-topic, icon-work, icon-young-adult),
   logos: (logo-growingupnyc, logo-nyc-childrens-cabinet, logo-vroom, logo-vroom-ar, logo-vroom-bn, logo-vroom-es, logo-vroom-fr, logo-vroom-ht, logo-vroom-ko, logo-vroom-pl, logo-vroom-ru, logo-vroom-ur, logo-vroom-zh-hant),
+  banners: (about, a, b, k, e, l, n, m, g, c, x, p, q, r, s, h, i, t, v, w, u),
   populations: (
     everyone: (
       text: #FFF,
@@ -189,6 +223,5 @@ $tokens:(
       text: #FFF,
       primary: #C1408B
     )
-  ),
-  banners: (a, b, k, e, l, n, m, g, c, o, p, q, r, s, h, i, t, v, w, u)
+  )
 );

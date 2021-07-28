@@ -3,6 +3,7 @@
 import Toggle from '@nycopportunity/pttrn-scripts/src/toggle/toggle';
 import Icons from '@nycopportunity/pttrn-scripts/src/icons/icons';
 import TranslateElement from '@nycopportunity/pttrn-scripts/src/google-translate-element/google-translate-element';
+import Menu from '@nycopportunity/pattern-menu/src/menu';
 import StaticColumn from './staticColumn';
 import TextRotation from './textRotation';
 
@@ -10,7 +11,21 @@ class Default {
   constructor() {}
 
   toggle() {
-    return new Toggle();
+    this.toggle = new Toggle();
+    return this.toggle
+  }
+
+  toggleTrigger(selector) {
+    // Use the toggle instance that the filters are using. It may be a different instance.
+
+    // Symbolic element for toggle method
+    this.trigger = document.createElement('button');
+    this.trigger.classList.remove(this.toggle.settings.activeClass);
+    this.trigger.setAttribute('aria-controls', selector);
+
+    // Toggle the element. This will show it if the element is hidden or hide it if it is visible
+    this.toggle.elementToggle(this.trigger, document.querySelector(selector), []);
+
   }
 
   accordion() {
@@ -33,6 +48,10 @@ class Default {
 
   icons(path) {
     return new Icons(path);
+  }
+
+  menu() {
+    return new Menu();
   }
 
   staticColumn() {
