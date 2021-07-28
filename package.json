@@ -23,7 +23,7 @@
   "dependencies": {
     "@nycopportunity/growingup-patterns": "file:../growingupnyc-patterns",
     "@nycopportunity/pattern-attribution": "^1.0.3",
-    "@nycopportunity/pattern-menu": "file:../../nycopportunity/pattern-menu",
+    "@nycopportunity/pattern-menu": "^1.0.0",
     "@nycopportunity/pattern-navigation": "^1.0.0",
     "@nycopportunity/pttrn-scripts": "^1.0.5",
     "@nycopportunity/wp-archive-vue": "^1.2.0",
