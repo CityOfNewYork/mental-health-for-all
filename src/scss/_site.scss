@@ -145,6 +145,10 @@ body, .o-navigation-spacing {
   bottom: 86px;
 }
 
+.c-hero {
+  background-size: 100% auto;
+}
+
 @media screen and (min-width: $screen-tablet) {
   .mhfa-logo-footer {
     display: inline-block;
@@ -176,12 +180,8 @@ body, .o-navigation-spacing {
   .o-navigation-spacing-bottom {
     bottom: 0;
   }
-}
 
-.o-navigation__nav {
-  padding: 1rem 0;
-}
-
-.o-navigation__nav ul li {
-  vertical-align: top
+  .c-hero {
+    background-size: cover;
+  }
 }
