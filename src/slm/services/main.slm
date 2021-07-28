@@ -2,13 +2,15 @@ article class='o-container js-sticky-container desktop:flex'
   div class='o-article-sidebar desktop:w-sidebar'
     div class='o-content-container--compact u-shift-up'
       ol class='c-nav-list js-sticky js-section-set o-sticky-nav'
-        - let sections = {"What it is": 'orange', "Who it’s for": 'magenta', 'Cost': 'blue', 'How to get in touch': 'red', 'Other ways to get help': 'yellow'};
+        - let sections = Object.keys(this.service.body);
+        - sections.pop(); // omit the substance abuse section from the jump nav
 
-        - for (let i in this.service.sections)
-          - let label = this.service.sections[i];
+        - for (let i in sections)
+          - let label = this.serviceSectionLabels[sections[i]];
+
           li class='c-nav-list__item'
-            a class='scroll js-section c-nav-list__link bg-${sections[label]}--primary' data-section='${this.createSlug(label)}' href='#${this.createSlug(label)}'
-              == label
+            a class='scroll js-section c-nav-list__link bg-${label.color}--primary' href='#${this.createSlug(label.label)}'
+              == label.label
 
               svg class='icon--caret' aria-hidden='true'
                 use xlink:href='#icon-caret-right'
