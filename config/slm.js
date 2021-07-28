@@ -23,7 +23,8 @@ services.map(s => {
 });
 
 module.exports = {
-  name: '',
+  name: package.nicename,
+  description: package.description,
   process: {
     env: {
       NODE_ENV: process.env.NODE_ENV,
@@ -31,6 +32,28 @@ module.exports = {
   },
   root: remotes[process.env.NODE_ENV],
   services: services,
+  serviceSectionLabels: {
+    whatItIs: {
+      label: 'What it is',
+      color: 'orange'
+    },
+    whoItIsFor: {
+      label: 'Who it’s for',
+      color: 'magenta'
+    },
+    cost: {
+      label: 'Cost',
+      color: 'blue'
+    },
+    howToGetInTouch: {
+      label: 'How to get in touch',
+      color: 'red'
+    },
+    otherWaysToGetHelp: {
+      label: 'Other ways to get help',
+      color: 'yellow'
+    }
+  },
   programs: [
     'Trauma Support',
     'Veterans',

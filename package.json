@@ -2,7 +2,7 @@
   "name": "@nycopportunity/mental-health-for-all",
   "nicename": "Mental Health for All",
   "version": "0.0.0-9",
-  "description": "The official NYC Mental Health resource",
+  "description": "Mental Health for All provides resources for New Yorkers seeking help for anxiety, trauma, substance misuse, and more.",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development concurrently \"pttrn -w -np\" \"pttrn serve -w\" -p \"none\"",

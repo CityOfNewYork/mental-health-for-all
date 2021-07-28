@@ -16,7 +16,7 @@ tokens.colors = {
   'green': '#1A9D65', // Families
   'teal': '#0089A2', // LGBTQ New Yorkers
   'blue': '#154A94', // Campaign / Adults
-  'fucia': '#3F289C', // Seniors
+  'fuchsia': '#3F289C', // Seniors
   'purple': '#8A4CC7', // Immigrants
   'slate': '#51596B', // Veterans
 
@@ -76,7 +76,7 @@ tokens.populations = {
   },
   'adults': {
     'text': textWhite,
-    'primary': tokens.colors['fucia']
+    'primary': tokens.colors['fuchsia']
   },
   'seniors': {
     'text': textWhite,

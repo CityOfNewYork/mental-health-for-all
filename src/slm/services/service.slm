@@ -1,10 +1,10 @@
 = extend('/slm/layouts/default')
 
-- title = '{{ SERVICE_TITLE }} | Services | Mental Health for All'
-- description = '{{ SERVICE_DESCRIPTION }}'
-
-- this.service = this.services.find(service => service.title == '{{ SERVICE_TITLE }}')
+- this.service = this.services.find(s => s.title == '{{ SERVICE_TITLE }}')
 - this.service.slug = '{{ SERVICE_SLUG }}';
+
+- title = `${this.service.title} | Services | Mental Health for All`
+- description = this.service.subtitle
 
 = content('main')
   = partial('/slm/services/banner.slm')

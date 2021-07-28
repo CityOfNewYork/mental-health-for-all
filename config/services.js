@@ -315,6 +315,7 @@ module.exports = [
         },
         cost: {
           title: 'Cost',
+          type: 'free',
           content: `
           <p>Free</p>
           `,
@@ -494,18 +495,19 @@ module.exports = [
             body: `
             <h3><a href="https://www1.nyc.gov/site/ocdv/programs/family-justice-centers.page" target="_blank" rel="noopener nofollow">Call a Family Justice Center</a></li></h3>
 
+            <p>There’s a Family Justice Center in every borough.</p>
+
+            <p>Family Justice Centers are providing remote services, and limited in-person services by appointment only for clients citywide that cannot engage in remote services safely or effectively.</p>
+
+            <p>Survivors can still reach the Centers directly Monday to Friday, 9 a.m. to 5 p.m. on the FJC phone lines.</p>
+
             <div class="list-unordered--check">
               <ul>
-                <li>There’s a Family Justice Center in every borough.</li>
-                <li>Family Justice Centers are providing remote services, and limited in-person services by appointment only for clients citywide that cannot engage in remote services safely or effectively.</li>
-                <li>Survivors can still reach the Centers directly Monday to Friday, 9 a.m. to 5 p.m. on the FJC phone lines.</li>
-                  <ul>
-                    <li>Brooklyn:<a href="tel:7182505113">718-250-5113</a></li>
-                    <li>Bronx:<a href="tel:7185081220">718-508-1220</a></li>
-                    <li>Manhattan:<a href="tel:2126022800">212-602-2800</a></li>
-                    <li>Queens:<a href="tel:7185754545">718-575-4545</a></li>
-                    <li>Staten Island:<a href="tel:7186974300">718-697-4300</a></li>
-                  </ul>
+                <li>Brooklyn: <a href="tel:7182505113">718-250-5113</a></li>
+                <li>Bronx: <a href="tel:7185081220">718-508-1220</a></li>
+                <li>Manhattan: <a href="tel:2126022800">212-602-2800</a></li>
+                <li>Queens: <a href="tel:7185754545">718-575-4545</a></li>
+                <li>Staten Island: <a href="tel:7186974300">718-697-4300</a></li>
               </ul>
             </div>
           `,
