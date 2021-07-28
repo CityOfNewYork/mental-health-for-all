@@ -1,10 +1,31 @@
 let tailwindcss = require('@nycopportunity/growingup-patterns/config/tailwind');
 let tokens = require('./tokens');
 
-tailwindcss.theme.colors = tokens.colors;
-tailwindcss.theme.textColor = tokens.colors;
-tailwindcss.theme.backgroundColor = tokens.colors;
-tailwindcss.theme.borderColor = tokens.colors;
+/**
+ * Rebuild color token keys and remove double quotes
+ */
+
+let colors = {};
+let keys = Object.keys(tokens.colors);
+
+for (let index = 0; index < keys.length; index++) {
+  let key = keys[index];
+
+  colors[key.replace(/"/g, '')] = tokens.colors[key];
+}
+
+/**
+ * Set the color settings
+ */
+
+tailwindcss.theme.colors = colors;
+tailwindcss.theme.textColor = colors;
+tailwindcss.theme.backgroundColor = colors;
+tailwindcss.theme.borderColor = colors;
+
+/**
+ * Set responsive screen widths
+ */
 
 tailwindcss.theme.screens = {
   'mobile-only': {
