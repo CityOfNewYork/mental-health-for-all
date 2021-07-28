@@ -62,13 +62,12 @@ article class='o-container js-sticky-container desktop:flex'
 
               div class='c-block-list__item'
                 div class='c-card rounded-lg'
-                  div class='c-card__title'
-                    a href=this.service.slug title=this.service.title
-                      div class='c-card__sticker sticker bg-red text-white' aria-hidden='true'
-                        svg class='icon--large'
-                          use xlink:href='#mhfa-icon-${this.card.type}'
+                  a href=this.service.slug title=this.service.title
+                    div class='c-card__sticker sticker bg-red text-white' aria-hidden='true'
+                      svg class='icon--large'
+                        use xlink:href='#mhfa-icon-${this.card.type}'
 
-                  div class='c-card__body'
+                  div class='c-card__body mb-0'
                     == this.card.body
 
       - if this.service.body.hasOwnProperty('otherWaysToGetHelp')

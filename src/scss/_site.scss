@@ -49,7 +49,7 @@ label {
   cursor: pointer
 }
 
-h1, h2, h3, h4, h5, h6, p, li {
+h1, h2, h3, h4, h5, h6, p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, h6, p, li {
     list-style: revert;
     margin: revert;
     padding: revert;
+    padding-inline-start: 1.7rem;
   }
 
   li,
