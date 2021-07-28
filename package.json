@@ -1,7 +1,7 @@
 {
   "name": "@nycopportunity/mental-health-for-all",
   "nicename": "Mental Health for All",
-  "version": "0.0.0-8",
+  "version": "0.0.0-9",
   "description": "The official NYC Mental Health resource",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,8 @@
   "dependencies": {
     "@nycopportunity/growingup-patterns": "file:../growingupnyc-patterns",
     "@nycopportunity/pattern-attribution": "^1.0.3",
+    "@nycopportunity/pattern-menu": "file:../../nycopportunity/pattern-menu",
+    "@nycopportunity/pattern-navigation": "^1.0.0",
     "@nycopportunity/pttrn-scripts": "^1.0.5",
     "@nycopportunity/wp-archive-vue": "^1.2.0",
     "animate.scss": "^0.0.6",
