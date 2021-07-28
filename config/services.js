@@ -2228,11 +2228,11 @@ module.exports = [
             <h3>Borough-specific public trainings are available for individuals. Please sign up for a training in your borough.</h3>
             <div class="list-unordered--check">
               <ul>
-                <li><a href="https://queens_covidconvo.timetap.com/">Queens</a>Queens</li>
-                <li><a href="https://brooklyn_covidconvo.timetap.com/">Brooklyn</a>Queens</li>
-                <li><a href="https://bronx_covidconvo.timetap.com/">Bronx</a>Queens</li>
-                <li><a href="https://statenisland_covidconvo.timetap.com/">Staten Island</a>Queens</li>
-                <li><a href="https://manhattan_covidconvo.timetap.com/">Manhattan</a>Queens</li>
+                <li><a href="https://queens_covidconvo.timetap.com/">Queens</a></li>
+                <li><a href="https://brooklyn_covidconvo.timetap.com/">Brooklyn</a></li>
+                <li><a href="https://bronx_covidconvo.timetap.com/">Bronx</a></li>
+                <li><a href="https://statenisland_covidconvo.timetap.com/">Staten Island</a></li>
+                <li><a href="https://manhattan_covidconvo.timetap.com/">Manhattan</a></li>
               <ul>
             </div>
           `,
