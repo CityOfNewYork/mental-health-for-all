@@ -315,6 +315,7 @@ module.exports = [
         },
         cost: {
           title: 'Cost',
+          type: 'free',
           content: `
           <p>Free</p>
           `,
