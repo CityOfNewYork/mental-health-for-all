@@ -1,5 +1,5 @@
 - let date = new Date();
-- let opts = {year: 'numeric', month: 'long', day: 'numeric'};
+- let opts = {year: 'numeric'};
 
 footer class='o-footer py-0 overflow-hidden' role='contentinfo'
   div class='o-container'
