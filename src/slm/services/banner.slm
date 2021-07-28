@@ -1,5 +1,9 @@
-/ div class='js-parallax relative'
-header class='c-hero c-hero--large bg-primary bg-banner-${this.service.banner} not-loaded' data-js='lazy'
+- let bannerClass = (this.service.banner) ? `c-hero c-hero--large bg-primary bg-banner-${this.service.banner} not-loaded` : 'c-hero c-hero--short bg-primary'
+
+header class='${bannerClass}' data-js='lazy'
+  - if (!this.service.banner)
+    = partial('/slm/partials/bg-light-b.slm');
+
   div class='o-container relative' style='z-index: 1'
     - if this.service.title
       h1 class='c-hero__title desktop:w-8/12'
@@ -25,5 +29,3 @@ header class='c-hero c-hero--large bg-primary bg-banner-${this.service.banner} n
           - let c = this.service.categories[i];
 
           a class='button--pill bg-yellow--primary' href='${this.root}/services/index?cat=${c.id}' = c.name
-
-
