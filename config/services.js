@@ -2138,7 +2138,7 @@ module.exports = [
     subtitle:
       'Find treatment for opioid use disorder (OUD) with medications like methadone and buprenorphine at your health care provider or one of these resources.',
     programProvider: 'Department of Health and Mental Hygiene (DOHMH)',
-    sections: ['What it is', 'Who it’s for', 'How to get in touch','Other ways to get help'],
+    sections: ['What it is', 'How to get in touch','Other ways to get help'],
     body: {
       whatItIs: {
         title: 'What it is',
@@ -2193,6 +2193,169 @@ module.exports = [
       {
         id: 7,
         name: "Peer Support",
+      },
+      {
+        id: 8,
+        name: "Counseling",
+      },
+    ],
+    population: [
+      {
+        id: 6,
+        name: "Everyone",
+      }
+    ],
+  },
+  {
+    title: 'COVID-19 Community Conversations',
+    subtitle:
+      'COVID-19 Community Conversations provides information and resources regarding the mental health impact of the pandemic.',
+    programProvider: 'Department of Health and Mental Hygiene (DOHMH)',
+    sections: ['What it is', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>3C offers free, one-hour virtual presentations and 3-hour training on mental health resources available in NYC. You can also get information about the impact of COVID-19 on mental health, health disparities in communities of color, trauma, grief, anxiety, and coping skills.</p>
+        <p>Presentations and training are available in Spanish, Cantonese and Mandarin.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'website',
+            body: `
+            <h3>Borough-specific public trainings are available for individuals. Please sign up for a training in your borough.</h3>
+            <div class="list-unordered--check">
+              <ul>
+                <li><a href="https://queens_covidconvo.timetap.com/">Queens</a>Queens</li>
+                <li><a href="https://brooklyn_covidconvo.timetap.com/">Brooklyn</a>Queens</li>
+                <li><a href="https://bronx_covidconvo.timetap.com/">Bronx</a>Queens</li>
+                <li><a href="https://statenisland_covidconvo.timetap.com/">Staten Island</a>Queens</li>
+                <li><a href="https://manhattan_covidconvo.timetap.com/">Manhattan</a>Queens</li>
+              <ul>
+            </div>
+          `,
+          },
+          {
+            type: 'website',
+            body: `
+            <h3>For organizations that would like to have their own training, please email <a href="mailto:covidconvo@health.nyc.gov">covidconvo@health.nyc.gov</a></h3>
+          `,
+          },
+
+        ],
+      },
+    },
+    featured: [],
+    categories: [
+      {
+        id: 1,
+        name: "Trauma Support",
+        slug: "trauma-support"
+      },
+      {
+        id: 5,
+        name: "Help with Anxiety",
+        slug: "help-with-anxiety"
+      },
+      {
+        id: 4,
+        name: "Grief Support",
+        slug: "grief-support"
+      },
+      {
+        id: 7,
+        name: "Peer Support",
+      },
+      {
+        id: 8,
+        name: "Counseling",
+      },
+    ],
+    population: [
+      {
+        id: 6,
+        name: "Everyone",
+      },
+      {
+        id: 3,
+        name: "LGBTQ New Yorkers",
+        slug: "lgbtq-new-yorkers"
+      },
+      {
+        id: 7,
+        name: "Immigrants",
+        slug: "immigrants"
+      },
+      {
+        id: 8,
+        name: "Adults",
+        slug: "adults"
+      },
+      {
+        id: 4,
+        name: "Seniors",
+        slug: "seniors"
+      },
+      {
+        id: 1,
+        name: "Veterans",
+        slug: "veterans"
+      }
+    ],
+  },
+  {
+    title: 'NY Project Hope',
+    subtitle:
+      'A COVID-19 emotional support helpline.',
+    programProvider: 'Department of Health and Mental Hygiene (DOHMH)',
+    sections: ['What it is', 'How to get in touch'],
+    body: {
+      whatItIs: {
+        title: 'What it is',
+        content: `
+        <p>NY Project Hope provides emotional support and assists individuals impacted by the COVID-19 pandemic. Get help with managing stress, developing coping strategies, and connecting to local crisis counseling services.</p>
+        `,
+      },
+      howToGetInTouch: {
+        title: 'How to get in touch',
+        content: [
+          {
+            type: 'calling',
+            body: `
+            <h3>You can call <a href="tel:844-863-9314">844-863-9314</a> to speak to a crisis counselor and get referrals to services in your community. Crisis counselors are available over the phone 7 days a week from 8 a.m. - 10 p.m.</h3>
+            <p>Crisis counselors are available over the phone 7 days a week from 8 a.m. - 10 p.m.</p>
+            `,
+          },
+          {
+            type: 'website',
+            body: `
+            <h3>Local crisis counselors are also available in all 5 boroughs of NYC.</h3>
+            <p>Connect with a crisis counselor by visiting <a href="NYProjectHope.org">NYProjectHope.org</a> and selecting “Find a Provider Near You.” You can also get more information on the website.</p>
+          `,
+          },
+
+        ],
+      },
+    },
+    featured: [],
+    categories: [
+      {
+        id: 1,
+        name: "Trauma Support",
+        slug: "trauma-support"
+      },
+      {
+        id: 5,
+        name: "Help with Anxiety",
+        slug: "help-with-anxiety"
+      },
+      {
+        id: 4,
+        name: "Grief Support",
+        slug: "grief-support"
       },
       {
         id: 8,
