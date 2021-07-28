@@ -1,7 +1,7 @@
 = extend('/slm/layouts/default')
 
-- this.service = this.services.find(s => s.title == 'Clubhouses')
-- this.service.slug = 'clubhouses';
+- this.service = this.services.find(s => s.title == 'COVID-19 Community Conversations')
+- this.service.slug = 'covid19-community-conversations';
 
 - title = `${this.service.title} | Services | Mental Health for All`
 - description = this.service.subtitle

@@ -1,10 +1,10 @@
 = extend('/slm/layouts/default')
 
-- title = 'Mental Health Integrated in Primary Care | Services | Mental Health for All'
-/ - description = '{{ SERVICE_DESCRIPTION }}'
-
-- this.service = this.services.find(service => service.title == 'Mental Health Integrated in Primary Care')
+- this.service = this.services.find(s => s.title == 'Mental Health Integrated in Primary Care')
 - this.service.slug = 'mental-health-integrated-in-primary-care';
+
+- title = `${this.service.title} | Services | Mental Health for All`
+- description = this.service.subtitle
 
 = content('main')
   = partial('/slm/services/banner.slm')
@@ -12,9 +12,4 @@
 
 = content('scripts')
   javascript:
-    window.addEventListener('load', () => {
-      document.querySelectorAll('[data-js="lazy"]').forEach(i => {
-        i.classList.remove('not-loaded');
-        i.classList.add('loaded');
-      });
-    });
+    gunyc.banners();

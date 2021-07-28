@@ -23,7 +23,8 @@ services.map(s => {
 });
 
 module.exports = {
-  name: '',
+  name: package.nicename,
+  description: package.description,
   process: {
     env: {
       NODE_ENV: process.env.NODE_ENV,
