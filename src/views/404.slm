@@ -1,0 +1,27 @@
+= extend('/slm/layouts/default')
+
+- title = `Page not found | Mental Health for All`
+
+= content('main')
+  / header class='c-hero c-hero--short bg-primary not-loaded' data-js='lazy'
+  header class='c-hero c-hero--short bg-primary'
+    = partial('/slm/partials/bg-light-b.slm');
+
+    div class='o-container'
+      h1 class='c-hero__title block text-center mb-0' = "Sorry, that page couldn't be found"
+
+  section class='o-container u-top-spacing u-bottom-spacing'
+    div class='o-content-container pl-0'
+      div class='mx-auto' style='max-width: 600px'
+        p class='text-center pt-8'
+          a class='button--primary bg-magenta--primary border-transparent' href='${this.root}/' Return Home
+
+        p class='text-center py-1' = ' or '
+
+        p class='text-center pb-8'
+
+          a class='button--primary bg-magenta--primary border-transparent' href='${this.root}/services/index' View all Mental Health Services
+
+  = content('scripts')
+    javascript:
+      gunyc.banners()

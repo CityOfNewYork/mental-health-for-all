@@ -49,11 +49,6 @@ label {
   cursor: pointer
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .o-footer,
 .o-footer a {
   color: map-get($colors, 'magenta-dark');
@@ -204,6 +199,11 @@ body, .o-navigation-spacing {
 
   [class*='o-content'] {
     font-size: 1.3125rem;
+
+    h1, h2, h3, h4, h5, h6, p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   .c-card {
