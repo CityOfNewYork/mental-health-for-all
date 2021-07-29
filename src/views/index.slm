@@ -72,7 +72,7 @@
               svg class='o-accordion__caret icon' aria-hidden='true'
                 use xlink:href='#icon-caret-down'
 
-            ul aria-hidden='false' role='region' id='aria-${slug}' class='hidden'
+            ul aria-hidden='true' role='region' id='aria-${slug}' class='hidden'
               li class='c-list-box__subitem bg-${slug}--primary'
 
                 - filteredServices = this.services.filter(service => service.featured.some((people) => people.id === this.population[i].id))
@@ -84,7 +84,7 @@
                     == this.include('/slm/partials/components/card/card.slm');
 
                 div class='text-center py-5'
-                  a href='${this.root}/services/index?pop=${this.population[i].id}' class='button--full-width button--primary text-${slug}--primary' See all services
+                  a href='${this.root}/services/index?pop=${this.population[i].id}' class='button--full-width button--primary text-${slug}--primary' tabindex="-1" See all services
 
       div class='text-center py-5'
         a href='${this.root}/services/index.html' class='button--outline button--outline--gray' See all services
