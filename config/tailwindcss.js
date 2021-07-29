@@ -34,7 +34,8 @@ tailwindcss.theme.screens = {
   'mobile':     { 'min': tokens.screens['small']  },
   'tablet':     { 'min': tokens.screens['medium'] },
   'desktop':    { 'min': tokens.screens['large']  },
-  'desktop-lg': { 'min': tokens.screens['xlarge'] }
+  'desktop-lg': { 'min': tokens.screens['xlarge'] },
+  'tall':       { 'raw': '(min-height: 600px)' }
 };
 
 module.exports = tailwindcss;

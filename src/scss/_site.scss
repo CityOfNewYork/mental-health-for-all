@@ -73,10 +73,6 @@ h1, h2, h3, h4, h5, h6, p {
   width: 29px;
 }
 
-[class*='o-content'] {
-  font-size: 1.3125rem;
-}
-
 .list-unordered--check {
   ul, ol {
     list-style: revert;
@@ -138,15 +134,32 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 body, .o-navigation-spacing {
-  padding-bottom: 86px;
+  padding-bottom: 88px;
 }
 
 .o-navigation-spacing-bottom {
-  bottom: 86px;
+  bottom: 88px;
+}
+
+.o-navigation-spacing-top {
+  top: 0;
 }
 
 .c-hero {
   background-size: 100% auto;
+}
+
+.c-hero--short {
+  padding-bottom: 4.0625rem;
+}
+
+.c-card {
+  margin-right: 0;
+}
+
+.c-card__sticker {
+  position: static;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: $screen-tablet) {
@@ -181,7 +194,29 @@ body, .o-navigation-spacing {
     bottom: 0;
   }
 
+  .o-navigation-spacing-top {
+    top: 88px;
+  }
+
   .c-hero {
     background-size: cover;
+  }
+
+  [class*='o-content'] {
+    font-size: 1.3125rem;
+  }
+
+  .c-card {
+    margin-right: 2.5rem;
+  }
+
+  .c-card__sticker {
+    position: absolute
+  }
+}
+
+@media screen and (min-width: $screen-desktop) {
+  .o-navigation-spacing-top {
+    top: 0px;
   }
 }
