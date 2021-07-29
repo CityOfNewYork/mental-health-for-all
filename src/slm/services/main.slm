@@ -90,4 +90,4 @@ article class='o-container desktop:flex mobile:pb-6 tablet:pb-2'
               div class='bg-white rounded-lg p-6 tablet:p-8'
                 == section.content
 
-  = partial('/slm/partials/back-to-top.slm')
+= partial('/slm/partials/back-to-top.slm')
