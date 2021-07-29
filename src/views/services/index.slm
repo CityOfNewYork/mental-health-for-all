@@ -2,6 +2,7 @@
 = extend('/slm/layouts/default')
 
 - title = 'Services | Mental Health for All'
+- description = 'Find resources for yourself or someone you know who needs support with their mental health.'
 
 = content('main')
   div
@@ -23,7 +24,7 @@
               a href='#' aria-current='page' class='font-normal no-underline text-white' Services
 
             div class='c-hero__tagline desktop:w-9/12'
-              p class='pb-4' Find resources for yourself or someone you know who needs support with their mental health
+              p class='pb-4' = description
 
     div data-js='programs'
       / Vue Application Content

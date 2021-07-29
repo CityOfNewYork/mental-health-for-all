@@ -7,15 +7,26 @@ html lang='en' class='no-js'
     meta name='format-detection' content='telephone=no'
     meta name='mobile-web-app-capable' content='yes'
 
+    / Primary Meta Tags
     title = title
+    meta name='title' content=title
 
     - if (typeof description !== 'undefined')
-      meta name='description' content='${description}'
+      meta name='description' content=description
 
-    / meta name='keywords' content='{{meta_keywords}}'
+    / Open Graph / Facebook
+    meta property='og:type' content='website'
+    meta property='og:title' content=title
 
-    / {% if meta_noindex == true %}
-    / meta name='robots' content='noindex'
+    - if (typeof description !== 'undefined')
+      meta property='og:description' content=description
+
+    meta property='og:image' content='${this.root}/img/social.jpg'
+
+    / Twitter
+    meta property='twitter:card' content='summary_large_image'
+    meta property='twitter:image' content='${this.root}/img/social.jpg'
+    meta property='twitter:image:alt' content='A closeup of a woman smiling and comforted by hug from someone else.'
 
     / link rel='manifest' href='{{theme.path}}/manifest.json'
     / link rel='icon' type='image' href='{{theme.path}}/assets/img/growningup-favicon.png'
@@ -25,7 +36,8 @@ html lang='en' class='no-js'
     link rel='stylesheet' href='${this.root}/css/default.css' type='text/css' media='screen'
 
     /! Global site tag (gtag.js) - Google Analytics
-    script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9HQEJJG8G2"
+    script async='' src='https://www.googletagmanager.com/gtag/js?id=G-9HQEJJG8G2'
+
     javascript:
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
