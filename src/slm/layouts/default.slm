@@ -15,18 +15,19 @@ html lang='en' class='no-js'
       meta name='description' content=description
 
     / Open Graph / Facebook
+    - let imageUrl = (typeof image === 'string') ? `${this.root}/img/${image}` : `${this.root}/img/social.jpg`
+
     meta property='og:type' content='website'
     meta property='og:title' content=title
+    meta property='og:image' content='${imageUrl}'
 
     - if (typeof description !== 'undefined')
       meta property='og:description' content=description
 
-    meta property='og:image' content='${this.root}/img/social.jpg'
-
     / Twitter
     meta property='twitter:card' content='summary_large_image'
-    meta property='twitter:image' content='${this.root}/img/social.jpg'
-    meta property='twitter:image:alt' content='A closeup of a woman smiling and comforted by hug from someone else.'
+    meta property='twitter:image' content='${imageUrl}'
+    / meta property='twitter:image:alt' content='A closeup of a woman smiling and comforted by hug from someone else.'
 
     / link rel='manifest' href='{{theme.path}}/manifest.json'
     / link rel='icon' type='image' href='{{theme.path}}/assets/img/growningup-favicon.png'

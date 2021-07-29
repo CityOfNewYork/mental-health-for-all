@@ -5,6 +5,7 @@
 
 - title = `${this.service.title} | Services | Mental Health for All`
 - description = this.service.subtitle
+- image = (this.service.banner) ? `banners/${this.service.banner}@social.jpg` : false;
 
 = content('main')
   = partial('/slm/services/banner.slm')
