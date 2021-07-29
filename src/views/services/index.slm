@@ -3,6 +3,7 @@
 
 - title = 'Services | Mental Health for All'
 - description = 'Find resources for yourself or someone you know who needs support with their mental health.'
+- image = 'social.jpg'
 
 = content('main')
   div
