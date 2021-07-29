@@ -6,14 +6,24 @@
 = content('main')
   div
     div class='js-parallax'
-      header class='c-hero c-hero--short bg-primary'
+      header class='c-hero c-hero--short bg-primary text-white'
         = partial('/slm/partials/bg-light-b.slm');
 
         div class='c-hero__content o-container'
           div
             h1 class='c-hero__title' Mental Health Services
 
-            div class='c-hero__tagline desktop:w-6/12 pt-2' Find resources for yourself or someone you know who needs support with their mental health
+            nav class='py-4' aria-label='Breadcrumb'
+              a href='${this.root}/' class='text-white' Home
+
+              span class='mx-1' aria-hidden='true'
+                svg class='icon-feather'
+                  use xlink:href='#mhfa-feather-chevron-right'
+
+              a href='#' aria-current='page' class='font-normal no-underline text-white' Services
+
+            div class='c-hero__tagline desktop:w-9/12'
+              p class='pb-4' Find resources for yourself or someone you know who needs support with their mental health
 
     div data-js='programs'
       / Vue Application Content

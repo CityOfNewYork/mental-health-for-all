@@ -68,6 +68,16 @@ label {
   width: 29px;
 }
 
+.icon-feather {
+  width: var(--o-navigation-icon-width);
+  height: var(--o-navigation-icon-height);
+  stroke: var(--o-navigation-icon-stroke-color);
+  stroke-width: var(--o-navigation-icon-stroke-width);
+  stroke-linecap: var(--o-navigation-icon-stroke-linecap);
+  stroke-linejoin: var(--o-navigation-icon-stroke-linejoin);
+  fill: var(--o-navigation-icon-fill);
+}
+
 .list-unordered--check {
   ul, ol {
     list-style: revert;
