@@ -98,7 +98,7 @@ module.exports = {
 
     let terms = [
       {
-        name: "Type of Need",
+        name: "Type of Support",
         slug: "cat",
         programs: unique(cat, 'id')
       },
