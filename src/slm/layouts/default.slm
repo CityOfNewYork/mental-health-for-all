@@ -51,7 +51,8 @@ html lang='en'
 
     /– Preloading Assets
     link rel='preload' href=this.tokens.fonts.main
-    link rel='preload' as='image' href='${this.root}/img/main.jpg'
+    link rel='preload' href='${this.root}/svg/svgs.svg'
+    link rel='preload' href='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/svg/icons.svg'
 
     /**
     /* Primary Stylesheet
@@ -126,5 +127,5 @@ html lang='en'
 
     / The "hot" reloading script. Should not be compiled during production builds.
     / @source https://www.npmjs.com/package/reload
-    - if this.process.env.NODE_ENV !== 'production'
+    - if this.process.env.NODE_ENV === 'development'
       script src='/reload/reload.js'
