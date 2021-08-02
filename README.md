@@ -1,10 +1,10 @@
-# MHFA
+# Mental Health for All
 
-Work-in-progress.
+Mental Health for All provides a directory of resources for New Yorkers seeking help for anxiety, trauma, substance misuse, and more. This repository contains the content and source code for the site. It uses the [NYCO Patterns CLI](https://github.com/CityOfNewYork/patterns-cli) to generate a static build of the 20+ service pages styled using the [Growing Up Patterns](https://github.com/NYCOpportunity/growingupnyc-patterns). The service directory (or archive) uses the [NYCO WordPress Archive Vue](https://github.com/CityOfNewYork/nyco-wp-archive-vue/) to filter the services.
 
-## Contributing
+### Contributing
 
-As of right now this project should be relative to the Growing Up Patterns.
+As of right now the project should be relative to the Growing Up Patterns when developing.
 
 ```
 - 📁 growingupnyc-patterns
@@ -26,97 +26,29 @@ $ npm install
 $ npm start
 ```
 
-## CHANGELOG
+### Growing Up Patterns
 
-### JavaScript Enhancements to Integrate
+The Growing Up Patterns are re-configured for the site to use [custom **Mental Health for All** design tokens](config/tokens.js) (fonts, colors, and media breakpoints). These are used by the [Tailwindcss configuration](config/tailwindcss.js) to generate a custom CSS utilities and the [main site stylesheet](src/scss/_site.scss) with new background images and other pattern overrides.
 
-* [ ] Google Translate Element (need to pull example from [one of our sites, ACCESS?](https://github.com/CityOfNewYork/ACCESS-NYC/blob/main/wp-content/themes/access/src/js/modules/google-translate-element.js))
-* [ ] Web Share Component (available in the [Patterns Scripts library](https://github.com/CityOfNewYork/patterns-scripts/tree/main/src/web-share))
+### Commands
 
-### v0.0.0-5
-
-Implemented of [NYCO WP Archive Vue](https://github.com/CityOfNewYork/nyco-wp-archive-vue) application for filtering Services.
-
-### v0.0.0-4
-
-Implemented first round of content and design of Services.
-
-### v0.0.0-3
-
-Integrated the following items.
-
-* [x] Integrate the icons
-* [x] Potentially use CDN for Styles and Icons (SVGs)
-* [x] Get JavaScript to work (modules need to be implemented on an as needed basis)
-* [x] Single program template (Trauma Support)
-
-### v0.0.0-2
-
-Integrated the following items.
-
-* [x] Styles (locally compiled)
-* [x] Scripts (CDN)
-* [x] Default layout
-* [x] Partials directory with some objects and components
-* [x] Homepage template
-* [x] Archive template
-
-To dos.
-
-* [ ] Integrate the icons
-* [ ] Get JavaScript to work
-* [ ] Potentially use CDN for Styles and Icons (SVGs)
-
-### v0.0.0-1
-
-Initialized an NPM/Node.js project.
-
-```
-$ npm init
-```
-
-Installed the @NYCOpportunity [Patterns CLI](https://github.com/CityOfNewYork/patterns-cli) and [Growing Up NYC Patterns](https://github.com/NYCOpportunity/growingupnyc-patterns).
+Commands are stored in the [package.json](package.json) file and can be run using NPM. Commands follow this pattern.
 
 ```shell
-$ npm install @nycopportunity/pttrn
+$ npm run {{ command }}
 ```
 
-The **Growing Up NYC Patterns** need to be installed as a local file dependency.
+Below is a description of the available commands.
 
-```
-$ cd ../
-$ git clone https://github.com/NYCOpportunity/growingupnyc-patterns
-$ cd mhfa
-$ npm install ../growingupnyc-patterns
-```
+Command    | Arguments         | Description
+-----------|-------------------|-
+`start`    |                   | Runs the Pattern CLI development server with watching and reloading.
+`default`  |                   | Runs a the default Pattern CLI build command.
+`version`  | major/minor/patch | Hooks into the npm version script by regenerating the build with the version number.
+`services` |                   | Regenerates all of the service `.slm` templates from the [config/services.js](config/services.js) file. This needs to be run if any changes are made to the [src/slm/service.slm](src/slm/service.slm) template.
+`ghpages`  |                   | "npm run default && cross-env NODE_ENV=testing pttrn publish"
 
-The path **../growingupnyc-patterns** would vary if Growing Up Patterns is already cloned locally.
-
-Ran the [pttrn scaffold command](https://github.com/CityOfNewYork/patterns-cli/#scaffold) to set up the project.
-
-```shell
-$ npx pttrn scaffold
-```
-
-Added [Pattern NPM scripts](https://github.com/CityOfNewYork/patterns-cli/#npm-scripts) to the project.
-
-```json
-  "scripts": {
-    "start": "cross-env NODE_ENV=development concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
-    "version": "npm run default && git add .",
-    "prepublishOnly": "git push && git push --tags",
-    "publish": "cross-env NODE_ENV=production pttrn publish",
-    "default": "cross-env NODE_ENV=production pttrn"
-  },
-```
-
-Added **.gitignore** to the project.
-
-```shell
-$ touch .gitignore
-```
-
-Updated README.md
+[Additional commands from the Patterns CLI](https://github.com/CityOfNewYork/patterns-cli#commands) can also be run. Most commands will require the `NODE_ENV` variable to be set.
 
 ---
 
