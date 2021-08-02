@@ -107,17 +107,18 @@ module.exports = {
         slug: "pop",
         programs: unique(pop, 'id')
       }
-    ]
+    ];
+
     /**
      * Write the services json
      */
 
     fs.writeFileSync(servciesJson, JSON.stringify(json));
     fs.writeFileSync(termsJson, JSON.stringify(terms));
-    fs.writeFileSync(population, JSON.stringify(unique(pop, 'id')));
+    // fs.writeFileSync(population, JSON.stringify(unique(pop, 'id')));
 
     cnsl.success(`${alerts.str.path(servciesJson)} was made.`);
     cnsl.success(`${alerts.str.path(termsJson)} was made.`);
-    cnsl.success(`${alerts.str.path(population)} was made.`);
+    // cnsl.success(`${alerts.str.path(population)} was made.`);
   },
 };

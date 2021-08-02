@@ -1,1 +1,42 @@
-[{"id":6,"name":"Everyone","slug":"everyone"},{"id":5,"name":"Children and Youth","slug":"children-and-youth"},{"id":2,"name":"Families","slug":"families"},{"id":3,"name":"LGBTQ New Yorkers","slug":"lgbtq-new-yorkers"},{"id":7,"name":"Immigrants","slug":"immigrants"},{"id":8,"name":"Adults","slug":"adults"},{"id":4,"name":"Seniors","slug":"seniors"},{"id":1,"name":"Veterans","slug":"veterans"}]
+[
+  {
+    "id": 6,
+    "name": "Everyone",
+    "slug": "everyone"
+  },
+  {
+    "id": 5,
+    "name": "Children and Youth",
+    "slug": "children-and-youth"
+  },
+  {
+    "id": 2,
+    "name": "Families",
+    "slug": "families"
+  },
+  {
+    "id": 3,
+    "name": "LGBTQ New Yorkers",
+    "slug": "lgbtq-new-yorkers"
+  },
+  {
+    "id": 7,
+    "name": "Immigrants",
+    "slug": "immigrants"
+  },
+  {
+    "id": 8,
+    "name": "Adults",
+    "slug": "adults"
+  },
+  {
+    "id": 4,
+    "name": "Seniors",
+    "slug": "seniors"
+  },
+  {
+    "id": 1,
+    "name": "Veterans",
+    "slug": "veterans"
+  }
+]
