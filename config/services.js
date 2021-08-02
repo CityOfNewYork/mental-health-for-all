@@ -2230,11 +2230,11 @@ module.exports = [
             <h3>Borough-specific public trainings are available for individuals. Please sign up for a training in your borough.</h3>
             <div class="list-unordered--check">
               <ul>
-                <li><a href="https://queens_covidconvo.timetap.com/">Queens</a></li>
-                <li><a href="https://brooklyn_covidconvo.timetap.com/">Brooklyn</a></li>
-                <li><a href="https://bronx_covidconvo.timetap.com/">Bronx</a></li>
-                <li><a href="https://statenisland_covidconvo.timetap.com/">Staten Island</a></li>
-                <li><a href="https://manhattan_covidconvo.timetap.com/">Manhattan</a></li>
+                <li><a target="_blank" href="https://queens_covidconvo.timetap.com/">Queens</a></li>
+                <li><a target="_blank" href="https://brooklyn_covidconvo.timetap.com/">Brooklyn</a></li>
+                <li><a target="_blank" href="https://bronx_covidconvo.timetap.com/">Bronx</a></li>
+                <li><a target="_blank" href="https://statenisland_covidconvo.timetap.com/">Staten Island</a></li>
+                <li><a target="_blank" href="https://manhattan_covidconvo.timetap.com/">Manhattan</a></li>
               <ul>
             </div>
           `,
@@ -2334,7 +2334,7 @@ module.exports = [
             type: 'website',
             body: `
             <h3>Local crisis counselors are also available in all 5 boroughs of NYC.</h3>
-            <p>Connect with a crisis counselor by visiting <a href="NYProjectHope.org">NYProjectHope.org</a> and selecting “Find a Provider Near You.” You can also get more information on the website.</p>
+            <p>Connect with a crisis counselor by visiting <a href="https://nyprojecthope.org/">NYProjectHope.org</a> and selecting “Find a Provider Near You.” You can also get more information on the website.</p>
           `,
           },
 
