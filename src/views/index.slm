@@ -2,10 +2,11 @@
 
 - title = 'Mental Health for All'
 - description = this.description
-- image = 'social.jpg'
+- image = 'main@social.jpg'
 
 = content('head')
-  link rel='preload' as='image' href='${this.root}/img/main.jpg'
+  link rel='preload' as='image' href='${this.root}/img/main@mobile.jpg'
+  link rel='preload' as='image' href='${this.root}/img/main@desktop.jpg'
 
 = content('main')
   section class='o-static-column o-static-column--left c-side-hero js-static bg-toddler--primary'

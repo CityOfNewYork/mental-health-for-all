@@ -52,7 +52,6 @@ html lang='en'
     /– Preloading Assets
     link rel='preload' href=this.tokens.fonts.main
     link rel='preload' as='image' href='${this.root}/img/main.jpg'
-    link rel='preload' as='image' href='${this.root}/img/banners/${this.service.banner}@desktop.jpg'
 
     /**
     /* Primary Stylesheet
