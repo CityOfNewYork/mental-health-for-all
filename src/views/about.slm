@@ -1,7 +1,14 @@
 = extend('/slm/layouts/default')
 
 - title = `${this.about.title} | Mental Health for All`
+- description = this.description
 - image = 'banners/about@social.jpg'
+
+= content('head')
+  link rel='preload' as='image' href='${this.root}/img/banners/about-low@desktop.jpg'
+  link rel='preload' as='image' href='${this.root}/img/banners/about@desktop.jpg'
+  link rel='preload' as='image' href='${this.root}/img/banners/about-low@mobile.jpg'
+  link rel='preload' as='image' href='${this.root}/img/banners/about@mobile.jpg'
 
 = content('main')
   header class='c-hero c-hero--large bg-primary bg-banner-about not-loaded' data-js='lazy'
