@@ -1,4 +1,5 @@
 let package = require('../package.json');
+let tokens = require('./tokens');
 let services = require('./services');
 let banners = require('./banners');
 let substanceAbuse = require('./substance-abuse');
@@ -8,7 +9,15 @@ let population = require('./population.json');
 let remotes = {
   development: '',
   testing: 'https://nycopportunity.github.io/mhfa',
-  production: package.homepage,
+  staging: 'https://cityofnewyork.github.io/mhfa',
+  production: 'https://mentalhealthforall.nyc.gov',
+};
+
+let gtag = {
+  development: 'G-GCXGSB3MXE',
+  testing: 'G-GCXGSB3MXE',
+  staging: 'G-W8WJSREGKV',
+  production: 'G-9HQEJJG8G2'
 };
 
 services.map(s => {
@@ -31,6 +40,8 @@ module.exports = {
     },
   },
   root: remotes[process.env.NODE_ENV],
+  gtag: gtag[process.env.NODE_ENV],
+  tokens: tokens,
   services: services,
   serviceSectionLabels: {
     whatItIs: {

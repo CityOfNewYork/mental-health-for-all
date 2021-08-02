@@ -8,6 +8,12 @@ let banners = require('./banners');
 tokens.output = `"${process.env.PWD}/src/config/_tokens.scss"`;
 
 /**
+ * Fonts
+ */
+
+tokens.fonts.main = '"https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;800&display=swap"';
+
+/**
  * Get banner letters from the banner assignment
  */
 

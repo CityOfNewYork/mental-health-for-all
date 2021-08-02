@@ -4,6 +4,9 @@
 - description = this.description
 - image = 'social.jpg'
 
+= content('head')
+  link rel='preload' as='image' href='${this.root}/img/main.jpg'
+
 = content('main')
   section class='o-static-column o-static-column--left c-side-hero js-static bg-toddler--primary'
     div class='c-side-hero__image bg-main bg-primary'
