@@ -244,11 +244,14 @@ class Programs {
             const tileText = document.createTextNode(
               'Sorry, no results were found.'
             );
+
             title.appendChild(tileText);
+
             const node = document.createElement('p');
             const textnode = document.createTextNode(
               'It looks like there aren’t any services for the filters you selected at this moment.'
             );
+
             node.appendChild(textnode);
             divContainer.appendChild(title);
             divContainer.appendChild(node);
@@ -259,9 +262,10 @@ class Programs {
           };
 
           if (this.query.cat && this.query.pop) {
-            if (this.query.cat.length === 0 && this.query.pop.length === 0) {
+            if (this.query.cat.length === 0 && this.query.pop.length === 0)
               filterdData = [...this.services];
-            } else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
+
+            else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
               filterdData = [...this.services].filter((service) => {
                 let filtered =
                   service.categories.some((category) =>
@@ -272,6 +276,7 @@ class Programs {
                   );
                 return filtered;
               });
+
               filterdData.length === 0 && noResultFound();
             } else if (
               this.query.cat.length > 0 &&
@@ -293,6 +298,7 @@ class Programs {
                 let filteredPop = service.population.some((people) =>
                   this.query.pop.includes(people.id)
                 );
+
                 return filteredPop;
               });
 
@@ -309,18 +315,18 @@ class Programs {
 
               filterdData.length === 0 && noResultFound();
             }
-          } else if (this.query.pop && !this.query.cat) {
+          } else if (this.query.pop && !this.query.cat)
             if (this.query.pop.length > 0) {
               filterdData = [...this.services].filter((service) => {
                 let filteredPop = service.population.some((people) =>
                   this.query.pop.includes(people.id)
                 );
+
                 return filteredPop;
               });
 
               filterdData.length === 0 && noResultFound();
             }
-          }
 
           return filterdData;
         },
@@ -360,20 +366,19 @@ class Programs {
           .queue() // Queue up the first request
           .fetch('terms') // Get the terms from the 'terms' endpoint
           .catch(this.error);
-
-
         },
       updated: function() {
         this.$nextTick(function () {
           // Code that will run only after the
           // entire view has been rendered
             if (!this.isMounted && window.innerWidth > SCREEN_LARGE) {
-              if (document.querySelector('#aria-c-cat') != null) {
-                window.gunyc.toggleTrigger('#aria-c-cat')
-              }
+              if (document.querySelector('#aria-c-cat') != null)
+                window.gunyc.toggleTrigger('#aria-c-cat');
+
               if (document.querySelector('#aria-c-pop') != null) {
-                window.gunyc.toggleTrigger('#aria-c-pop')
-                this.isMounted = true
+                window.gunyc.toggleTrigger('#aria-c-pop');
+
+                this.isMounted = true;
               }
             }
           })
