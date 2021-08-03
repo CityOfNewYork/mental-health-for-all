@@ -5,7 +5,7 @@
   "description": "Mental Health for All provides resources for New Yorkers seeking help for anxiety, trauma, substance misuse, and more.",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development concurrently \"pttrn -w -np\" \"pttrn serve -w\" -p \"none\"",
+    "start": "cross-env NODE_ENV=development concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
     "version": "npm run default && git add .",
     "default": "cross-env NODE_ENV=testing pttrn -np",
     "services": "npx pttrn services",
