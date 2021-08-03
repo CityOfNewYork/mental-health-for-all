@@ -1820,7 +1820,7 @@ module.exports = [
           <ul>
             <li>mental health</li>
             <li>social needs like food or income</li>
-          <ul>
+          </ul>
         </div>
         <p>Screenings done with mothers during pregnancy carry into postpartum follow-up and pediatric visits. The proper care is conducted through a social worker or other mental health professional.</p>
         `,
@@ -1947,7 +1947,7 @@ module.exports = [
             <li>Bullying</li>
             <li>Workplace issues</li>
             <li>And much more</li>
-          <ul>
+          </ul>
         </div>
         <p>Hotlines are anonymous,  confidential, and free.</p>
         `,
@@ -2235,7 +2235,7 @@ module.exports = [
                 <li><a target="_blank" href="https://bronx_covidconvo.timetap.com/">Bronx</a></li>
                 <li><a target="_blank" href="https://statenisland_covidconvo.timetap.com/">Staten Island</a></li>
                 <li><a target="_blank" href="https://manhattan_covidconvo.timetap.com/">Manhattan</a></li>
-              <ul>
+              </ul>
             </div>
           `,
           },
