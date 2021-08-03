@@ -38,4 +38,13 @@ tailwindcss.theme.screens = {
   'tall':       { 'raw': '(min-height: 600px)' }
 };
 
+tailwindcss.purge = {
+  enabled: true,
+  content: [
+    './dist/**/*.html',
+    './src/views/**/*.slm',
+    './src/views/**/*.vue'
+  ]
+};
+
 module.exports = tailwindcss;
