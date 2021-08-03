@@ -1,0 +1,18 @@
+= extend('/slm/layouts/default')
+
+- title = 'Banners | Mental Health for All'
+
+= content('head')
+  / This page should not be indexed
+  meta name='robots' content='noindex,nofollow'
+
+= content('main')
+  - for (let s in this.services)
+    - this.service = this.services[s];
+    - this.service.slug = this.createSlug(this.service.title);
+
+    = partial('/slm/services/banner.slm')
+
+= content('scripts')
+  javascript:
+    gunyc.banners();

@@ -1,12 +1,18 @@
 = extend('/slm/layouts/default')
 
 - title = 'Mental Health for All'
+- description = this.description
+- image = 'main@social.jpg'
+
+= content('head')
+  link rel='preload' as='image' href='${this.root}/img/main@mobile.jpg'
+  link rel='preload' as='image' href='${this.root}/img/main@desktop.jpg'
 
 = content('main')
   section class='o-static-column o-static-column--left c-side-hero js-static bg-toddler--primary'
-    div class='c-side-hero__image bg-main bg-color-purple'
+    div class='c-side-hero__image bg-main bg-primary'
 
-    div class='c-side-hero__content bg-color-purple desktop:bg-transparent overflow-hidden'
+    div class='c-side-hero__content bg-primary text-white desktop:bg-transparent overflow-hidden'
       svg class='bg-light-a desktop:hidden' viewBox='0 0 1260 384' fill='none' xmlns='http://www.w3.org/2000/svg'
         path d='M540.959 -34.3182L1259.95 -34.3182L1116.69 460.74L0.698089 455.732L540.959 -34.3182Z' fill='url(#bg-light-a)' fill-opacity='0.8'
 
@@ -16,42 +22,35 @@
             stop offset='1' stop-color='#DA7CB5' stop-opacity='0'
 
       h1 class='c-side-hero__title'
-        p
+        div
           | The official
-          svg.icon--nyc.mx-2 role="img"
+
+          svg class='icon--nyc mx-2' role='img'
             title New York City
-            use xlink:href="#icon-nyc-logo"
-          | Mental Health
-          |  resource for
+            use xlink:href='#icon-nyc-logo'
+
+          | Mental Health resource for
 
         div class='c-side-hero__title__large rotating-text'
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Children and youth"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Families"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Adults"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Seniors"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Veterans"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Seniors"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "LGBTQ"
-          span data-js="rotate-text" class="rotating-text__entry"
-            == "Immigrants"
-          span data-js="rotate-controller" id="rotate" class="animated"
+          - let audiences = ['Children and youth', 'Families', 'Adults', 'Seniors', 'Veterans', 'Seniors', 'LGBTQ', 'Immigrants'];
 
-      a.button--outline.button--outline--white href='${this.root}/programs/index.html' Explore Mental Health services
+          - for (let audience in audiences)
+            - let a = audiences[audience];
+
+            span data-js='rotate-text' class='rotating-text__entry'
+              = a
+
+          span data-js='rotate-controller' id='rotate' class='animated'
+
+      a.button--outline.button--outline--white href='${this.root}/services/index.html' Explore Mental Health services
 
   section class='o-scroll-column o-scroll-column--right'
     div clas='o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar'
       div class='c-list-box c-list-box--quaternary o-accordion'
         div class='c-list-box__item o-accordion__item'
-          div class='c-list-box__heading o-accordion__header bg-color-gray-light text-color-black flex items-center'
+          div class='c-list-box__heading o-accordion__header bg-gray-light text-black flex items-center'
             div class='pr-4'
-              div class='sticker sticker--medium text-color-purple bg-color-white' aria-hidden='true'
+              div class='sticker sticker--medium text-primary bg-white' aria-hidden='true'
                 svg style='width: 29px'
                   use xlink:href='#mhfa-icon-calling'
 
@@ -60,38 +59,40 @@
 
               span class='c-list-box__subheading' The hotlines below are free, confidential, and available 24/7
 
-          ul class='c-list-box__content bg-color-gray-light text-color-black'
+          ul class='c-list-box__content bg-gray-light'
             li class='c-list-box__subitem pb-0'
-              a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary button--text hover:text-color-purple hover:border-color-purple' Speak to a counselor from NYC Well
+              a href='https://nycwell.cityofnewyork.us/en/get-help-now/' class='button--full-width button--primary button--text hover:text-primary hover:border-primary' Speak to a counselor from NYC Well
 
             li class='c-list-box__subitem'
-              a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary button--text hover:text-color-purple hover:border-color-purple' National Suicide Prevention Lifeline
+              a href='https://suicidepreventionlifeline.org/talk-to-someone-now/' class='button--full-width button--primary button--text hover:text-primary hover:border-primary' National Suicide Prevention Lifeline
 
-      div class='c-list-box c-list-box--quaternary js-accordion o-accordion pt-0' aria-multiselectable='true' data-multiselectable='true' role='presentation'
+      div class='c-list-box c-list-box--quaternary js-accordion o-accordion pt-0'
         - for (let i in this.population)
           - let slug = this.createSlug(this.population[i].name);
 
           div class='c-list-box__item o-accordion__item'
-            button data-js='accordion' type='button' aria-controls='aria-${slug}' aria-expanded='false' class='c-list-box__heading o-accordion__header bg-${slug}--secondary'
+            button data-js='accordion' type='button' aria-controls='aria-${slug}' aria-expanded='false' class='c-list-box__heading o-accordion__header bg-${slug}--primary'
               == this.population[i].name
 
               svg class='o-accordion__caret icon' aria-hidden='true'
                 use xlink:href='#icon-caret-down'
 
-            ul aria-hidden='false' role='region' id='aria-${slug}' class='hidden'
+            ul aria-hidden='true' role='region' id='aria-${slug}' class='hidden'
               li class='c-list-box__subitem bg-${slug}--primary'
-                - filteredServices = this.services.filter(service => service.population.id === this.population[i].id)
-                - for (let i in filteredServices.slice(0, 2))
-                  - card = filteredServices[i]
 
-                  div class='c-block-list__item text-color-black'
+                - filteredServices = this.services.filter(service => service.featured.some((people) => people.id === this.population[i].id))
+
+                - for (let fs in filteredServices)
+                  - card = filteredServices[fs]
+
+                  div class='c-block-list__item text-black'
                     == this.include('/slm/partials/components/card/card.slm');
 
                 div class='text-center py-5'
-                  a href='${this.root}/programs/index.html' class='button--full-width button--primary text-${slug}--primary' See all services
+                  a href='${this.root}/services/index?pop=${this.population[i].id}' class='button--full-width button--primary text-${slug}--primary' tabindex="-1" See all services
 
       div class='text-center py-5'
-        a href='${this.root}/programs/index.html' class='button--outline button--outline--gray' See all services
+        a href='${this.root}/services/index.html' class='button--outline button--outline--gray' See all services
 
   = content('scripts')
     javascript:

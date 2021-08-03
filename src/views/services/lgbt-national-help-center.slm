@@ -1,0 +1,23 @@
+= extend('/slm/layouts/default')
+
+- this.service = this.services.find(s => s.title == 'LGBT National Help Center')
+- this.service.slug = 'lgbt-national-help-center';
+
+- title = `${this.service.title} | Services | Mental Health for All`
+- description = this.service.subtitle
+- image = (this.service.banner) ? `banners/${this.service.banner}@social.jpg` : false;
+
+= content('head')
+  - if (this.service.banner)
+    link rel='preload' as='image' href='${this.root}/img/banners/${this.service.banner}-low@desktop.jpg'
+    link rel='preload' as='image' href='${this.root}/img/banners/${this.service.banner}@desktop.jpg'
+    link rel='preload' as='image' href='${this.root}/img/banners/${this.service.banner}-low@mobile.jpg'
+    link rel='preload' as='image' href='${this.root}/img/banners/${this.service.banner}@mobile.jpg'
+
+= content('main')
+  = partial('/slm/services/banner.slm')
+  = partial('/slm/services/main.slm')
+
+= content('scripts')
+  javascript:
+    gunyc.banners();

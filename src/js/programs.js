@@ -1,7 +1,7 @@
 'use strict';
 
 import Vue from 'vue/dist/vue.esm.browser';
-import ProgramsArchive from '../views/programs/archive.vue';
+import ProgramsArchive from '../views/services/archive.vue';
 import Services from '../../dist/data/services.json';
 
 /**
@@ -54,7 +54,7 @@ class Programs {
              *
              * @type  {String}
              */
-            terms: 'https://cityofnewyork.github.io/mhfa/data/terms.json',
+            terms: 'https://nycopportunity.github.io/mhfa/data/terms.json',
 
             /**
              * A required endpoint for the list of services. This is based on
@@ -62,7 +62,13 @@ class Programs {
              *
              * @type  {String}
              */
-            programs: 'https://cityofnewyork.github.io/mhfa/data/services.json',
+            programs: 'https://nycopportunity.github.io/mhfa/data/services.json',
+            /**
+             *
+             *
+             * @type  {boolean}
+             */
+            isMounted: false,
           },
 
           /**
@@ -139,6 +145,43 @@ class Programs {
         },
 
         /**
+         * Filters the term data and toggles the checked attribute, then, invokes
+         * the filtering method.
+         *
+         * @param   {Object}  event   The click event
+         * @param   {String}  parent  The taxonomy parent
+         * @param   {Number}  parent  The taxonomy id
+         *
+         * @return  {Object}          Vue Instance
+         */
+        link: function(event, parent, id) {
+          this.change({
+            event: event,
+            data: {
+              parent: parent,
+              id: id
+            }
+          });
+
+          let term = this.terms.find(t => t.slug === parent)['filters']
+            .find(term => term.id === id);
+
+          this.$set(term, 'checked', !term.checked);
+
+          return this;
+        },
+
+        /**
+         * Generate class names based on population name
+         * @param {*} name
+         */
+        classNameGenerator: function(name) {
+          let className = ['bg-' + name.toLowerCase() + '--secondary'];
+
+          return className;
+        },
+
+        /**
          * Overrides wpQuery from the archive.vue library which makes the
          * request for the Services data. Since the data is bundled with the
          * application there is no need to make a request. We just mock the
@@ -201,11 +244,14 @@ class Programs {
             const tileText = document.createTextNode(
               'Sorry, no results were found.'
             );
+
             title.appendChild(tileText);
+
             const node = document.createElement('p');
             const textnode = document.createTextNode(
               'It looks like there aren’t any services for the filters you selected at this moment.'
             );
+
             node.appendChild(textnode);
             divContainer.appendChild(title);
             divContainer.appendChild(node);
@@ -216,14 +262,19 @@ class Programs {
           };
 
           if (this.query.cat && this.query.pop) {
-            if (this.query.cat.length === 0 && this.query.pop.length === 0) {
+            if (this.query.cat.length === 0 && this.query.pop.length === 0)
               filterdData = [...this.services];
-            } else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
+
+            else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
               filterdData = [...this.services].filter((service) => {
-                return (
-                  (this.query.cat.includes(service.category.id) &&
-                  this.query.pop.includes(service.population.id))
-                );
+                let filtered =
+                  service.categories.some((category) =>
+                    this.query.cat.includes(category.id)
+                  ) &&
+                  service.population.some((people) =>
+                    this.query.pop.includes(people.id)
+                  );
+                return filtered;
               });
 
               filterdData.length === 0 && noResultFound();
@@ -232,7 +283,10 @@ class Programs {
               this.query.pop.length === 0
             ) {
               filterdData = [...this.services].filter((service) => {
-                return (this.query.cat.includes(service.category.id));
+                let filteredCat = service.categories.some((category) =>
+                  this.query.cat.includes(category.id)
+                );
+                return filteredCat;
               });
 
               filterdData.length === 0 && noResultFound();
@@ -241,7 +295,11 @@ class Programs {
               this.query.cat.length === 0
             ) {
               filterdData = [...this.services].filter((service) => {
-                return (this.query.pop.includes(service.population.id));
+                let filteredPop = service.population.some((people) =>
+                  this.query.pop.includes(people.id)
+                );
+
+                return filteredPop;
               });
 
               filterdData.length === 0 && noResultFound();
@@ -249,20 +307,26 @@ class Programs {
           } else if (this.query.cat && !this.query.pop) {
             if (this.query.cat.length > 0) {
               filterdData = [...this.services].filter((service) => {
-                return (this.query.cat.includes(service.category.id));
+                let filteredCat = service.categories.some((category) =>
+                  this.query.cat.includes(category.id)
+                );
+                return filteredCat;
               });
 
               filterdData.length === 0 && noResultFound();
             }
-          } else if (this.query.pop && !this.query.cat) {
+          } else if (this.query.pop && !this.query.cat)
             if (this.query.pop.length > 0) {
               filterdData = [...this.services].filter((service) => {
-                return (this.query.pop.includes(service.population.id));
+                let filteredPop = service.population.some((people) =>
+                  this.query.pop.includes(people.id)
+                );
+
+                return filteredPop;
               });
 
               filterdData.length === 0 && noResultFound();
             }
-          }
 
           return filterdData;
         },
@@ -278,22 +342,11 @@ class Programs {
          */
 
         slugify: function(string) {
-          const a =
-            'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
-          const b =
-            'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
-          const p = new RegExp(a.split('').join('|'), 'g');
-
           return string
-            .toString()
             .toLowerCase()
-            .replace(/\s+/g, '-') // Replace spaces with -
-            .replace(p, (c) => b.charAt(a.indexOf(c))) // Replace special characters
-            .replace(/&/g, '-and-') // Replace & with 'and'
-            .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-            .replace(/\-\-+/g, '-') // Replace multiple - with single -
-            .replace(/^-+/, '') // Trim - from start of text
-            .replace(/-+$/, ''); // Trim - from end of text
+            .replace(/[^0-9a-zA-Z - _]+/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-');
         },
       },
 
@@ -313,6 +366,23 @@ class Programs {
           .queue() // Queue up the first request
           .fetch('terms') // Get the terms from the 'terms' endpoint
           .catch(this.error);
+        },
+      updated: function() {
+        this.$nextTick(function () {
+          // Code that will run only after the
+          // entire view has been rendered
+            if (!this.isMounted && window.innerWidth > SCREEN_LARGE) {
+              if (document.querySelector('#aria-c-cat') != null)
+                window.gunyc.toggleTrigger('#aria-c-cat');
+
+              if (document.querySelector('#aria-c-pop') != null) {
+                window.gunyc.toggleTrigger('#aria-c-pop');
+
+                this.isMounted = true;
+              }
+            }
+          })
+
       },
     }).$mount('[data-js="programs"]');
   }

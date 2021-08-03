@@ -1,5 +1,6 @@
+@import 'tokens';
 @import '@nycopportunity/growingup-patterns/src/config/fonts';
 
-$font-src: 'https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;800&display=swap';
+$font-src: map-get(map-get($tokens, 'fonts'), 'main');
 $font-family-text: 'Public Sans', sans-serif;
 $font-family-display: 'Public Sans', sans-serif;

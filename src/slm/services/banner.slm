@@ -1,0 +1,48 @@
+- let bannerClass = (this.service.banner) ? `c-hero c-hero--large bg-primary bg-banner-${this.service.banner} not-loaded` : 'c-hero c-hero--short bg-primary'
+- let width = (this.service.banner) ? 'desktop:w-5/12' : 'desktop:w-9/12';
+
+header class='${bannerClass}' data-js='lazy'
+  - if (!this.service.banner)
+    = partial('/slm/partials/bg-light-b.slm');
+
+  div class='o-container relative' style='z-index: 1'
+    - if this.service.title
+      h1 class='c-hero__title desktop:w-8/12'
+        = this.service.title
+
+      nav class='py-4' aria-label='Breadcrumb'
+        a href='${this.root}/' class='text-white' Home
+
+        span class='mx-1' aria-hidden='true'
+          svg class='icon-feather'
+            use xlink:href='#mhfa-feather-chevron-right'
+
+        a href='${this.root}/services/index' class='text-white' Services
+
+        span class='mx-1' aria-hidden='true'
+          svg class='icon-feather'
+            use xlink:href='#mhfa-feather-chevron-right'
+
+        a href='#' aria-current='page' class='font-normal no-underline text-white' = this.service.title
+
+    - if this.service.subtitle
+      p class='c-hero__tagline ${width} text-lg'
+        = this.service.subtitle
+
+        - if this.service.programProvider
+          = ' Provided by '
+          b = this.service.programProvider
+          = '.'
+
+    - if this.service.categories && this.service.categories.length > 0
+      p class='c-hero__tags ${width}'
+        - if this.service.population && this.service.population.length > 0
+          - for (let i in this.service.population)
+            - let p = this.service.population[i];
+
+            a class='button--pill bg-${this.createSlug(p.name)}--primary' href='${this.root}/services/index?pop=${p.id}' = p.name
+
+        - for (let i in this.service.categories)
+          - let c = this.service.categories[i];
+
+          a class='button--pill bg-yellow--primary' href='${this.root}/services/index?cat=${c.id}' = c.name

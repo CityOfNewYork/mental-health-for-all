@@ -1,0 +1,23 @@
+= extend('/slm/layouts/default')
+
+- this.service = this.services.find(s => s.title == 'Crime Victim Assistance Program (CVAP)')
+- this.service.slug = 'crime-victim-assistance-program-cvap';
+
+- title = `${this.service.title} | Services | Mental Health for All`
+- description = this.service.subtitle
+- image = (this.service.banner) ? `banners/${this.service.banner}@social.jpg` : false;
+
+= content('head')
+  - if (this.service.banner)
+    link rel='preload' as='image' href='${this.root}/img/banners/${this.service.banner}-low@desktop.jpg'
+    link rel='preload' as='image' href='${this.root}/img/banners/${this.service.banner}@desktop.jpg'
+    link rel='preload' as='image' href='${this.root}/img/banners/${this.service.banner}-low@mobile.jpg'
+    link rel='preload' as='image' href='${this.root}/img/banners/${this.service.banner}@mobile.jpg'
+
+= content('main')
+  = partial('/slm/services/banner.slm')
+  = partial('/slm/services/main.slm')
+
+= content('scripts')
+  javascript:
+    gunyc.banners();

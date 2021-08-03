@@ -1,0 +1,7 @@
+svg class='bg-light-b' viewBox='0 0 1260 384' fill='none' xmlns='http://www.w3.org/2000/svg'
+  path d='M540.959 -34.3182L1259.95 -34.3182L1116.69 460.74L0.698089 455.732L540.959 -34.3182Z' fill='url(#bg-light-b)' fill-opacity='0.8'
+
+  defs
+    linearGradient id='bg-light-b' x1='732.41' y1='-19.1426' x2='664.587' y2='349.294' gradientUnits='userSpaceOnUse'
+      stop stop-color='#DA7CB5'
+      stop offset='1' stop-color='#DA7CB5' stop-opacity='0'

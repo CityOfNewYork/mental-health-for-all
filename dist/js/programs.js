@@ -12550,10 +12550,6 @@ var Programs = (function () {
         })
         .then(this.wp)
         .catch(message => {
-          // eslint-disable-next-line no-undef
-          {
-            console.dir(message);
-          }
         });
       },
 
@@ -12790,10 +12786,6 @@ var Programs = (function () {
        * @param {Object} response  The error response
        */
       error: function(response) {
-        // eslint-disable-next-line no-undef
-        {
-          console.dir(response);
-        }
       },
 
       /**
@@ -12934,10 +12926,7 @@ var Programs = (function () {
     var _c = _vm._self._c || _h;
     return _c(
       "section",
-      {
-        staticClass:
-          "o-container u-bottom-spacing u-top-spacing-small desktop:flex"
-      },
+      { staticClass: "o-container u-top-spacing-small desktop:flex" },
       [
         _c(
           "div",
@@ -12946,16 +12935,13 @@ var Programs = (function () {
               "o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"
           },
           [
+            _vm._m(0),
+            _vm._v(" "),
             _c(
               "div",
               {
                 staticClass:
-                  "c-list-box c-list-box--quaternary js-accordion o-accordion",
-                attrs: {
-                  "data-multiselectable": "false",
-                  role: "presentation",
-                  "aria-multiselectable": "false"
-                }
+                  "c-list-box c-list-box--quaternary js-accordion o-accordion"
               },
               _vm._l(_vm.terms, function(term) {
                 return _c(
@@ -12971,7 +12957,7 @@ var Programs = (function () {
                         class:
                           "c-list-box__heading o-accordion__header bg-" +
                           term.slug +
-                          "--secondary active",
+                          "--primary active",
                         attrs: {
                           "data-js": "accordion",
                           type: "button",
@@ -13001,37 +12987,13 @@ var Programs = (function () {
                     _c(
                       "ul",
                       {
+                        staticClass: "active hidden",
                         attrs: {
-                          role: "region",
                           "aria-hidden": "false",
                           id: "aria-c-" + term.slug
                         }
                       },
                       [
-                        _c(
-                          "li",
-                          {
-                            class:
-                              "c-list-box__subitem bg-" + term.slug + "--primary"
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                on: {
-                                  click: function($event) {
-                                    return _vm.toggle({
-                                      event: $event,
-                                      data: { parent: term.slug }
-                                    })
-                                  }
-                                }
-                              },
-                              [_vm._v("\n              Toggle All\n            ")]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
                         _vm._l(term.filters, function(filter) {
                           return _c(
                             "li",
@@ -13074,6 +13036,7 @@ var Programs = (function () {
                                 _c(
                                   "span",
                                   {
+                                    staticClass: "select-none",
                                     domProps: { innerHTML: _vm._s(filter.name) }
                                   },
                                   [_vm._v(_vm._s(filter.name))]
@@ -13081,7 +13044,34 @@ var Programs = (function () {
                               ])
                             ]
                           )
-                        })
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          {
+                            class:
+                              "c-list-box__subitem bg-" +
+                              term.slug +
+                              "--primary text-center"
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "button--outline p-3 w-full mb-4",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.toggle({
+                                      event: $event,
+                                      data: { parent: term.slug }
+                                    })
+                                  }
+                                }
+                              },
+                              [_vm._v("\n              Toggle All\n            ")]
+                            )
+                          ]
+                        )
                       ],
                       2
                     )
@@ -13104,17 +13094,13 @@ var Programs = (function () {
                       _c(
                         "div",
                         {
-                          staticClass:
-                            "c-block-list--shade o-content-container u-sm-gutter",
+                          staticClass: "c-block-list--shade o-content-container",
                           attrs: { "data-js": "filtered-results" }
                         },
                         _vm._l(page.posts, function(post) {
                           return _c(
                             "div",
-                            {
-                              key: post.id,
-                              staticClass: "c-block-list__item u-sm-gutter"
-                            },
+                            { key: post.id, staticClass: "u-lg-gutter" },
                             [
                               _c(
                                 "div",
@@ -13158,48 +13144,62 @@ var Programs = (function () {
                                     "div",
                                     { staticClass: "c-card__tags order-last" },
                                     [
-                                      _c(
-                                        "button",
-                                        {
-                                          staticClass:
-                                            "button--pill js-category button--pill--alt",
-                                          on: {
-                                            click: function($event) {
-                                              return _vm.change({
-                                                event: $event,
-                                                data: {
-                                                  parent: "cat",
-                                                  id: post.category.id
-                                                }
-                                              })
+                                      _vm._l(post.population, function(people) {
+                                        return _c(
+                                          "button",
+                                          {
+                                            key: people.id,
+                                            class:
+                                              "button--pill bg-" +
+                                              _vm.slugify(people.name) +
+                                              "--primary",
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.link(
+                                                  $event,
+                                                  "pop",
+                                                  people.id
+                                                )
+                                              }
                                             }
-                                          }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    " +
-                                              _vm._s(post.category.name) +
-                                              "\n                  "
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "a",
-                                        {
-                                          staticClass:
-                                            "button--pill js-category bg-pre-schooler--primary",
-                                          attrs: { href: "#" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                    " +
-                                              _vm._s(post.population.name) +
-                                              "\n                  "
-                                          )
-                                        ]
-                                      )
-                                    ]
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                    " +
+                                                _vm._s(people.name) +
+                                                "\n                  "
+                                            )
+                                          ]
+                                        )
+                                      }),
+                                      _vm._l(post.categories, function(category) {
+                                        return _c(
+                                          "button",
+                                          {
+                                            key: category.name,
+                                            class:
+                                              "button--pill bg-yellow--primary",
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.link(
+                                                  $event,
+                                                  "cat",
+                                                  category.id
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                    " +
+                                                _vm._s(category.name) +
+                                                "\n                  "
+                                            )
+                                          ]
+                                        )
+                                      })
+                                    ],
+                                    2
                                   )
                                 ]
                               )
@@ -13213,51 +13213,21 @@ var Programs = (function () {
               ])
             }),
             0
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "o-content-container--compact pagination mobile:flex justify-between"
-            },
-            [
-              _c("div", {
-                staticClass: "previous tablet:mr-3 mb-3 tablet:mb-0 text-center",
-                attrs: { id: "paginate" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "paginate text-center" }, [
-                _vm.next
-                  ? _c(
-                      "button",
-                      {
-                        staticClass:
-                          "button--outline button--outline--gray paginate",
-                        attrs: { "data-amount": "1" },
-                        on: { click: _vm.paginate }
-                      },
-                      [_vm._v("\n          Next\n        ")]
-                    )
-                  : _vm._e()
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("p", [
-            _vm.next
-              ? _c(
-                  "button",
-                  { attrs: { "data-amount": "1" }, on: { click: _vm.paginate } },
-                  [_vm._v("\n        Load More Posts\n      ")]
-                )
-              : _vm._e()
-          ])
+          )
         ])
       ]
     )
   };
-  var __vue_staticRenderFns__ = [];
+  var __vue_staticRenderFns__ = [
+    function() {
+      var _vm = this;
+      var _h = _vm.$createElement;
+      var _c = _vm._self._c || _h;
+      return _c("div", { staticClass: "px-8 py-3" }, [
+        _c("h3", [_vm._v("Filter Services:")])
+      ])
+    }
+  ];
   __vue_render__._withStripped = true;
 
     /* style */
@@ -13291,164 +13261,1149 @@ var Programs = (function () {
 
   var Services = [
   	{
-  		subtitle: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
-  		title: "Early Childhood Mental Health Network",
-  		programProvider: "Department of Health and Mental Hygiene",
-  		body: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
-  		link: "./programs/",
-  		featured: true,
-  		category: {
-  			id: 9,
-  			name: "Mental Health Care "
-  		},
-  		population: {
-  			id: 2,
-  			name: "Children and Families"
-  		}
+  		subtitle: "A COVID-19 emotional support helpline.",
+  		title: "NY Project Hope",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "A COVID-19 emotional support helpline.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
   	},
   	{
-  		subtitle: "People who struggle with mental illness and substance abuse can go to a Clubhouse to connect with peers and get help rejoining society.",
+  		subtitle: "COVID-19 Community Conversations provides information and resources regarding the mental health impact of the pandemic.",
+  		title: "COVID-19 Community Conversations",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "COVID-19 Community Conversations provides information and resources regarding the mental health impact of the pandemic.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			},
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Find treatment for opioid use disorder (OUD) with medications like methadone and buprenorphine at your health care provider or one of these resources.",
+  		title: "Medications for Opioid Use Disorder",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "Find treatment for opioid use disorder (OUD) with medications like methadone and buprenorphine at your health care provider or one of these resources.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Parents can get support through NYC Well and the Center on Addiction if their children struggle with drug or alcohol use.",
+  		title: "Child Use of Prescription Pain Relievers or Heroin",
+  		programProvider: "NYC Well",
+  		body: "Parents can get support through NYC Well and the Center on Addiction if their children struggle with drug or alcohol use.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "LGBTQ New Yorkers under age 25 can connect to a Trevor counselor if they’re in crisis, feeling suicidal, or need a safe and judgment-free place to talk.",
+  		title: "The Trevor Project",
+  		programProvider: "The Trevor Project",
+  		body: "LGBTQ New Yorkers under age 25 can connect to a Trevor counselor if they’re in crisis, feeling suicidal, or need a safe and judgment-free place to talk.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "LGBTQ New Yorkers can call National Help Center Hotlines to connect with peers about coming out, relationships, and other concerns.",
+  		title: "LGBT National Help Center",
+  		programProvider: "LGBT National Help Center",
+  		body: "LGBTQ New Yorkers can call National Help Center Hotlines to connect with peers about coming out, relationships, and other concerns.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Routine mental health screenings for primary care patients at NYC Health + Hospitals locations.",
+  		title: "Mental Health Integrated in Primary Care",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Routine mental health screenings for primary care patients at NYC Health + Hospitals locations.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Routine screenings for pregnant patients and their children under 3 years old are available at select Health + Hospitals locations.",
+  		title: "3-2-1 Impact",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Routine screenings for pregnant patients and their children under 3 years old are available at select Health + Hospitals locations.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Mental health resources at NYCDOE schools to meet the emotional health and academic needs of your child.",
+  		title: "School Mental Health Services",
+  		programProvider: "Department of Education (DOE) and Department of Health and Mental Hygiene (DOHMH)",
+  		body: "Mental health resources at NYCDOE schools to meet the emotional health and academic needs of your child.",
+  		featured: [
+  			{
+  				id: 5,
+  				name: "Children and Youth"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			},
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "New Yorkers with a serious mental illness can get referred to specialty mental health services.",
+  		title: "Mobile Treatment Services Accessible Through the Single Point of Access",
+  		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
+  		body: "New Yorkers with a serious mental illness can get referred to specialty mental health services.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Families can get bilingual counseling with therapists at NYC Health + Hospitals to improve communication and build stronger relationships.",
+  		title: "Family Counseling",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Families can get bilingual counseling with therapists at NYC Health + Hospitals to improve communication and build stronger relationships.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Pride Health Centers provide primary care services, mental health support and sexual/reproductive services for LGBTQ New Yorkers.",
+  		title: "Gotham Pride Health Centers",
+  		programProvider: "NYC Health + Hospitals Pride Health Centers",
+  		body: "Pride Health Centers provide primary care services, mental health support and sexual/reproductive services for LGBTQ New Yorkers.",
+  		featured: [
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			},
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Safer use supplies and education for people who use drugs",
+  		title: "Syringe Service Programs",
+  		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
+  		body: "Safer use supplies and education for people who use drugs",
+  		featured: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Free Naloxone kits from community-based programs and pharmacies to reverse an opioid overdose.",
+  		title: "Naloxone",
+  		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
+  		body: "Free Naloxone kits from community-based programs and pharmacies to reverse an opioid overdose.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Psychiatric emergency services for New Yorkers.",
+  		title: "Comprehensive Psychiatric Emergency Services Program (CPEP) at Health + Hospitals",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "Psychiatric emergency services for New Yorkers.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
+  		title: "Early Childhood Mental Health Network",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
+  		featured: [
+  			{
+  				id: 2,
+  				name: "Families"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "Homeless and runaway youth who need food and other essentials can go to emergency drop-in centers throughout New York City.",
+  		title: "Drop-in Centers for Runaway and Homeless Youth",
+  		programProvider: "Department of Youth and Community Development (DYCD)",
+  		body: "Homeless and runaway youth who need food and other essentials can go to emergency drop-in centers throughout New York City.",
+  		featured: [
+  			{
+  				id: 5,
+  				name: "Children and Youth"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			},
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "New Yorkers who are ineligible for health insurance or can’t afford it can access low- or no- cost healthcare through NYC Care.",
+  		title: "NYC Care",
+  		programProvider: "NYC Health + Hospitals",
+  		body: "New Yorkers who are ineligible for health insurance or can’t afford it can access low- or no- cost healthcare through NYC Care.",
+  		featured: [
+  			{
+  				id: 7,
+  				name: "Immigrants"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			},
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "People who experience serious mental illness can go to a Clubhouse to connect with peers and get access to opportunities.",
   		title: "Clubhouses",
-  		programProvider: "Department of Health and Mental Hygiene",
-  		body: "People who struggle with mental illness and substance abuse can go to a Clubhouse to connect with peers and get help rejoining society.",
-  		link: "./programs/",
-  		featured: true,
-  		category: {
-  			id: 7,
-  			name: "Peer Support"
-  		},
-  		population: {
-  			id: 8,
-  			name: "Adults"
-  		}
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "People who experience serious mental illness can go to a Clubhouse to connect with peers and get access to opportunities.",
+  		featured: [
+  			{
+  				id: 8,
+  				name: "Adults"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			},
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			}
+  		]
   	},
   	{
   		subtitle: "Immigrants who survived torture and are applying for asylum can access medical, mental health, and other services.",
   		title: "Program for Survivors of Torture",
   		programProvider: "Bellevue and NYC Health + Hospitals",
   		body: "Immigrants who survived torture and are applying for asylum can access medical, mental health, and other services.",
-  		link: "./programs/",
-  		featured: true,
-  		category: {
-  			id: 8,
-  			name: "Counseling"
-  		},
-  		population: {
-  			id: 7,
-  			name: "Immigrants"
-  		}
+  		featured: [
+  			{
+  				id: 7,
+  				name: "Immigrants"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			}
+  		]
   	},
   	{
   		subtitle: "Older New Yorkers who feel isolated can connect with a peer to talk about shared interests.",
   		title: "Friendly Visiting and Friendly VOICES",
   		programProvider: "Department for the Aging (DFTA)",
   		body: "Older New Yorkers who feel isolated can connect with a peer to talk about shared interests.",
-  		link: "./programs/",
-  		featured: true,
-  		category: {
-  			id: 7,
-  			name: "Peer Support"
-  		},
-  		population: {
-  			id: 4,
-  			name: "Seniors"
-  		}
+  		featured: [
+  			{
+  				id: 4,
+  				name: "Seniors"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			}
+  		]
   	},
   	{
   		subtitle: "New Yorkers age 60 and older can get mental health screenings, on-site counseling, and referrals at senior centers near them.",
   		title: "Geriatric Mental Health Initiative",
   		programProvider: "Department for the Aging (DFTA)",
   		body: "New Yorkers age 60 and older can get mental health screenings, on-site counseling, and referrals at senior centers near them.",
-  		link: "./programs/",
-  		featured: true,
-  		category: {
-  			id: 2,
-  			name: "Care for Serious Mental Illness"
-  		},
-  		population: {
-  			id: 4,
-  			name: "Seniors"
-  		}
+  		featured: [
+  			{
+  				id: 4,
+  				name: "Seniors"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			}
+  		]
   	},
   	{
-  		subtitle: "Legal and social services for survivors of domestic and gender-based violence",
+  		subtitle: "NYC Family Justice Centers connect survivors of domestic and gender-based violence to mental health, legal, and social services.",
   		title: "Family Justice Centers",
-  		programProvider: "Mayor's Office to End Domestic and Gender-Based Violence",
-  		body: "Legal and social services for survivors of domestic and gender-based violence",
-  		link: "./programs/family-justice-centers",
-  		featured: true,
-  		category: {
-  			id: 1,
-  			name: "Trauma Support"
-  		},
-  		population: {
-  			id: 6,
-  			name: "Everyone"
-  		}
+  		programProvider: "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) and NYC Health + Hospitals",
+  		body: "NYC Family Justice Centers connect survivors of domestic and gender-based violence to mental health, legal, and social services.",
+  		featured: [
+  			{
+  				id: 2,
+  				name: "Families"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
   	},
   	{
   		subtitle: "Mission: VetCheck connects veterans to trained volunteers through one-on-one supportive check-in calls.",
   		title: "Mission: VetCheck",
-  		programProvider: "NYC Department of Veterans’ Services & The Mayor’s Office of Community Mental Health and Unite Us",
+  		programProvider: "NYC Department of Veterans’ Services (DVS) and Mayor’s Office of Community Mental Health (OCMH)",
   		body: "Mission: VetCheck connects veterans to trained volunteers through one-on-one supportive check-in calls.",
-  		link: "./programs/",
-  		featured: true,
-  		category: {
-  			id: 5,
-  			name: "Help with Anxiety"
-  		},
-  		population: {
-  			id: 1,
-  			name: "Veterans"
-  		}
+  		featured: [
+  			{
+  				id: 1,
+  				name: "Veterans"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			}
+  		]
   	},
   	{
-  		subtitle: "Mental health support for victims of domestic violence and other crimes",
-  		title: "The Crime Victim Assistance Program (CVAP)",
-  		programProvider: "NYPD & Safe Horizon",
-  		body: "Mental health support for victims of domestic violence and other crimes",
-  		link: "./programs/the-crime-victim-assistance-program-cvap",
-  		featured: true,
-  		category: {
-  			id: 1,
-  			name: "Trauma Support"
-  		},
-  		population: {
-  			id: 6,
-  			name: "Everyone"
-  		}
+  		subtitle: "The Crime Victim Assistance Program (CVAP) connects victims of crime, violence, or abuse to advocates who can connect them to mental health support, benefits, and other services.",
+  		title: "Crime Victim Assistance Program (CVAP)",
+  		programProvider: "NYPD, Safe Horizon, and Mayor’s Office of Criminal Justice (MOCJ)",
+  		body: "The Crime Victim Assistance Program (CVAP) connects victims of crime, violence, or abuse to advocates who can connect them to mental health support, benefits, and other services.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
   	},
   	{
-  		subtitle: "Free short-term counseling",
+  		subtitle: "NYC Well is your connection to free, confidential mental health support. Speak to a counselor via phone, text, or chat and get access to mental health and substance use services, in more than 200 languages.",
   		title: "NYC Well",
-  		programProvider: "ThriveNYC",
-  		body: "Free short-term counseling",
-  		link: "./programs/support-during-a-crisis",
-  		featured: true,
-  		category: {
-  			id: 3,
-  			name: "Crisis Support"
-  		},
-  		population: {
-  			id: 6,
-  			name: "Everyone"
-  		}
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "NYC Well is your connection to free, confidential mental health support. Speak to a counselor via phone, text, or chat and get access to mental health and substance use services, in more than 200 languages.",
+  		featured: [
+  			{
+  				id: 6,
+  				name: "Everyone"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults"
+  			}
+  		],
+  		categories: [
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 6,
+  				name: "Substance Use Services",
+  				slug: "substance-use-services"
+  			},
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			},
+  			{
+  				id: 5,
+  				name: "Children and Youth",
+  				slug: "children-and-youth"
+  			},
+  			{
+  				id: 2,
+  				name: "Families",
+  				slug: "families"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			},
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			}
+  		]
   	},
   	{
-  		subtitle: "Request help to your home during a psychological crisis",
-  		title: "Mobile crisis teams",
-  		programProvider: "ThriveNYC",
-  		body: "Request help to your home during a psychological crisis",
-  		link: "./programs/support-during-a-crisis",
-  		featured: true,
-  		category: {
-  			id: 3,
-  			name: "Crisis Support"
-  		},
-  		population: {
-  			id: 1,
-  			name: "Veterans"
-  		}
+  		subtitle: "Teams of mental health professionals that can come to your home if you’re experiencing a psychological crisis",
+  		title: "Mobile Crisis Teams",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "Teams of mental health professionals that can come to your home if you’re experiencing a psychological crisis",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 3,
+  				name: "Crisis Support",
+  				slug: "crisis-support"
+  			},
+  			{
+  				id: 10,
+  				name: "Care for Serious Mental Illness",
+  				slug: "care-for-serious-mental-illness"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
   	}
   ];
 
@@ -13502,7 +14457,7 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              terms: 'https://cityofnewyork.github.io/mhfa/data/terms.json',
+              terms: 'https://nycopportunity.github.io/mhfa/data/terms.json',
 
               /**
                * A required endpoint for the list of services. This is based on
@@ -13510,7 +14465,13 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              programs: 'https://cityofnewyork.github.io/mhfa/data/services.json',
+              programs: 'https://nycopportunity.github.io/mhfa/data/services.json',
+              /**
+               *
+               *
+               * @type  {boolean}
+               */
+              isMounted: false,
             },
 
             /**
@@ -13587,6 +14548,43 @@ var Programs = (function () {
           },
 
           /**
+           * Filters the term data and toggles the checked attribute, then, invokes
+           * the filtering method.
+           *
+           * @param   {Object}  event   The click event
+           * @param   {String}  parent  The taxonomy parent
+           * @param   {Number}  parent  The taxonomy id
+           *
+           * @return  {Object}          Vue Instance
+           */
+          link: function(event, parent, id) {
+            this.change({
+              event: event,
+              data: {
+                parent: parent,
+                id: id
+              }
+            });
+
+            let term = this.terms.find(t => t.slug === parent)['filters']
+              .find(term => term.id === id);
+
+            this.$set(term, 'checked', !term.checked);
+
+            return this;
+          },
+
+          /**
+           * Generate class names based on population name
+           * @param {*} name
+           */
+          classNameGenerator: function(name) {
+            let className = ['bg-' + name.toLowerCase() + '--secondary'];
+
+            return className;
+          },
+
+          /**
            * Overrides wpQuery from the archive.vue library which makes the
            * request for the Services data. Since the data is bundled with the
            * application there is no need to make a request. We just mock the
@@ -13649,11 +14647,14 @@ var Programs = (function () {
               const tileText = document.createTextNode(
                 'Sorry, no results were found.'
               );
+
               title.appendChild(tileText);
+
               const node = document.createElement('p');
               const textnode = document.createTextNode(
                 'It looks like there aren’t any services for the filters you selected at this moment.'
               );
+
               node.appendChild(textnode);
               divContainer.appendChild(title);
               divContainer.appendChild(node);
@@ -13664,14 +14665,19 @@ var Programs = (function () {
             };
 
             if (this.query.cat && this.query.pop) {
-              if (this.query.cat.length === 0 && this.query.pop.length === 0) {
+              if (this.query.cat.length === 0 && this.query.pop.length === 0)
                 filterdData = [...this.services];
-              } else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
+
+              else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
                 filterdData = [...this.services].filter((service) => {
-                  return (
-                    (this.query.cat.includes(service.category.id) &&
-                    this.query.pop.includes(service.population.id))
-                  );
+                  let filtered =
+                    service.categories.some((category) =>
+                      this.query.cat.includes(category.id)
+                    ) &&
+                    service.population.some((people) =>
+                      this.query.pop.includes(people.id)
+                    );
+                  return filtered;
                 });
 
                 filterdData.length === 0 && noResultFound();
@@ -13680,7 +14686,10 @@ var Programs = (function () {
                 this.query.pop.length === 0
               ) {
                 filterdData = [...this.services].filter((service) => {
-                  return (this.query.cat.includes(service.category.id));
+                  let filteredCat = service.categories.some((category) =>
+                    this.query.cat.includes(category.id)
+                  );
+                  return filteredCat;
                 });
 
                 filterdData.length === 0 && noResultFound();
@@ -13689,7 +14698,11 @@ var Programs = (function () {
                 this.query.cat.length === 0
               ) {
                 filterdData = [...this.services].filter((service) => {
-                  return (this.query.pop.includes(service.population.id));
+                  let filteredPop = service.population.some((people) =>
+                    this.query.pop.includes(people.id)
+                  );
+
+                  return filteredPop;
                 });
 
                 filterdData.length === 0 && noResultFound();
@@ -13697,20 +14710,26 @@ var Programs = (function () {
             } else if (this.query.cat && !this.query.pop) {
               if (this.query.cat.length > 0) {
                 filterdData = [...this.services].filter((service) => {
-                  return (this.query.cat.includes(service.category.id));
+                  let filteredCat = service.categories.some((category) =>
+                    this.query.cat.includes(category.id)
+                  );
+                  return filteredCat;
                 });
 
                 filterdData.length === 0 && noResultFound();
               }
-            } else if (this.query.pop && !this.query.cat) {
+            } else if (this.query.pop && !this.query.cat)
               if (this.query.pop.length > 0) {
                 filterdData = [...this.services].filter((service) => {
-                  return (this.query.pop.includes(service.population.id));
+                  let filteredPop = service.population.some((people) =>
+                    this.query.pop.includes(people.id)
+                  );
+
+                  return filteredPop;
                 });
 
                 filterdData.length === 0 && noResultFound();
               }
-            }
 
             return filterdData;
           },
@@ -13726,22 +14745,11 @@ var Programs = (function () {
            */
 
           slugify: function(string) {
-            const a =
-              'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
-            const b =
-              'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
-            const p = new RegExp(a.split('').join('|'), 'g');
-
             return string
-              .toString()
               .toLowerCase()
-              .replace(/\s+/g, '-') // Replace spaces with -
-              .replace(p, (c) => b.charAt(a.indexOf(c))) // Replace special characters
-              .replace(/&/g, '-and-') // Replace & with 'and'
-              .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-              .replace(/\-\-+/g, '-') // Replace multiple - with single -
-              .replace(/^-+/, '') // Trim - from start of text
-              .replace(/-+$/, ''); // Trim - from end of text
+              .replace(/[^0-9a-zA-Z - _]+/g, '')
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-');
           },
         },
 
@@ -13761,6 +14769,23 @@ var Programs = (function () {
             .queue() // Queue up the first request
             .fetch('terms') // Get the terms from the 'terms' endpoint
             .catch(this.error);
+          },
+        updated: function() {
+          this.$nextTick(function () {
+            // Code that will run only after the
+            // entire view has been rendered
+              if (!this.isMounted && window.innerWidth > 1024) {
+                if (document.querySelector('#aria-c-cat') != null)
+                  window.gunyc.toggleTrigger('#aria-c-cat');
+
+                if (document.querySelector('#aria-c-pop') != null) {
+                  window.gunyc.toggleTrigger('#aria-c-pop');
+
+                  this.isMounted = true;
+                }
+              }
+            });
+
         },
       }).$mount('[data-js="programs"]');
     }

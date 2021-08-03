@@ -1,0 +1,165 @@
+/**
+ * Backgrounds
+ */
+
+// Dependencies
+@import 'config/tokens';
+@import 'config/media';
+
+// Declarations
+
+$banners: map-get($tokens, 'banners');
+
+/**
+ * Homepage
+ */
+
+// Hide splashes in homepage banner
+.c-side-hero__content:after,
+.c-side-hero__content:before {
+  display: none
+}
+
+.bg-main {
+  background-image: url('../img/main@mobile.jpg');
+}
+
+@media screen and (min-width: $screen-tablet) {
+  .bg-main {
+    background-image: url('../img/main@desktop.jpg');
+  }
+}
+
+@media screen and (min-width: $screen-desktop) {
+  .bg-main {
+    background-image: linear-gradient(5deg, rgba(40,11,28,0.8) 10%, rgba(40,11,28,0) 64%, rgba(40,11,28,0) 100%),
+                      url('../img/main@desktop.jpg');
+  }
+}
+
+/**
+ * Single Page Banner images
+ */
+
+[class*='bg-banner'] {
+  &:before {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+[class*='bg-banner']:before,
+[class*='bg-banner']:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  content: '';
+  transition: opacity 1s;
+}
+
+[class*='bg-banner'].loaded:before {
+  opacity: 0;
+}
+
+[class*='bg-banner'].loaded:after {
+  opacity: 1;
+}
+
+@media screen and (max-width: $screen-tablet) {
+  @each $b in $banners {
+    .bg-banner-#{$b} {
+      background-image: url('../img/banners/#{$b}@mobile.jpg');
+
+      &:before {
+        background-image: url('../img/banners/#{$b}-low@mobile.jpg');
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-tablet) {
+  [class*='bg-banner'],
+  [class*='bg-banner']:before {
+    background-size: cover;
+    background-position: 30% 30%;
+  }
+
+  [class*='bg-banner']:after {
+    background-image: linear-gradient(53deg, rgba(105,19,69,1) 18%, rgba(40,11,28,0) 70%, rgba(40,11,28,0));
+    mix-blend-mode: multiply;
+    opacity: 0;
+  }
+
+  @each $b in $banners {
+    .bg-banner-#{$b} {
+      background-image: url('../img/banners/#{$b}@desktop.jpg');
+
+      &:before {
+        background-image: url('../img/banners/#{$b}-low@desktop.jpg');
+      }
+    }
+  }
+
+  .bg-banner-f, .bg-banner-f:before {
+    background-position: 30% 70%;
+  }
+
+  .bg-banner-g, .bg-banner-g:before {
+    background-position: 50% 80%;
+  }
+
+  .bg-banner-j, .bg-banner-j:before {
+    background-position: 30% 40%;
+  }
+
+  .bg-banner-x, .bg-banner-x:before {
+    background-position: 90% 30%;
+  }
+}
+
+/**
+ * Light Effects
+ */
+
+[class*='bg-light'] {
+  position: absolute;
+}
+
+.bg-light-a {
+  top: 0;
+  right: 50%;
+  margin-right: -340px;
+  width: 983px;
+  min-width: 983px;
+  height: auto;
+}
+
+.bg-light-b {
+  top: 0;
+  left: 50%;
+  margin-left: -500px;
+  width: 1343px;
+  min-width: 1343px;
+  height: 480px;
+}
+
+.bg-light-c {
+  top: 0;
+  left: 0;
+  margin-left: -90px;
+  width: 877px;
+  min-width: 877px;
+  height: 353px;
+}
+
+.bg-light-d {
+  bottom: 0;
+  left: 0;
+  width: 1427px;
+  min-width: 1427px;
+  height: 478px;
+}

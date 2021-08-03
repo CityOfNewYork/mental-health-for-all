@@ -1,98 +1,92 @@
-div class='js-parallax relative'
-  header class='c-hero c-hero--large c-hero--long-text js-parallax-content bg-color-purple bg-single'
-    div class='o-container js-parallax-text'
-      - if this.service.title
-        h1 class='c-hero__title c-hero__title--long'
-          == this.service.title
-
-      - if this.service.subtitle
-        p class='c-hero__tagline desktop:w-6/12'
-          == this.service.subtitle
-
-          - if this.service.programProvider
-            = ' | '
-            b == this.service.programProvider
-
-      / - if this.service.programProvider
-      /   p class='c-hero__tagline desktop:w-6/12'
-      /     == this.service.programProvider
-
-      - if this.service.category.name
-        p class='c-hero__tags'
-          a href='#' class='button--pill'
-            == this.service.category.name
-
-article class='o-container u-bottom-spacing-small js-sticky-container desktop:flex'
+article class='o-container desktop:flex mobile:pb-6 tablet:pb-2'
+  / aside class='o-article-sidebar desktop:w-sidebar tall:sticky o-navigation-spacing-top z-10'
   div class='o-article-sidebar desktop:w-sidebar'
-    div class='o-content-container--compact u-shift-up'
-      ol class='c-nav-list js-sticky js-section-set o-sticky-nav' style=('width: 357px;')
-        - let sections = ['veterans', 'children-and-youth', 'lgbtq', 'seniors', 'immigrants'];
+    nav class='o-content-container--compact u-shift-up sticky top-0 pt-4' aria-label='Jump Navigation'
+      ol class='c-nav-list'
+        - let sections = Object.keys(this.service.body);
+        - sections.pop(); // omit the substance abuse section from the jump nav
 
-        - for (let i in this.service.sections)
+        - for (let i in sections)
+          - let label = this.serviceSectionLabels[sections[i]];
+
           li class='c-nav-list__item'
-            a class='scroll js-section c-nav-list__link bg-${sections[i]}--secondary' data-section='${this.createSlug(this.service.sections[i])}' href='#${this.createSlug(this.service.sections[i])}'
-              == this.service.sections[i]
+            a class='scroll js-section c-nav-list__link bg-${label.color}--primary py-2 tablet:py-6' href='#${this.createSlug(label.label)}'
+              == label.label
 
               svg class='icon--caret' aria-hidden='true'
                 use xlink:href='#icon-caret-right'
 
-  div class='o-article js-sticky-article desktop:w-article m-auto'
-    div class='o-content-container--compact'
+  div class='o-article desktop:w-article o-article--shift'
+    div class='u-top-spacing'
       - if this.service.body.hasOwnProperty('whatItIs')
-        section id='${this.createSlug(this.service.body.whatItIs.title)}' class='o-content-container--text s-wysiwyg u-top-spacing u-bottom-spacing-small' tabindex='-1'
-          h2 id='section-call-to-action' tabindex='-1'
-            == this.service.body.whatItIs.title
+        section id='${this.createSlug(this.service.body.whatItIs.title)}' class='o-content-container--compact o-content-container--text u-bottom-spacing'
+          h2 == this.service.body.whatItIs.title
 
           == this.service.body.whatItIs.content
 
-      - if this.service.body.hasOwnProperty('whoItIsFor')
-        section class='c-tip u-sm-gutter bg-color-purple o-content-container text-center mb-4' data-id='${this.createSlug(this.service.body.whoItIsFor.title)}'
-          div id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='c-tip__sticker sticker bg-color-purple'
-            svg class='icon--large' role='img' aria-hidden='true'
-              use xlink:href='#icon-lightbulb'
+      - let columns = (this.service.body.hasOwnProperty('whoItIsFor') && this.service.body.hasOwnProperty('cost')) ? 'tablet:grid grid-cols-2 gap-6' : '';
 
-          div class='c-tip__content text-center'
-            h2 id='section-call-to-action' tabindex='-1'
-              == this.service.body.whoItIsFor.title
+      - if this.service.body.hasOwnProperty('whoItIsFor') || this.service.body.hasOwnProperty('cost')
+        div class='o-content-container--compact ${columns} u-bottom-spacing'
+          - if this.service.body.hasOwnProperty('whoItIsFor')
+            section class='c-tip u-sm-gutter bg-primary o-content-container rounded-lg mb-4'
+              div id='${this.createSlug(this.service.body.whoItIsFor.title)}' class='c-tip__sticker sticker bg-primary'
+                svg class='icon--large' role='img' aria-hidden='true'
+                  use xlink:href='#icon-lightbulb'
 
-            == this.service.body.whoItIsFor.content
+              div class='c-tip__content relative'
+                h2 = this.service.body.whoItIsFor.title
 
-        br
+                == this.service.body.whoItIsFor.content
 
-      - if this.service.body.hasOwnProperty('cost')
-        section id='${this.createSlug(this.service.body.cost.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
-          h2 id='section-call-to-action' tabindex='-1'
-            == this.service.body.cost.title
+          - if this.service.body.hasOwnProperty('cost')
+            section class='c-tip u-sm-gutter bg-gray-light text-black o-content-container rounded-lg'
+              div id='${this.createSlug(this.service.body.cost.title)}' class='c-tip__sticker sticker bg-gray-light text-black'
+                svg class='icon--large' role='img' aria-hidden='true'
+                  use xlink:href='#mhfa-icon-${this.service.body.cost.type}'
 
-          == this.service.body.cost.content
+              div class='c-tip__content relative'
+                h2 = this.service.body.cost.title
+
+                == this.service.body.cost.content
 
       - if this.service.body.hasOwnProperty('howToGetInTouch')
-        section id='${this.createSlug(this.service.body.howToGetInTouch.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
-          h2 id='section-call-to-action' tabindex='-1'
-            == this.service.body.howToGetInTouch.title
+        section id='${this.createSlug(this.service.body.howToGetInTouch.title)}' class='u-bottom-spacing'
+          div class='o-content-container o-content-container--text c-block-list c-block-list--shade'
+            h2 = this.service.body.howToGetInTouch.title
 
-          div class='o-content-container c-block-list c-block-list--shade'
             - for (let i in this.service.body.howToGetInTouch.content)
               - this.card = this.service.body.howToGetInTouch.content[i]
 
               div class='c-block-list__item'
                 div class='c-card rounded-lg'
-                  div class='c-card__title'
-                    a href=this.service.slug title=this.service.title
-                      div class='c-card__sticker sticker bg-color-purple text-color-white' aria-hidden='true'
-                        svg class='icon--large'
-                          use xlink:href='#mhfa-icon-${this.card.type}'
+                  div class='c-card__sticker sticker bg-red text-white' aria-hidden='true'
+                    svg class='icon--large'
+                      use xlink:href='#mhfa-icon-${this.card.type}'
 
-                  div class='c-card__body'
+                  div class='c-card__body mb-0'
                     == this.card.body
 
       - if this.service.body.hasOwnProperty('otherWaysToGetHelp')
-        section id='${this.createSlug(this.service.body.otherWaysToGetHelp.title)}' class='o-content-container--text s-wysiwyg u-bottom-spacing-small' tabindex='-1'
-          h2 id='section-call-to-action' tabindex='-1'
-            == this.service.body.otherWaysToGetHelp.title
+        section id='${this.createSlug(this.service.body.otherWaysToGetHelp.title)}' class='o-content-container--compact o-content-container--text u-bottom-spacing'
+          h2 = this.service.body.otherWaysToGetHelp.title
 
           == this.service.body.otherWaysToGetHelp.content
 
-div class='mobile:pt-5 tablet:pt-12 pb-6'
-  a href='#main' class='back-to-top bg-color-blue-light hover:bg-color-blue no-underline' id='myBtn' data-js='back-to-top' title='Back To Top'
-    | Back To Top
+      - if this.service.body.hasOwnProperty('substanceAbuse')
+        - let section = this.service.body.substanceAbuse;
+
+        section class='o-content-container--compact c-list-box c-list-box--quaternary o-accordion'
+          div id='${this.createSlug(section.title)}'
+            button class='c-list-box__heading o-accordion__header bg-yellow--primary p-5 pr-8' data-js='accordion' type='button' aria-controls='aria-${this.createSlug(section.title)}' aria-expanded='false'
+              span id='aria-lb-${this.createSlug(section.title)}' style='pointer-events: none'
+                = section.title
+
+              svg class='o-accordion__caret icon' aria-hidden='true'
+                use xlink:href='#icon-caret-down'
+
+            div class='o-content-container bg-yellow-light hidden' id='aria-${this.createSlug(section.title)}' aria-hidden='true' role='region' aria-labelledby='aria-lb-${this.createSlug(section.title)}'
+              div class='bg-white rounded-lg p-6 tablet:p-8'
+                == section.content
+
+= partial('/slm/partials/back-to-top.slm')

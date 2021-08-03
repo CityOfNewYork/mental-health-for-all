@@ -1,0 +1,38 @@
+= extend('/slm/layouts/default')
+
+- title = `${this.about.title} | Mental Health for All`
+- description = this.description
+- image = 'banners/about@social.jpg'
+
+= content('head')
+  link rel='preload' as='image' href='${this.root}/img/banners/about-low@desktop.jpg'
+  link rel='preload' as='image' href='${this.root}/img/banners/about@desktop.jpg'
+  link rel='preload' as='image' href='${this.root}/img/banners/about-low@mobile.jpg'
+  link rel='preload' as='image' href='${this.root}/img/banners/about@mobile.jpg'
+
+= content('main')
+  header class='c-hero c-hero--large bg-primary bg-banner-about not-loaded' data-js='lazy'
+    div class='o-container relative' style='z-index: 1'
+        h1 class='c-hero__title mb-0'
+          = this.about.title
+
+        nav class='py-4' aria-label='Breadcrumb'
+          a href='${this.root}/' class='text-white' Home
+
+          span class='mx-1' aria-hidden='true'
+            svg class='icon-feather'
+              use xlink:href='#mhfa-feather-chevron-right'
+
+          a href='#' aria-current='page' class='font-normal no-underline text-white' About
+
+  section class='o-container u-top-spacing u-bottom-spacing'
+    div class='o-content-container pl-0'
+      div class='mx-auto' style='max-width: 600px'
+        == this.about.content
+
+        p class='text-center py-8'
+          a class='button--primary bg-magenta--primary border-transparent' href='${this.root}/services/index' View all Mental Health Services
+
+  = content('scripts')
+    javascript:
+      gunyc.banners()

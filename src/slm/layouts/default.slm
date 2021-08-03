@@ -1,44 +1,109 @@
 doctype html
-html lang='en' class='no-js'
+html lang='en'
   head
     meta charset='utf-8'
     meta name='viewport' content='width=device-width, initial-scale=1.0'
-    meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'
     meta name='format-detection' content='telephone=no'
     meta name='mobile-web-app-capable' content='yes'
 
+    link rel='icon' type='image/svg+xml' href='${this.root}/img/favicon/favicon.svg'
+    link rel='icon' type='image/png' href='${this.root}/img/favicon/favicon.png'
+
+    /**
+    /* Content Meta Tags
+    /*
+
     title = title
-    / meta name='description' content='{{meta_desc}}'
-    / meta name='keywords' content='{{meta_keywords}}'
+    meta name='title' content=title
 
-    / {% if meta_noindex == true %}
-    / meta name='robots' content='noindex'
+    - if (typeof description !== 'undefined')
+      meta name='description' content=description
 
-    / link rel='manifest' href='{{theme.path}}/manifest.json'
-    / link rel='icon' type='image' href='{{theme.path}}/assets/img/growningup-favicon.png'
-    / link rel='apple-touch-icon-precomposed' sizes='76x76' href='{{theme.path}}/assets/img/growningup-Icon-App-76x76@3x.png'
+    / Open Graph / Facebook, LinkedIn, Twitter
+    - let imageUrl = (typeof image === 'string') ? `${this.root}/img/${image}` : `${this.root}/img/social.jpg`
 
-    / link rel='stylesheet' href='css/animate.css' type='text/css' media='screen'
+    meta property='og:type' content='website'
+    meta property='og:title' content=title
+    meta property='og:image' content='${imageUrl}'
+    / meta property='og:image:alt' content='A closeup of a woman smiling and comforted by hug from someone else.'
+
+    - if (typeof description !== 'undefined')
+      meta property='og:description' content=description
+
+    / Twitter Specific
+    meta property='twitter:card' content='summary_large_image'
+
+    /**
+    /* Preload/Prefetch
+    /*
+
+    / DNS Prefetching
+    link rel='dns-prefetch' href='//cdn.jsdelivr.net'
+    link rel='dns-prefetch' href='//www.googletagmanager.com'
+    link rel='dns-prefetch' href='//translate.googleapis.com'
+    link rel='dns-prefetch' href='//www.gstatic.com'
+    link rel='dns-prefetch' href='//fonts.gstatic.com'
+    link rel='dns-prefetch' href='//fonts.googleapis.com'
+    link rel='dns-prefetch' href='//s.w.org'
+    link rel='dns-prefetch' href='//www.google-analytics.com'
+    link rel='dns-prefetch' href='//cdnjs.cloudflare.com'
+
+    / Webtrends (City Analytics)
+    / link rel='dns-prefetch' href='//www1.nyc.gov'
+    / link rel="dns-prefetch" href='//s.webtrends.com'
+
+    /– Preloading Assets
+    link rel='preload' href=this.tokens.fonts.main
+    link rel='preload' href='${this.root}/svg/svgs.svg'
+    link rel='preload' href='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/svg/icons.svg'
+
+    /**
+    /* Primary Stylesheet
+    /*
+
     link rel='stylesheet' href='${this.root}/css/default.css' type='text/css' media='screen'
 
-    = content('head');
+    /**
+    /* Indexing
+    /*
+
+    / Discourage search engines from indexing the site if not production
+    - if this.process.env.NODE_ENV !== 'production'
+      meta name='robots' content='noindex,nofollow'
+
+    /**
+    /* Google Analytics Global site tag (gtag.js)
+    /*
+
+    - if (this.gtag)
+      script async='' src='https://www.googletagmanager.com/gtag/js?id=${this.gtag}'
+
+      javascript:
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '${this.gtag}');
+
+    /**
+    /* Per page head extras
+    /*
+
+    = content('head')
 
   body
-    div class='o-offcanvas js-offcanvas' id='offcanvas-ages'
-      a href='#main' class='show-for-keyboard' Skip to main content
+    a href='#main' class='show-for-keyboard' Skip to main content
 
-      div class='o-offcanvas__main js-offcanvas__main'
-        == this.include('/slm/partials/objects/navigation/navigation-offcanvas.slm');
+    = partial('/slm/partials/objects/menu/menu.slm')
 
-        main id='main' role='main'
-          = content('main')
+    = partial('/slm/partials/objects/navigation/navigation.slm')
 
-        == this.include('/slm/partials/objects/footer/footer.slm');
+    main id='main' role='main'
+      = content('main')
 
-        / == this.include('/slm/partials/objects/banner/banner.slm');
+    = partial('/slm/partials/objects/footer/footer.slm');
 
-    / script src='https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@v1.0.1/dist/scripts/growingup-nyc.js'
     script src='${this.root}/js/default.js'
+    script src="https://translate.google.com/translate_a/element.js?cb=window.googleTranslateInit"
 
     javascript:
       var gunyc = new Default();
@@ -47,10 +112,23 @@ html lang='en' class='no-js'
       gunyc.icons('${this.root}/svg/svgs.svg');
       gunyc.toggle();
       gunyc.accordion();
+      gunyc.menu();
+
+      window.googleTranslateInit = function() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'es,ru,ko,ar,ht,zh-CN,fr,pl,ur,bn',
+          autoDisplay: false
+        }, 'js-google-translate');
+      };
+
+      gunyc.translateElement();
+
+      window.gunyc = gunyc
 
     = content('scripts')
 
-    / The reload script. This should not be compile during production builds
+    / The "hot" reloading script. Should not be compiled during production builds.
     / @source https://www.npmjs.com/package/reload
-    - if this.process.env.NODE_ENV !== 'production'
+    - if this.process.env.NODE_ENV === 'development'
       script src='/reload/reload.js'

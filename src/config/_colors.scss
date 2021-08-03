@@ -1,0 +1,82 @@
+//
+// tokens
+//
+
+// Dependencies
+@import './tokens';
+
+// Declarations
+$colors: map-get($tokens, 'colors');
+$colors-default: map-get($tokens, 'colors-default');
+
+// Colors
+$color-black: map-get($colors, 'black');
+$color-white: map-get($colors, 'white');
+$color-gray-light: map-get($colors, 'gray-light');
+$color-gray: map-get($colors, 'gray');
+$color-gray-mid: map-get($colors, 'gray');
+$color-gray-dark: map-get($colors, 'slate');
+$color-dark-gray: map-get($colors, 'slate');
+$color-dark-gray-mid: map-get($colors, 'slate');
+$color-dark-gray-dark: map-get($colors, 'slate');
+$color-blue-lightest: map-get($colors, 'blue');
+$color-blue-light: map-get($colors, 'blue');
+$color-blue: map-get($colors, 'blue');
+$color-blue-mid: map-get($colors, 'blue');
+$color-blue-dark: map-get($colors, 'blue');
+$color-red: map-get($colors, 'red');
+$color-pink: map-get($colors, 'coral');
+$color-pink-dark: map-get($colors, 'coral');
+$color-green: map-get($colors, 'green');
+$color-green-dark: map-get($colors, 'green');
+$color-orange-light: map-get($colors, 'orange');
+$color-orange-mid: map-get($colors, 'orange');
+$color-orange: map-get($colors, 'orange');
+$color-orange-dark: map-get($colors, 'orange');
+$color-orange-vroom: map-get($colors, 'orange');
+$color-purple: map-get($colors, 'purple');
+$color-purple-dark: map-get($colors, 'purple');
+$color-shadow: map-get($colors, 'shadow');
+
+$color-primary: map-get($colors, map-get($colors-default, 'color-primary'));
+$color-secondary: map-get($colors, map-get($colors-default, 'color-secondary'));
+$color-background: map-get($colors, map-get($colors-default, 'color-background'));
+$color-background-shade: map-get($colors, map-get($colors-default, 'color-background-shade'));
+$color-background-footer: map-get($colors, map-get($colors-default, 'color-background-footer'));
+$color-text: map-get($colors, map-get($colors-default, 'color-text'));
+$color-text-invert: map-get($colors, map-get($colors-default, 'color-text-invert'));
+$color-text-link: map-get($colors, map-get($colors-default, 'color-text-link'));
+$color-text-weak: map-get($colors, map-get($colors-default, 'color-text-weak'));
+$color-error: map-get($colors, map-get($colors-default, 'color-error'));
+
+// Milestones
+$colors-baby: transparent;
+$color-baby-primary: transparent;
+$color-baby-secondary: transparent;
+
+$colors-toddler: transparent;
+$color-toddler-primary: transparent;
+$color-toddler-secondary: transparent;
+$color-toddler-tertiary: transparent;
+
+$colors-pre-schooler: transparent;
+$color-pre-schooler-primary: transparent;
+$color-pre-schooler-secondary: transparent;
+$color-pre-schooler-tertiary: transparent;
+
+$colors-grade-schooler: transparent;
+$color-grade-schooler-primary: transparent;
+$color-grade-schooler-secondary: transparent;
+$color-grade-schooler-tertiary: transparent;
+
+$colors-pre-teen: transparent;
+$color-pre-teen-primary: transparent;
+$color-pre-teen-secondary: transparent;
+
+$colors-teen: transparent;
+$color-teen-primary: transparent;
+$color-teen-secondary: transparent;
+
+$colors-young-adult: transparent;
+$color-young-adult-primary: transparent;
+$color-young-adult-secondary: transparent;
