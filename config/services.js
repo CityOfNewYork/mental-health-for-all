@@ -2334,7 +2334,7 @@ module.exports = [
             type: 'website',
             body: `
             <h3>Local crisis counselors are also available in all 5 boroughs of NYC.</h3>
-            <p>Connect with a crisis counselor by visiting <a href="https://nyprojecthope.org/">NYProjectHope.org</a> and selecting “Find a Provider Near You.” You can also get more information on the website.</p>
+            <p>Connect with a crisis counselor by visiting <a target="_blank" href="https://nyprojecthope.org/">NYProjectHope.org</a> and selecting “Find a Provider Near You.” You can also get more information on the website.</p>
           `,
           },
 
