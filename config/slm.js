@@ -17,7 +17,7 @@ let gtag = {
   development: 'G-GCXGSB3MXE',
   testing: 'G-PHC0PCR8S3',
   staging: 'G-G87VSJNZ1M',
-  production: 'G-9HQEJJG8G2'
+  production: 'G-CFPSFD534S'
 };
 
 services.map(s => {
