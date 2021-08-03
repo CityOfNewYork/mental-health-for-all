@@ -45,7 +45,7 @@ Command    | Arguments         | Description
 `start`    |                   | Runs the Pattern CLI development server with watching and reloading.
 `default`  |                   | Runs a the default Pattern CLI build command.
 `version`  | major/minor/patch | Hooks into the npm version script by regenerating the build with the version number.
-`services` |                   | Regenerates all of the service `.slm` templates from the [config/services.js](config/services.js) file. This needs to be run if any changes are made to the [src/slm/service.slm](src/slm/service.slm) template.
+`services` |                   | Regenerates all of the service `.slm` templates from the [config/services.js](config/services.js) file. This needs to be run if any changes are made to the [src/slm/service.slm](src/slm/service.slm) template or new services are added to [config/services.js](config/services.js).
 `ghpages`  |                   | Run the default command and publish to the testing environment.
 
 [Additional commands from the Patterns CLI](https://github.com/CityOfNewYork/patterns-cli#commands) can also be run. Most commands will require the `NODE_ENV` variable to be set.
