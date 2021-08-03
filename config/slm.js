@@ -8,15 +8,15 @@ let population = require('./population.json');
 
 let remotes = {
   development: '',
-  testing: 'https://nycopportunity.github.io/mhfa',
-  staging: 'https://cityofnewyork.github.io/mhfa',
+  testing: 'https://cityofnewyork.github.io/mental-health-for-all',
+  staging: 'https://mentalhealthforall-stg.nyc.gov',
   production: 'https://mentalhealthforall.nyc.gov',
 };
 
 let gtag = {
   development: 'G-GCXGSB3MXE',
-  testing: 'G-GCXGSB3MXE',
-  staging: 'G-W8WJSREGKV',
+  testing: 'G-PHC0PCR8S3',
+  staging: 'G-G87VSJNZ1M',
   production: 'G-9HQEJJG8G2'
 };
 
