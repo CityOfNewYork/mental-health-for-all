@@ -1,6 +1,9 @@
 div id='js-google-translate' class='hidden' aria-hidden='true'
+  / Container for the real translate element
 
 label class='o-navigation__menu-item cursor-pointer' for='js-google-translate-control'
+  span class='sr-only' Translate
+
   svg class='o-navigation__menu-icon'
     use xlink:href='#mhfa-icon-translate'
 

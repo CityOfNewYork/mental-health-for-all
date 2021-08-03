@@ -5,14 +5,14 @@
         <h3>Filter Services:</h3>
       </div>
 
-      <div class='c-list-box c-list-box--quaternary js-accordion o-accordion' data-multiselectable="false" role="presentation" aria-multiselectable="false">
+      <div class='c-list-box c-list-box--quaternary js-accordion o-accordion'>
         <div v-for="term in terms" :key="term.term_id" class="c-list-box__item o-accordion__item">
           <button data-js="accordion" type="button" :aria-controls="'aria-c-' + term.slug" aria-expanded="true" :class="'c-list-box__heading o-accordion__header bg-' + term.slug + '--primary active'">
             {{term.name}}
             <svg class="o-accordion__caret icon" aria-hidden="true"><use xlink:href="#icon-caret-down"></use></svg>
           </button>
 
-          <ul role="region" aria-hidden="false" :id="'aria-c-' + term.slug" class="active hidden">
+          <ul aria-hidden="false" :id="'aria-c-' + term.slug" class="active hidden">
             <li v-for="filter in term.filters" :key="filter.slug" :class="'c-list-box__subitem bg-' + term.slug + '--primary'">
             <!-- <li v-for="filter in term.filters" :key="filter.slug" :class="'c-list-box__subitem bg-gray-light text-black'"> -->
               <label class="checkbox">
@@ -107,5 +107,6 @@
 
 <script>
   import Archive from '@nycopportunity/wp-archive-vue/src/archive.vue';
+
   export default Archive;
 </script>
