@@ -12926,10 +12926,7 @@ var Programs = (function () {
     var _c = _vm._self._c || _h;
     return _c(
       "section",
-      {
-        staticClass:
-          "o-container u-bottom-spacing u-top-spacing-small desktop:flex"
-      },
+      { staticClass: "o-container u-top-spacing-small desktop:flex" },
       [
         _c(
           "div",
@@ -12944,12 +12941,7 @@ var Programs = (function () {
               "div",
               {
                 staticClass:
-                  "c-list-box c-list-box--quaternary js-accordion o-accordion",
-                attrs: {
-                  "data-multiselectable": "false",
-                  role: "presentation",
-                  "aria-multiselectable": "false"
-                }
+                  "c-list-box c-list-box--quaternary js-accordion o-accordion"
               },
               _vm._l(_vm.terms, function(term) {
                 return _c(
@@ -12965,7 +12957,7 @@ var Programs = (function () {
                         class:
                           "c-list-box__heading o-accordion__header bg-" +
                           term.slug +
-                          "--secondary active",
+                          "--primary active",
                         attrs: {
                           "data-js": "accordion",
                           type: "button",
@@ -12995,37 +12987,13 @@ var Programs = (function () {
                     _c(
                       "ul",
                       {
+                        staticClass: "active hidden",
                         attrs: {
-                          role: "region",
                           "aria-hidden": "false",
                           id: "aria-c-" + term.slug
                         }
                       },
                       [
-                        _c(
-                          "li",
-                          {
-                            class:
-                              "c-list-box__subitem bg-" + term.slug + "--primary"
-                          },
-                          [
-                            _c(
-                              "button",
-                              {
-                                on: {
-                                  click: function($event) {
-                                    return _vm.toggle({
-                                      event: $event,
-                                      data: { parent: term.slug }
-                                    })
-                                  }
-                                }
-                              },
-                              [_vm._v("\n              Toggle All\n            ")]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
                         _vm._l(term.filters, function(filter) {
                           return _c(
                             "li",
@@ -13068,6 +13036,7 @@ var Programs = (function () {
                                 _c(
                                   "span",
                                   {
+                                    staticClass: "select-none",
                                     domProps: { innerHTML: _vm._s(filter.name) }
                                   },
                                   [_vm._v(_vm._s(filter.name))]
@@ -13075,7 +13044,34 @@ var Programs = (function () {
                               ])
                             ]
                           )
-                        })
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          {
+                            class:
+                              "c-list-box__subitem bg-" +
+                              term.slug +
+                              "--primary text-center"
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "button--outline p-3 w-full mb-4",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.toggle({
+                                      event: $event,
+                                      data: { parent: term.slug }
+                                    })
+                                  }
+                                }
+                              },
+                              [_vm._v("\n              Toggle All\n            ")]
+                            )
+                          ]
+                        )
                       ],
                       2
                     )
@@ -13098,17 +13094,13 @@ var Programs = (function () {
                       _c(
                         "div",
                         {
-                          staticClass:
-                            "c-block-list--shade o-content-container u-sm-gutter",
+                          staticClass: "c-block-list--shade o-content-container",
                           attrs: { "data-js": "filtered-results" }
                         },
                         _vm._l(page.posts, function(post) {
                           return _c(
                             "div",
-                            {
-                              key: post.id,
-                              staticClass: "c-block-list__item u-sm-gutter"
-                            },
+                            { key: post.id, staticClass: "u-lg-gutter" },
                             [
                               _c(
                                 "div",
@@ -13186,9 +13178,7 @@ var Programs = (function () {
                                           {
                                             key: category.name,
                                             class:
-                                              "button--pill bg-" +
-                                              _vm.slugify(category.name) +
-                                              "--primary",
+                                              "button--pill bg-yellow--primary",
                                             on: {
                                               click: function($event) {
                                                 return _vm.link(
@@ -13223,46 +13213,7 @@ var Programs = (function () {
               ])
             }),
             0
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "o-content-container--compact pagination mobile:flex justify-between"
-            },
-            [
-              _c("div", {
-                staticClass: "previous tablet:mr-3 mb-3 tablet:mb-0 text-center",
-                attrs: { id: "paginate" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "paginate text-center" }, [
-                _vm.next
-                  ? _c(
-                      "button",
-                      {
-                        staticClass:
-                          "button--outline button--outline--gray paginate",
-                        attrs: { "data-amount": "1" },
-                        on: { click: _vm.paginate }
-                      },
-                      [_vm._v("\n          Next\n        ")]
-                    )
-                  : _vm._e()
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c("p", [
-            _vm.next
-              ? _c(
-                  "button",
-                  { attrs: { "data-amount": "1" }, on: { click: _vm.paginate } },
-                  [_vm._v("\n        Load More Posts\n      ")]
-                )
-              : _vm._e()
-          ])
+          )
         ])
       ]
     )
@@ -13309,6 +13260,110 @@ var Programs = (function () {
     );
 
   var Services = [
+  	{
+  		subtitle: "A COVID-19 emotional support helpline.",
+  		title: "NY Project Hope",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "A COVID-19 emotional support helpline.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "COVID-19 Community Conversations provides information and resources regarding the mental health impact of the pandemic.",
+  		title: "COVID-19 Community Conversations",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "COVID-19 Community Conversations provides information and resources regarding the mental health impact of the pandemic.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			},
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			}
+  		]
+  	},
   	{
   		subtitle: "Find treatment for opioid use disorder (OUD) with medications like methadone and buprenorphine at your health care provider or one of these resources.",
   		title: "Medications for Opioid Use Disorder",
@@ -13483,48 +13538,6 @@ var Programs = (function () {
   				id: 2,
   				name: "Families",
   				slug: "families"
-  			}
-  		]
-  	},
-  	{
-  		subtitle: "Court-ordered treatment program for those with serious mental illness who are a danger to themselves or others.",
-  		title: "Assisted Outpatient Treatment (AOT)",
-  		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
-  		body: "Court-ordered treatment program for those with serious mental illness who are a danger to themselves or others.",
-  		featured: [
-  		],
-  		categories: [
-  			{
-  				id: 10,
-  				name: "Care for Serious Mental Illness",
-  				slug: "care-for-serious-mental-illness"
-  			}
-  		],
-  		population: [
-  			{
-  				id: 3,
-  				name: "LGBTQ New Yorkers",
-  				slug: "lgbtq-new-yorkers"
-  			},
-  			{
-  				id: 8,
-  				name: "Adults",
-  				slug: "adults"
-  			},
-  			{
-  				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
-  			},
-  			{
-  				id: 7,
-  				name: "Immigrants",
-  				slug: "immigrants"
-  			},
-  			{
-  				id: 1,
-  				name: "Veterans",
-  				slug: "veterans"
   			}
   		]
   	},
@@ -13752,41 +13765,6 @@ var Programs = (function () {
   				id: 6,
   				name: "Everyone",
   				slug: "everyone"
-  			},
-  			{
-  				id: 5,
-  				name: "Children and Youth",
-  				slug: "children-and-youth"
-  			},
-  			{
-  				id: 2,
-  				name: "Families",
-  				slug: "families"
-  			},
-  			{
-  				id: 3,
-  				name: "LGBTQ New Yorkers",
-  				slug: "lgbtq-new-yorkers"
-  			},
-  			{
-  				id: 8,
-  				name: "Adults",
-  				slug: "adults"
-  			},
-  			{
-  				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
-  			},
-  			{
-  				id: 7,
-  				name: "Immigrants",
-  				slug: "immigrants"
-  			},
-  			{
-  				id: 1,
-  				name: "Veterans",
-  				slug: "veterans"
   			}
   		]
   	},
@@ -13809,41 +13787,6 @@ var Programs = (function () {
   				id: 6,
   				name: "Everyone",
   				slug: "everyone"
-  			},
-  			{
-  				id: 5,
-  				name: "Children and Youth",
-  				slug: "children-and-youth"
-  			},
-  			{
-  				id: 2,
-  				name: "Families",
-  				slug: "families"
-  			},
-  			{
-  				id: 3,
-  				name: "LGBTQ New Yorkers",
-  				slug: "lgbtq-new-yorkers"
-  			},
-  			{
-  				id: 8,
-  				name: "Adults",
-  				slug: "adults"
-  			},
-  			{
-  				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
-  			},
-  			{
-  				id: 7,
-  				name: "Immigrants",
-  				slug: "immigrants"
-  			},
-  			{
-  				id: 1,
-  				name: "Veterans",
-  				slug: "veterans"
   			}
   		]
   	},
@@ -13896,33 +13839,6 @@ var Programs = (function () {
   				name: "Help with Anxiety",
   				slug: "help-with-anxiety"
   			},
-  			{
-  				id: 7,
-  				name: "Peer Support",
-  				slug: "peer-support"
-  			}
-  		],
-  		population: [
-  			{
-  				id: 2,
-  				name: "Families",
-  				slug: "families"
-  			},
-  			{
-  				id: 5,
-  				name: "Children and Youth",
-  				slug: "children-and-youth"
-  			}
-  		]
-  	},
-  	{
-  		subtitle: "Family support services for parents of youth with mental health challenges.",
-  		title: "NYC Family Resource Centers",
-  		programProvider: "NYC Department of Health and Mental Hygiene",
-  		body: "Family support services for parents of youth with mental health challenges.",
-  		featured: [
-  		],
-  		categories: [
   			{
   				id: 7,
   				name: "Peer Support",
@@ -14291,41 +14207,6 @@ var Programs = (function () {
   				id: 6,
   				name: "Everyone",
   				slug: "everyone"
-  			},
-  			{
-  				id: 2,
-  				name: "Families",
-  				slug: "families"
-  			},
-  			{
-  				id: 5,
-  				name: "Children and Youth",
-  				slug: "children-and-youth"
-  			},
-  			{
-  				id: 8,
-  				name: "Adults",
-  				slug: "adults"
-  			},
-  			{
-  				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
-  			},
-  			{
-  				id: 1,
-  				name: "Veterans",
-  				slug: "veterans"
-  			},
-  			{
-  				id: 3,
-  				name: "LGBTQ New Yorkers",
-  				slug: "lgbtq-new-yorkers"
-  			},
-  			{
-  				id: 7,
-  				name: "Immigrants",
-  				slug: "immigrants"
   			}
   		]
   	},
@@ -14394,41 +14275,6 @@ var Programs = (function () {
   				id: 6,
   				name: "Everyone",
   				slug: "everyone"
-  			},
-  			{
-  				id: 2,
-  				name: "Families",
-  				slug: "families"
-  			},
-  			{
-  				id: 5,
-  				name: "Children and Youth",
-  				slug: "children-and-youth"
-  			},
-  			{
-  				id: 8,
-  				name: "Adults",
-  				slug: "adults"
-  			},
-  			{
-  				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
-  			},
-  			{
-  				id: 1,
-  				name: "Veterans",
-  				slug: "veterans"
-  			},
-  			{
-  				id: 3,
-  				name: "LGBTQ New Yorkers",
-  				slug: "lgbtq-new-yorkers"
-  			},
-  			{
-  				id: 7,
-  				name: "Immigrants",
-  				slug: "immigrants"
   			}
   		]
   	},
@@ -14556,41 +14402,6 @@ var Programs = (function () {
   				id: 6,
   				name: "Everyone",
   				slug: "everyone"
-  			},
-  			{
-  				id: 5,
-  				name: "Children and Youth",
-  				slug: "children-and-youth"
-  			},
-  			{
-  				id: 2,
-  				name: "Families",
-  				slug: "families"
-  			},
-  			{
-  				id: 8,
-  				name: "Adults",
-  				slug: "adults"
-  			},
-  			{
-  				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
-  			},
-  			{
-  				id: 7,
-  				name: "Immigrants",
-  				slug: "immigrants"
-  			},
-  			{
-  				id: 1,
-  				name: "Veterans",
-  				slug: "veterans"
-  			},
-  			{
-  				id: 3,
-  				name: "LGBTQ New Yorkers",
-  				slug: "lgbtq-new-yorkers"
   			}
   		]
   	}
@@ -14655,6 +14466,12 @@ var Programs = (function () {
                * @type  {String}
                */
               programs: 'https://nycopportunity.github.io/mhfa/data/services.json',
+              /**
+               *
+               *
+               * @type  {boolean}
+               */
+              isMounted: false,
             },
 
             /**
@@ -14830,11 +14647,14 @@ var Programs = (function () {
               const tileText = document.createTextNode(
                 'Sorry, no results were found.'
               );
+
               title.appendChild(tileText);
+
               const node = document.createElement('p');
               const textnode = document.createTextNode(
                 'It looks like there aren’t any services for the filters you selected at this moment.'
               );
+
               node.appendChild(textnode);
               divContainer.appendChild(title);
               divContainer.appendChild(node);
@@ -14845,9 +14665,10 @@ var Programs = (function () {
             };
 
             if (this.query.cat && this.query.pop) {
-              if (this.query.cat.length === 0 && this.query.pop.length === 0) {
+              if (this.query.cat.length === 0 && this.query.pop.length === 0)
                 filterdData = [...this.services];
-              } else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
+
+              else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
                 filterdData = [...this.services].filter((service) => {
                   let filtered =
                     service.categories.some((category) =>
@@ -14858,6 +14679,7 @@ var Programs = (function () {
                     );
                   return filtered;
                 });
+
                 filterdData.length === 0 && noResultFound();
               } else if (
                 this.query.cat.length > 0 &&
@@ -14879,6 +14701,7 @@ var Programs = (function () {
                   let filteredPop = service.population.some((people) =>
                     this.query.pop.includes(people.id)
                   );
+
                   return filteredPop;
                 });
 
@@ -14895,18 +14718,18 @@ var Programs = (function () {
 
                 filterdData.length === 0 && noResultFound();
               }
-            } else if (this.query.pop && !this.query.cat) {
+            } else if (this.query.pop && !this.query.cat)
               if (this.query.pop.length > 0) {
                 filterdData = [...this.services].filter((service) => {
                   let filteredPop = service.population.some((people) =>
                     this.query.pop.includes(people.id)
                   );
+
                   return filteredPop;
                 });
 
                 filterdData.length === 0 && noResultFound();
               }
-            }
 
             return filterdData;
           },
@@ -14946,6 +14769,23 @@ var Programs = (function () {
             .queue() // Queue up the first request
             .fetch('terms') // Get the terms from the 'terms' endpoint
             .catch(this.error);
+          },
+        updated: function() {
+          this.$nextTick(function () {
+            // Code that will run only after the
+            // entire view has been rendered
+              if (!this.isMounted && window.innerWidth > 1024) {
+                if (document.querySelector('#aria-c-cat') != null)
+                  window.gunyc.toggleTrigger('#aria-c-cat');
+
+                if (document.querySelector('#aria-c-pop') != null) {
+                  window.gunyc.toggleTrigger('#aria-c-pop');
+
+                  this.isMounted = true;
+                }
+              }
+            });
+
         },
       }).$mount('[data-js="programs"]');
     }

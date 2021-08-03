@@ -1,11 +1,12 @@
 $tokens:(
-  version: 0.0.0-8,
-  cdn: "https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@0.0.0-8/dist/",
-  output: "/Users/dehirth/envs/cityofnewyork/mhfa/src/config/_tokens.scss",
+  version: 0.0.0-9,
+  cdn: "https://cdn.jsdelivr.net/gh/NYCOpportunity/growingupnyc-patterns@0.0.0-9/dist/",
+  output: "/Users/dehirth/envs/nycopportunity/mhfa/src/config/_tokens.scss",
   fonts: (
     system: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
     text-sans: ("Open Sans", sans-serif),
-    display-sans: ("museo-sans-rounded", sans-serif)
+    display-sans: ("museo-sans-rounded", sans-serif),
+    main: "https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;800&display=swap"
   ),
   font-weights: (
     medium: 500,
@@ -25,70 +26,39 @@ $tokens:(
     font-size-xxx-large: 66px
   ),
   colors: (
-    coral: #F35C48,
-    green: #1A9D65,
-    teal: #0089A2,
-    blue: #154A94,
-    fucia: #3F289C,
-    purple: #8A4CC7,
-    slate: #51596B,
-    orange: #FA660A,
-    magenta: #C1408B,
-    magenta-dark: #9F2D71,
-    red: #E93E51,
-    yellow: #FDB714,
-    yellow-light: #FED77C,
-    black: #333,
-    white: #FFF,
-    gray: #999,
-    gray-light: #EEE,
-    transparent: transparent,
-    shadow: rgba(0, 0, 0, .2),
+    "coral": #F35C48,
+    "green": #1A9D65,
+    "teal": #0089A2,
+    "blue": #154A94,
+    "fuchsia": #3F289C,
+    "purple": #8A4CC7,
+    "slate": #51596B,
+    "orange": #FA660A,
+    "magenta": #C1408B,
+    "magenta-dark": #9F2D71,
+    "red": #E93E51,
+    "yellow": #FDB714,
+    "yellow-light": #FED77C,
+    "black": #333,
+    "white": #FFF,
+    "gray": #999,
+    "gray-light": #EEE,
+    "transparent": transparent,
+    "shadow": rgba(0, 0, 0, .2),
     primary: #C1408B,
     secondary: #9F2D71
   ),
   colors-default: (
-    color-primary: magenta,
-    color-secondary: magenta-dark,
-    color-background: white,
-    color-background-shade: gray-light,
-    color-text: black,
-    color-text-invert: white,
-    color-text-weak: gray,
-    color-text-link: magenta,
-    color-background-footer: yellow-light,
-    color-error: red
-  ),
-  colors-baby: (
-    primary: color-pink,
-    secondary: color-pink-dark
-  ),
-  colors-toddler: (
-    primary: color-orange,
-    secondary: color-orange-dark,
-    tertiary: color-orange-light
-  ),
-  colors-pre-schooler: (
-    primary: color-green,
-    secondary: color-green-dark,
-    tertiary: color-green-light
-  ),
-  colors-grade-schooler: (
-    primary: color-light-green,
-    secondary: color-light-green-dark,
-    tertiary: color-light-green-light
-  ),
-  colors-pre-teen: (
-    primary: color-blue,
-    secondary: color-blue-dark
-  ),
-  colors-teen: (
-    primary: color-purple,
-    secondary: color-purple-dark
-  ),
-  colors-young-adult: (
-    primary: color-dark-gray,
-    secondary: color-dark-gray-mid
+    color-primary: "magenta",
+    color-secondary: "magenta-dark",
+    color-background: "white",
+    color-background-shade: "gray-light",
+    color-text: "black",
+    color-text-invert: "white",
+    color-text-weak: "gray",
+    color-text-link: "magenta",
+    color-background-footer: "yellow-light",
+    color-error: "red"
   ),
   transitions: (
     button-transition: all ease-in-out .15s,
