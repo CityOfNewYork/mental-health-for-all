@@ -12920,8 +12920,315 @@ var Programs = (function () {
   const __vue_script__ = __vue_component__$1;
 
   /* template */
-  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('section',{staticClass:"o-container u-top-spacing-small desktop:flex"},[_c('div',{staticClass:"o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"c-list-box c-list-box--quaternary js-accordion o-accordion",attrs:{"data-multiselectable":"false","role":"presentation","aria-multiselectable":"false"}},_vm._l((_vm.terms),function(term){return _c('div',{key:term.term_id,staticClass:"c-list-box__item o-accordion__item"},[_c('button',{class:'c-list-box__heading o-accordion__header bg-' + term.slug + '--primary active',attrs:{"data-js":"accordion","type":"button","aria-controls":'aria-c-' + term.slug,"aria-expanded":"true"}},[_vm._v("\n          "+_vm._s(term.name)+"\n          "),_c('svg',{staticClass:"o-accordion__caret icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-caret-down"}})])]),_vm._v(" "),_c('ul',{attrs:{"role":"region","aria-hidden":"false","id":'aria-c-' + term.slug}},[_vm._l((term.filters),function(filter){return _c('li',{key:filter.slug,class:'c-list-box__subitem bg-' + term.slug + '--primary'},[_c('label',{staticClass:"checkbox"},[_c('input',{staticClass:"checkbox__field",attrs:{"type":"checkbox"},domProps:{"value":filter.slug,"checked":filter.checked},on:{"change":function($event){return _vm.change({ event: $event, data: filter })}}}),_vm._v(" "),_c('svg',{staticClass:"checkbox__indicator"},[_c('use',{attrs:{"xlink:href":"#icon-check"}})]),_vm._v(" "),_c('span',{staticClass:"select-none",domProps:{"innerHTML":_vm._s(filter.name)}},[_vm._v(_vm._s(filter.name))])])])}),_vm._v(" "),_c('li',{class:'c-list-box__subitem bg-' + term.slug + '--primary text-center'},[_c('button',{staticClass:"button--outline p-3 w-full mb-4",on:{"click":function($event){return _vm.toggle({ event: $event, data: { parent: term.slug } })}}},[_vm._v("\n              Toggle All\n            ")])])],2)])}),0)]),_vm._v(" "),_c('div',{staticClass:"o-article desktop:w-article"},[_c('section',{staticClass:"c-block-list"},_vm._l((_vm.posts),function(page){return _c('div',{key:("page-" + (_vm.posts.indexOf(page)))},[(page && page.show)?_c('div',[_c('div',{staticClass:"c-block-list--shade o-content-container",attrs:{"data-js":"filtered-results"}},_vm._l((page.posts),function(post){return _c('div',{key:post.id,staticClass:"u-lg-gutter"},[_c('div',{staticClass:"c-card rounded-lg mr-0 flex"},[_c('div',{staticClass:"c-card__title"},[_c('a',{attrs:{"href":_vm.slugify(post.title),"title":post.title,"rel":""}},[_vm._v("\n                    "+_vm._s(post.title)+"\n                  ")])]),_vm._v(" "),_c('div',{staticClass:"c-card__subtitle"},[_c('p',[_vm._v(_vm._s(post.programProvider))])]),_vm._v(" "),_c('div',{staticClass:"c-card__body"},[_vm._v("\n                  "+_vm._s(post.body)+"\n                ")]),_vm._v(" "),_c('div',{staticClass:"c-card__tags order-last"},[_vm._l((post.population),function(people){return _c('button',{key:people.id,class:'button--pill bg-' + _vm.slugify(people.name) + '--primary',on:{"click":function($event){return _vm.link($event, 'pop', people.id)}}},[_vm._v("\n                    "+_vm._s(people.name)+"\n                  ")])}),_vm._l((post.categories),function(category){return _c('button',{key:category.name,class:'button--pill bg-yellow--primary',on:{"click":function($event){return _vm.link($event, 'cat', category.id)}}},[_vm._v("\n                    "+_vm._s(category.name)+"\n                  ")])})],2)])])}),0)]):_vm._e()])}),0)])])};
-  var __vue_staticRenderFns__ = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"px-8 py-3"},[_c('h3',[_vm._v("Filter Services:")])])}];
+  var __vue_render__ = function() {
+    var _vm = this;
+    var _h = _vm.$createElement;
+    var _c = _vm._self._c || _h;
+    return _c(
+      "section",
+      { staticClass: "o-container u-top-spacing-small desktop:flex" },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "o-article-sidebar o-content-container--compact u-lg-gutter desktop:w-sidebar"
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "c-list-box c-list-box--quaternary js-accordion o-accordion"
+              },
+              _vm._l(_vm.terms, function(term) {
+                return _c(
+                  "div",
+                  {
+                    key: term.term_id,
+                    staticClass: "c-list-box__item o-accordion__item"
+                  },
+                  [
+                    _c(
+                      "button",
+                      {
+                        class:
+                          "c-list-box__heading o-accordion__header bg-" +
+                          term.slug +
+                          "--primary active",
+                        attrs: {
+                          "data-js": "accordion",
+                          type: "button",
+                          "aria-controls": "aria-c-" + term.slug,
+                          "aria-expanded": "true"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n          " + _vm._s(term.name) + "\n          "
+                        ),
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "o-accordion__caret icon",
+                            attrs: { "aria-hidden": "true" }
+                          },
+                          [
+                            _c("use", {
+                              attrs: { "xlink:href": "#icon-caret-down" }
+                            })
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "ul",
+                      {
+                        staticClass: "active hidden",
+                        attrs: {
+                          "aria-hidden": "false",
+                          id: "aria-c-" + term.slug
+                        }
+                      },
+                      [
+                        _vm._l(term.filters, function(filter) {
+                          return _c(
+                            "li",
+                            {
+                              key: filter.slug,
+                              class:
+                                "c-list-box__subitem bg-" +
+                                term.slug +
+                                "--primary"
+                            },
+                            [
+                              _c("label", { staticClass: "checkbox" }, [
+                                _c("input", {
+                                  staticClass: "checkbox__field",
+                                  attrs: { type: "checkbox" },
+                                  domProps: {
+                                    value: filter.slug,
+                                    checked: filter.checked
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      return _vm.change({
+                                        event: $event,
+                                        data: filter
+                                      })
+                                    }
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "svg",
+                                  { staticClass: "checkbox__indicator" },
+                                  [
+                                    _c("use", {
+                                      attrs: { "xlink:href": "#icon-check" }
+                                    })
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  {
+                                    staticClass: "select-none",
+                                    domProps: { innerHTML: _vm._s(filter.name) }
+                                  },
+                                  [_vm._v(_vm._s(filter.name))]
+                                )
+                              ])
+                            ]
+                          )
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          {
+                            class:
+                              "c-list-box__subitem bg-" +
+                              term.slug +
+                              "--primary text-center"
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "button--outline p-3 w-full mb-4",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.toggle({
+                                      event: $event,
+                                      data: { parent: term.slug }
+                                    })
+                                  }
+                                }
+                              },
+                              [_vm._v("\n              Toggle All\n            ")]
+                            )
+                          ]
+                        )
+                      ],
+                      2
+                    )
+                  ]
+                )
+              }),
+              0
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "o-article desktop:w-article" }, [
+          _c(
+            "section",
+            { staticClass: "c-block-list" },
+            _vm._l(_vm.posts, function(page) {
+              return _c("div", { key: "page-" + _vm.posts.indexOf(page) }, [
+                page && page.show
+                  ? _c("div", [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "c-block-list--shade o-content-container",
+                          attrs: { "data-js": "filtered-results" }
+                        },
+                        _vm._l(page.posts, function(post) {
+                          return _c(
+                            "div",
+                            { key: post.id, staticClass: "u-lg-gutter" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "c-card rounded-lg mr-0 flex" },
+                                [
+                                  _c("div", { staticClass: "c-card__title" }, [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: _vm.slugify(post.title),
+                                          title: post.title,
+                                          rel: ""
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                    " +
+                                            _vm._s(post.title) +
+                                            "\n                  "
+                                        )
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "c-card__subtitle" }, [
+                                    _c("p", [
+                                      _vm._v(_vm._s(post.programProvider))
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "c-card__body" }, [
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(post.body) +
+                                        "\n                "
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "c-card__tags order-last" },
+                                    [
+                                      _vm._l(post.population, function(people) {
+                                        return _c(
+                                          "button",
+                                          {
+                                            key: people.id,
+                                            class:
+                                              "button--pill bg-" +
+                                              _vm.slugify(people.name) +
+                                              "--primary",
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.link(
+                                                  $event,
+                                                  "pop",
+                                                  people.id
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                    " +
+                                                _vm._s(people.name) +
+                                                "\n                  "
+                                            )
+                                          ]
+                                        )
+                                      }),
+                                      _vm._l(post.categories, function(category) {
+                                        return _c(
+                                          "button",
+                                          {
+                                            key: category.name,
+                                            class:
+                                              "button--pill bg-yellow--primary",
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.link(
+                                                  $event,
+                                                  "cat",
+                                                  category.id
+                                                )
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                    " +
+                                                _vm._s(category.name) +
+                                                "\n                  "
+                                            )
+                                          ]
+                                        )
+                                      })
+                                    ],
+                                    2
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            }),
+            0
+          )
+        ])
+      ]
+    )
+  };
+  var __vue_staticRenderFns__ = [
+    function() {
+      var _vm = this;
+      var _h = _vm.$createElement;
+      var _c = _vm._self._c || _h;
+      return _c("div", { staticClass: "px-8 py-3" }, [
+        _c("h3", [_vm._v("Filter Services:")])
+      ])
+    }
+  ];
+  __vue_render__._withStripped = true;
 
     /* style */
     const __vue_inject_styles__ = undefined;
@@ -12953,6 +13260,110 @@ var Programs = (function () {
     );
 
   var Services = [
+  	{
+  		subtitle: "A COVID-19 emotional support helpline.",
+  		title: "NY Project Hope",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "A COVID-19 emotional support helpline.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			}
+  		]
+  	},
+  	{
+  		subtitle: "COVID-19 Community Conversations provides information and resources regarding the mental health impact of the pandemic.",
+  		title: "COVID-19 Community Conversations",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		body: "COVID-19 Community Conversations provides information and resources regarding the mental health impact of the pandemic.",
+  		featured: [
+  		],
+  		categories: [
+  			{
+  				id: 1,
+  				name: "Trauma Support",
+  				slug: "trauma-support"
+  			},
+  			{
+  				id: 5,
+  				name: "Help with Anxiety",
+  				slug: "help-with-anxiety"
+  			},
+  			{
+  				id: 4,
+  				name: "Grief Support",
+  				slug: "grief-support"
+  			},
+  			{
+  				id: 7,
+  				name: "Peer Support",
+  				slug: "peer-support"
+  			},
+  			{
+  				id: 8,
+  				name: "Counseling",
+  				slug: "counseling"
+  			}
+  		],
+  		population: [
+  			{
+  				id: 6,
+  				name: "Everyone",
+  				slug: "everyone"
+  			},
+  			{
+  				id: 3,
+  				name: "LGBTQ New Yorkers",
+  				slug: "lgbtq-new-yorkers"
+  			},
+  			{
+  				id: 7,
+  				name: "Immigrants",
+  				slug: "immigrants"
+  			},
+  			{
+  				id: 8,
+  				name: "Adults",
+  				slug: "adults"
+  			},
+  			{
+  				id: 4,
+  				name: "Seniors",
+  				slug: "seniors"
+  			},
+  			{
+  				id: 1,
+  				name: "Veterans",
+  				slug: "veterans"
+  			}
+  		]
+  	},
   	{
   		subtitle: "Find treatment for opioid use disorder (OUD) with medications like methadone and buprenorphine at your health care provider or one of these resources.",
   		title: "Medications for Opioid Use Disorder",
@@ -14055,6 +14466,12 @@ var Programs = (function () {
                * @type  {String}
                */
               programs: 'https://nycopportunity.github.io/mhfa/data/services.json',
+              /**
+               *
+               *
+               * @type  {boolean}
+               */
+              isMounted: false,
             },
 
             /**
@@ -14230,11 +14647,14 @@ var Programs = (function () {
               const tileText = document.createTextNode(
                 'Sorry, no results were found.'
               );
+
               title.appendChild(tileText);
+
               const node = document.createElement('p');
               const textnode = document.createTextNode(
                 'It looks like there aren’t any services for the filters you selected at this moment.'
               );
+
               node.appendChild(textnode);
               divContainer.appendChild(title);
               divContainer.appendChild(node);
@@ -14245,9 +14665,10 @@ var Programs = (function () {
             };
 
             if (this.query.cat && this.query.pop) {
-              if (this.query.cat.length === 0 && this.query.pop.length === 0) {
+              if (this.query.cat.length === 0 && this.query.pop.length === 0)
                 filterdData = [...this.services];
-              } else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
+
+              else if (this.query.cat.length > 0 && this.query.pop.length > 0) {
                 filterdData = [...this.services].filter((service) => {
                   let filtered =
                     service.categories.some((category) =>
@@ -14258,6 +14679,7 @@ var Programs = (function () {
                     );
                   return filtered;
                 });
+
                 filterdData.length === 0 && noResultFound();
               } else if (
                 this.query.cat.length > 0 &&
@@ -14279,6 +14701,7 @@ var Programs = (function () {
                   let filteredPop = service.population.some((people) =>
                     this.query.pop.includes(people.id)
                   );
+
                   return filteredPop;
                 });
 
@@ -14295,18 +14718,18 @@ var Programs = (function () {
 
                 filterdData.length === 0 && noResultFound();
               }
-            } else if (this.query.pop && !this.query.cat) {
+            } else if (this.query.pop && !this.query.cat)
               if (this.query.pop.length > 0) {
                 filterdData = [...this.services].filter((service) => {
                   let filteredPop = service.population.some((people) =>
                     this.query.pop.includes(people.id)
                   );
+
                   return filteredPop;
                 });
 
                 filterdData.length === 0 && noResultFound();
               }
-            }
 
             return filterdData;
           },
@@ -14346,6 +14769,23 @@ var Programs = (function () {
             .queue() // Queue up the first request
             .fetch('terms') // Get the terms from the 'terms' endpoint
             .catch(this.error);
+          },
+        updated: function() {
+          this.$nextTick(function () {
+            // Code that will run only after the
+            // entire view has been rendered
+              if (!this.isMounted && window.innerWidth > 1024) {
+                if (document.querySelector('#aria-c-cat') != null)
+                  window.gunyc.toggleTrigger('#aria-c-cat');
+
+                if (document.querySelector('#aria-c-pop') != null) {
+                  window.gunyc.toggleTrigger('#aria-c-pop');
+
+                  this.isMounted = true;
+                }
+              }
+            });
+
         },
       }).$mount('[data-js="programs"]');
     }
