@@ -2,6 +2,10 @@
 
 - title = 'Banners | Mental Health for All'
 
+= content('head')
+  / This page should not be indexed
+  meta name='robots' content='noindex,nofollow'
+
 = content('main')
   - for (let s in this.services)
     - this.service = this.services[s];
