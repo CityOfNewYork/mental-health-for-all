@@ -24,5 +24,6 @@ module.exports = {
   'Gotham Pride Health Centers': false,
   '3-2-1 Impact': 'v',
   'Mental Health Integrated in Primary Care': 'w',
-  'Child Use of Prescription Pain Relievers or Heroin': 'u'
+  'Child Use of Prescription Pain Relievers or Heroin': 'u',
+  'COVID-19 Community Conversations': 'y'
 };
