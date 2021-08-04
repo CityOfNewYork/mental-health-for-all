@@ -48,7 +48,7 @@ nav role='navigation' aria-label='Primary Navigation' class='o-navigation o-navi
 
   = partial('/slm/partials/objects/translate-element/translate-element.slm');
 
-  button class='o-navigation__menu-item o-navigation__menu-toggle' data-js='menu' data-js-menu='open' aria-controls='aria-c-menu' aria-expanded='false'
+  button class='o-navigation__menu-item o-navigation__menu-toggle' data-js='menu' data-js-menu='open' aria-haspopup='menu' aria-controls='aria-c-menu' aria-expanded='false'
     svg class='o-navigation__menu-icon'
       use xlink:href='#mhfa-feather-menu'
 
