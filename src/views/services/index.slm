@@ -31,8 +31,6 @@
     div data-js='programs'
       / Vue Application Content
 
-    = partial('/slm/partials/back-to-top.slm');
-
 = content('scripts')
   script src='${this.root}/js/programs.js'
   javascript:
