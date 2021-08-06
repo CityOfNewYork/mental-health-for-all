@@ -7,9 +7,6 @@ header class='${bannerClass}' data-js='lazy'
 
   div class='o-container relative' style='z-index: 1'
     - if this.service.title
-      h1 class='c-hero__title desktop:w-8/12'
-        = this.service.title
-
       nav class='py-4' aria-label='Breadcrumb'
         a href='${this.root}/' class='text-white' Home
 
@@ -24,6 +21,9 @@ header class='${bannerClass}' data-js='lazy'
             use xlink:href='#mhfa-feather-chevron-right'
 
         a href='#' aria-current='page' class='font-normal no-underline text-white' = this.service.title
+      h1 class='c-hero__title desktop:w-8/12'
+        = this.service.title
+
 
     - if this.service.subtitle
       p class='c-hero__tagline ${width} text-lg'
