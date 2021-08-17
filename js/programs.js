@@ -14451,6 +14451,7 @@ var Programs = (function () {
              * @type {Array}
              */
             services: Object.freeze(Services.map((obj) => Object.freeze(obj))),
+
             /**
              * This is our custom post type to query
              *
@@ -14471,6 +14472,13 @@ var Programs = (function () {
             // },
 
             /**
+             * If the domain where the App is hosted is different from the API domain.
+             *
+             * @type {String}
+             */
+            domain: 'https://cityofnewyork.github.io/mental-health-for-all',
+
+            /**
              * This is the endpoint list for terms and post requests
              *
              * @type  {Object}
@@ -14481,7 +14489,7 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              terms: 'https://nycopportunity.github.io/mhfa/data/terms.json',
+              terms: '/data/terms.json',
 
               /**
                * A required endpoint for the list of services. This is based on
@@ -14489,7 +14497,8 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              programs: 'https://nycopportunity.github.io/mhfa/data/services.json',
+              programs: '/data/services.json',
+
               /**
                *
                *
@@ -14755,7 +14764,36 @@ var Programs = (function () {
                 filterdData.length === 0 && noResultFound();
               }
 
+            filterdData = this.sortByTaxonomy(filterdData, 'population', 5); // Children/Youth
+            filterdData = this.sortByTaxonomy(filterdData, 'population', 2); // Families
+
             return filterdData;
+          },
+
+          /**
+           * Sort the list of services by a taxonomy name and category ID.
+           *
+           * @param   {Array}   services  The services data to sort
+           * @param   {String}  taxonomy  The taxonomy to sort
+           * @param   {Number}  id        The category ID to compare
+           * @param   {Number}  order     Ascending (-1) or Descending (1) order
+           *
+           * @return  {Array}             Sorted services data
+           */
+          sortByTaxonomy: function(services, taxonomy, id, order = 1) {
+            return services.sort((a, b) => {
+              // check a and b populations contain a specific taxonomy ID
+              let popA = a[taxonomy].filter(p => p.id === id);
+              let popB = b[taxonomy].filter(p => p.id === id);
+
+              if (popA.length < popB.length)
+                return order;
+
+              if (popA.length > popB.length)
+                return -(order);
+
+              return 0;
+            });
           },
 
           /**
@@ -14798,7 +14836,7 @@ var Programs = (function () {
           this.$nextTick(function () {
             // Code that will run only after the
             // entire view has been rendered
-              if (!this.isMounted && window.innerWidth > 1024) {
+              if (!this.isMounted && window.innerWidth > 1112) {
                 if (document.querySelector('#aria-c-cat') != null)
                   window.gunyc.toggleTrigger('#aria-c-cat');
 
