@@ -7,7 +7,9 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development concurrently \"pttrn -w\" \"pttrn serve -w\" -p \"none\"",
     "version": "npm run default && git add .",
-    "default": "cross-env NODE_ENV=testing pttrn -np",
+    "default": "NODE_ENV=testing concurrently \"pttrn -np\" \"pttrn services\"",
+    "staging": "NODE_ENV=staging concurrently \"pttrn -np\" \"pttrn services\"",
+    "production": "NODE_ENV=production concurrently \"pttrn -np\" \"pttrn services\"",
     "services": "npx pttrn services",
     "ghpages": "npm run default && cross-env NODE_ENV=testing pttrn publish"
   },

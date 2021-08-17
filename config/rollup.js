@@ -9,6 +9,7 @@ const json = require('@rollup/plugin-json');                // Adds .json file i
 
 let tokens = require('./tokens');
 let slm = require('./slm');
+let global = require('./global');
 
 /**
  * Base module configuration. Refer to the package for details on the available options.
@@ -61,7 +62,7 @@ module.exports = [
     output: [
       {
         name: 'Default',
-        file: `${process.env.PWD}/dist/js/default.js`,
+        file: `${process.env.PWD}/${global.dist}/js/default.js`,
         sourcemap: rollup.sourcemap,
         format: rollup.format,
         strict: rollup.strict,
@@ -75,7 +76,7 @@ module.exports = [
     output: [
       {
         name: 'Programs',
-        file: `${process.env.PWD}/dist/js/programs.js`,
+        file: `${process.env.PWD}/${global.dist}/js/programs.js`,
         sourcemap: false,
         format: rollup.format,
         strict: rollup.strict,

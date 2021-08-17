@@ -8,6 +8,7 @@ const fs = require('fs');
 const cnsl = require('@nycopportunity/pttrn/bin/util/console');
 const alerts = require('@nycopportunity/pttrn/config/alerts');
 
+const global = require('../config/global');
 const services = require('../config/services');
 
 const createSlug = (s) =>
@@ -39,8 +40,9 @@ module.exports = {
 
     let cat = []
     let pop = []
-    let servciesJson = 'dist/data/services.json';
-    let termsJson = 'dist/data/terms.json';
+    let dir = `${global.dist}/data`
+    let servciesJson = `${dir}/services.json`;
+    let termsJson = `${dir}/terms.json`;
     let population = 'config/population.json'
 
     for (let i = services.length - 1; i >= 0; i--) {
@@ -112,6 +114,10 @@ module.exports = {
     /**
      * Write the services json
      */
+
+    if (!fs.existsSync(`${dir}`)) {
+      fs.mkdirSync(dir, {recursive: true});
+    }
 
     fs.writeFileSync(servciesJson, JSON.stringify(json));
     fs.writeFileSync(termsJson, JSON.stringify(terms));

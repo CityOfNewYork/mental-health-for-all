@@ -3,7 +3,6 @@ let tokens = require('./tokens');
 let services = require('./services');
 let banners = require('./banners');
 let substanceAbuse = require('./substance-abuse');
-let about = require('./about');
 let population = require('./population.json');
 
 let remotes = {
@@ -78,7 +77,6 @@ module.exports = {
     'Substance Use Services',
   ],
   population: population,
-  about: about,
   generateClassName: (title) => {
     let className = `bg-${title.toLowerCase()}--secondary`;
     return className;

@@ -1,3 +1,5 @@
+const global = require('./global');
+
 /**
  * Config
  *
@@ -20,7 +22,7 @@ const sass = {
 module.exports = [
   {
     file: `${process.env.PWD}/src/scss/default.scss`,
-    outDir: `${process.env.PWD}/dist/css/`,
+    outDir: `${process.env.PWD}/${global.dist}/css/`,
     outFile: 'default.css',
     sourceMapEmbed: sass.sourceMapEmbed,
     includePaths: sass.includePaths,
