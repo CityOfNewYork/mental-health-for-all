@@ -31,6 +31,8 @@ footer class='o-footer py-0 overflow-hidden' role='contentinfo'
 
           a class='tablet:inline-flex tablet:p-0' href='${this.root}/about' title='Learn more about Mental Health for All' About
 
+          a class='tablet:inline-flex tablet:p-0' href='https://airtable.com/shrX5OAHgzNMqV6zW' title='Share your thoughts about Mental Health for All' target='_blank' rel='nofollow noopener' Feedback
+
       div class='o-attribution__flex border-grey-light'
         div class='text-blue-dark'
           p class='o-attribution__byline'

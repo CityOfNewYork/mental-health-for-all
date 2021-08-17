@@ -1,4 +1,7 @@
-div class='o-container sticky o-navigation-spacing-bottom'
+div class='o-content-container--compact sticky o-navigation-spacing-bottom'
   div class='py-5 tablet:py-12 text-right'
-    a href='#main' class='button--primary bg-yellow--primary text-black hover:text-black border-transparent' title='Back To Top'
+    a class='button--primary button--text hover:text-primary border--primary bg-white mr-1' href='https://airtable.com/shrX5OAHgzNMqV6zW' title='Share your thoughts about Mental Health for All' target='_blank' rel='nofollow noopener'
+      | Feedback
+
+    a class='button--primary bg-yellow--primary text-black hover:text-black border-transparent' href='#main' title='Back To Top'
       | Back To Top
