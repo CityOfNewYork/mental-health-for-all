@@ -27,7 +27,7 @@
   section class='o-container u-top-spacing u-bottom-spacing'
     div class='o-content-container pl-0'
       div class='mx-auto' style='max-width: 600px'
-        == this.include('/content/report.md')
+        == this.include('/content/about.md')
 
         p class='text-center py-8'
           a class='button--primary bg-magenta--primary border-transparent' href='${this.root}/services/index' View all Mental Health Services
