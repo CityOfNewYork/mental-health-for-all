@@ -1,8 +1,10 @@
-In this report, you will see the comprehensive mental health support provided to every New Yorker – broken into five groups that we are focused on as we recover from COVID-19:1. Our students and young people. The past year has profoundly affected our children who have been subject to isolation, different forms of learning, and loss in their families and communities.
-
-Our communities of color. COVID-19 didn’t create inequities in mental health care – it revealed and exacerbated them. We will continue to bring additional resources to communities that have been underserved for decades. 
+In this report, you will see the comprehensive mental health support provided to every New Yorker – broken into five groups that we are focused on as we recover from COVID-19:
 
 <div class="list-unordered--check">
+
+1. **Our students and young people**. The past year has profoundly affected our children who have been subject to isolation, different forms of learning, and loss in their families and communities. 
+
+1. **Our communities of color**. COVID-19 didn’t create inequities in mental health care – it revealed and exacerbated them. We will continue to bring additional resources to communities that have been underserved for decades. 
 
 1. **New Yorkers who want or need help for substance misuse**. The opioid crisis hasn’t gone away – and substance misuse has, for many, get worse during COVID-19. 
 
