@@ -12550,6 +12550,10 @@ var Programs = (function () {
         })
         .then(this.wp)
         .catch(message => {
+          // eslint-disable-next-line no-undef
+          {
+            console.dir(message);
+          }
         });
       },
 
@@ -12786,6 +12790,10 @@ var Programs = (function () {
        * @param {Object} response  The error response
        */
       error: function(response) {
+        // eslint-disable-next-line no-undef
+        {
+          console.dir(response);
+        }
       },
 
       /**
@@ -13207,7 +13215,9 @@ var Programs = (function () {
                           )
                         }),
                         0
-                      )
+                      ),
+                      _vm._v(" "),
+                      _vm._m(1, true)
                     ])
                   : _vm._e()
               ])
@@ -13226,6 +13236,28 @@ var Programs = (function () {
       return _c("div", { staticClass: "px-8 py-3" }, [
         _c("h3", [_vm._v("Filter Services:")])
       ])
+    },
+    function() {
+      var _vm = this;
+      var _h = _vm.$createElement;
+      var _c = _vm._self._c || _h;
+      return _c(
+        "div",
+        { staticClass: "o-container sticky o-navigation-spacing-bottom" },
+        [
+          _c("div", { staticClass: "py-5 tablet:py-12 text-right" }, [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "button--primary bg-yellow--primary text-black hover:text-black border-transparent",
+                attrs: { href: "#main", title: "Back To Top" }
+              },
+              [_vm._v("\n                Back To Top\n              ")]
+            )
+          ])
+        ]
+      )
     }
   ];
   __vue_render__._withStripped = true;
@@ -14427,6 +14459,7 @@ var Programs = (function () {
              * @type {Array}
              */
             services: Object.freeze(Services.map((obj) => Object.freeze(obj))),
+
             /**
              * This is our custom post type to query
              *
@@ -14447,6 +14480,13 @@ var Programs = (function () {
             // },
 
             /**
+             * If the domain where the App is hosted is different from the API domain.
+             *
+             * @type {String}
+             */
+            domain: 'http://localhost:7000',
+
+            /**
              * This is the endpoint list for terms and post requests
              *
              * @type  {Object}
@@ -14457,7 +14497,7 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              terms: 'https://nycopportunity.github.io/mhfa/data/terms.json',
+              terms: '/data/terms.json',
 
               /**
                * A required endpoint for the list of services. This is based on
@@ -14465,7 +14505,8 @@ var Programs = (function () {
                *
                * @type  {String}
                */
-              programs: 'https://nycopportunity.github.io/mhfa/data/services.json',
+              programs: '/data/services.json',
+
               /**
                *
                *
@@ -14731,7 +14772,36 @@ var Programs = (function () {
                 filterdData.length === 0 && noResultFound();
               }
 
+            filterdData = this.sortByTaxonomy(filterdData, 'population', 5); // Children/Youth
+            filterdData = this.sortByTaxonomy(filterdData, 'population', 2); // Families
+
             return filterdData;
+          },
+
+          /**
+           * Sort the list of services by a taxonomy name and category ID.
+           *
+           * @param   {Array}   services  The services data to sort
+           * @param   {String}  taxonomy  The taxonomy to sort
+           * @param   {Number}  id        The category ID to compare
+           * @param   {Number}  order     Ascending (-1) or Descending (1) order
+           *
+           * @return  {Array}             Sorted services data
+           */
+          sortByTaxonomy: function(services, taxonomy, id, order = 1) {
+            return services.sort((a, b) => {
+              // check a and b populations contain a specific taxonomy ID
+              let popA = a[taxonomy].filter(p => p.id === id);
+              let popB = b[taxonomy].filter(p => p.id === id);
+
+              if (popA.length < popB.length)
+                return order;
+
+              if (popA.length > popB.length)
+                return -(order);
+
+              return 0;
+            });
           },
 
           /**
@@ -14774,7 +14844,7 @@ var Programs = (function () {
           this.$nextTick(function () {
             // Code that will run only after the
             // entire view has been rendered
-              if (!this.isMounted && window.innerWidth > 1024) {
+              if (!this.isMounted && window.innerWidth > 1112) {
                 if (document.querySelector('#aria-c-cat') != null)
                   window.gunyc.toggleTrigger('#aria-c-cat');
 

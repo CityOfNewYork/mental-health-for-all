@@ -24,6 +24,7 @@ class Programs {
            * @type {Array}
            */
           services: Object.freeze(Services.map((obj) => Object.freeze(obj))),
+
           /**
            * This is our custom post type to query
            *
@@ -44,6 +45,13 @@ class Programs {
           // },
 
           /**
+           * If the domain where the App is hosted is different from the API domain.
+           *
+           * @type {String}
+           */
+          domain: process.env.ROOT,
+
+          /**
            * This is the endpoint list for terms and post requests
            *
            * @type  {Object}
@@ -54,7 +62,7 @@ class Programs {
              *
              * @type  {String}
              */
-            terms: 'https://nycopportunity.github.io/mhfa/data/terms.json',
+            terms: '/data/terms.json',
 
             /**
              * A required endpoint for the list of services. This is based on
@@ -62,7 +70,8 @@ class Programs {
              *
              * @type  {String}
              */
-            programs: 'https://nycopportunity.github.io/mhfa/data/services.json',
+            programs: '/data/services.json',
+
             /**
              *
              *
@@ -328,7 +337,36 @@ class Programs {
               filterdData.length === 0 && noResultFound();
             }
 
+          filterdData = this.sortByTaxonomy(filterdData, 'population', 5); // Children/Youth
+          filterdData = this.sortByTaxonomy(filterdData, 'population', 2); // Families
+
           return filterdData;
+        },
+
+        /**
+         * Sort the list of services by a taxonomy name and category ID.
+         *
+         * @param   {Array}   services  The services data to sort
+         * @param   {String}  taxonomy  The taxonomy to sort
+         * @param   {Number}  id        The category ID to compare
+         * @param   {Number}  order     Ascending (-1) or Descending (1) order
+         *
+         * @return  {Array}             Sorted services data
+         */
+        sortByTaxonomy: function(services, taxonomy, id, order = 1) {
+          return services.sort((a, b) => {
+            // check a and b populations contain a specific taxonomy ID
+            let popA = a[taxonomy].filter(p => p.id === id);
+            let popB = b[taxonomy].filter(p => p.id === id);
+
+            if (popA.length < popB.length)
+              return order;
+
+            if (popA.length > popB.length)
+              return -(order);
+
+            return 0;
+          });
         },
 
         /**
