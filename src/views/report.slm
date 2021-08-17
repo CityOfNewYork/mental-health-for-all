@@ -2,29 +2,13 @@
 
 - title = `Report | Mental Health for All`
 - description = this.description
-- image = 'banners/about@social.jpg'
+- image = 'main@social.jpg'
 
 = content('head')
-  / link rel='preload' as='image' href='${this.root}/img/banners/about-low@desktop.jpg'
-  / link rel='preload' as='image' href='${this.root}/img/banners/about@desktop.jpg'
-  / link rel='preload' as='image' href='${this.root}/img/banners/about-low@mobile.jpg'
-  / link rel='preload' as='image' href='${this.root}/img/banners/about@mobile.jpg'
+  link rel='preload' as='image' href='${this.root}/img/main@mobile.jpg'
+  link rel='preload' as='image' href='${this.root}/img/main@desktop.jpg'
 
 = content('main')
-  / header class='c-hero c-hero--large bg-primary'
-  /   div class='o-container relative' style='z-index: 1'
-  /     nav class='py-4' aria-label='Breadcrumb'
-  /       a href='${this.root}/' class='text-white' Home
-
-  /       span class='mx-1' aria-hidden='true'
-  /         svg class='icon-feather'
-  /           use xlink:href='#mhfa-feather-chevron-right'
-
-  /       a href='#' aria-current='page' class='font-normal no-underline text-white' About
-
-  /     h1 class='c-hero__title mb-0'
-  /       = this.about.title
-
   header class='c-hero c-hero--short bg-primary'
     = partial('/slm/partials/bg-light-b.slm');
 
@@ -44,3 +28,10 @@
     div class='o-content-container pl-0'
       div class='mx-auto' style='max-width: 600px'
         == this.include('/content/report.md')
+
+        iframe class="scribd_iframe_embed" title="MHF-All_008_V2" src="https://www.scribd.com/embeds/520558008/content?start_page=1&view_mode=scroll&access_key=key-7nlLnchZq6Pk0v3Av1Y1" data-auto-height="true" data-aspect-ratio="0.75" scrolling="no" id="doc_917" width="100%" height="600" frameborder="0"
+
+  = content('scripts')
+    javascript:
+      (function() { var scribd = document.createElement("script"); scribd.type = "text/javascript"; scribd.async = true; scribd.src = "https://www.scribd.com/javascripts/embed_code/inject.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(scribd, s); })();
+
