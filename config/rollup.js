@@ -23,8 +23,6 @@ const rollup = {
   strict: true,
 };
 
-console.dir(slm.root);
-
 /**
  * Plugin configuration. Refer to the package for details on the available options.
  *
