@@ -13393,8 +13393,8 @@ var Programs = (function () {
   			},
   			{
   				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
+  				name: "Aging New Yorkers",
+  				slug: "aging-new-yorkers"
   			},
   			{
   				id: 1,
@@ -13554,10 +13554,10 @@ var Programs = (function () {
   		]
   	},
   	{
-  		subtitle: "Routine screenings for pregnant patients and their children under 3 years old are available at select Health + Hospitals locations.",
+  		subtitle: "Routine screenings for pre grant patients and their children under 3 years old are available at select Health + Hospitals locations.",
   		title: "3-2-1 Impact",
   		programProvider: "NYC Health + Hospitals",
-  		body: "Routine screenings for pregnant patients and their children under 3 years old are available at select Health + Hospitals locations.",
+  		body: "Routine screenings for pre grant patients and their children under 3 years old are available at select Health + Hospitals locations.",
   		featured: [
   		],
   		categories: [
@@ -13583,7 +13583,7 @@ var Programs = (function () {
   	{
   		subtitle: "Mental health resources at NYCDOE schools to meet the emotional health and academic needs of your child.",
   		title: "School Mental Health Services",
-  		programProvider: "Department of Education (DOE) and Department of Health and Mental Hygiene (DOHMH)",
+  		programProvider: "Department of Education (DOE), Department of Health and Mental Hygiene (DOHMH), and Mayor's Office of Community Mental Health",
   		body: "Mental health resources at NYCDOE schools to meet the emotional health and academic needs of your child.",
   		featured: [
   			{
@@ -13772,10 +13772,10 @@ var Programs = (function () {
   		]
   	},
   	{
-  		subtitle: "Safer use supplies and education for people who use drugs",
+  		subtitle: "Safer use supplies and education for people who use drugs.",
   		title: "Syringe Service Programs",
   		programProvider: "Department of Mental Health and Hygiene (DOHMH)",
-  		body: "Safer use supplies and education for people who use drugs",
+  		body: "Safer use supplies and education for people who use drugs.",
   		featured: [
   			{
   				id: 6,
@@ -13859,7 +13859,7 @@ var Programs = (function () {
   	{
   		subtitle: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
   		title: "Early Childhood Mental Health Network",
-  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH) and Mayor's Office of Community Mental Health",
   		body: "Parents worried about their children’s emotions or behaviors can get specialized mental health treatment for their children.",
   		featured: [
   			{
@@ -13898,10 +13898,10 @@ var Programs = (function () {
   		]
   	},
   	{
-  		subtitle: "Homeless and runaway youth who need food and other essentials can go to emergency drop-in centers throughout New York City.",
+  		subtitle: "Homeless and runaway youth can find mental health support, food, and other essentials at emergency drop-in centers throughout New York City.",
   		title: "Drop-in Centers for Runaway and Homeless Youth",
-  		programProvider: "Department of Youth and Community Development (DYCD)",
-  		body: "Homeless and runaway youth who need food and other essentials can go to emergency drop-in centers throughout New York City.",
+  		programProvider: "Department of Youth and Community Development (DYCD) and Mayor's Office of Community Mental Health",
+  		body: "Homeless and runaway youth can find mental health support, food, and other essentials at emergency drop-in centers throughout New York City.",
   		featured: [
   			{
   				id: 5,
@@ -14014,8 +14014,8 @@ var Programs = (function () {
   			},
   			{
   				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
+  				name: "Aging New Yorkers",
+  				slug: "aging-new-yorkers"
   			},
   			{
   				id: 7,
@@ -14030,10 +14030,10 @@ var Programs = (function () {
   		]
   	},
   	{
-  		subtitle: "People who experience serious mental illness can go to a Clubhouse to connect with peers and get access to opportunities.",
+  		subtitle: "New Yorkers experiencing serious mental illness can connect to Clubhouses across the city, where you can build social connections, get resources and find a supportive community.",
   		title: "Clubhouses",
-  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
-  		body: "People who experience serious mental illness can go to a Clubhouse to connect with peers and get access to opportunities.",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH) and Mayor's Office of Community Mental Health",
+  		body: "New Yorkers experiencing serious mental illness can connect to Clubhouses across the city, where you can build social connections, get resources and find a supportive community.",
   		featured: [
   			{
   				id: 8,
@@ -14080,8 +14080,8 @@ var Programs = (function () {
   			},
   			{
   				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
+  				name: "Aging New Yorkers",
+  				slug: "aging-new-yorkers"
   			},
   			{
   				id: 1,
@@ -14149,12 +14149,12 @@ var Programs = (function () {
   	{
   		subtitle: "Older New Yorkers who feel isolated can connect with a peer to talk about shared interests.",
   		title: "Friendly Visiting and Friendly VOICES",
-  		programProvider: "Department for the Aging (DFTA)",
+  		programProvider: "Department for the Aging (DFTA) and Mayor's Office of Community Mental Health",
   		body: "Older New Yorkers who feel isolated can connect with a peer to talk about shared interests.",
   		featured: [
   			{
   				id: 4,
-  				name: "Seniors"
+  				name: "Aging New Yorkers"
   			}
   		],
   		categories: [
@@ -14167,20 +14167,20 @@ var Programs = (function () {
   		population: [
   			{
   				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
+  				name: "Aging New Yorkers",
+  				slug: "aging-new-yorkers"
   			}
   		]
   	},
   	{
   		subtitle: "New Yorkers age 60 and older can get mental health screenings, on-site counseling, and referrals at senior centers near them.",
   		title: "Geriatric Mental Health Initiative",
-  		programProvider: "Department for the Aging (DFTA)",
+  		programProvider: "Department for the Aging (DFTA) and Mayor's Office of Community Mental Health",
   		body: "New Yorkers age 60 and older can get mental health screenings, on-site counseling, and referrals at senior centers near them.",
   		featured: [
   			{
   				id: 4,
-  				name: "Seniors"
+  				name: "Aging New Yorkers"
   			}
   		],
   		categories: [
@@ -14203,15 +14203,15 @@ var Programs = (function () {
   		population: [
   			{
   				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
+  				name: "Aging New Yorkers",
+  				slug: "aging-new-yorkers"
   			}
   		]
   	},
   	{
   		subtitle: "NYC Family Justice Centers connect survivors of domestic and gender-based violence to mental health, legal, and social services.",
   		title: "Family Justice Centers",
-  		programProvider: "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV) and NYC Health + Hospitals",
+  		programProvider: "Mayor's Office to End Domestic and Gender-Based Violence (ENDGBV), NYC Health + Hospitals, and Mayor's Office of Community Mental Health",
   		body: "NYC Family Justice Centers connect survivors of domestic and gender-based violence to mental health, legal, and social services.",
   		featured: [
   			{
@@ -14288,7 +14288,7 @@ var Programs = (function () {
   	{
   		subtitle: "The Crime Victim Assistance Program (CVAP) connects victims of crime, violence, or abuse to advocates who can connect them to mental health support, benefits, and other services.",
   		title: "Crime Victim Assistance Program (CVAP)",
-  		programProvider: "NYPD, Safe Horizon, and Mayor’s Office of Criminal Justice (MOCJ)",
+  		programProvider: "NYPD, Safe Horizon, Mayor’s Office of Criminal Justice (MOCJ), and Mayor's Office of Community Mental Health",
   		body: "The Crime Victim Assistance Program (CVAP) connects victims of crime, violence, or abuse to advocates who can connect them to mental health support, benefits, and other services.",
   		featured: [
   		],
@@ -14320,7 +14320,7 @@ var Programs = (function () {
   	{
   		subtitle: "NYC Well is your connection to free, confidential mental health support. Speak to a counselor via phone, text, or chat and get access to mental health and substance use services, in more than 200 languages.",
   		title: "NYC Well",
-  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH) and Mayor's Office of Community Mental Health",
   		body: "NYC Well is your connection to free, confidential mental health support. Speak to a counselor via phone, text, or chat and get access to mental health and substance use services, in more than 200 languages.",
   		featured: [
   			{
@@ -14397,8 +14397,8 @@ var Programs = (function () {
   			},
   			{
   				id: 4,
-  				name: "Seniors",
-  				slug: "seniors"
+  				name: "Aging New Yorkers",
+  				slug: "aging-new-yorkers"
   			},
   			{
   				id: 7,
@@ -14413,10 +14413,10 @@ var Programs = (function () {
   		]
   	},
   	{
-  		subtitle: "Teams of mental health professionals that can come to your home if you’re experiencing a psychological crisis",
+  		subtitle: "During a mental health crisis, teams of mental health professionals can come to you to provide immediate support.",
   		title: "Mobile Crisis Teams",
-  		programProvider: "Department of Health and Mental Hygiene (DOHMH)",
-  		body: "Teams of mental health professionals that can come to your home if you’re experiencing a psychological crisis",
+  		programProvider: "Department of Health and Mental Hygiene (DOHMH) and Mayor's Office of Community Mental Health",
+  		body: "During a mental health crisis, teams of mental health professionals can come to you to provide immediate support.",
   		featured: [
   		],
   		categories: [
