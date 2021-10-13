@@ -29,7 +29,7 @@ tokens.colors = {
   '"green"': '#1A9D65', // Families
   '"teal"': '#0089A2', // LGBTQ New Yorkers
   '"blue"': '#154A94', // Campaign / Adults
-  '"fuchsia"': '#3F289C', // Seniors
+  '"fuchsia"': '#3F289C', // Aging New Yorkers
   '"purple"': '#8A4CC7', // Immigrants
   '"slate"': '#51596B', // Veterans
 
@@ -91,7 +91,7 @@ tokens.populations = {
     'text': textWhite,
     'primary': tokens.colors['"fuchsia"']
   },
-  'seniors': {
+  'aging-new-yorkers': {
     'text': textWhite,
     'primary': tokens.colors['"purple"']
   },
