@@ -9,3 +9,5 @@ profile
 node_modules
 npm-debug.log
 TODO.md
+
+*.zip
