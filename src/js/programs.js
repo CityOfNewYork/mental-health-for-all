@@ -337,7 +337,7 @@ class Programs {
               filterdData.length === 0 && noResultFound();
             }
 
-          filterdData = this.sortByTaxonomy(filterdData, 'population', 5); // Children/Youth
+          filterdData = this.sortByTaxonomy(filterdData, 'population', 5); // Children / Youth
           filterdData = this.sortByTaxonomy(filterdData, 'population', 2); // Families
 
           return filterdData;

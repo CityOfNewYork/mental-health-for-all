@@ -32,7 +32,8 @@
           | Mental Health resource for
 
         div class='c-side-hero__title__large rotating-text'
-          - let audiences = ['Children and youth', 'Families', 'Adults', 'Seniors', 'Veterans', 'Seniors', 'LGBTQ', 'Immigrants'];
+          / - let audiences = ['Children and youth', 'Families', 'Adults', 'LGBTQ New Yorkers', 'Veterans', 'Aging New Yorkers', 'LGBTQ', 'Immigrants'];
+          - let audiences = ['Children and Youth', 'Families', 'LGBTQ New Yorkers', 'Immigrants', 'Adults', 'Aging New Yorkers', 'Veterans']
 
           - for (let audience in audiences)
             - let a = audiences[audience];

@@ -58,8 +58,7 @@ module.exports = {
 
       data = data
         .replace(/{{ SERVICE_TITLE }}/g, service.title)
-        .replace('{{ SERVICE_SLUG }}', slug)
-        .replace('{{ SERVICE_DESCRIPTION }}', service.metaDescription ? service.metaDescription : service.subtitle );
+        .replace('{{ SERVICE_SLUG }}', slug);
 
       // if (!fs.existsSync(write)) {
       await fs.writeFileSync(write, data);

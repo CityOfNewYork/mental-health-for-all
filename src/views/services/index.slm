@@ -33,6 +33,7 @@
 
 = content('scripts')
   script src='${this.root}/js/programs.js'
+
   javascript:
     new Programs();
 
