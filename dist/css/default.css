@@ -4352,60 +4352,60 @@ a.bg-adults--secondary.is-active,a.bg-adults--secondary:focus,a.bg-adults--secon
   stop-color:#3f289c
 }
 
-.bg-seniors--primary,.hover\:bg-seniors--primary:hover{
+.bg-aging-new-yorkers--primary,.hover\:bg-aging-new-yorkers--primary:hover{
   color:#fff!important;
   background-color:#8a4cc7!important
 }
 
-.border-seniors--primary{
+.border-aging-new-yorkers--primary{
   border-color:#8a4cc7!important
 }
 
-.text-seniors--primary{
+.text-aging-new-yorkers--primary{
   color:#8a4cc7
 }
 
-a.bg-seniors--primary,button.bg-seniors--primary{
+a.bg-aging-new-yorkers--primary,button.bg-aging-new-yorkers--primary{
   color:#fff!important;
   transition:background-color .25s linear
 }
 
-a.bg-seniors--primary.is-active,a.bg-seniors--primary:focus,a.bg-seniors--primary:hover,button.bg-seniors--primary.is-active,button.bg-seniors--primary:focus,button.bg-seniors--primary:hover{
+a.bg-aging-new-yorkers--primary.is-active,a.bg-aging-new-yorkers--primary:focus,a.bg-aging-new-yorkers--primary:hover,button.bg-aging-new-yorkers--primary.is-active,button.bg-aging-new-yorkers--primary:focus,button.bg-aging-new-yorkers--primary:hover{
   color:#fff!important;
   background-color:#7035ab!important;
   border-color:#7035ab!important;
   outline:none
 }
 
-.bg-seniors--secondary,.hover\:bg-seniors--secondary:hover{
+.bg-aging-new-yorkers--secondary,.hover\:bg-aging-new-yorkers--secondary:hover{
   color:#fff!important;
   background-color:#7035ab!important
 }
 
-.border-seniors--secondary{
+.border-aging-new-yorkers--secondary{
   border-color:#7035ab!important
 }
 
-.text-seniors--secondary{
+.text-aging-new-yorkers--secondary{
   color:#7035ab
 }
 
-a.bg-seniors--secondary,button.bg-seniors--secondary{
+a.bg-aging-new-yorkers--secondary,button.bg-aging-new-yorkers--secondary{
   color:#fff!important
 }
 
-a.bg-seniors--secondary.is-active,a.bg-seniors--secondary:focus,a.bg-seniors--secondary:hover,button.bg-seniors--secondary.is-active,button.bg-seniors--secondary:focus,button.bg-seniors--secondary:hover{
+a.bg-aging-new-yorkers--secondary.is-active,a.bg-aging-new-yorkers--secondary:focus,a.bg-aging-new-yorkers--secondary:hover,button.bg-aging-new-yorkers--secondary.is-active,button.bg-aging-new-yorkers--secondary:focus,button.bg-aging-new-yorkers--secondary:hover{
   color:#fff!important;
   background-color:#8a4cc7!important;
   border-color:#8a4cc7!important;
   outline:none
 }
 
-.svg-seniors .stop1{
+.svg-aging-new-yorkers .stop1{
   stop-color:#7035ab
 }
 
-.svg-seniors .stop2{
+.svg-aging-new-yorkers .stop2{
   stop-color:#8a4cc7
 }
 
