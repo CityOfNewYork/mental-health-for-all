@@ -12550,10 +12550,6 @@ var Programs = (function () {
         })
         .then(this.wp)
         .catch(message => {
-          // eslint-disable-next-line no-undef
-          {
-            console.dir(message);
-          }
         });
       },
 
@@ -12790,10 +12786,6 @@ var Programs = (function () {
        * @param {Object} response  The error response
        */
       error: function(response) {
-        // eslint-disable-next-line no-undef
-        {
-          console.dir(response);
-        }
       },
 
       /**
@@ -13246,6 +13238,21 @@ var Programs = (function () {
         { staticClass: "o-container sticky o-navigation-spacing-bottom" },
         [
           _c("div", { staticClass: "py-5 tablet:py-12 text-right" }, [
+            _c(
+              "a",
+              {
+                staticClass:
+                  "button--primary button--text hover:text-primary border--primary bg-white mr-1",
+                attrs: {
+                  href: "https://airtable.com/shrX5OAHgzNMqV6zW",
+                  title: "Share your thoughts about Mental Health for All",
+                  target: "_blank",
+                  rel: "nofollow noopener"
+                }
+              },
+              [_vm._v("\n                Feedback\n              ")]
+            ),
+            _vm._v(" "),
             _c(
               "a",
               {
@@ -14484,7 +14491,7 @@ var Programs = (function () {
              *
              * @type {String}
              */
-            domain: 'http://localhost:7000',
+            domain: 'https://cityofnewyork.github.io/mental-health-for-all',
 
             /**
              * This is the endpoint list for terms and post requests
