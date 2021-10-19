@@ -11,3 +11,6 @@ npm-debug.log
 TODO.md
 
 *.zip
+
+/staging
+/production
