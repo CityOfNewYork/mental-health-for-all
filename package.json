@@ -1,7 +1,7 @@
 {
   "name": "@nycopportunity/mental-health-for-all",
   "nicename": "Mental Health for All",
-  "version": "1.0.3-0",
+  "version": "1.0.3",
   "description": "Mental Health for All provides resources for New Yorkers seeking help for anxiety, trauma, substance misuse, and more.",
   "main": "index.js",
   "scripts": {
